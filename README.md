@@ -1,1 +1,3 @@
 # Final-Year-Project....
+
+This repo will have all our files regaridng our Final Year Project be it Code or Documentations
