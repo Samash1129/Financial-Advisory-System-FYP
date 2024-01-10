@@ -1,21 +1,67 @@
 import os
-import csv
-import PyPDF2
 import requests
 from datetime import datetime, timedelta
 import csv
+import PyPDF2
+import re
 import pandas as pd
 
+# Function to extract section from PDF
+def extract_section(pdf_file_path, start_marker, end_marker):
+    with open(pdf_file_path, 'rb') as pdf_file:
+        pdf_reader = PyPDF2.PdfReader(pdf_file)
+        num_pages = len(pdf_reader.pages)
+
+        start_page = None
+        end_page = None
+        found_start_marker = False
+
+        # Find the start and end pages
+        for page_num in range(num_pages):
+            page = pdf_reader.pages[page_num]
+            text = page.extract_text()
+
+            if not found_start_marker and start_marker in text:
+                start_page = page_num
+                found_start_marker = True
+
+            if found_start_marker and end_marker in text:
+                end_page = page_num
+                break
+
+        print(start_page, end_page)
+
+
+        # Extract text from the specified section on each page
+        extracted_text = ''
+        if start_page is not None and end_page is not None:
+            for page_num in range(start_page, end_page + 1):
+                page = pdf_reader.pages[page_num]
+                text = page.extract_text()
+
+                # Find the start and end positions within the text
+                start_pos = text.find(start_marker) + len(start_marker)
+                end_pos = text.find(end_marker)
+
+                print(f"Start Pos: {start_pos}, End Pos: {end_pos}")
+
+                # Extract the content between start and end markers
+                extracted_text += text[start_pos:end_pos].strip() + '\n'
+
+        return extracted_text
+
 # Initial date
-current_date = datetime.strptime('2024-01-01', '%Y-%m-%d')
+current_date = datetime.strptime('2024-01-06', '%Y-%m-%d')
 
 # Number of times to execute the URL
 days = 365
-years = 10
-num_executions = years * days
+years = 15
+num_executions = days * years
 
 # List to store results
 results = []
+
+previous_line = ""
 
 for _ in range(num_executions):
     # Format the current date to match the URL
@@ -36,54 +82,20 @@ for _ in range(num_executions):
         with open(f'{formatted_date}.pdf', 'wb') as pdf_file:
             pdf_file.write(response.content)
 
-        def extract_section(pdf_file_path, start_marker, end_marker):
-            with open(pdf_file_path, 'rb') as pdf_file:
-                pdf_reader = PyPDF2.PdfReader(pdf_file)
-                num_pages = len(pdf_reader.pages)
-
-                start_page = None
-                end_page = None
-
-                # Find the start and end pages
-                for page_num in range(num_pages):
-                    page = pdf_reader.pages[page_num]
-                    text = page.extract_text()
-
-                    if start_marker in text:
-                        start_page = page_num
-                    if end_marker in text:
-                        end_page = page_num
-                        break
-
-                # Extract text from the specified section on each page
-                extracted_text = ''
-                if start_page is not None and end_page is not None:
-                    for page_num in range(start_page, end_page + 1):
-                        page = pdf_reader.pages[page_num]
-                        text = page.extract_text()
-
-                        # Find the start and end positions within the text
-                        start_pos = text.find(start_marker) + len(start_marker)
-                        end_pos = text.find(end_marker)
-
-                        # Extract the content between start and end markers
-                        extracted_text += text[start_pos:end_pos].strip() + \
-                            '\n'
-            return extracted_text
-
-        # Example usage
+        # Extract data from the downloaded PDF
         pdf_file_path = f'{formatted_date}.pdf'
         start_marker = '***COMMERCIAL BANKS***'
         end_marker = '***INSURANCE***'
 
-        extracted_data = extract_section(
-            pdf_file_path, start_marker, end_marker)
-        # print(extracted_data)
+        extracted_data = extract_section(pdf_file_path, start_marker, end_marker)
+        print(extracted_data)
 
         lines = extracted_data.strip().split("\n")
 
+        csv_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "bank_data.csv")
+
         # Open the existing CSV file in append mode ("a")
-        with open("bank_data.csv", "a", newline='') as csvfile:
+        with open(csv_file_path, "a", newline='') as csvfile:
             writer = csv.writer(csvfile)
 
             # If the file is empty, write the header row
@@ -92,8 +104,25 @@ for _ in range(num_executions):
                                 "Highest Price", "Lowest Price", "Closing Price", "Net Change"])
 
             # Write the data
-            for line in lines:
-                parts = line.split()
+            for i in range(len(lines)):
+                parts = lines[i].split()
+
+                # If the line has fewer parts, merge it with the next line
+                if len(parts) < 8 and i < len(lines) - 1:
+                    next_line_parts = lines[i + 1].split()
+                    parts += next_line_parts
+                    i += 1
+
+                # Replace "LtdXD" with the number after XD
+                for j in range(len(parts)):
+                    if "XD" in parts[j] and parts[j].__contains__("XD"):
+                        xd_number_match = re.search(r'XD(\d+)', parts[j])
+                        if xd_number_match:
+                            xd_number = xd_number_match.group(1)
+                            parts[j] = xd_number
+                    
+                if len(parts) < 8:
+                    continue
 
                 date = formatted_date
                 ticker_symbol = parts[0]
@@ -126,30 +155,36 @@ for _ in range(num_executions):
     # Append result to the list
     results.append([formatted_date, result])
 
+save_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "download_results.csv")
+
 # Save results to CSV
-with open('download_results.csv', 'w', newline='') as csvfile:
+with open(save_file_path, 'w', newline='') as csvfile:
     csv_writer = csv.writer(csvfile)
     csv_writer.writerow(['Date', 'Result'])
     csv_writer.writerows(results)
 
-# Assuming you have the data in a CSV file named 'bank_data.csv'
-csv_file = 'bank_data.csv'
+bank_data_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "bank_data.csv")
 
-# Read the CSV file into a DataFrame
-df = pd.read_csv(csv_file, parse_dates=['Date'])
+# Read bank_data.csv into a DataFrame
+bank_data = pd.read_csv(bank_data_file_path)
 
-# Get unique security names
-unique_security_names = df['Security Name'].unique()
+bank_data_sheets_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "bank_data_sheets.xlsx")
 
-# Create a Pandas Excel writer using ExcelWriter
-with pd.ExcelWriter('output_file_with_sheets.xlsx', engine='xlsxwriter') as writer:
-    # Loop through each unique security name
-    for security_name in unique_security_names:
-        # Create a DataFrame for the current security name
-        security_df = df[df['Security Name'] == security_name]
+# Create an Excel file with multiple sheets
+with pd.ExcelWriter(bank_data_sheets_file_path) as writer:
+    # Count occurrences of each Ticker Symbol
+    ticker_symbol_counts = bank_data['Ticker Symbol'].value_counts()
 
-        # Write the DataFrame to a sheet with the security name
-        security_df.to_excel(writer, sheet_name=security_name, index=False)
+    # Group data by security name and iterate over groups
+    for group_name, group_data in bank_data.groupby('Ticker Symbol'):
+        # Check if the ticker symbol count is greater than 5
+        if ticker_symbol_counts.get(group_name, 0) >= 1:
+            # Truncate long names to fit within the Excel limit (31 characters)
+            truncated_name = "".join(char for char in group_name[:31] if char.isalnum() or char in ['_', '-'])
 
-print("Excel file with multiple sheets created successfully.")
-print("Data Extraction Completed.")
+            # Check if the ticker symbol contains any numbers
+            if not any(char.isdigit() for char in group_data['Ticker Symbol'].iloc[0]):
+                group_data.to_excel(writer, sheet_name=truncated_name, index=False)
+
+
+print(f"Data extracted for {num_executions} days.")
