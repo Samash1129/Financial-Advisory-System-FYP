@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
   password: { type: String, required: true },
   email: { type: String, required: true, unique:true },
   role : {type: String, required:true, },
-  preferance: {type : Strint, required:true}
+  preferance: {type : String, required:true}
 });
 
 // arg1: name of model in app, arg2: schema, arg3: collection name in db
