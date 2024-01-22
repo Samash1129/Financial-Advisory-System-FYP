@@ -1,6 +1,6 @@
 const express = require("express");
 const { body } = require("express-validator");
-const User = require("../Models/user.model");
+const User = require("../models/user.model");
 const { signUp, signIn, getProfile, updateUser, deleteUser, refreshToken } = require("../Controllers/user.controller");
 
 // recordRoutes is an instance of the express router.
@@ -44,7 +44,7 @@ recordRoutes.route("/signUp").post(
         .isLength({ min: 4 })
         .withMessage("Role must be at least 4 characters long"),
     
-    body("preferance")
+    body("preference")
         .notEmpty()
         .withMessage("Preferance is required")
         .isLength({ min: 4 })

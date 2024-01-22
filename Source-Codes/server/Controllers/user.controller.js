@@ -1,4 +1,4 @@
-const User = require("../Models/user.model");
+const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
@@ -19,16 +19,17 @@ exports.signUp = async (req, res) => {
   }
   
   try {
-    const { name, password, email } = req.body;
+    const { name, password, email, role, preference } = req.body;
     // Email must be unique
     let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ error: "Email already exists" });
     }
+
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
     // Create a new user
-    const newUser = new User({ name, password:hashedPassword, email });
+    const newUser = new User({ name, password:hashedPassword, email , role, preference});
     await newUser.save();
 
     res.json({ message: "User added successfully" });
@@ -108,7 +109,7 @@ module.exports.getProfile = async (req, res) => {
       return res.status(400).json({ error: "User does not exist" });
     }
     // Send the user details excluding the password
-    res.json({ user: { name: user.name, email: user.email } });
+    res.json({ user: { name: user.name, email: user.email , preference: user.preference} });
   } catch (err) {
     handleError(res, err);
   }
