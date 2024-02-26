@@ -49,8 +49,6 @@ recordRoutes.route("/signUp").post(
         .withMessage("Preferance is required")
         .isLength({ min: 4 })
         .withMessage("Preferance must be defined"),
-
-
   ],
   signUp
 );
