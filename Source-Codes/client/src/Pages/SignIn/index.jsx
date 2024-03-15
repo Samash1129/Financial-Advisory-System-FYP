@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
@@ -11,6 +12,7 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (value) => {
     const regex = /\S+@\S+\.\S+/;
@@ -39,7 +41,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    navigate('/dashregular');
   };
 
 
@@ -65,7 +67,7 @@ const SignIn = () => {
 
         <a href="/forgot-password" className={styles.forgotPasswordLink}>Forgot your password?</a>
         
-        <Button text="Log In" onClick={() => {/* Handle login */}} />
+        <Button text="Log In"/>
         <div className={styles.secondaryAction}>
           Need an account? <a href="/signup" className={styles.signUpLink}>Sign up</a>
         </div>

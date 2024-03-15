@@ -1,0 +1,52 @@
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+   height: 100vh;
+   }
+
+.leftContainer
+{
+  width: 24%;
+  margin: 0;
+  padding: 0;
+}
+
+.rightContainer
+{
+    width: 76%;
+    margin: 0;
+    padding: 0;
+    background-color: #001A4F;
+}
+
+.headerContainer
+{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.rightColumns
+{
+    display: flex;
+}
+
+.col1
+{
+margin: 5px 20px 0px 40px;
+width: 50%;
+}
+
+.col2
+{
+margin: 5px 40px 0px 20px;
+width: 50%;
+}
+
+.stocksContainer
+{
+    margin-bottom: 2%;
+}
