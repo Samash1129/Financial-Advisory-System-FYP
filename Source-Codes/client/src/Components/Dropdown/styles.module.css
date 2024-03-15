@@ -8,13 +8,12 @@
 
 .dropdownHeader {
   padding: 10px 20px;
-  background-color: rgba(194, 194, 194, 0.8);
+  background-color: #F3F3F3;
   border: 0px solid;
-  border-radius: 10px;
+  border-radius: 6px;
   font-weight:300;
   font-size: 20px;
-  border-radius: 10px;
-  color: #727272;
+  color: #BBBBBB;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,3 +60,18 @@
   background-color: #3692FF;
   color: white;
 }
+
+.dropdownList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.dropdownList::-webkit-scrollbar-track {
+  background: #F3F3F3; /* Track color */
+}
+
+.dropdownList::-webkit-scrollbar-thumb {
+  background: #3692FF; /* Thumb color */
+  border-radius: 15px; /* Border radius of the thumb */
+
+}
+
