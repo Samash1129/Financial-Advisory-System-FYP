@@ -1,9 +1,9 @@
 
 @font-face {
-    font-family: 'Outfit';
-    src: local('Outfit'), url('./Outfit-VariableFont_wght.ttf') format('truetype');
-  }
+  font-family: 'Outfit';
+  src: local('Outfit'), url('./Outfit-VariableFont_wght.ttf') format('truetype');
+}
 
-  body {
-    font-family: 'Outfit';
-  }
+body {
+  font-family: 'Outfit';
+}

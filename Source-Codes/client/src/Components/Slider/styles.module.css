@@ -1,0 +1,137 @@
+.sliderContainer {
+  align-items: center;
+  border-radius: 0px 17px 17px 0px;
+  background: #3692ff;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Outfit";
+  height: 100vh;
+}
+
+.welcomeText {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 10px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.descriptionText {
+  color: #ffffff;
+  text-align: left;
+  width: fit-content;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 5%;
+}
+
+.textContainer {
+  width: 100%; /* Take the full width of the parent container */
+  display: flex; /* Use flexbox to arrange children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align text to the start (left) */
+}
+
+.upgradeBtn {
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  padding: 13px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0px;
+  width: 80%;
+  color: white; /* Set text color to white */
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upgradeBtn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.profileBtn {
+  color: white; /* Set text color to white */
+  background-color: transparent;
+  font-family: Outfit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.logoutBtn {
+  color: white; /* Set text color to white */
+  background-color: transparent;
+  font-family: Outfit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  margin-top: 10%;
+}
+
+.imageContainer {
+  width: 80%;
+  margin-top: -60px;
+  mix-blend-mode: overlay;
+  margin-left: 0px;
+  margin-bottom: -40px;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.sliderButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: -10px;
+}
+
+/* Fade animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.imageContainer img:nth-child(2) {
+  animation: fade 6s infinite;
+}

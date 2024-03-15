@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
-import small from '../../Assets/SVGs/Small.svg'; 
-import stretch from '../../Assets/SVGs/Stretch.svg'; 
+import small from '../../Assets/SVGs/Small.svg';
+import stretch from '../../Assets/SVGs/Stretch.svg';
 
 const LogoAnimation = () => {
   return (

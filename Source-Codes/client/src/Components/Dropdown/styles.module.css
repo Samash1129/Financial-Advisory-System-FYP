@@ -1,19 +1,17 @@
-
-
 .dropdownContainer {
   position: relative;
   width: 100%;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .dropdownHeader {
   padding: 10px 20px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   border: 0px solid;
   border-radius: 6px;
-  font-weight:300;
+  font-weight: 300;
   font-size: 20px;
-  color: #BBBBBB;
+  color: #bbbbbb;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +27,6 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-  
 }
 
 .dropdownList {
@@ -37,11 +34,11 @@
   padding: 0;
   margin: 0;
   border-radius: 10px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   border: 0px solid;
   border-radius: 10px;
   margin-top: 1.5%;
-  font-weight:300;
+  font-weight: 300;
   font-size: 20px;
   position: absolute;
   width: 100%;
@@ -57,7 +54,7 @@
 }
 
 .dropdownListItem:hover {
-  background-color: #3692FF;
+  background-color: #3692ff;
   color: white;
 }
 
@@ -66,12 +63,10 @@
 }
 
 .dropdownList::-webkit-scrollbar-track {
-  background: #F3F3F3; /* Track color */
+  background: #f3f3f3; /* Track color */
 }
 
 .dropdownList::-webkit-scrollbar-thumb {
-  background: #3692FF; /* Thumb color */
+  background: #3692ff; /* Thumb color */
   border-radius: 15px; /* Border radius of the thumb */
-
 }
-

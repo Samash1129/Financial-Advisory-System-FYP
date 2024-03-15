@@ -1,106 +1,102 @@
-body
-{
+body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
 }
 
 .container {
-   display: flex;
-   margin: 0;
-   padding: 0;
-   border: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
   height: 100vh;
-  }
-  
-  .leftContainer {
-    width: 64%;
-    margin: 0;
-    padding: 0;
-  }
+}
 
-  .coverImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.leftContainer {
+  width: 64%;
+  margin: 0;
+  padding: 0;
+}
 
-  
-  .rightContainer {
-    width: 36%;
-    margin: 0;
-    padding: 0;
-  }
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .signInContainer {
-    max-width: 500px;
-    margin: auto;
-    font-family: 'Outfit', sans-serif;
-    padding: 40px;
-  }
-  
-  .signInForm {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8%;
-  }
-  
-  .signInForm label {
-    margin: 10px 0 5px;
-    font-size: 17px;
-    font-weight: 400;
-  }
-  
-  .signInForm input[type="text"],
-  .signInForm input[type="password"] {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 0px solid;
-    line-height: regular;
-    height: 27px;
-    border-radius: 8px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 18px;
-    background-color: rgba(194, 194, 194, 0.8);
-  }
+.rightContainer {
+  width: 36%;
+  margin: 0;
+  padding: 0;
+}
 
-  .signInForm input[type="text"]:focus,
-  .signInForm input[type="password"]:focus {
-    border: 0px solid;
-    outline: none;
-  }
-    
+.signInContainer {
+  max-width: 500px;
+  margin: auto;
+  font-family: "Outfit", sans-serif;
+  padding: 40px;
+}
 
-  .signInForm input::placeholder {
-    color: #1E1E1E;
-    opacity: 0.25;
-    padding-left: 5px;
-  }
-  
-  .forgotPasswordLink {
-    color: #3692FF;
-    text-decoration: none;
-    margin-bottom: 10px;
-    margin-top: 30px;
-    display: block;
-    text-align: left;
-  }
-  
-  .secondaryAction {
-    text-align: left;
-    margin-top: 10px;
-  }
-  
-  .signUpLink {
-    color: #3692FF;
-    text-decoration: none;
-    text-align: left;
-  }
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8%;
+}
 
-  .errorMessage {
-    color: red; /* Change color as needed */
-    margin-top: -8px;
-    font-size: 1.0rem;
-    margin-bottom: 15px;
-  }
-  
+.signInForm label {
+  margin: 10px 0 5px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.signInForm input[type="text"],
+.signInForm input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 0px solid;
+  line-height: regular;
+  height: 27px;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: rgba(194, 194, 194, 0.8);
+}
+
+.signInForm input[type="text"]:focus,
+.signInForm input[type="password"]:focus {
+  border: 0px solid;
+  outline: none;
+}
+
+.signInForm input::placeholder {
+  color: #1e1e1e;
+  opacity: 0.25;
+  padding-left: 5px;
+}
+
+.forgotPasswordLink {
+  color: #3692ff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: block;
+  text-align: left;
+}
+
+.secondaryAction {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.signUpLink {
+  color: #3692ff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.errorMessage {
+  color: red; /* Change color as needed */
+  margin-top: -8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}

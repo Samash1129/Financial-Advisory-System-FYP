@@ -1,9 +1,7 @@
-
 .navBar {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   width: 100%;
   margin-bottom: 10%;
-  
 }
 
 .navContainer {
@@ -28,7 +26,7 @@
 .backTitle {
   font-size: 18px;
   font-weight: 500;
-  color: #3692FF;
+  color: #3692ff;
 }
 
 .titleContainer h1 {
