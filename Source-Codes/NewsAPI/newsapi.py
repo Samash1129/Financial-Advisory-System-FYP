@@ -100,7 +100,7 @@ def retrieve_all_articles(query):
 
 
 def fetch_news_for_all_queries(queries):
-    for query in queries:
+    for query, ticker_symbol in queries.items():
         print(f"Fetching news for query: {query}")
         news = retrieve_all_articles(query)
         save_to_db(query, news)

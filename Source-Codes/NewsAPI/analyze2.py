@@ -1,11 +1,37 @@
 import os
 import json
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import pymongo
+from dotenv import load_dotenv
+from datetime import datetime
+
+load_dotenv()
 
 def calculate_sentiment_score_vader(text):
     analyzer = SentimentIntensityAnalyzer()
     compound_score = analyzer.polarity_scores(text)["compound"]
     return compound_score
+
+def save_vader_scores_to_db(sentiment_scores):
+    # Connect to MongoDB
+    client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
+    db = client["news"]
+    collection = db["vader_sentiment"]
+
+    for query, score in sentiment_scores.items():
+        stock_ticker = queries.get(query)
+        if stock_ticker:
+            query_filter = {"query": query}
+            update_query = {
+                "$set": {
+                    "sentiment_score": score,
+                    "stock_ticker": stock_ticker,
+                    "updated_at": datetime.now()
+                }
+            }
+            collection.update_one(query_filter, update_query, upsert=True)
+
+    client.close()
 
 def analyze_sentiment_for_files_vader(queries):
     sentiment_scores_vader = {}
@@ -42,9 +68,13 @@ def analyze_sentiment_for_files_vader(queries):
 # Load queries from JSON file
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
-    queries = queries_data.get("queries", [])
+    queries = queries_data.get("queries", {})
 
+# Analyze sentiment scores using VADER
 sentiment_scores_vader = analyze_sentiment_for_files_vader(queries)
+
+# Save sentiment scores to MongoDB and print them
 print("Sentiment Scores using VADER:")
-for query, score in sentiment_scores_vader.items():
-    print(f"{query}: {score:.2f}")
+print(sentiment_scores_vader)
+save_vader_scores_to_db(sentiment_scores_vader)
+print("Sentiment scores saved to MongoDB.")

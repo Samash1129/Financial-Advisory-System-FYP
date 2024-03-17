@@ -3,24 +3,34 @@ import json
 from textblob import TextBlob
 import pymongo
 from dotenv import load_dotenv
+from datetime import datetime
+
 
 load_dotenv()
 
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
-    queries = queries_data.get("queries", [])
+    queries = queries_data.get("queries", {})
 
 
 def save2db(sentiment_scores):
     # Connect to MongoDB
     client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
-    collection = db["sentiment"]
+    collection = db["textblob_sentiment"]
 
     for query, score in sentiment_scores.items():
-        query_filter = {"query": query}
-        update_query = {"$set": {"sentiment_score": score}}
-        collection.update_one(query_filter, update_query, upsert=True)
+        stock_ticker = queries.get(query)
+        if stock_ticker:
+            query_filter = {"query": query}
+            update_query = {
+                "$set": {
+                    "sentiment_score": score,
+                    "stock_ticker": stock_ticker,
+                    "updated_at": datetime.now()
+                }
+            }
+            collection.update_one(query_filter, update_query, upsert=True)
 
     client.close()
 
@@ -72,6 +82,6 @@ print(len(sentiment_scores))  # Add this line for debugging
 for query, score in sentiment_scores.items():
     print(f"{query}: {score:.2f}")
 
-#save2db(sentiment_scores)
+save2db(sentiment_scores)
 print("Sentiment scores saved to MongoDB.")
 
