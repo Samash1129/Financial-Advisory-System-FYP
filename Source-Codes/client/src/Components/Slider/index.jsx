@@ -25,6 +25,11 @@ const Slider = () => {
         navigate('/signin');
     };
 
+    const handleProfileClick = () => {
+        // Navigate to the /profilesettings route
+        navigate('/profilesettings');
+    }
+
     return (
         <div className={styles.sliderContainer}>
             <div className={styles.imageContainer}>
@@ -37,8 +42,8 @@ const Slider = () => {
             </div>
             <div className={styles.sliderButtonContainer}>
                 <hr className={styles.divider} />
-                <button className={styles.profileBtn} type="button">
-                    <img src={SettingIcon} alt="Profile Settings" className={styles.icon} />
+                <button className={styles.profileBtn} type="button" onClick={handleProfileClick}>
+                    <img src={SettingIcon} alt="Profile Settings" className={styles.icon}/>
                     <span>Profile Settings</span>
                 </button>
                 <button className={styles.logoutBtn} type="button" onClick={handleLogout}>

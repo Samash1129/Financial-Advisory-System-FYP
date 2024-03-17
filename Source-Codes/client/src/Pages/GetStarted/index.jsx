@@ -22,22 +22,22 @@ const GetStarted = () => {
   return (
     <div className={styles.container}>
 
-    <div className={styles.leftContainer}>
-    
-    {/* <LogoAnimation>
-    <img src={blankBackground} alt="Cover Image" className={styles.coverImage} />
-    </LogoAnimation> */}
-    <img src={background} alt="Cover Image" className={styles.coverImage} />
-    </div>
+      <div className={styles.leftContainer}>
 
-    <div className={styles.rightContainer}>
+        {/* <LogoAnimation>
+          <img src={blankBackground} alt="Cover Image" className={styles.coverImage} />
+        </LogoAnimation> */}
+        <img src={background} alt="Cover Image" className={styles.coverImage} />
+      </div>
+
+      <div className={styles.rightContainer}>
         <h2 className={styles.title}>Get Started</h2>
         <div className={styles.buttonContainer}>
-        <Button text="Log In" onClick={handleSignInClick} />
-        <Button text="Sign Up" onClick={handleSignUpClick} />
+          <Button text="Log In" onClick={handleSignInClick} />
+          <Button text="Sign Up" onClick={handleSignUpClick} />
         </div>
         <img src={bottomLogo} alt="Bottom Logo" className={styles.bottomLogo} />
-    </div>
+      </div>
 
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
@@ -10,7 +11,7 @@ import LoadingSpinner from '../../Components/LoadingAnimation';
 
 const SignUp = () => {
 
-const [name, setName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,6 +19,7 @@ const [name, setName] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (value) => {
     // Simple regex for email validation - adjust as needed
@@ -64,49 +66,56 @@ const [name, setName] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add submission logic here
+    // At the moment will navigate to preferrence then premium wala page..
+    navigate('/preferences');
   };
 
-    return (
+  const handleChangeToSignIn = () => {
+    navigate('/signin');
+  }
+
+  return (
     <div className={styles.container}>
 
-    <div className={styles.leftContainer}>
-    <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
-    </div> 
+      <div className={styles.leftContainer}>
+        <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
+      </div>
 
-    <div className={styles.rightContainer}>
-    <LoadingSpinner loadingText="Loading...">
-    <div className={styles.signUpContainer}>
-      <NavBar title="Sign Up" />
-      <form className={styles.signUpForm} onSubmit={handleSubmit}>
-        <label htmlFor="name">NAME</label>
-        <input type="text" id="name" placeholder="Enter your name" value={name} onChange={handleNameChange} />
-        {nameError && <div className={styles.errorMessage}>{nameError}</div>}
+      <div className={styles.rightContainer}>
+        <LoadingSpinner loadingText="Loading...">
+          <div className={styles.signUpContainer}>
+            <NavBar title="Sign Up" />
+            <form className={styles.signUpForm} onSubmit={handleSubmit}>
+              <label htmlFor="name">NAME</label>
+              <input type="text" id="name" placeholder="Enter your name" value={name} onChange={handleNameChange} />
+              {nameError && <div className={styles.errorMessage}>{nameError}</div>}
 
-        <label htmlFor="email">EMAIL ADDRESS</label>
-        <input type="text" id="email" placeholder="Enter your email address" value={email} onChange={handleEmailChange} />
-        {emailError && <div className={styles.errorMessage}>{emailError}</div>}
+              <label htmlFor="email">EMAIL ADDRESS</label>
+              <input type="text" id="email" placeholder="Enter your email address" value={email} onChange={handleEmailChange} />
+              {emailError && <div className={styles.errorMessage}>{emailError}</div>}
 
-        <label htmlFor="password">PASSWORD</label>
-        <input type="password" id="password" placeholder="Enter your password" value={password} onChange={handlePasswordChange} />
-        {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
+              <label htmlFor="password">PASSWORD</label>
+              <input type="password" id="password" placeholder="Enter your password" value={password} onChange={handlePasswordChange} />
+              {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
 
-        <label htmlFor="confirm-password">CONFIRM PASSWORD</label>
-        <input type="password" id="confirm-password" placeholder="Confirm your password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
-        {confirmPasswordError && <div className={styles.errorMessage}>{confirmPasswordError}</div>}
-        </form>
-        
-        <Button text="Sign Up" onClick={handleSubmit} />
+              <label htmlFor="confirm-password">CONFIRM PASSWORD</label>
+              <input type="password" id="confirm-password" placeholder="Confirm your password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
+              {confirmPasswordError && <div className={styles.errorMessage}>{confirmPasswordError}</div>}
+            </form>
 
-        <div className={styles.secondaryAction}>
-          Have an account? <a href="/signin" className={styles.signInLink}>Sign In</a>
-        </div>
+            <Button text="Sign Up" onClick={handleSubmit} />
 
-    </div>    
-    </LoadingSpinner>
-    </div>       
+            <div className={styles.secondaryAction}>
+              Have an account? 
+              <p onClick={handleChangeToSignIn} className={styles.signInLink}>Sign In</p>
+            </div>
+
+          </div>
+        </LoadingSpinner>
+      </div>
     </div>
 
-);
+  );
 };
 
 export default SignUp;

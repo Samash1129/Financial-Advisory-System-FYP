@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
@@ -11,6 +12,7 @@ const ProfileSettings = () => {
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const navigate = useNavigate();
 
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
@@ -46,6 +48,11 @@ const ProfileSettings = () => {
     e.preventDefault();
     // Add form submission logic here
   };
+
+  const handlePreferencesClick = () => {
+    // Navigate to the /preferences route
+    navigate('/preferences');
+  }
 
   return (
 
@@ -85,7 +92,7 @@ const ProfileSettings = () => {
         {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
 
         <div className={styles.editPreferences}>
-        <a href="/preferences" className={styles.editPreferences}>Edit Investment Preferences</a>
+        <p onClick={handlePreferencesClick} className={styles.editPreferences}>Edit Investment Preferences</p>
         </div>
 
         <Button text="Save" onClick={handleSubmit} />

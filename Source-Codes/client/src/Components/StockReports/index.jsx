@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
 import ReportIcon from '../../Assets/SVGs/ReportIcon.svg';
 import Elevy from '../../Assets/SVGs/Elevy.svg';
+import PremiumPopup from '../PremiumPopup';
 
 const StockReports = () => {
+    const [showPremiumPopup, setShowPremiumPopup] = useState(false);
+
+    const handleUpgradeClick = () => {
+        setShowPremiumPopup(true);
+    };
+
+    const handleClosePopup = () => {
+        setShowPremiumPopup(false);
+    };
+
     return (
         <div className={styles.overallContainer}>
             <div className={styles.srContainer}>
@@ -24,8 +35,9 @@ const StockReports = () => {
             </div>
             <div className={styles.buttonContainer}>
                 <button className={styles.button}>Generate Detailed Report</button>
-                <button className={styles.button}>Chat With Elevy</button>
+                <button className={styles.button} onClick={handleUpgradeClick}>Chat With Elevy</button>
             </div>
+            {showPremiumPopup && <PremiumPopup onClose={handleClosePopup} />}
         </div>
     );
 };

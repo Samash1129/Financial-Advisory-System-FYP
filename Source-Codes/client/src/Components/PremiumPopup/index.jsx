@@ -14,11 +14,15 @@ const PremiumPopup = ({ onClose }) => {
         navigate('/payment');
     };
 
+    const handleClosePopupClick = () => {
+        onClose();
+    };
+
     return (
         <div className={styles.popupContainer}>
             <div className={styles.popupBackground} onClick={onClose}></div>
             <div className={styles.popupContent}>
-                <div className={styles.backButton1Container} onClick={() => window.history.back()}>
+                <div className={styles.backButton1Container} onClick={handleClosePopupClick}>
                     <img src={BackButton} alt="Back" className={styles.backArrow1} />
                     <span className={styles.backTitle1}>BACK</span>
                 </div>

@@ -86,12 +86,15 @@ body {
 .secondaryAction {
   text-align: left;
   margin-top: 10px;
+  display: flex;
 }
 
 .signUpLink {
   color: #3692ff;
   text-decoration: none;
   text-align: left;
+  margin: 0 0 0 5px;
+  cursor: pointer;
 }
 
 .errorMessage {

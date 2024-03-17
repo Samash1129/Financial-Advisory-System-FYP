@@ -33,6 +33,7 @@
   display: flex; /* Use flexbox to arrange children */
   flex-direction: column; /* Stack children vertically */
   align-items: flex-start; /* Align text to the start (left) */
+  height: 190px;
 }
 
 .upgradeBtn {

@@ -44,6 +44,10 @@ const SignIn = () => {
     navigate('/dashregular');
   };
 
+  const handleChangeToSignUp = () => {
+    navigate('/signup');
+  }
+
 
   return (
     <div className={styles.container}>
@@ -69,7 +73,8 @@ const SignIn = () => {
         
         <Button text="Log In"/>
         <div className={styles.secondaryAction}>
-          Need an account? <a href="/signup" className={styles.signUpLink}>Sign up</a>
+          Need an account? 
+          <p onClick={handleChangeToSignUp} className={styles.signUpLink}>Sign up</p>
         </div>
       </form>
     </div>
