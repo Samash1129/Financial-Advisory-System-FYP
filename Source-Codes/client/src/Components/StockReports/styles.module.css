@@ -1,0 +1,168 @@
+.srContainer {
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.srIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+.summaryContainer::-webkit-scrollbar {
+  width: 4.5px;
+}
+
+.summaryContainer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.summaryContainer::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.summaryContainer {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+  height: auto;
+  overflow-y: auto;
+  height: fit-content; /* Fixed height for container */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  margin-right: 35px;
+  width: fit-content;
+}
+
+.summaryIcon {
+  width: 23px; /* Adjust the width of the icon */
+  height: 23px; /* Adjust the height of the icon */
+  margin-left: 11px;
+  margin-top: 15px;
+  margin-right: 11px;
+}
+
+.summaryParagraph {
+  font-size: 12px; /* Adjust the font size of the paragraph */
+  color: #ffffff; /* Adjust the color of the paragraph text */
+  color: #fff;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.46px;
+}
+
+.button {
+  font-family: "Outfit", sans-serif;
+  background-color: #3692ff;
+  padding: 7px 32px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0 5px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0073ff;
+}
+
+.button:active {
+  background-color: #0073ff;
+}
+
+.overallContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.titleContainer {
+  display: flex;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Outfit;
+  font-style: normal;
+  line-height: normal;
+  width: fit-content;
+}
+
+.loader {
+  border: 3.5px solid rgba(255, 255, 255, 0.3);
+  border-top: 3.5px solid #ffffff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 1.5s linear infinite;
+  margin-bottom: -2px;
+  margin-left: 90px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.srHeader {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items horizontally in the center */
+  padding: 4px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+}
+
+.companyTitle {
+  color: #80f5a7;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.mainTitle {
+  margin-right: 2px; /* Add a margin between the main-title and company-title */
+}

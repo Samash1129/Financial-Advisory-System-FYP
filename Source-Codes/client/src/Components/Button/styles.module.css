@@ -1,0 +1,22 @@
+.customStaticbutton {
+  font-family: "Outfit", sans-serif;
+  background-color: #3692ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.customStaticbutton:hover {
+  background-color: #0073ff;
+}
+
+.customStaticbutton:active {
+  background-color: #0073ff;
+}

@@ -1,0 +1,72 @@
+.dropdownContainer {
+  position: relative;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+}
+
+.dropdownHeader {
+  padding: 10px 20px;
+  background-color: #f3f3f3;
+  border: 0px solid;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 20px;
+  color: #bbbbbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  color: #000;
+  margin-left: 10px;
+}
+
+.dropdownListContainer {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdownList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  border: 0px solid;
+  border-radius: 10px;
+  margin-top: 1.5%;
+  font-weight: 300;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.dropdownListItem {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdownListItem:hover {
+  background-color: #3692ff;
+  color: white;
+}
+
+.dropdownList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.dropdownList::-webkit-scrollbar-track {
+  background: #f3f3f3; /* Track color */
+}
+
+.dropdownList::-webkit-scrollbar-thumb {
+  background: #3692ff; /* Thumb color */
+  border-radius: 15px; /* Border radius of the thumb */
+}

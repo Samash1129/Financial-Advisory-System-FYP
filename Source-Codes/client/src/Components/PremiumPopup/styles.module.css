@@ -1,0 +1,135 @@
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.popupContent {
+  position: relative;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1001;
+  width: fit-content;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popupContainer {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.backButton1Container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backArrow1 {
+  width: 14px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.backTitle1 {
+  font-size: 14px;
+  font-weight: 300;
+  color: #3692ff;
+}
+
+.popupMainContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  padding: 10px;
+  color: #000;
+}
+
+.popupVerticalLine1 {
+  height: 140px;
+  width: 2px;
+  background-color: #3692ff;
+  margin-left: -1%;
+  border-radius: 20px;
+}
+
+.popupVerticalLine2 {
+  height: 140px;
+  width: 2px;
+  background-color: #3692ff;
+  margin-right: 4%;
+  border-radius: 20px;
+}
+
+.elevyChatLogo {
+  width: 280px;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.popupActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -4%;
+  margin-left: -8px;
+}
+
+.startingPrice {
+  font-size: 17px;
+  color: #333;
+}
+
+.upgradeButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 7px;
+  color: #fff;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #3692ff;
+  width: max-content;
+  margin-top: -4%;
+}
+
+.upgradeButton:hover {
+  background-color: #0073ff;
+}
+
+.popupMainContent h2 {
+  color: #000;
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  margin-right: 0%;
+  width: 30%;
+}

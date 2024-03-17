@@ -1,0 +1,37 @@
+.navBar {
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.backButtonContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backArrow {
+  width: 12px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.backTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3692ff;
+}
+
+.titleContainer h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+  color: #000000;
+}
