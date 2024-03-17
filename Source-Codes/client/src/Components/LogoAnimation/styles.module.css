@@ -1,0 +1,30 @@
+.logoAnimationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.logoSmall,
+.logoStretch {
+  transition: opacity 0.3s ease;
+  position: absolute;
+  width: 200px;
+  height: auto;
+}
+
+.logoStretch {
+  opacity: 1;
+  width: 530px;
+  height: 1000px;
+  position: absolute;
+}
+
+.logoAnimationContainer:hover .logoStretch {
+  opacity: 1;
+}
+
+.logoAnimationContainer:hover .logoSmall {
+  opacity: 0;
+}

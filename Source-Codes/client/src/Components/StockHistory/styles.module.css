@@ -1,0 +1,124 @@
+.shSearchContainer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Outfit", sans-serif;
+  font-size: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.shSearchResults {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  overflow-y: auto;
+  height: 150px; /* Fixed height for container */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.shSearchResults li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.shSearchResults li:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.shIcon {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+}
+
+.shItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.shSymbol {
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: -3px;
+}
+
+.shName {
+  font-size: 1.5em;
+  color: #f0f0f0;
+}
+
+.shDate {
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #ffffff;
+  padding-right: 8px;
+}
+
+.shInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.shSearchIcon {
+  position: absolute;
+  left: 10px;
+  width: 21px;
+  height: 21px;
+  top: 8px;
+}
+
+.shSearchResults li:hover {
+  background: #3692ff;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.sRecent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sRecentIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.sRecentTitle {
+  font-size: 2.2em;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.shSearchResults::-webkit-scrollbar {
+  width: 4.5px;
+}
+
+.shSearchResults::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.shSearchResults::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}

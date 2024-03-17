@@ -1,0 +1,468 @@
+FORMAT: 1A
+HOST: https://elev8.ai.apiblueprint.org/
+
+# elev8.ai - APIs
+
+This Document contains all the APIs that will be used in the development of Elev8.ai
+
+## Auth [/]
+
+### SIGN_IN [POST/signin]
+
++ Request (application/json)
+        
+            {
+                "username": "sam",
+                "password": "abc123"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "message": "User Login Success",
+                "token": "xyz"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "Wrong Username or Password"
+            }
+        
+
+### SIGN_UP [POST/signup]
+
++ Request (application/json)
+
+            {
+                "username": "sam",
+                "email": "sam@test.com",
+                "password": "abc123"
+            }
+        
++ Response 200 (application/json)
+
+            {
+                "message": "User Created Successfully",
+                "token": "xyz"
+            }
+
+### FORGOT_PASSWORD [POST/forgotpassword]
+
++ Request (application/json)
+
+            {
+                "email": "sam@test.com"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "message": "OTP Generated and Sent
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "Invalid Email"
+            }
+            
+### VALIDATE_OTP [POST/validateotp]
+
++ Request (application/json)
+
+            {
+                "otp": "85fds"
+            }
+            
++ Response 200 (application/json)   
+
+            {
+                "message": "OTP Validated"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "Incorrect OTP"
+            }
+
+### CHANGE_PASSWORD [PATCH/changepassword]
+
++ Request (application/json)
+        
+            {
+                "password": "abc123"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "message": "Password Updated"
+            }
+            
+### LOG_OUT [POST/logout]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
++ Response 200 (application/json)
+
+            {
+                "message": "User Logged Out
+            }
+
++ Response 401 (application/json)
+
+            {
+                "message": "User Already Logged Out"
+            }
+    
+    
+
+## User [/user]
+
+### ADD_PREFERENCE [POST/preference]
+
++ Request (application/json)
+
+    + Headers
+    
+            accessToken: token
+
+    + Body
+    
+            {
+                "investmentGoals": "Long Term",
+                "riskTolerence": "Low",
+                "amountToInvest": 25000,
+                "preferedIndustries": "Banking",
+                "stockType": "Dividend"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "message": "Preference Added"
+            }
+            
++ Response 401 (applicaiton/json)
+            
+            {
+                "message": "User Unathorized"
+            }
+
+
+### UPDATE_PREFERENCE [PATCH/updatepreference]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
+    + Body
+    
+            {
+                "investmentGoals": "Long Term",
+                "riskTolerence": "Low",
+                "amountToInvest": 25000,
+                "preferedIndustries": "Banking",
+                "stockType": "Dividend"
+            }
+
++ Response 200 (application/json)
+
+            {
+                "message": "Preference Updated"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+            
+            
+### UPDATE_PROFILE [PATCH/updateprofile]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
+    + Body
+    
+            {
+                "username": "sam",
+                "email": "sam@test.com",
+                "password": "abc123"
+            }
+            
++ Response 200 (application/json)
+
+            {
+                "message": "Profile Updated"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": " User Unathorized"
+            }
+            
+            
+### SEARCH_STOCK [GET/getstocks]
+
++ Request (application/json)
+    
+    + Headers
+        
+            accessToken: token
+            
+    + Body
+    
+            {
+                "stockName": "Meezan Bank Ltd"
+            }
+            
++ Response 200 (application/json)
+
+            {   
+                "message": "Stock Selected",
+                "report": "abc...xyz"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+            
+            
+### RECOMMENDED_STOCKS [GET/getrecommendedstocks]
+    
++ Request (application/json)
+
+    + Headers
+    
+            accessToken: token
+            
++ Response 200 (application/json)
+
+        [
+            {
+                "tickerSymbol": "MEZN",
+                "securityName": "Meezan Bank Ltd",
+                "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+            },
+            {
+                "tickerSymbol": "BAHL",
+                "securityName": "Bank Al Habib Ltd",
+                "stockPrice": 205 <!-- Maybe Kuch aur ho -->
+            },
+            {
+                "tickerSymbol": "ABL",
+                "securityName": "Allied Bank Ltd",
+                "stockPrice": 200 <!-- Maybe Kuch aur ho -->
+            },
+            {
+                "tickerSymbol": "AKBL",
+                "securityName": "Askari Bank Ltd",
+                "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+            },
+            {
+                "tickerSymbol": "HBL",
+                "securityName": "Habib Bank Ltd",
+                "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+            }
+        ]
+        
++ Response 401 (application/json)
+
+        {
+            "message": "User Unathorized"
+        }
+        
+        
+### RECENTLY_VIEWED_STOCKS [GET/recentstocks]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
++ Response 200 (application/json)
+
+            [
+                {
+                    "tickerSymbol": "MEZN",
+                    "securityName": "Meezan Bank Ltd",
+                    "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+                },
+                {
+                    "tickerSymbol": "MEZN",
+                    "securityName": "Meezan Bank Ltd",
+                    "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+                },
+                {
+                    "tickerSymbol": "MEZN",
+                    "securityName": "Meezan Bank Ltd",
+                    "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+                },
+                {
+                    "tickerSymbol": "MEZN",
+                    "securityName": "Meezan Bank Ltd",
+                    "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+                },
+                {
+                    "tickerSymbol": "MEZN",
+                    "securityName": "Meezan Bank Ltd",
+                    "stockPrice": 215 <!-- Maybe Kuch aur ho -->
+                }
+            ]
+        
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+        
+        
+### GENERATE_REPORT [GET/generatereport]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
++ Response 200 (application/json)
+
+            {
+                "message": "Report Generated",
+                "report": "abc....xyz"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+            
+            
+### PURCHASE_PREMIUM [POST/purchasepremium]
+
++ Request (application/json)
+
+    + Headers
+        
+            accessToken: token
+            
+    + Body
+    
+            {
+                "creditCardNumber": 186165,
+                "expiryDate": "04/27",
+                "cvv/cvc": 123,
+                "cardHolderName": "sam",
+                "billingAddress": {
+                    "state": "Sindh"
+                    "postalCode": 12345,
+                    "country": "Pakistan"
+                }
+            }
+            
++ Response 200 (application/json)
+
+            {
+                "message": "Package Purhcased",
+                "amount": 50.00,
+                "time": "2024-03-17T12:00:00Z"
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+
+
+
+## ADMIN [/admin]
+
+### GET_ALL_USERS [GET/getallusers]
+
++ Request (application/json)
+
+    + Headers
+            
+            accessToken: token
+            
++ Response 200 (application/json)
+
+            [
+                {
+                    "username": "sam",
+                    "role": "User" <!-- Also ADMIN -->
+                },
+                {
+                    "username": "sam",
+                    "role": "User" <!-- Also ADMIN -->
+                },
+                {
+                    "username": "sam",
+                    "role": "User" <!-- Also ADMIN -->
+                },
+                {
+                    "username": "sam",
+                    "role": "User" <!-- Also ADMIN -->
+                },
+                {
+                    "username": "sam",
+                    "role": "User" <!-- Also ADMIN -->
+                }
+            ]
+
+### GET_SELECTED_USER [POST/getuser/{id}]
+
++ Request (application/json)
+
+    + Headers
+        
+            accessToken: token
+
++ Response 200 (application/json)
+
+            {
+                "username": "sam",
+                "email": "sam@test.com",
+                "password": "fhdsoghilahgaeakr238rf",
+                "role": "User",
+                "isPremium": True
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "message": "User Unathorized"
+            }
+            
++ Response 402 (application/json)
+
+            {
+                "message": "User Not Found"
+            }
+
+
+
+
+
+
+
+
