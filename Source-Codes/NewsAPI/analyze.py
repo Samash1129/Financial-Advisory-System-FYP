@@ -2,6 +2,9 @@ import os
 import json
 from textblob import TextBlob
 import pymongo
+from dotenv import load_dotenv
+
+load_dotenv()
 
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
@@ -10,7 +13,7 @@ with open("queries.json", "r") as queries_file:
 
 def save2db(sentiment_scores):
     # Connect to MongoDB
-    client = pymongo.MongoClient("mongodb+srv://dev:CITsI6uEkchPWJmV@elev8.rzawmjq.mongodb.net/")
+    client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
     collection = db["sentiment"]
 

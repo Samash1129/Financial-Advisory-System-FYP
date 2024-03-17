@@ -4,6 +4,9 @@ from datetime import datetime, timedelta
 import time
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
@@ -12,7 +15,7 @@ with open("queries.json", "r") as queries_file:
 
 def save_to_db(query, data):
     # Connect to MongoDB
-    client = pymongo.MongoClient("mongodb+srv://dev:CITsI6uEkchPWJmV@elev8.rzawmjq.mongodb.net/")
+    client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
     collection = db["newsdata"]
 
@@ -66,7 +69,7 @@ def fetch_news(query, page):
     }
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "f6e7cad8ccmsh00599ca6d9b6973p18b55ajsn6f43756ea6fc",
+        "X-RapidAPI-Key": os.getenv("RAPID_API_KEY"),
         "X-RapidAPI-Host": "newsnow.p.rapidapi.com"
     }
 
@@ -107,6 +110,8 @@ def fetch_news_for_all_queries(queries):
 
 
 fetch_news_for_all_queries(queries)
+# print(os.getenv("RAPID_API_KEY"))
+# print(os.getenv("MONGO_DB_KEY"))
 
 #query = "Askari Bank PSX"
 #news2 = fetch_news(query, 1)
