@@ -7,7 +7,8 @@ import backgroundImage from '../../Assets/Images/background.png';
 import correctIcon from '../../Assets/SVGs/correct.svg';
 import errorIcon from '../../Assets/SVGs/error.svg';
 import LoadingSpinner from '../../Components/LoadingAnimation';
-
+import axios from 'axios';
+import { baseurl } from '../../constants';
 
 const SignUp = () => {
 
@@ -63,12 +64,56 @@ const SignUp = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add submission logic here
-    // At the moment will navigate to preferrence then premium wala page..
-    navigate('/preferences');
+    try {
+      // Using Fetch
+      // const response = await fetch('https://private-61242-elev8aiapis.apiary-mock.com/signup', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     email,
+      //     password
+      //   })
+      // });
+
+      // if (response.ok) {
+      //   const result = await response.json();
+      //   console.log(result);
+      //   navigate('/dashregular');
+      //   setName('');
+      //   setEmail('');
+      //   setPassword('');
+      // } else {
+      //   console.error(`Failed with status ${response.status}`);
+      // }
+
+      // Using Axios
+      const response = await axios.post(baseurl + '/signup', {
+        name,
+        email,
+        password
+      });
+
+      if (response.status === 200) {
+        console.log(response.data);
+        // Add submission logic here
+        // At the moment will navigate to preferrence then premium wala page..
+        navigate('/preferences');
+      } else {
+        console.error(`Failed with status ${response.status}`);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
+
+  const handleBackButtonClick = () => {
+    navigate('/');
+  }
 
   const handleChangeToSignIn = () => {
     navigate('/signin');
@@ -84,7 +129,7 @@ const SignUp = () => {
       <div className={styles.rightContainer}>
         <LoadingSpinner loadingText="Loading...">
           <div className={styles.signUpContainer}>
-            <NavBar title="Sign Up" />
+            <NavBar title="Sign Up" handleBackButtonClick={handleBackButtonClick} />
             <form className={styles.signUpForm} onSubmit={handleSubmit}>
               <label htmlFor="name">NAME</label>
               <input type="text" id="name" placeholder="Enter your name" value={name} onChange={handleNameChange} />
@@ -106,7 +151,7 @@ const SignUp = () => {
             <Button text="Sign Up" onClick={handleSubmit} />
 
             <div className={styles.secondaryAction}>
-              Have an account? 
+              Have an account?
               <p onClick={handleChangeToSignIn} className={styles.signInLink}>Sign In</p>
             </div>
 
