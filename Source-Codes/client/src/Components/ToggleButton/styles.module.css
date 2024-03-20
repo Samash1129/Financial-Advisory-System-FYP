@@ -1,11 +1,11 @@
 .customButton {
   font-family: "Outfit", sans-serif;
-  background-color: #c9c9c9;
+  background-color: #f3f3f3;
   color: #000;
-  padding: 15px 10px;
+  padding: 11px 10px;
   border-radius: 8px;
   border: 0px solid;
-  font-size: 125%;
+  font-size: 110%;
   font-weight: 300;
   cursor: pointer;
   outline: none;
@@ -18,10 +18,10 @@
 .customButton.selected {
   background-color: #3692ff;
   color: white;
-  padding: 15px 10px;
+  padding: 11px 10px;
   border-radius: 8px;
   border: 0px solid;
-  font-size: 125%;
+  font-size: 110%;
   font-weight: 300;
   cursor: pointer;
   outline: none;

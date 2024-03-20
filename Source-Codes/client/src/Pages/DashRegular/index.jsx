@@ -6,13 +6,14 @@ import SearchBar from '../../Components/SearchBar';
 import StockReports from '../../Components/StockReports';
 import Stocks from '../../Components/Stocks';
 import PremiumPopup from '../../Components/PremiumPopup';
+import StockHistory from '../../Components/StockHistory';
 
 const DashRegular = ({ filteredData }) => {
 
     return (
         <div className={styles.container}>
             <div className={styles.leftContainer}>
-                <Slider />
+            <Slider pageType="regular" />
             </div>
 
             <div className={styles.rightContainer}>
@@ -23,10 +24,13 @@ const DashRegular = ({ filteredData }) => {
 
                     <div className={styles.col1}>
                         <div className={styles.searchBarContainer}>
-                            <SearchBar placeholder="Search your desired stocks" />
+                        <SearchBar placeholder="Search for your desired stocks" data={filteredData} />
                         </div>
                         <div className={styles.stocksContainer}>
                             <Stocks filteredData={filteredData} />
+                        </div>
+                        <div className={styles.stocksHistoryContainer}>
+                            <StockHistory filteredData={filteredData} />
                         </div>
                     </div>
 

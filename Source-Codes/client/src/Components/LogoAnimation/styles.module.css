@@ -1,30 +1,36 @@
-.logoAnimationContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
+.logo-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    background-color: linear-gradient(141deg, #001D57 0%, #000D26 100%);  }
+  
+  .diagonal-stretch1 {
+    animation: increaseHeight1 7s ease-in-out infinite alternate;
+  }
+  
+  @keyframes increaseHeight1 {
+    0% {
+      height: 170.129px; /* Original height */
+    }
+    100% {
+      height: 713.564px;; /* Doubled height */
+    }
+  }
+  
+  .diagonal-stretch2 {
+    animation: increaseHeight2 7s ease-in-out infinite alternate;
+  }
+  
+  @keyframes increaseHeight2 {
+    0% {
+      height: 170.129; /* Original height */
+    }
+    100% {
+      height: 734.835px; /* New height */
+      y: -544.793px;
+    }
+  }
+  
 
-.logoSmall,
-.logoStretch {
-  transition: opacity 0.3s ease;
-  position: absolute;
-  width: 200px;
-  height: auto;
-}
-
-.logoStretch {
-  opacity: 1;
-  width: 530px;
-  height: 1000px;
-  position: absolute;
-}
-
-.logoAnimationContainer:hover .logoStretch {
-  opacity: 1;
-}
-
-.logoAnimationContainer:hover .logoSmall {
-  opacity: 0;
-}

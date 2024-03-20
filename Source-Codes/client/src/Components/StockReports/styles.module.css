@@ -8,7 +8,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 70vh;
+  height: 562px;
 }
 
 .srIcon {
@@ -41,7 +41,7 @@
   margin: 0;
   height: auto;
   overflow-y: auto;
-  height: fit-content; /* Fixed height for container */
+  height: 560px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0px 0px 8px 8px;
@@ -63,8 +63,8 @@
 }
 
 .summaryParagraph {
-  font-size: 12px; /* Adjust the font size of the paragraph */
-  color: #ffffff; /* Adjust the color of the paragraph text */
+  font-size: 14px;
+  color: #ffffff;
   color: #fff;
   font-family: Outfit;
   font-style: normal;
@@ -76,14 +76,15 @@
 .button {
   font-family: "Outfit", sans-serif;
   background-color: #3692ff;
-  padding: 7px 32px;
-  border-radius: 8px;
+  padding: 9px 32px;
+  border-radius: 5px;
   border: none;
   color: white;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 5px;
   outline: none;
   transition: background-color 0.3s;
 }
@@ -110,18 +111,18 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 14px;
+  margin-top: 8px;
   align-items: center;
-  width: 100%;
+  width: 100.8%;
   position: relative;
 }
 
 .titleContainer {
   display: flex;
-  font-size: 1em;
+  font-size: 1.1em;
   color: rgba(255, 255, 255, 0.9);
   font-family: Outfit;
-  font-style: normal;
+  font-weight: 500;
   line-height: normal;
   width: fit-content;
 }
@@ -134,7 +135,7 @@
   height: 15px;
   animation: spin 1.5s linear infinite;
   margin-bottom: -2px;
-  margin-left: 90px;
+  margin-left: 370px;
 }
 
 @keyframes spin {

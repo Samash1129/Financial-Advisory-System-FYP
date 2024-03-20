@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
 import backgroundImage from '../../Assets/Images/background.png';
+import LogoAnimation from '../../Components/LogoAnimation';
 
 const ProfileSettings = () => {
   const [name, setName] = useState('');
@@ -59,6 +60,9 @@ const ProfileSettings = () => {
     <div className={styles.container}>
 
     <div className={styles.leftContainer}>
+    <div className={styles.logo}>
+      <LogoAnimation />
+      </div>
     <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
     </div>    
 

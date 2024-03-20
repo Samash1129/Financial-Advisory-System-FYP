@@ -32,7 +32,7 @@ const PremiumPopup = ({ onClose }) => {
                     <img src={ElevyChatLogo} alt="ElevyChat" className={styles.elevyChatLogo} />
                     <div className={styles.popupVerticalLine2}></div>
                     <div className={styles.popupActions}>
-                        <p className={styles.startingPrice}>Starting at $25</p>
+                        <p className={styles.startingPrice}>Rs.2000/month</p>
                         <button className={styles.upgradeButton} onClick={handleUpgradeClick}>Upgrade to Premium</button>
                     </div>
                 </div>

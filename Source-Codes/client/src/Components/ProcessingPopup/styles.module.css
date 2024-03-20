@@ -63,20 +63,30 @@
 
 .processingDoneContainer {
   display: flex;
-  margin-top: 30px;
+  margin-top: -10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .processingDoneText {
-  margin-top: 20px;
+  margin-top: -40px;
   font-family: "Outfit";
   font-size: 25px;
   color: #000;
 }
 
-.doneIcon {
-  width: 80px;
-  height: 80px;
+.processingFailedContainer {
+  display: flex;
+  margin-top: 35px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.processingFailedText {
+  margin-top: 6px;
+  font-family: "Outfit";
+  font-size: 25px;
+  color: #000;
 }

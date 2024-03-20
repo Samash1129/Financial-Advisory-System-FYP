@@ -10,7 +10,7 @@
   border: 0px solid;
   border-radius: 6px;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   color: #bbbbbb;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   border-radius: 10px;
   margin-top: 1.5%;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -58,15 +58,3 @@
   color: white;
 }
 
-.dropdownList::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-}
-
-.dropdownList::-webkit-scrollbar-track {
-  background: #f3f3f3; /* Track color */
-}
-
-.dropdownList::-webkit-scrollbar-thumb {
-  background: #3692ff; /* Thumb color */
-  border-radius: 15px; /* Border radius of the thumb */
-}

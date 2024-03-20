@@ -5,6 +5,8 @@ import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
 import backgroundImage from '../../Assets/Images/background.png';
 import LoadingSpinner from '../../Components/LoadingAnimation';
+import LogoAnimation from '../../Components/LogoAnimation';
+
 
 const SignIn = () => {
 
@@ -53,6 +55,9 @@ const SignIn = () => {
     <div className={styles.container}>
 
     <div className={styles.leftContainer}>
+    <div className={styles.logo}>
+      <LogoAnimation />
+      </div>
     <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
     </div>    
 

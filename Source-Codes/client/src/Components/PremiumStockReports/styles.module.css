@@ -9,6 +9,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  height: 562px;
 }
 
 .psrIcon {
@@ -40,7 +41,7 @@
   margin: 0;
   height: auto;
   overflow-y: auto;
-  height: 400px;
+  height: 560px;
   width: fit-content;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0px 0px 8px 8px;
@@ -70,7 +71,7 @@
 }
 
 .psrSummaryParagraph {
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
   color: #fff;
   font-family: Outfit;
@@ -92,10 +93,10 @@
 
 .psrTitleContainer {
   display: flex;
-  font-size: 1em;
+  font-size: 1.1em;
   color: rgba(255, 255, 255, 0.9);
   font-family: Outfit;
-  font-style: normal;
+  font-weight: 500;
   line-height: normal;
   width: fit-content;
 }
@@ -108,7 +109,7 @@
   height: 15px;
   animation: spin 1.5s linear infinite;
   margin-bottom: -2px;
-  margin-left: 180px;
+  margin-left: 435px;
 }
 
 @keyframes spin {
@@ -148,7 +149,7 @@
 .psrInputContainer {
   position: relative;
   top: 12px;
-  width: 100%;
+  width: 99%;
   align-items: center;
   justify-content: center;
 }
@@ -156,9 +157,8 @@
 .psrInputField {
   padding: 10px 0px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   width: 100%;
-  max-width: 98%;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.1);
   justify-content: center;
@@ -189,12 +189,12 @@
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  padding: 6.5px;
+  padding: 6px;
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
   top: 52.5%;
-  right: 0px;
+  right: -8px;
 }
 
 .psrInputButton:hover {
@@ -233,7 +233,7 @@
   color: #fff;
   text-align: center;
   font-family: Outfit;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   line-height: normal;
   justify-content: center;
@@ -253,8 +253,8 @@
   color: #fff;
   text-align: center;
   font-family: Outfit;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 400;
   line-height: normal;
   justify-content: center;
   align-items: center;

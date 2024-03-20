@@ -7,7 +7,7 @@ const LoadingSpinner = ({ children, loadingText }) => {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 600);
 
     return () => clearTimeout(loadingTimer);
   }, []);

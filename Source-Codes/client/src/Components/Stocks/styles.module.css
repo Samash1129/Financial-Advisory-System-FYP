@@ -1,6 +1,6 @@
 .ssearchContainer {
-  width: 100%;
-  max-width: 100%;
+  width: 99.6%;
+  height: 100%;
   margin: 0 auto;
   font-family: "Outfit", sans-serif;
   font-size: 8px;
@@ -81,6 +81,20 @@
 .ssearchResults li:hover {
   background: #3692ff;
   cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.premiumResults li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.premiumResults li:hover {
+  background: linear-gradient(91deg, #3692FF 52.09%, #7FF4A7 111.89%);
+  cursor: pointer;
 }
 
 .srecommended {

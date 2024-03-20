@@ -7,6 +7,7 @@ import backgroundImage from '../../Assets/Images/background.png';
 import correctIcon from '../../Assets/SVGs/correct.svg';
 import errorIcon from '../../Assets/SVGs/error.svg';
 import LoadingSpinner from '../../Components/LoadingAnimation';
+import LogoAnimation from '../../Components/LogoAnimation';
 
 
 const SignUp = () => {
@@ -78,6 +79,9 @@ const SignUp = () => {
     <div className={styles.container}>
 
       <div className={styles.leftContainer}>
+      <div className={styles.logo}>
+      <LogoAnimation />
+      </div>
         <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
       </div>
 
@@ -103,7 +107,9 @@ const SignUp = () => {
               {confirmPasswordError && <div className={styles.errorMessage}>{confirmPasswordError}</div>}
             </form>
 
+            <div className={styles.signupbutton}>
             <Button text="Sign Up" onClick={handleSubmit} />
+            </div>
 
             <div className={styles.secondaryAction}>
               Have an account? 

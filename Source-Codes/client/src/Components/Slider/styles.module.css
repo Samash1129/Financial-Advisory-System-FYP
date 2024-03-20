@@ -1,22 +1,25 @@
 .sliderContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  border-radius: 0px 17px 17px 0px;
+  justify-content: space-between;
+  border-radius: 17px;
   background: #3692ff;
   padding: 20px;
-  justify-content: space-between;
-  width: 100%;
+  width: fit-content; /* Takes the full width of the parent container */
+  height: 100%; /* Adjusted to take full height of its parent */
   font-family: "Outfit";
-  height: 100vh;
 }
 
 .welcomeText {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: normal;
   margin-right: 10px;
   text-align: left;
-  margin-bottom: 0;
+  margin-top: -40px;
+  margin-bottom: -5px;
 }
 
 .descriptionText {
@@ -25,7 +28,7 @@
   width: fit-content;
   font-size: 1.1rem;
   font-weight: 300;
-  margin-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 .textContainer {
@@ -44,8 +47,8 @@
   font-weight: 400;
   line-height: normal;
   margin-bottom: 0px;
-  width: 80%;
-  color: white; /* Set text color to white */
+  width: 100%;
+  color: white;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 5px;
@@ -56,7 +59,31 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.rechargeBtn {
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  padding: 13px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0px;
+  width: 100%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rechargeBtn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .profileBtn {
+  display: flex; /* Enable Flexbox layout */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
+  gap: 10px;
   color: white; /* Set text color to white */
   background-color: transparent;
   font-family: Outfit;
@@ -72,7 +99,11 @@
 }
 
 .logoutBtn {
-  color: white; /* Set text color to white */
+  display: flex; /* Enable Flexbox layout */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
+  gap: 10px;
+  color: white;
   background-color: transparent;
   font-family: Outfit;
   font-size: 17px;
@@ -94,11 +125,18 @@
 }
 
 .imageContainer {
-  width: 80%;
-  margin-top: -60px;
+  width: 20vh;
+  margin-top: -35px;
+  margin-left: -140px;
+}
+
+.sliderImage {
+  width: 320px;
+  height: auto;
+}
+
+.sliderImageOverlay {
   mix-blend-mode: overlay;
-  margin-left: 0px;
-  margin-bottom: -40px;
 }
 
 .buttonContent {
@@ -108,8 +146,8 @@
 }
 
 .icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .sliderButtonContainer {
@@ -118,21 +156,4 @@
   align-items: flex-start;
   width: 100%;
   margin-top: -10px;
-}
-
-/* Fade animation */
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.imageContainer img:nth-child(2) {
-  animation: fade 6s infinite;
 }

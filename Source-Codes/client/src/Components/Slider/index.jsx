@@ -1,59 +1,92 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './styles.module.css';
-import SliderImg from '../../Assets/SVGs/SliderImg.svg';
-import SliderImg2 from '../../Assets/SVGs/SliderImg2.svg';
-import SettingIcon from '../../Assets/SVGs/SettingIcon.svg';
-import LogoutIcon from '../../Assets/SVGs/LogoutIcon.svg';
-import PremiumPopup from '../PremiumPopup';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./styles.module.css";
+import SliderImg from "../../Assets/SVGs/SliderImg.svg";
+import SettingIcon from "../../Assets/SVGs/SettingIcon.svg";
+import LogoutIcon from "../../Assets/SVGs/LogoutIcon.svg";
+import PremiumPopup from "../PremiumPopup";
 
-const Slider = () => {
+const Slider = ({ pageType }) => {
+  const [showPremiumPopup, setShowPremiumPopup] = useState(false);
+  const navigate = useNavigate();
 
-    const [showPremiumPopup, setShowPremiumPopup] = useState(false);
-    const navigate = useNavigate();
-
-    const handleUpgradeClick = () => {
-        setShowPremiumPopup(true);
-    };
-
-    const handleClosePopup = () => {
-        setShowPremiumPopup(false);
-    };
-
-    const handleLogout = () => {
-        // Navigate to the /signin route
-        navigate('/signin');
-    };
-
-    const handleProfileClick = () => {
-        // Navigate to the /profilesettings route
-        navigate('/profilesettings');
+  const renderActionButton = () => {
+    if (pageType === "premium") {
+      return (
+        <button className={styles.rechargeBtn} onClick={handleUpgradeClick}>
+          Recharge Account
+        </button>
+      );
     }
-
+    // Default to showing the upgrade button if pageType is 'regular' or undefined
     return (
-        <div className={styles.sliderContainer}>
-            <div className={styles.imageContainer}>
-                <img src={SliderImg} alt="Slider" />
-            </div>
-            <div className={styles.textContainer}>
-                <h1 className={styles.welcomeText}>Welcome to elev8.ai!</h1>
-                <p className={styles.descriptionText}>Your New Best Friend for Smart and Friendly Investment Advice!</p>
-                <button className={styles.upgradeBtn} onClick={handleUpgradeClick}>Upgrade to Premium</button>
-            </div>
-            <div className={styles.sliderButtonContainer}>
-                <hr className={styles.divider} />
-                <button className={styles.profileBtn} type="button" onClick={handleProfileClick}>
-                    <img src={SettingIcon} alt="Profile Settings" className={styles.icon}/>
-                    <span>Profile Settings</span>
-                </button>
-                <button className={styles.logoutBtn} type="button" onClick={handleLogout}>
-                    <img src={LogoutIcon} alt="Logout" className={styles.icon} />
-                    <span>Logout</span>
-                </button>
-            </div>
-            {showPremiumPopup && <PremiumPopup onClose={handleClosePopup} />}
-        </div>
+      <button className={styles.upgradeBtn} onClick={handleUpgradeClick}>
+        Upgrade to Premium
+      </button>
     );
+  };
+
+  const handleUpgradeClick = () => {
+    setShowPremiumPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPremiumPopup(false);
+  };
+
+  const handleLogout = () => {
+    // Navigate to the /signin route
+    navigate("/signin");
+  };
+
+  const handleProfileClick = () => {
+    // Navigate to the /profilesettings route
+    navigate("/profilesettings");
+  };
+
+  return (
+    <div className={styles.sliderContainer}>
+      <div className={styles.imageContainer}>
+    <img
+      src={SliderImg}
+      alt="Slider"
+      className={`${styles.sliderImage} ${pageType !== "premium" ? styles.sliderImageOverlay : ''}`}
+    />
+  </div>
+
+      <div className={styles.textContainer}>
+        <h1 className={styles.welcomeText}>Welcome to elev8.ai!</h1>
+        <p className={styles.descriptionText}>
+          Your New Best Friend for Smart and Friendly Investment Advice!
+        </p>
+      </div>
+      <div className={styles.sliderButtonContainer}>
+        {renderActionButton()}
+        <hr className={styles.divider} />
+        <button
+          className={styles.profileBtn}
+          type="button"
+          onClick={handleProfileClick}
+        >
+          <img
+            src={SettingIcon}
+            alt="Profile Settings"
+            className={styles.icon}
+          />
+          <span>Profile Settings</span>
+        </button>
+        <button
+          className={styles.logoutBtn}
+          type="button"
+          onClick={handleLogout}
+        >
+          <img src={LogoutIcon} alt="Logout" className={styles.icon} />
+          <span>Logout</span>
+        </button>
+      </div>
+      {showPremiumPopup && <PremiumPopup onClose={handleClosePopup} />}
+    </div>
+  );
 };
 
 export default Slider;

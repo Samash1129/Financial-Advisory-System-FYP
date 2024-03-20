@@ -18,14 +18,14 @@ const Header = () => {
         <div className={styles.headerContainer}>
             <div className={styles.headerTitle}>My Dashboard</div>
             <div className={styles.headerIcons}>
-                <button className={styles.iconContainer} data-tooltip="More Information">
-                    <img src={info} alt="Info" className={styles.headerIcon} />
-                </button>
                 <button className={styles.iconContainer} data-tooltip="Edit Preferences" onClick={handlePreferencesClick}>
                     <img src={edit} alt="Edit" className={styles.headerIcon} />
                 </button>
-                <button className={styles.iconContainer} data-tooltip="Reload Page">
+                <button className={styles.iconContainer} data-tooltip="Download PDF">
                     <img src={reload} alt="Reload" className={styles.headerIcon} />
+                </button>
+                <button className={styles.iconContainer} data-tooltip="More Info">
+                    <img src={info} alt="Info" className={styles.headerIcon} />
                 </button>
             </div>
         </div>

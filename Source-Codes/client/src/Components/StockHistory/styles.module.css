@@ -1,11 +1,12 @@
 .shSearchContainer {
-  width: 100%;
-  max-width: 100%;
+  width: 99.6%;
+  height: 100%;
   margin: 0 auto;
   font-family: "Outfit", sans-serif;
   font-size: 8px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
+
 }
 
 .shSearchResults {
@@ -13,7 +14,7 @@
   margin: 0;
   height: auto;
   overflow-y: auto;
-  height: 150px; /* Fixed height for container */
+  height: 210px; /* Fixed height for container */
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0px 0px 8px 8px;
@@ -23,9 +24,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px;
+  padding: 6px;
   padding-left: 10px;
-  position: relative;
 }
 
 .shSearchResults li:last-child {
@@ -84,6 +84,11 @@
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+.shpremiumResults li:hover {
+  background: linear-gradient(91deg, #3692ff 52.09%, #7ff4a7 111.89%);
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
 .sRecent {
   display: flex;
   align-items: center;
@@ -109,16 +114,16 @@
 }
 
 .shSearchResults::-webkit-scrollbar {
-  width: 4.5px;
+  width: 4px;
 }
 
 .shSearchResults::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
-  padding: 4px;
+  padding: 5px;
 }
 
 .shSearchResults::-webkit-scrollbar-thumb {
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 4px;
 }

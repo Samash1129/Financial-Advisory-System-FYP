@@ -1,4 +1,5 @@
 import { Route, Routes, Navigate } from "react-router-dom";
+import LandingPage from "./Pages/LandingPage/LandingPage";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
@@ -12,15 +13,16 @@ function App() {
 
   const filteredData = [
     { name: 'Meezan Bank Ltd', symbol: 'MEZN', price: '797,022', category: 'Banking' },
-    { name: 'Amazon.com, Inc', symbol: 'AMZN', price: '37,020', category: 'Technology' },
-    { name: 'Pakistan Stock Exchange', symbol: 'PSX', price: '48,354', category: 'Stocks' },
+    { name: 'Silk Bank Ltd', symbol: 'SILK', price: '37,020', category: 'Banking' },
+    { name: 'Askari Bank Ltd', symbol: 'AKBL', price: '48,354', category: 'Banking' },
     { name: 'Habib Bank Limited', symbol: 'HBL', price: '797,022', category: 'Banking' },
-    { name: 'Tesla', symbol: 'TSL', price: '37,020', category: 'Technology' },
+    { name: 'Dubai Islamic Bank', symbol: 'DIB', price: '37,020', category: 'Banking' },
   ];
   
   return (
     <Routes>
-      <Route path="/" element={<GetStarted />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/GetStarted" element={<GetStarted />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/preferences" element={<Preferences />} />
@@ -29,7 +31,7 @@ function App() {
       <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
       <Route path="/payment" element={<Payment />} />
 
-      {/* <Route path="/" element={<Navigate to="/signin" />} /> */}
+      {/* <Route path="/" element={<Navigate to="/GetStarted" />} /> */}
     </Routes>
     
   );

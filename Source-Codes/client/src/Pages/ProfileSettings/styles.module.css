@@ -13,9 +13,14 @@ body {
 }
 
 .leftContainer {
-  width: 64%;
+  width: 50%;
   margin: 0;
   padding: 0;
+}
+.logo 
+{
+  display: flex;
+  justify-content: center;
 }
 
 .coverImage {
@@ -25,7 +30,7 @@ body {
 }
 
 .rightContainer {
-  width: 36%;
+  width: 50%;
   margin: 0;
 }
 
@@ -57,7 +62,7 @@ body {
   border-radius: 8px;
   font-family: "Outfit", sans-serif;
   font-size: 18px;
-  background-color: rgba(194, 194, 194, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .profileSettingsForm input[type="text"]:focus,
@@ -107,7 +112,7 @@ body {
   border-radius: 8px;
   font-family: "Outfit", sans-serif;
   font-size: 18px;
-  background-color: rgba(194, 194, 194, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .editPreferences {

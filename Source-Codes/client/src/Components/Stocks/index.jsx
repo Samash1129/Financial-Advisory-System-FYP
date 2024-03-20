@@ -18,14 +18,14 @@ const getIconPath = (category) => {
     }
 };
 
-const Stocks = ({ filteredData }) => {
+const Stocks = ({ filteredData, pageType }) => {
     return (
         <div className={styles.ssearchContainer}>
             <div className={styles.srecommended}>
                 <img src={riseicon} alt="Recommended" className={styles.srecommendedIcon} />
                 <div className={styles.srecommendedTitle}>Recommended Stocks</div>
             </div>
-            <ul className={styles.ssearchResults}>
+            <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}>
                 {filteredData.map((item, index) => ( // Add index parameter
                     <li key={item.symbol} className={styles.ssearchItem}>
                         {/* Add span for numbering */}

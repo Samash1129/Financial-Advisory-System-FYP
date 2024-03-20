@@ -18,15 +18,14 @@ const getIconPath = (category) => {
     }
 };
 
-const StockHistory = ({ filteredData }) => {
+const StockHistory = ({ filteredData, pageType }) => {
     return (
         <div className={styles.shSearchContainer}>
             <div className={styles.sRecent}>
                 <img src={History} alt="Recommended" className={styles.sRecentIcon} />
                 <div className={styles.sRecentTitle}>Recently Viewed</div>
             </div>
-            <ul className={`${styles.shSearchResults} ${styles.scrollbar}`}>
-
+            <ul className={`${styles.shSearchResults} ${pageType === 'premium' ? styles.shpremiumResults : ''} ${styles.scrollbar}`}>
                 {filteredData.map((item) => (
                     <li key={item.symbol} className={styles.shSearchItem}>
                         <img

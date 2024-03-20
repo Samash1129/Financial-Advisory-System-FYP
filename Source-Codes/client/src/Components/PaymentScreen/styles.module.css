@@ -2,20 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
   gap: 40px; /* Adjust as necessary */
 }
 
 .leftPanel {
   width: 40%;
-  padding: 20px;
 }
 
 .leftPanel h1 {
   width: 50%;
   color: #000;
   font-family: Outfit;
-  font-size: 25px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -24,12 +22,10 @@
 
 .rightPanel {
   width: 55%; /* Adjust as necessary */
-  padding: 0px;
-  height: 100vh;
+  padding: 15px;
   border: 2px solid rgba(187, 187, 187, 0.3);
   border-radius: 8px;
-  background: #ffeded;
-  overflow-y: scroll;
+  background: #fff;
 }
 
 .priceInfo {
@@ -37,19 +33,17 @@
   align-items: baseline;
   color: #000;
   font-family: Outfit;
-  font-size: 20px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
 .price {
-  font-size: 30px; /* Adjust as necessary */
+  font-size: 60px; /* Adjust as necessary */
 }
 
 .perMonth {
   margin-left: 8px; /* Adjust as necessary */
-  font-size: 22px; /* Adjust as necessary */
+  font-size: 20px; /* Adjust as necessary */
   color: #3692ff;
   font-family: Outfit;
   font-style: normal;
@@ -61,7 +55,7 @@
   margin-top: 20px;
   color: #000;
   font-family: Outfit;
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -79,7 +73,6 @@
 
 .inputGroup {
   margin-bottom: 10px;
-  margin-right: 20px;
 }
 
 .inputGroup label {
@@ -103,11 +96,12 @@
   margin-bottom: 0.5%;
   color: rgba(0, 0, 0, 0.7);
   font-family: Outfit;
-  font-size: 20px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   outline: none;
+  width: calc(100% - 20px);
 }
 
 .inputGroup input::placeholder {
@@ -117,7 +111,7 @@
   margin-top: 1.5%;
   color: #bbb;
   font-family: Outfit;
-  font-size: 20px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -138,8 +132,7 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 70%;
-  margin-top: 3%;
-  margin-bottom: 10%;
+  margin-top: 2%;
 }
 
 .subscribeButton:hover {
@@ -168,7 +161,7 @@
 }
 
 .divider {
-  height: 1px; /* Or whatever height you want */
+  height: 1px;
   border-radius: 20px;
   width: 100%;
   border: 0px;
@@ -177,7 +170,7 @@
 }
 
 .verticalLine1 {
-  height: 30px;
+  height: 28px;
   width: 3px;
   background-color: #3692ff;
   margin-left: 2px;
@@ -188,7 +181,34 @@
 
 .errorMessage1 {
   color: red;
-  font-size: 1.2rem;
+  font-size: 15px;
   margin-bottom: 10px;
   font-family: Outfit;
+}
+
+.cardDetailsRow {
+  display: flex;
+  gap: 10px;
+}
+
+.expiryInput {
+  flex: 1;
+}
+
+.cvcInput {
+  flex: 1;
+}
+
+.addressRow {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.countryInput {
+  flex: 1;
+}
+
+.cityInput {
+  flex: 1;
 }

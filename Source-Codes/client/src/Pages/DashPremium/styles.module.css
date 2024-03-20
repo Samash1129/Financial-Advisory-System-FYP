@@ -4,19 +4,25 @@
   padding: 0;
   border: 0;
   height: 100vh;
+  background-color: #001a4f;
+  align-items: flex-start;
 }
 
 .leftContainer {
-  width: 24%;
+  width: 18%;
   margin: 0;
   padding: 0;
+  border-radius: 17px 17px 17px 17px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .rightContainer {
-  width: 76%;
-  margin: 0;
+  width: 82%;
   padding: 0;
-  background-color: #001a4f;
+  display: flex;
+  flex-direction: column;
 }
 
 .headerContainer {
@@ -29,16 +35,22 @@
   display: flex;
 }
 
+/* T R B L */
 .col1 {
-  margin: 5px 20px 0px 40px;
-  width: 50%;
+  margin: 0px 0px 0px 40px;
+  width: 45%;
 }
 
+/* T R B L */
 .col2 {
-  margin: 5px 40px 0px 20px;
-  width: 50%;
+  margin: 0px 40px 0px 15px;
+  width: 55%;
 }
 
 .stocksContainer {
-  margin-bottom: 2%;
+  margin-bottom: 3%;
+}
+
+.searchBarContainer {
+  margin-bottom: 1%;
 }

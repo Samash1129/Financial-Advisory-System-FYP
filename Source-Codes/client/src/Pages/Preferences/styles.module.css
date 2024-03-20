@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
 }
 
 .container {
@@ -9,13 +8,19 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  height: 100vh;
 }
 
 .leftContainer {
-  width: 64%;
+  width: 50%;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.logo 
+{
+  display: flex;
+  justify-content: center;
 }
 
 .coverImage {
@@ -25,7 +30,7 @@ body {
 }
 
 .rightContainer {
-  width: 36%;
+  width: 50%;
   margin: 0;
   padding: 0;
 }
@@ -38,18 +43,18 @@ body {
 }
 
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .section h2 {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 20px;
   font-weight: 500;
   color: #1e1e1e;
 }
 
 .saveButton {
-  margin-top: 10%;
+  margin-top: 7%;
   text-align: center;
 }
 
@@ -73,3 +78,4 @@ body {
   gap: 10px;
   width: 80%;
 }
+

@@ -6,6 +6,7 @@ import NavBar from '../../Components/NavBar';
 import ToggleButton from '../../Components/ToggleButton'; // The updated component with label prop
 import Dropdown from '../../Components/Dropdown';
 import backgroundImage from '../../Assets/Images/background.png';
+import LogoAnimation from '../../Components/LogoAnimation';
 
 // Options for the Amount to Invest / Disposable Income dropdown
 const amountToInvestOptions = [
@@ -36,12 +37,16 @@ const Preferences = () => {
     <div className={styles.container}>
 
       <div className={styles.leftContainer}>
+      <div className={styles.logo}>
+      <LogoAnimation />
+      </div>
         <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
       </div>
 
       <div className={styles.rightContainer}>
         <div className={styles.preferences}>
           <NavBar title="Preferences" />
+
 
           <div className={styles.section}>
             <h2>Investment Goals</h2>

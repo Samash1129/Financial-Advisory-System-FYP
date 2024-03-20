@@ -12,7 +12,7 @@ const DashPremium = ({ filteredData }) => {
     return (
         <div className={styles.container}>
             <div className={styles.leftContainer}>
-                <Slider />
+            <Slider pageType="premium" />
             </div>
 
             <div className={styles.rightContainer}>
@@ -23,13 +23,13 @@ const DashPremium = ({ filteredData }) => {
 
                     <div className={styles.col1}>
                         <div className={styles.searchBarContainer}>
-                            <SearchBar placeholder="Search your desired stocks" />
+                        <SearchBar placeholder="Search for your desired stocks" data={filteredData} />
                         </div>
                         <div className={styles.stocksContainer}>
-                            <Stocks filteredData={filteredData} />
+                        <Stocks filteredData={filteredData} pageType="premium" />
                         </div>
                         <div className={styles.stocksHistoryContainer}>
-                            <StockHistory filteredData={filteredData} />
+                            <StockHistory filteredData={filteredData} pageType="premium" />
                         </div>
                     </div>
 
