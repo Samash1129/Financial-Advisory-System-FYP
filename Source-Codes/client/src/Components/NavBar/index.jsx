@@ -3,12 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import BackButton from '../../Assets/SVGs/Vector1.svg';
 
-const NavBar = ({ title }) => { // Accepting a title prop
+const NavBar = ({ title, handleBackButtonClick }) => { // Accepting a title prop
   const navigate = useNavigate();
-
-  const handleBackButtonClick = () => {
-    navigate('/');
-  }
 
   return (
     <nav className={styles.navBar}>

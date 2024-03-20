@@ -1,87 +1,169 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './styles.module.css';
-import Button from '../../Components/Button';
-import NavBar from '../../Components/NavBar';
-import ToggleButton from '../../Components/ToggleButton'; // The updated component with label prop
-import Dropdown from '../../Components/Dropdown';
-import backgroundImage from '../../Assets/Images/background.png';
-import LogoAnimation from '../../Components/LogoAnimation';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./styles.module.css";
+import Button from "../../Components/Button";
+import NavBar from "../../Components/NavBar";
+import ToggleButton from "../../Components/ToggleButton"; // The updated component with label prop
+import Dropdown from "../../Components/Dropdown";
+import backgroundImage from "../../Assets/Images/background.png";
+import LogoAnimation from "../../Components/LogoAnimation";
+import { baseurl } from "../../constants";
+import axios from "axios";
 
 // Options for the Amount to Invest / Disposable Income dropdown
 const amountToInvestOptions = [
-  '$0 - $1,000',
-  '$1,001 - $5,000',
-  '$5,001 - $10,000',
-  'More than $10,000'
+  "$0 - $1,000",
+  "$1,001 - $5,000",
+  "$5,001 - $10,000",
+  "More than $10,000",
 ];
 
 // Options for the Stock Type dropdown
-const stockTypeOptions = [
-  'Dividend',
-  'Non-Dividend',
-  'Growth',
-  'Value'
-];
+const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
 const Preferences = () => {
   const navigate = useNavigate();
+  const [investmentGoals, setInvestmentGoals] = useState([]);
+  const [riskTolerance, setRiskTolerance] = useState([]);
+  const [preferredIndustries, setPreferredIndustries] = useState([]);
+  const [amountToInvest, setAmountToInvest] = useState("");
+  const [stockType, setStockType] = useState("");
 
-  const handleSubmit = () => {
+  const handleToggleInvestmentGoal = (goal) => {
+    if (investmentGoals.includes(goal)) {
+      setInvestmentGoals(investmentGoals.filter((item) => item !== goal));
+    } else {
+      setInvestmentGoals([...investmentGoals, goal]);
+    }
+  };
+
+  const handleToggleRiskTolerance = (risk) => {
+    if (riskTolerance.includes(risk)) {
+      setRiskTolerance(riskTolerance.filter((item) => item !== risk));
+    } else {
+      setRiskTolerance([...riskTolerance, risk]);
+    }
+  };
+
+  const handleTogglePreferredIndustry = (industry) => {
+    if (preferredIndustries.includes(industry)) {
+      setPreferredIndustries(
+        preferredIndustries.filter((item) => item !== industry)
+      );
+    } else {
+      setPreferredIndustries([...preferredIndustries, industry]);
+    }
+  };
+
+  const handleDropdownAmountToInvest = (selectedOption) => {
+    setAmountToInvest(selectedOption);
+  };
+
+  const handleDropdownStockType = (selectedOption) => {
+    setStockType(selectedOption);
+  };
+
+  const handleSubmit = async () => {
+    console.log(investmentGoals);
+    console.log(riskTolerance);
+    console.log(preferredIndustries);
+    console.log(amountToInvest);
+    console.log(stockType);
     // Navigate to the /dashboard route
-    navigate('/dashpremium');
-  }
-  
+    // At the moment navigating to premium dashboard to show the route
+    navigate("/dashpremium");
+  };
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
+
   return (
-
     <div className={styles.container}>
-
       <div className={styles.leftContainer}>
-      <div className={styles.logo}>
-      <LogoAnimation />
-      </div>
-        <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
+        <div className={styles.logo}>
+          <LogoAnimation />
+        </div>
+        <img
+          src={backgroundImage}
+          alt="Cover Image"
+          className={styles.coverImage}
+        />
       </div>
 
       <div className={styles.rightContainer}>
         <div className={styles.preferences}>
-          <NavBar title="Preferences" />
-
+          <NavBar
+            title="Preferences"
+            handleBackButtonClick={handleBackButtonClick}
+          />
 
           <div className={styles.section}>
             <h2>Investment Goals</h2>
             <div className={styles.toggleContainer1}>
-              <ToggleButton label="Short Term" />
-              <ToggleButton label="Long Term" />
+              <ToggleButton
+                label="Short Term"
+                onClick={() => handleToggleInvestmentGoal("Short Term")}
+                // additionalOnClick={() => console.log("Additional onClick for Short Term")}
+              />
+              <ToggleButton
+                label="Long Term"
+                onClick={() => handleToggleInvestmentGoal("Long Term")}
+                // additionalOnClick={() => console.log("Additional onClick for Long Term")}
+              />
             </div>
           </div>
 
           <div className={styles.section}>
             <h2>Risk Tolerance</h2>
             <div className={styles.toggleContainer2}>
-              <ToggleButton label="Low" />
-              <ToggleButton label="Medium" />
-              <ToggleButton label="High" />
+              <ToggleButton
+                label="Low"
+                onClick={() => handleToggleRiskTolerance("Low")}
+              />
+              <ToggleButton
+                label="Medium"
+                onClick={() => handleToggleRiskTolerance("Medium")}
+              />
+              <ToggleButton
+                label="High"
+                onClick={() => handleToggleRiskTolerance("High")}
+              />
             </div>
           </div>
 
           <div className={styles.section}>
             <h2>Amount to Invest / Disposable Income</h2>
-            <Dropdown options={amountToInvestOptions} />
+            <Dropdown
+              options={amountToInvestOptions}
+              onOptionSelect={handleDropdownAmountToInvest}
+            />
           </div>
 
           <div className={styles.section}>
             <h2>Preferred Industries</h2>
             <div className={styles.toggleContainer3}>
-              <ToggleButton label="Clothing" />
-              <ToggleButton label="Cosmetics" />
-              <ToggleButton label="Logistics" />
+              <ToggleButton
+                label="Clothing"
+                onClick={() => handleTogglePreferredIndustry("Clothing")}
+              />
+              <ToggleButton
+                label="Cosmetics"
+                onClick={() => handleTogglePreferredIndustry("Cosmetics")}
+              />
+              <ToggleButton
+                label="Logistics"
+                onClick={() => handleTogglePreferredIndustry("Logistics")}
+              />
             </div>
           </div>
 
           <div className={styles.section}>
             <h2>Stock Type</h2>
-            <Dropdown options={stockTypeOptions} />
+            <Dropdown
+              options={stockTypeOptions}
+              onOptionSelect={handleDropdownStockType}
+            />
           </div>
 
           <div className={styles.saveButton}>
@@ -91,6 +173,6 @@ const Preferences = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Preferences;
