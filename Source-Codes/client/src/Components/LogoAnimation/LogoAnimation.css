@@ -7,7 +7,7 @@
     background-color: linear-gradient(141deg, #001D57 0%, #000D26 100%);  }
   
   .diagonal-stretch1 {
-    animation: increaseHeight1 4s ease-in forwards; 
+    animation: increaseHeight1 1s ease-in forwards; 
   }
   
   @keyframes increaseHeight1 {
@@ -20,7 +20,7 @@
   }
   
   .diagonal-stretch2 {
-      animation: increaseHeight2 4s ease-in forwards; 
+      animation: increaseHeight2 1s ease-in forwards; 
     }
   
   
