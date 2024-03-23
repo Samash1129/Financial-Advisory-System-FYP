@@ -8,6 +8,7 @@ import ProfileSettings from "./Pages/ProfileSettings";
 import DashRegular from "./Pages/DashRegular";
 import DashPremium from "./Pages/DashPremium";
 import Payment from "./Pages/Payment";
+import PrivateRoute from "./Components/PrivateRoute";
 
 function App() {
 
@@ -26,11 +27,13 @@ function App() {
         <Route path="/GetStarted" element={<GetStarted />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/preferences" element={<Preferences />} />
-        <Route path="/profilesettings" element={<ProfileSettings />} />
-        <Route path="/dashregular" element={<DashRegular filteredData={filteredData} />} />
-        <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path='' element={<PrivateRoute />}>
+          <Route path="/preferences" element={<Preferences />} />
+          <Route path="/profilesettings" element={<ProfileSettings />} />
+          <Route path="/dashregular" element={<DashRegular filteredData={filteredData} />} />
+          <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
+          <Route path="/payment" element={<Payment />} />
+        </Route>
       </>
     )
   )

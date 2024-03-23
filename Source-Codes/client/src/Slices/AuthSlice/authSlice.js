@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     email: '',
     name: '',
-    isPremium: false
+    isPremium: false,
+    // token: ''
 }
 
 const authSlice = createSlice({
@@ -12,14 +13,16 @@ const authSlice = createSlice({
     reducers: {
         setCredentials: (state, action) => {
             const { email, name, isPremium } = action.payload
-            state.email = email
+            state.email = email 
             state.name = name
             state.isPremium = isPremium
+            // state.token = token
         },
         removeCredentials: (state) => {
             state.email = ''
             state.name = ''
             state.isPremium = null
+            // state.token = ''
         }
     }
 })

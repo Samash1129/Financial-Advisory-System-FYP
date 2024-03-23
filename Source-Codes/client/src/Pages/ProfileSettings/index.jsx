@@ -7,6 +7,8 @@ import backgroundImage from '../../Assets/Images/background.png';
 import LogoAnimation from '../../Components/LogoAnimation';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
+import { useUpdateUserMutation } from '../../Slices/UserSlice/userApiSlice';
+import { setCredentials } from '../../Slices/AuthSlice/authSlice';
 
 const ProfileSettings = () => {
   const [name, setName] = useState('');
@@ -18,13 +20,14 @@ const ProfileSettings = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [updateUser, { isLoading }] = useUpdateUserMutation();
 
   const previousPage = useSelector((state) => state.previousPage.previousPage);
   const userState = useSelector((state) => state.auth);
 
   useEffect(() => {
-      setName(userState.name);
-      setEmail(userState.email);
+    setName(userState.name);
+    setEmail(userState.email);
   }, [userState.email, userState.name]);
 
   const handlePasswordChange = (e) => {
@@ -57,9 +60,20 @@ const ProfileSettings = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
+    try {
+      const res = await updateUser({
+        // id: userState.id,
+        name,
+        email,
+        password
+      }).unwrap();
+      console.log(res);
+      dispatch(setCredentials(res));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const handlePreferencesClick = () => {
@@ -88,7 +102,7 @@ const ProfileSettings = () => {
 
         <div className={styles.profileSettingsContainer}>
           <NavBar title="Profile Settings" handleBackButtonClick={handleBackButtonClick} />
-          <form className={styles.profileSettingsForm} onSubmit={handleSubmit}>
+          <form className={styles.profileSettingsForm}>
             <label htmlFor="name">NAME</label>
             <input
               type="text"
