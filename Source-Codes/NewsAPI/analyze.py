@@ -4,20 +4,21 @@ from textblob import TextBlob
 import pymongo
 from dotenv import load_dotenv
 from datetime import datetime
+import pymongo
 
 
 load_dotenv()
 
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
-    queries = queries_data.get("queries", {})
+    queries = queries_data.get("queries", [])
 
 
 def save2db(sentiment_scores):
     # Connect to MongoDB
     client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
-    collection = db["textblob_sentiment"]
+    collection = db["textblob_sentiment2"]
 
     for query, score in sentiment_scores.items():
         stock_ticker = queries.get(query)
@@ -42,24 +43,21 @@ def calculate_sentiment_score(text):
     return sentiment_score
 
 
+
 def analyze_sentiment_for_files(queries):
     sentiment_scores = {}
 
-    # Iterate over each query in the list
-    for query in queries:
+    for query in queries.values():
         file_name = f"{query}.json"
         file_path = os.path.join("query_responses_test", file_name)
 
-        # Check if the JSON file exists
         if os.path.exists(file_path):
             with open(file_path, "r") as file:
                 data = json.load(file)
 
-                # Ensure that data is a list containing a list of dictionaries
                 if isinstance(data, list) and data and isinstance(data[0], list):
                     query_sentiment_scores = []
 
-                    # Iterate over articles in the JSON file
                     for articles in data:
                         for article in articles:
                             if isinstance(article, dict):
@@ -67,7 +65,6 @@ def analyze_sentiment_for_files(queries):
                                 sentiment_score = calculate_sentiment_score(news_text)
                                 query_sentiment_scores.append(sentiment_score)
 
-                    # Calculate average sentiment score for the query
                     if query_sentiment_scores:
                         average_score = sum(query_sentiment_scores) / len(query_sentiment_scores)
                         sentiment_scores[query] = average_score
@@ -75,13 +72,11 @@ def analyze_sentiment_for_files(queries):
     return sentiment_scores
 
 
-# Example usage:
 sentiment_scores = analyze_sentiment_for_files(queries)
 print("Sentiment Scores:")
-print(len(sentiment_scores))  # Add this line for debugging
+print(len(sentiment_scores))  
 for query, score in sentiment_scores.items():
     print(f"{query}: {score:.2f}")
 
 save2db(sentiment_scores)
 print("Sentiment scores saved to MongoDB.")
-

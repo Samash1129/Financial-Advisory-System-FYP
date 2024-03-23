@@ -14,22 +14,18 @@ with open("queries.json", "r") as queries_file:
     
 
 def save_to_db(query, data):
-    # Connect to MongoDB
-    client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
+    client = pymongo.MongoClien(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
     collection = db["newsdata"]
 
-    # Check if data for the query already exists
     existing_entry = collection.find_one({"query": query})
     if existing_entry:
-        # Update existing entry
         collection.update_one(
             {"query": query},
             {"$set": {"data": data, "timestamp": datetime.now()}}
         )
         print(f"Data for query '{query}' updated in the database.")
     else:
-        # Create new entry
         entry = {
             "query": query,
             "data": data,
@@ -38,16 +34,18 @@ def save_to_db(query, data):
         collection.insert_one(entry)
         print(f"New entry created for query '{query}' in the database.")
 
+    client.close()
 
-def save_to_json(query, data):
+
+def save_to_json(ticker, data):
     directory = "query_responses_test"
     if not os.path.exists(directory):
         os.makedirs(directory)
-    file_path = os.path.join(directory, f"{query}.json")
+    file_path = os.path.join(directory, f"{ticker}.json")
     with open(file_path, "w") as file:
         json.dump(data, file, indent=4)
 
-    print(f"Data for query '{query}' saved to '{file_path}'")
+    print(f"Data for query '{ticker}' saved to '{file_path}'")
 
 
 def fetch_news(query, page):
@@ -103,20 +101,26 @@ def fetch_news_for_all_queries(queries):
     for query, ticker_symbol in queries.items():
         print(f"Fetching news for query: {query}")
         news = retrieve_all_articles(query)
-        save_to_db(query, news)
-        save_to_json(query, news)
+        all_text = ""
+        for page_articles in news:
+            for article in page_articles:
+                all_text += article.get("title", "") + " " + article.get("short_description", "") + " " + article.get("text", "") + " "
+        #save_to_db(query, news)
+        save_to_json(ticker_symbol, news)
         time.sleep(2)  # Add a delay to avoid hitting API rate limits
+
 
 
 
 fetch_news_for_all_queries(queries)
 # print(os.getenv("RAPID_API_KEY"))
-# print(os.getenv("MONGO_DB_KEY"))
+#print(os.getenv("MONGO_DB_KEY"))
 
-#query = "Askari Bank PSX"
+#query = "Silk Bank Limited Pakistan Share Stock"
+#ticker = "SILK"
 #news2 = fetch_news(query, 1)
 #news = retrieve_all_articles(query)
 #print(len(news2))
 #print(len(news))
-#save_to_db("United Bank PSX", news)
-#save_to_json(query, news)
+#save_to_db(query, news)
+#save_to_json(ticker, news)
