@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
@@ -18,22 +18,25 @@ function App() {
     { name: 'Habib Bank Limited', symbol: 'HBL', price: '797,022', category: 'Banking' },
     { name: 'Dubai Islamic Bank', symbol: 'DIB', price: '37,020', category: 'Banking' },
   ];
-  
-  return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/GetStarted" element={<GetStarted />} />
-      <Route path="/signin" element={<SignIn />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/preferences" element={<Preferences />} />
-      <Route path="/profilesettings" element={<ProfileSettings />} />
-      <Route path="/dashregular" element={<DashRegular filteredData={filteredData} />} />
-      <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
-      <Route path="/payment" element={<Payment />} />
 
-      {/* <Route path="/" element={<Navigate to="/GetStarted" />} /> */}
-    </Routes>
-    
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" index={true} element={<LandingPage />} />
+        <Route path="/GetStarted" element={<GetStarted />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/preferences" element={<Preferences />} />
+        <Route path="/profilesettings" element={<ProfileSettings />} />
+        <Route path="/dashregular" element={<DashRegular filteredData={filteredData} />} />
+        <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
+        <Route path="/payment" element={<Payment />} />
+      </>
+    )
+  )
+
+  return (
+    <RouterProvider router={router} />
   );
 }
 

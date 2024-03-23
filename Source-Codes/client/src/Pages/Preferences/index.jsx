@@ -7,8 +7,10 @@ import ToggleButton from "../../Components/ToggleButton"; // The updated compone
 import Dropdown from "../../Components/Dropdown";
 import backgroundImage from "../../Assets/Images/background.png";
 import LogoAnimation from "../../Components/LogoAnimation";
-import { baseurl } from "../../constants";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
+import { useSignoutMutation } from "../../Slices/UserSlice/userApiSlice";
+import { removeCredentials } from "../../Slices/AuthSlice/authSlice";
 
 // Options for the Amount to Invest / Disposable Income dropdown
 const amountToInvestOptions = [
@@ -22,12 +24,17 @@ const amountToInvestOptions = [
 const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
 const Preferences = () => {
-  const navigate = useNavigate();
   const [investmentGoals, setInvestmentGoals] = useState([]);
   const [riskTolerance, setRiskTolerance] = useState([]);
   const [preferredIndustries, setPreferredIndustries] = useState([]);
   const [amountToInvest, setAmountToInvest] = useState("");
   const [stockType, setStockType] = useState("");
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const previousPage = useSelector((state) => state.previousPage.previousPage);
+  const userState = useSelector((state) => state.auth);
 
   const handleToggleInvestmentGoal = (goal) => {
     if (investmentGoals.includes(goal)) {
@@ -73,9 +80,27 @@ const Preferences = () => {
     // At the moment navigating to premium dashboard to show the route
     navigate("/dashpremium");
   };
+  const [signout] = useSignoutMutation();
 
-  const handleBackButtonClick = () => {
-    navigate(-1);
+
+  const handleBackButtonClick = async () => {
+    try {
+      if (previousPage === '/signup') {
+        await signout().unwrap();
+        dispatch(removeCredentials());
+        dispatch(setPreviousPage(null));
+        navigate(previousPage);
+      }
+      if (userState.isPremium === true) {
+        navigate('/dashpremium')
+        dispatch(setPreviousPage(null))
+      } else {
+        navigate('/dashregular')
+        dispatch(setPreviousPage(null))
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -97,19 +122,18 @@ const Preferences = () => {
             title="Preferences"
             handleBackButtonClick={handleBackButtonClick}
           />
-
           <div className={styles.section}>
             <h2>Investment Goals</h2>
             <div className={styles.toggleContainer1}>
               <ToggleButton
                 label="Short Term"
                 onClick={() => handleToggleInvestmentGoal("Short Term")}
-                // additionalOnClick={() => console.log("Additional onClick for Short Term")}
+              // additionalOnClick={() => console.log("Additional onClick for Short Term")}
               />
               <ToggleButton
                 label="Long Term"
                 onClick={() => handleToggleInvestmentGoal("Long Term")}
-                // additionalOnClick={() => console.log("Additional onClick for Long Term")}
+              // additionalOnClick={() => console.log("Additional onClick for Long Term")}
               />
             </div>
           </div>

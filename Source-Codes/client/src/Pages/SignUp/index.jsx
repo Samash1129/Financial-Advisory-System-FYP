@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
@@ -8,8 +8,10 @@ import correctIcon from '../../Assets/SVGs/correct.svg';
 import errorIcon from '../../Assets/SVGs/error.svg';
 import LoadingSpinner from '../../Components/LoadingAnimation';
 import LogoAnimation from '../../Components/LogoAnimation';
-import axios from 'axios';
-import { baseurl } from '../../constants';
+import { useSignUpMutation } from '../../Slices/UserSlice/userApiSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCredentials } from '../../Slices/AuthSlice/authSlice';
+import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 
 const SignUp = () => {
 
@@ -21,7 +23,36 @@ const SignUp = () => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [signUp, { isLoading }] = useSignUpMutation();
+
+  const EMAIL = useSelector((state) => state.auth.email);
+
+  useEffect(() => {
+    if (EMAIL) {
+      navigate('/preferences');
+    }
+  }, [EMAIL, navigate]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await signUp({ name, email, password }).unwrap();
+      console.log(response);
+      dispatch(setCredentials({ ...response }));
+
+      // dispatch(setPreviousPage(null));
+      dispatch(setPreviousPage('/signup'));
+
+      navigate('/preferences');
+      
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const validateEmail = (value) => {
     // Simple regex for email validation - adjust as needed
@@ -65,58 +96,12 @@ const SignUp = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      // Using Fetch
-      // const response = await fetch('https://private-61242-elev8aiapis.apiary-mock.com/signup', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify({
-      //     name,
-      //     email,
-      //     password
-      //   })
-      // });
-
-      // if (response.ok) {
-      //   const result = await response.json();
-      //   console.log(result);
-      //   navigate('/dashregular');
-      //   setName('');
-      //   setEmail('');
-      //   setPassword('');
-      // } else {
-      //   console.error(`Failed with status ${response.status}`);
-      // }
-
-      // Using Axios
-      const response = await axios.post(baseurl + '/signup', {
-        name,
-        email,
-        password
-      });
-
-      if (response.status === 200) {
-        console.log(response.data);
-        // Add submission logic here
-        // At the moment will navigate to preferrence then premium wala page..
-        navigate('/preferences');
-      } else {
-        console.error(`Failed with status ${response.status}`);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const handleBackButtonClick = () => {
     navigate('/');
   }
 
   const handleChangeToSignIn = () => {
+    dispatch(setPreviousPage('/signup'));
     navigate('/signin');
   }
 
@@ -124,13 +109,14 @@ const SignUp = () => {
     <div className={styles.container}>
 
       <div className={styles.leftContainer}>
-      <div className={styles.logo}>
-      <LogoAnimation />
-      </div>
+        <div className={styles.logo}>
+          <LogoAnimation />
+        </div>
         <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
       </div>
 
       <div className={styles.rightContainer}>
+        {isLoading && <LoadingSpinner loadingText="Signing Up" />}
         <LoadingSpinner loadingText="Loading...">
           <div className={styles.signUpContainer}>
             <NavBar title="Sign Up" handleBackButtonClick={handleBackButtonClick} />
@@ -153,19 +139,17 @@ const SignUp = () => {
             </form>
 
             <div className={styles.signupbutton}>
-            <Button text="Sign Up" onClick={handleSubmit} />
+              <Button text="Sign Up" onClick={handleSubmit} />
             </div>
 
             <div className={styles.secondaryAction}>
               Have an account?
               <p onClick={handleChangeToSignIn} className={styles.signInLink}>Sign In</p>
             </div>
-
           </div>
         </LoadingSpinner>
       </div>
     </div>
-
   );
 };
 

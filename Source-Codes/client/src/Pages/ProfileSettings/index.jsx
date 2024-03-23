@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import NavBar from '../../Components/NavBar';
 import backgroundImage from '../../Assets/Images/background.png';
 import LogoAnimation from '../../Components/LogoAnimation';
+import { useDispatch, useSelector } from 'react-redux';
+import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 
 const ProfileSettings = () => {
   const [name, setName] = useState('');
@@ -13,7 +15,17 @@ const ProfileSettings = () => {
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const previousPage = useSelector((state) => state.previousPage.previousPage);
+  const userState = useSelector((state) => state.auth);
+
+  useEffect(() => {
+      setName(userState.name);
+      setEmail(userState.email);
+  }, [userState.email, userState.name]);
 
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
@@ -52,57 +64,63 @@ const ProfileSettings = () => {
 
   const handlePreferencesClick = () => {
     // Navigate to the /preferences route
+    dispatch(setPreviousPage('/profilesettings'));
     navigate('/preferences');
+  }
+
+  const handleBackButtonClick = () => {
+    dispatch(setPreviousPage(null));
+    navigate(previousPage);
   }
 
   return (
 
     <div className={styles.container}>
 
-    <div className={styles.leftContainer}>
-    <div className={styles.logo}>
-      <LogoAnimation />
-      </div>
-    <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
-    </div>    
-
-    <div className={styles.rightContainer}>
-
-    <div className={styles.profileSettingsContainer}>
-      <NavBar title="Profile Settings" />
-      <form className={styles.profileSettingsForm} onSubmit={handleSubmit}>
-      <label htmlFor="name">NAME</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          value={name}
-          onChange={handleNameChange}
-        />
-        {nameError && <div className={styles.errorMessage}>{nameError}</div>}
-
-        <label htmlFor="email">EMAIL ADDRESS</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email address"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        {emailError && <div className={styles.errorMessage}>{emailError}</div>}
-        
-        <label htmlFor="password">PASSWORD</label>
-        <input type="password" id="password" placeholder="Enter your password" value={password} onChange={handlePasswordChange} />
-        {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
-
-        <div className={styles.editPreferences}>
-        <p onClick={handlePreferencesClick} className={styles.editPreferences}>Edit Investment Preferences</p>
+      <div className={styles.leftContainer}>
+        <div className={styles.logo}>
+          <LogoAnimation />
         </div>
+        <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
+      </div>
 
-        <Button text="Save" onClick={handleSubmit} />
-      </form>
-    </div>
-    </div>
+      <div className={styles.rightContainer}>
+
+        <div className={styles.profileSettingsContainer}>
+          <NavBar title="Profile Settings" handleBackButtonClick={handleBackButtonClick} />
+          <form className={styles.profileSettingsForm} onSubmit={handleSubmit}>
+            <label htmlFor="name">NAME</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              value={name}
+              onChange={handleNameChange}
+            />
+            {nameError && <div className={styles.errorMessage}>{nameError}</div>}
+
+            <label htmlFor="email">EMAIL ADDRESS</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            {emailError && <div className={styles.errorMessage}>{emailError}</div>}
+
+            <label htmlFor="password">PASSWORD</label>
+            <input type="password" id="password" placeholder="Enter your password" value={password} onChange={handlePasswordChange} />
+            {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
+
+            <div className={styles.editPreferences}>
+              <p onClick={handlePreferencesClick} className={styles.editPreferences}>Edit Investment Preferences</p>
+            </div>
+
+            <Button text="Save" onClick={handleSubmit} />
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
