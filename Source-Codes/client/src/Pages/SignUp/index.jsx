@@ -8,9 +8,9 @@ import correctIcon from '../../Assets/SVGs/correct.svg';
 import errorIcon from '../../Assets/SVGs/error.svg';
 import LoadingSpinner from '../../Components/LoadingAnimation';
 import LogoAnimation from '../../Components/LogoAnimation';
-import { useSignUpMutation } from '../../Slices/UserSlice/userApiSlice';
+import { useSignUpMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCredentials } from '../../Slices/AuthSlice/authSlice';
+import { setCredentials } from '../../Slices/User/AuthSlice/authSlice';
 import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 
 const SignUp = () => {
@@ -107,7 +107,6 @@ const SignUp = () => {
 
   return (
     <div className={styles.container}>
-
       <div className={styles.leftContainer}>
         <div className={styles.logo}>
           <LogoAnimation />

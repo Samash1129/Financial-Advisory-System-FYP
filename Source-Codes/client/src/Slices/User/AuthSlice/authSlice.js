@@ -4,7 +4,7 @@ const initialState = {
     email: '',
     name: '',
     isPremium: false,
-    // token: ''
+    token: ''
 }
 
 const authSlice = createSlice({
@@ -12,17 +12,17 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         setCredentials: (state, action) => {
-            const { email, name, isPremium } = action.payload
+            const { email, name, isPremium, token } = action.payload
             state.email = email 
             state.name = name
             state.isPremium = isPremium
-            // state.token = token
+            state.token = token
         },
         removeCredentials: (state) => {
             state.email = ''
             state.name = ''
             state.isPremium = null
-            // state.token = ''
+            state.token = ''
         }
     }
 })

@@ -7,8 +7,8 @@ import backgroundImage from '../../Assets/Images/background.png';
 import LoadingSpinner from '../../Components/LoadingAnimation';
 import LogoAnimation from '../../Components/LogoAnimation';
 import { useDispatch, useSelector } from 'react-redux';
-import { useSigninMutation } from '../../Slices/UserSlice/userApiSlice';
-import { setCredentials } from '../../Slices/AuthSlice/authSlice';
+import { useSigninMutation } from '../../Slices/User/UserSlice/userApiSlice';
+import { setCredentials } from '../../Slices/User/AuthSlice/authSlice';
 import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 
 /**

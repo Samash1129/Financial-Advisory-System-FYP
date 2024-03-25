@@ -7,8 +7,9 @@ import backgroundImage from '../../Assets/Images/background.png';
 import LogoAnimation from '../../Components/LogoAnimation';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
-import { useUpdateUserMutation } from '../../Slices/UserSlice/userApiSlice';
-import { setCredentials } from '../../Slices/AuthSlice/authSlice';
+import { useUpdateUserMutation } from '../../Slices/User/UserSlice/userApiSlice';
+import { setCredentials } from '../../Slices/User/AuthSlice/authSlice';
+import LoadingSpinner from '../../Components/LoadingAnimation';
 
 const ProfileSettings = () => {
   const [name, setName] = useState('');
@@ -88,9 +89,7 @@ const ProfileSettings = () => {
   }
 
   return (
-
     <div className={styles.container}>
-
       <div className={styles.leftContainer}>
         <div className={styles.logo}>
           <LogoAnimation />
@@ -99,7 +98,7 @@ const ProfileSettings = () => {
       </div>
 
       <div className={styles.rightContainer}>
-
+        {isLoading && <LoadingSpinner loadingText={'Updating...'} />}
         <div className={styles.profileSettingsContainer}>
           <NavBar title="Profile Settings" handleBackButtonClick={handleBackButtonClick} />
           <form className={styles.profileSettingsForm}>

@@ -30,8 +30,8 @@ function App() {
         <Route path='' element={<PrivateRoute />}>
           <Route path="/preferences" element={<Preferences />} />
           <Route path="/profilesettings" element={<ProfileSettings />} />
-          <Route path="/dashregular" element={<DashRegular filteredData={filteredData} />} />
-          <Route path="/dashpremium" element={<DashPremium filteredData={filteredData} />} />
+          <Route path="/dashregular" element={<DashRegular filteredData={filteredData}/>} />
+          <Route path="/dashpremium" element={<DashPremium />} />
           <Route path="/payment" element={<Payment />} />
         </Route>
       </>

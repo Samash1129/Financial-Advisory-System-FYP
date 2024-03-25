@@ -4,6 +4,10 @@ import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
 import bankicon from '../../Assets/SVGs/bank-icon.svg';
 import riseicon from '../../Assets/SVGs/Riseicon.svg';
+import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
+import { useDispatch } from 'react-redux';
+import { setRecommendedStocks } from '../../Slices/StockSlice/stockSlice';
+import LoadingSpinner from '../LoadingAnimation';
 
 const getIconPath = (category) => {
     switch (category) {
@@ -18,7 +22,13 @@ const getIconPath = (category) => {
     }
 };
 
-const Stocks = ({ filteredData, pageType }) => {
+const Stocks = ({ pageType }) => {
+
+    const dispatch = useDispatch();
+    const { data: recommendedStocks, isLoading } = useGetRecommendedStocksQuery();
+
+    dispatch(setRecommendedStocks(recommendedStocks));
+
     return (
         <div className={styles.ssearchContainer}>
             <div className={styles.srecommended}>
@@ -26,22 +36,28 @@ const Stocks = ({ filteredData, pageType }) => {
                 <div className={styles.srecommendedTitle}>Recommended Stocks</div>
             </div>
             <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}>
-                {filteredData.map((item, index) => ( // Add index parameter
-                    <li key={item.symbol} className={styles.ssearchItem}>
-                        {/* Add span for numbering */}
-                        <span className={styles.listNumber}>{index + 1}</span>
-                        <img
-                            src={getIconPath(item.category)}
-                            alt={`${item.name} icon`}
-                            className={styles.sicon}
-                        />
-                        <div className={styles.sitemInfo}>
-                            <div className={styles.ssymbol}>{item.symbol}</div>
-                            <div className={styles.sname}>{item.name}</div>
-                        </div>
-                        <div className={styles.sprice}>Rs. {item.price}</div>
-                    </li>
-                ))}
+                {isLoading ? (
+                    <LoadingSpinner loadingText={'Loading Recommended Stocks...'}/>
+                ) : recommendedStocks ? (
+                    recommendedStocks.map((item, index) => (
+                        <li key={item.tickerSymbol} className={styles.ssearchItem}>
+                            {/* Add span for numbering */}
+                            <span className={styles.listNumber}>{index + 1}</span>
+                            <img
+                                src={getIconPath(item.category)}
+                                alt={`${item.securityName} icon`}
+                                className={styles.sicon}
+                            />
+                            <div className={styles.sitemInfo}>
+                                <div className={styles.ssymbol}>{item.tickerSymbol}</div>
+                                <div className={styles.sname}>{item.securityName}</div>
+                            </div>
+                            <div className={styles.sprice}>Rs. {item.stockPrice}</div>
+                        </li>
+                    ))
+                ) : (
+                    <div>No recommended stocks available</div>
+                )}
             </ul>
         </div>
     );

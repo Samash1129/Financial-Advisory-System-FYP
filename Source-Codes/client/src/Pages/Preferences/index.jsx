@@ -9,8 +9,8 @@ import backgroundImage from "../../Assets/Images/background.png";
 import LogoAnimation from "../../Components/LogoAnimation";
 import { useDispatch, useSelector } from "react-redux";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
-import { useSignoutMutation } from "../../Slices/UserSlice/userApiSlice";
-import { removeCredentials } from "../../Slices/AuthSlice/authSlice";
+import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { removeCredentials } from "../../Slices/User/AuthSlice/authSlice";
 
 // Options for the Amount to Invest / Disposable Income dropdown
 const amountToInvestOptions = [

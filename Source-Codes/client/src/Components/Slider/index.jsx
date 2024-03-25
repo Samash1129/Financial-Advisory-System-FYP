@@ -5,16 +5,18 @@ import SliderImg from "../../Assets/SVGs/SliderImg.svg";
 import SettingIcon from "../../Assets/SVGs/SettingIcon.svg";
 import LogoutIcon from "../../Assets/SVGs/LogoutIcon.svg";
 import PremiumPopup from "../PremiumPopup";
-import { useSignoutMutation } from "../../Slices/UserSlice/userApiSlice";
-import { removeCredentials } from "../../Slices/AuthSlice/authSlice";
+import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { removeCredentials } from "../../Slices/User/AuthSlice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
+import { removeHistoryStock, removeRecommendedStocks } from "../../Slices/StockSlice/stockSlice";
 
 const Slider = ({ pageType }) => {
   const [showPremiumPopup, setShowPremiumPopup] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const userState = useSelector((state) => state.auth);
 
   const [signout] = useSignoutMutation();
@@ -47,6 +49,8 @@ const Slider = ({ pageType }) => {
     try {
       await signout().unwrap();
       dispatch(removeCredentials());
+      dispatch(removeRecommendedStocks());
+      dispatch(removeHistoryStock());
       dispatch(setPreviousPage(null));
       navigate("/signin");
     } catch (error) {
