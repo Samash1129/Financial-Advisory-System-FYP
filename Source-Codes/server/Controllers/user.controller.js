@@ -17,7 +17,7 @@ exports.signUp = async (req, res) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  
+
   try {
     const { name, password, email, role, preference } = req.body;
     // Email must be unique
@@ -29,10 +29,12 @@ exports.signUp = async (req, res) => {
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
     // Create a new user
-    const newUser = new User({ name, password:hashedPassword, email , role, preference});
+    const newUser = new User({ name, password: hashedPassword, email, role, preference });
     await newUser.save();
 
-    res.json({ message: "User added successfully" });
+    res.json({
+      message: "User added successfully"
+    });
   } catch (err) {
     handleError(res, err);
   }
@@ -71,7 +73,24 @@ module.exports.signIn = async (req, res) => {
       expiresIn: "1d",
     });
 
-    res.json({ message: "Sign in successful", accessToken, refreshToken});
+    // save the token in cookie
+    res.cookie("accessToken", accessToken, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "strict",
+      maxAge: 1000 * 60 * 60 * 4
+      // 4 hours
+    });
+
+    // res.json({ message: "Sign in successful", accessToken, refreshToken });
+    res.json({
+      message: "Sign in successful",
+      accessToken,
+      refreshToken,
+      email: user.email,
+      name: user.name,
+      isPremium: false
+    });
   } catch (err) {
     handleError(res, err);
   }
@@ -109,7 +128,7 @@ module.exports.getProfile = async (req, res) => {
       return res.status(400).json({ error: "User does not exist" });
     }
     // Send the user details excluding the password
-    res.json({ user: { name: user.name, email: user.email , preference: user.preference} });
+    res.json({ user: { name: user.name, email: user.email, preference: user.preference } });
   } catch (err) {
     handleError(res, err);
   }
@@ -186,4 +205,16 @@ module.exports.deleteUser = async (req, res) => {
   }
 }
 
+// SignOut Api Controller
+module.exports.signout = async (req, res) => {
+  try {
+    // Clear the JSON Web Token cookies
+    res.clearCookie('refreshToken');
+    res.clearCookie('accessToken');
 
+    res.json({ message: "User logged out successfully" });
+  } catch(err) {
+    handleError(res, err);
+    // console.log(err);
+  }
+}

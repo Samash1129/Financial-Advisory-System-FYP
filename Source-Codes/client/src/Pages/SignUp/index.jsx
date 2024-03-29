@@ -47,7 +47,7 @@ const SignUp = () => {
       // dispatch(setPreviousPage(null));
       dispatch(setPreviousPage('/signup'));
 
-      navigate('/preferences');
+      navigate('/preferences')
       
     } catch (err) {
       console.error(err);

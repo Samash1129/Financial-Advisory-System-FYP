@@ -5,6 +5,7 @@ from datetime import datetime
 import math
 import numpy as np
 import pandas as pd
+import json
 
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
@@ -12,10 +13,10 @@ from keras.layers import Dense, LSTM, Dropout
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 
-final_close_values = []
+final_close_values = {}
 
-companies = ['ABL', 'AKBL', 'BAFL', 'BAHL', 'BIPL', 'BML', 'BOK', 'BOP', 'FABL', 'HBL', 'HMB', 'JSBL', 'MCB', 'MEBL', 'NBP', 'SCBPL', 'SILK', 'SNBL', 'UBL']
-
+# companies = ['ABL', 'AKBL', 'BAFL', 'BAHL', 'BIPL', 'BML', 'BOK', 'BOP', 'FABL', 'HBL', 'HMB', 'JSBL', 'MCB', 'MEBL', 'NBP', 'SCBPL', 'SILK', 'SNBL', 'UBL']
+companies = ['ABL', 'AKBL']
 
 for company in companies:
     ## Set the Date ##
@@ -142,6 +143,18 @@ for company in companies:
     pred_price = scaler.inverse_transform(pred_price)
     print(pred_price)
     
-    final_close_values.append(list(pred_price))
+    # final_close_values.append(list(pred_price))
+    ## Store predicted values in the dictionary ##
+    final_close_values[company] = list(pred_price)
     
 print(final_close_values)
+
+# # Save final_close_values to a JSON file
+# with open('pred.json', 'w') as json_file:
+#     json.dump(final_close_values, json_file)
+
+# save final close values to a text file
+with open('pred_close_values.txt', 'w') as f:
+    for company, values in final_close_values.items():
+        f.write(f"{company}: {values}\n")
+        print(f"{company}: {values}")

@@ -11,13 +11,6 @@ import { useSigninMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { setCredentials } from '../../Slices/User/AuthSlice/authSlice';
 import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 
-/**
- * SignIn component handles user sign in form and validation.
- * Uses react hooks for state management and redux for global state.
- * Handles submit to call signin API and dispatch user info to redux store.
- * Navigates to /dashpremium or /dashregular based on user type.
- * Contains validation and error handling for form fields.
- */
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,8 +20,10 @@ const SignIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [signin, { isLoading }] = useSigninMutation();
+  // Calling the API
+  const [signin, { isLoading, isSuccess }] = useSigninMutation();
 
+  // Accessing the current state
   const EMAIL = useSelector((state) => state.auth.email);
   const IS_PREMIUM = useSelector((state) => state.auth.isPremium);
 
@@ -42,16 +37,21 @@ const SignIn = () => {
     }
   }, [EMAIL, IS_PREMIUM, dispatch, navigate]);
 
+  // Signing In functionality
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+
+      // calling the signin api slice
       const response = await signin({ email, password }).unwrap();
       dispatch(setCredentials(response));
       dispatch(setPreviousPage('/signin'));
-      if (response.isPremium === true) {
-        navigate("/dashpremium");
-      } else {
-        navigate("/dashregular");
+      if (isSuccess) {
+        if (response.isPremium === true) {
+          navigate("/dashpremium");
+        } else {
+          navigate("/dashregular");
+        }
       }
     } catch (err) {
       console.error(err);

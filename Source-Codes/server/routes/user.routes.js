@@ -1,7 +1,7 @@
 const express = require("express");
 const { body } = require("express-validator");
 const User = require("../models/user.model");
-const { signUp, signIn, getProfile, updateUser, deleteUser, refreshToken } = require("../Controllers/user.controller");
+const { signUp, signIn, getProfile, updateUser, deleteUser, refreshToken, signout } = require("../Controllers/user.controller");
 
 // recordRoutes is an instance of the express router.
 const recordRoutes = express.Router();
@@ -53,7 +53,7 @@ recordRoutes.route("/signUp").post(
   signUp
 );
 
-recordRoutes.route("/signIn").post(
+recordRoutes.route("/signin").post(
   [
     // Validate email (required)
     body("email")
@@ -96,6 +96,6 @@ recordRoutes.route("/user").patch(
 
 recordRoutes.route("/user").delete(deleteUser);
 
-
+recordRoutes.route("/signout").post(signout);
 
 module.exports = recordRoutes;
