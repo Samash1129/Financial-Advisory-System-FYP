@@ -147,5 +147,3 @@ def process_data():
     return x
 
 
-
-process_data()
