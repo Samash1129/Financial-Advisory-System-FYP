@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "financial-advisory-system-server.vercel.app",
+  "proxy": "http://localhost:4500",
   "eslintConfig": {
     "extends": [
       "react-app",
