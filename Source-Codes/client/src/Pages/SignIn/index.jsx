@@ -100,7 +100,7 @@ const SignIn = () => {
         </div>
         <img
           src={backgroundImage}
-          alt="Cover Image"
+          alt="Cover"
           className={styles.coverImage}
         />
       </div>
