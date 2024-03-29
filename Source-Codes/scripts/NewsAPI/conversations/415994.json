@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "\ud83d\ude0a Hello! How can I assist you today? Is there something you'd like to chat about or a task you'd like me to help you with?"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  }
+]

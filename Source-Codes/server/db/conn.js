@@ -1,4 +1,6 @@
-const Db = process.env.ATLAS_URI;
+const Db = process.env.MONGO_DB_KEY;
+
+
 
 const mongoose = require("mongoose");
 //configure mongoose

@@ -11,10 +11,9 @@ load_dotenv()
 with open("queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
     queries = queries_data.get("queries", [])
-    
 
 def save_to_db(query, data):
-    client = pymongo.MongoClien(os.getenv("MONGO_DB_KEY"))
+    client = pymongo.MongoClient(os.getenv("MONGO_DB_KEY"))
     db = client["news"]
     collection = db["newsdata"]
 
@@ -96,23 +95,29 @@ def retrieve_all_articles(query):
     return all_articles
 
 
+def fetch_news_for_all_queries():
+    try:
+        for query, ticker_symbol in queries.items():
+            print(f"Fetching news for query: {query}")
+            news = retrieve_all_articles(query)
+            all_text = ""
+            for page_articles in news:
+                for article in page_articles:
+                    all_text += article.get("title", "") + " " + article.get("short_description", "") + " " + article.get("text", "") + " "
+            save_to_db(query, news)
+            save_to_json(ticker_symbol, news)
+            time.sleep(2)  # Add a delay to avoid hitting API rate limits
+        print("All news fetched and saved.")
+        return True  # Return True if successfully executed
+    except Exception as e:
+        print("Error fetching news:", e)
+        return False  # Return False if there's an error during execution
 
-def fetch_news_for_all_queries(queries):
-    for query, ticker_symbol in queries.items():
-        print(f"Fetching news for query: {query}")
-        news = retrieve_all_articles(query)
-        all_text = ""
-        for page_articles in news:
-            for article in page_articles:
-                all_text += article.get("title", "") + " " + article.get("short_description", "") + " " + article.get("text", "") + " "
-        #save_to_db(query, news)
-        save_to_json(ticker_symbol, news)
-        time.sleep(2)  # Add a delay to avoid hitting API rate limits
 
 
 
 
-fetch_news_for_all_queries(queries)
+
 # print(os.getenv("RAPID_API_KEY"))
 #print(os.getenv("MONGO_DB_KEY"))
 
@@ -124,3 +129,5 @@ fetch_news_for_all_queries(queries)
 #print(len(news))
 #save_to_db(query, news)
 #save_to_json(ticker, news)
+
+

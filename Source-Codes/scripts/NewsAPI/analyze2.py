@@ -37,7 +37,7 @@ def save_vader_scores_to_db(sentiment_scores):
 
     client.close()
 
-def analyze_sentiment_for_files_vader(queries):
+def analyze_sentiment_for_files_vader():
     sentiment_scores_vader = {}
 
     for query in queries.values():
@@ -62,13 +62,23 @@ def analyze_sentiment_for_files_vader(queries):
                         average_score = sum(query_sentiment_scores) / len(query_sentiment_scores)
                         sentiment_scores_vader[query] = average_score
 
-    return sentiment_scores_vader
+
+    print("Sentiment Scores using VADER:")
+    print(len(sentiment_scores_vader))  
+    for query, score in sentiment_scores_vader.items():
+        print(f"{query}: {score:.2f}")
+    save_vader_scores_to_db(sentiment_scores_vader)
+    print("Sentiment scores saved to MongoDB.")
+    if sentiment_score:
+        return True
+    else:
+        return False
 
 
 
-sentiment_scores_vader = analyze_sentiment_for_files_vader(queries)
+# sentiment_scores_vader = analyze_sentiment_for_files_vader(queries)
 
-print("Sentiment Scores using VADER:")
-print(sentiment_scores_vader)
-save_vader_scores_to_db(sentiment_scores_vader)
-print("Sentiment scores saved to MongoDB.")
+# print("Sentiment Scores using VADER:")
+# print(sentiment_scores_vader)
+# save_vader_scores_to_db(sentiment_scores_vader)
+# print("Sentiment scores saved to MongoDB.")
