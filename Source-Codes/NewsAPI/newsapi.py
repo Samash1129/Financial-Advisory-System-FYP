@@ -131,4 +131,3 @@ def fetch_news_for_all_queries():
 #save_to_json(ticker, news)
 
 
-x = fetch_news_for_all_queries()
