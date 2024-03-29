@@ -5,7 +5,8 @@ import pymongo
 from dotenv import load_dotenv
 from datetime import datetime
 import pymongo
-
+# import ntlk
+# ntlk.download('punkt')
 
 load_dotenv()
 
@@ -43,8 +44,7 @@ def calculate_sentiment_score(text):
     return sentiment_score
 
 
-
-def analyze_sentiment_for_files(queries):
+def analyze_sentiment_for_files():
     sentiment_scores = {}
 
     for query in queries.values():
@@ -69,14 +69,27 @@ def analyze_sentiment_for_files(queries):
                         average_score = sum(query_sentiment_scores) / len(query_sentiment_scores)
                         sentiment_scores[query] = average_score
 
-    return sentiment_scores
+    print("Sentiment Scores:")
+    print(len(sentiment_scores))  
+    for query, score in sentiment_scores.items():
+        print(f"{query}: {score:.2f}")
+
+    save2db(sentiment_scores)
+    print("Sentiment scores saved to MongoDB.")
+    if sentiment_scores:
+        return True
+    else:
+        return False
+
+# sentiment_scores = analyze_sentiment_for_files()
+# print("Sentiment Scores:")
+# print(len(sentiment_scores))  
+# for query, score in sentiment_scores.items():
+#     print(f"{query}: {score:.2f}")
+
+# save2db(sentiment_scores)
+# print("Sentiment scores saved to MongoDB.")
 
 
-sentiment_scores = analyze_sentiment_for_files(queries)
-print("Sentiment Scores:")
-print(len(sentiment_scores))  
-for query, score in sentiment_scores.items():
-    print(f"{query}: {score:.2f}")
 
-save2db(sentiment_scores)
-print("Sentiment scores saved to MongoDB.")
+# print(os.getenv("MONGO_DB_KEY"))
