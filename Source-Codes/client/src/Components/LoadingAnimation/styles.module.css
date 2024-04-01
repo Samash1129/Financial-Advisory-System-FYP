@@ -1,10 +1,22 @@
 .loadingSpinnerContainer {
+  position: relative; /* Add position relative */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Outfit", sans-serif;
   height: 100vh;
+}
+
+.failureContainer, .successContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  margin-top: -25px;
 }
 
 .spinner {
@@ -19,7 +31,13 @@
 .loadingText {
   margin-top: 20px;
   font-size: 25px;
+  font-family: "Outfit";
   color: #000;
+}
+
+.successText, .failureText {
+  font-size: 25px;
+  margin-top: -40px;
 }
 
 /* Spinner animation */
@@ -31,3 +49,4 @@
     transform: rotate(360deg);
   }
 }
+

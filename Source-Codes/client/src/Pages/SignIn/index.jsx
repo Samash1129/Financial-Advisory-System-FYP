@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './styles.module.css';
-import Button from '../../Components/Button';
-import NavBar from '../../Components/NavBar';
-import backgroundImage from '../../Assets/Images/background.png';
-import LoadingSpinner from '../../Components/LoadingAnimation';
-import LogoAnimation from '../../Components/LogoAnimation';
-import { useDispatch, useSelector } from 'react-redux';
-import { useSigninMutation } from '../../Slices/User/UserSlice/userApiSlice';
-import { setCredentials } from '../../Slices/User/AuthSlice/authSlice';
-import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./styles.module.css";
+import Button from "../../Components/Button";
+import NavBar from "../../Components/NavBar";
+import backgroundImage from "../../Assets/Images/background.png";
+import LoadingSpinner from "../../Components/LoadingAnimation";
+import LogoAnimation from "../../Components/LogoAnimation";
+import { useDispatch, useSelector } from "react-redux";
+import { useSigninMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { setCredentials } from "../../Slices/User/AuthSlice/authSlice";
+import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [isFailure, setFailure] = useState(false);
+
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,32 +31,29 @@ const SignIn = () => {
 
   useEffect(() => {
     if (EMAIL && IS_PREMIUM === true) {
-      dispatch(setPreviousPage('/signin'));
+      dispatch(setPreviousPage("/signin"));
       navigate("/dashpremium");
     } else if (EMAIL && IS_PREMIUM === false) {
-      dispatch(setPreviousPage('/signin'));
-      navigate("/dashregular");
+      dispatch(setPreviousPage("/signin"));
+      navigate("/dashpremium");
     }
   }, [EMAIL, IS_PREMIUM, dispatch, navigate]);
 
-  // Signing In functionality
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
       // calling the signin api slice
       const response = await signin({ email, password }).unwrap();
       dispatch(setCredentials(response));
-      dispatch(setPreviousPage('/signin'));
-      if (isSuccess) {
-        if (response.isPremium === true) {
-          navigate("/dashpremium");
-        } else {
-          navigate("/dashregular");
-        }
+      dispatch(setPreviousPage("/signin"));
+      if (response.isPremium === true) {
+        navigate("/dashpremium");
+      } else {
+        navigate("/dashpremium");
       }
     } catch (err) {
       console.error(err);
+      setFailure(true); // Set isFailure to true upon sign in failure
     }
   };
 
@@ -88,7 +87,7 @@ const SignIn = () => {
   };
 
   const handleChangeToSignUp = () => {
-    dispatch(setPreviousPage('/signin'));
+    dispatch(setPreviousPage("/signin"));
     navigate("/signup");
   };
 
@@ -100,13 +99,13 @@ const SignIn = () => {
         </div>
         <img
           src={backgroundImage}
-          alt="Cover"
+          alt="Cover Image"
           className={styles.coverImage}
         />
       </div>
       <div className={styles.rightContainer}>
         {isLoading && <LoadingSpinner loadingText="Signing In" />}
-        <LoadingSpinner loadingText="Loading...">
+        <LoadingSpinner loadingText="Signing">
           <div className={styles.signInContainer}>
             <NavBar
               title="Sign In"

@@ -2,11 +2,12 @@
   width: 100%;
   margin: 0 auto;
   font-family: "Outfit", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
+  z-index: 1000;
 }
 
 .searchContainer input:focus {
-  outline: none; /* Remove outline when input is focused */
+  outline: none;
 }
 
 .searchContainer input::placeholder {
@@ -21,15 +22,15 @@
   width: 100%;
   margin-bottom: 10px;
   font-family: "Outfit", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
-  padding-left: 40px;
-  margin-bottom: 10px;
+  padding-left: 47px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   display: flex;
   color: white;
+
 }
 
 .searchContainer {
@@ -40,7 +41,7 @@
 
 .searchResults {
   position: absolute;
-  top: calc(100% + 7px);
+  top: calc(100% + 6px);
   padding: 0;
   margin: 0;
   border-radius: 7px;
@@ -49,7 +50,7 @@
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 1;
-  height: 562px;
+  height: 554px;
   backdrop-filter: blur(40px);
 }
 
@@ -57,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 9px;
+  padding: 12px;
 }
 
 .searchResults li:last-child {
@@ -106,9 +107,9 @@
 .searchIcon {
   position: absolute;
   left: 10px;
-  width: 21px;
-  height: 21px;
-  top: 8px;
+  width: 22px;
+  height: 22px;
+  top: 10px;
 }
 
 /* For Webkit browsers like Chrome, Safari */

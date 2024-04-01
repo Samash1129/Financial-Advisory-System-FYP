@@ -82,21 +82,20 @@ const Preferences = () => {
   };
   const [signout] = useSignoutMutation();
 
-
   const handleBackButtonClick = async () => {
     try {
-      if (previousPage === '/signup') {
+      if (previousPage === "/signup") {
         await signout().unwrap();
         dispatch(removeCredentials());
         dispatch(setPreviousPage(null));
         navigate(previousPage);
       }
       if (userState.isPremium === true) {
-        navigate('/dashpremium')
-        dispatch(setPreviousPage(null))
+        navigate("/dashpremium");
+        dispatch(setPreviousPage(null));
       } else {
-        navigate('/dashregular')
-        dispatch(setPreviousPage(null))
+        navigate("/dashregular");
+        dispatch(setPreviousPage(null));
       }
     } catch (error) {
       console.error(error);
@@ -128,12 +127,12 @@ const Preferences = () => {
               <ToggleButton
                 label="Short Term"
                 onClick={() => handleToggleInvestmentGoal("Short Term")}
-              // additionalOnClick={() => console.log("Additional onClick for Short Term")}
+                // additionalOnClick={() => console.log("Additional onClick for Short Term")}
               />
               <ToggleButton
                 label="Long Term"
                 onClick={() => handleToggleInvestmentGoal("Long Term")}
-              // additionalOnClick={() => console.log("Additional onClick for Long Term")}
+                // additionalOnClick={() => console.log("Additional onClick for Long Term")}
               />
             </div>
           </div>

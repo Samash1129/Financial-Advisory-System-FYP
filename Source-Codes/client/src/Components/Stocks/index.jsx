@@ -7,20 +7,26 @@ import riseicon from '../../Assets/SVGs/Riseicon.svg';
 import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
 import { useDispatch } from 'react-redux';
 import { setRecommendedStocks } from '../../Slices/StockSlice/stockSlice';
-import LoadingSpinner from '../LoadingAnimation';
 
-const getIconPath = (category) => {
-    switch (category) {
-        case 'Banking':
-            return bankicon;
-        case 'Technology':
-            return techicon;
-        case 'Stocks':
-            return stockicon;
-        default:
-            return 'default-icon';
-    }
-};
+// const getIconPath = (category) => {
+//     switch (category) {
+//         case 'Banking':
+//             return bankicon;
+//         case 'Technology':
+//             return techicon;
+//         case 'Stocks':
+//             return stockicon;
+//         default:
+//             return 'default-icon';
+//     }
+// };
+
+const SkeletonLoader = () => (
+    <div className={styles.skeletonContainer}>
+      <div className={styles.skeletonIcon}></div>
+      <div className={styles.skeletonText}></div>
+    </div>
+  );
 
 const Stocks = ({ pageType }) => {
 
@@ -36,18 +42,24 @@ const Stocks = ({ pageType }) => {
                 <div className={styles.srecommendedTitle}>Recommended Stocks</div>
             </div>
             <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}>
-                {isLoading ? (
-                    <LoadingSpinner loadingText={'Loading Recommended Stocks...'}/>
-                ) : recommendedStocks ? (
-                    recommendedStocks.map((item, index) => (
+            {isLoading ? (
+          // Display skeleton loader while data is loading
+          <>
+            <SkeletonLoader />
+            <SkeletonLoader />
+            <SkeletonLoader />
+            <SkeletonLoader />
+          </>
+        ) : recommendedStocks ? (
+          recommendedStocks.map((item, index) => (
                         <li key={item.tickerSymbol} className={styles.ssearchItem}>
                             {/* Add span for numbering */}
                             <span className={styles.listNumber}>{index + 1}</span>
-                            <img
+                            {/* <img
                                 src={getIconPath(item.category)}
                                 alt={`${item.securityName} icon`}
                                 className={styles.sicon}
-                            />
+                            /> */}
                             <div className={styles.sitemInfo}>
                                 <div className={styles.ssymbol}>{item.tickerSymbol}</div>
                                 <div className={styles.sname}>{item.securityName}</div>

@@ -3,7 +3,6 @@
   height: 100%;
   margin: 0 auto;
   font-family: "Outfit", sans-serif;
-  font-size: 8px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -46,19 +45,20 @@
 }
 
 .ssymbol {
-  font-size: 2em;
+  font-size: 18px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: -3px;
 }
 
 .sname {
-  font-size: 1.5em;
+  font-size: 14px;
+  margin-top: 2px;
   color: #f0f0f0;
 }
 
 .sprice {
-  font-size: 1.8em;
+  font-size: 18px;
   font-weight: 500;
   color: #ffffff;
   padding-right: 8px;
@@ -93,7 +93,8 @@
 }
 
 .premiumResults li:hover {
-  background: linear-gradient(91deg, #3692FF 52.09%, #7FF4A7 111.89%);
+  background: #3692ff;
+  /* background: linear-gradient(91deg, #3692FF 52.09%, #7FF4A7 111.89%); */
   cursor: pointer;
 }
 
@@ -112,7 +113,7 @@
 }
 
 .srecommendedTitle {
-  font-size: 2.2em;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.9);
   font-family: Outfit;
   font-style: normal;
@@ -129,9 +130,35 @@
 }
 
 .listNumber {
-  font-size: 2em; /* Adjust the font size of the numbers */
-  font-weight: bold;
+  font-size: 20px; /* Adjust the font size of the numbers */
+  font-weight: 500;
   color: #ffffff; /* Adjust the color of the numbers */
   margin-right: 13px;
   padding-left: 3px; /* Adjust the margin between number and content */
+}
+
+/* Skeleton loader container */
+.skeletonContainer {
+  display: flex;
+  align-items: center;
+  padding: 13px;
+  opacity: 30%;
+}
+
+/* Skeleton loader icon placeholder */
+.skeletonIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  border-radius: 50%;
+  opacity: 40%;
+  margin-right: 16px;
+}
+
+.skeletonText {
+  flex: 1;
+  height: 12px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  opacity: 30%;
+  border-radius: 4px;
 }

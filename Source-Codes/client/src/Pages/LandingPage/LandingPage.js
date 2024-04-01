@@ -48,7 +48,7 @@ const LandingPage = () => {
             Sign In
           </button>
           <button className="sign-up-btn" onClick={handleSignUp}>
-            Sign Up
+            Get Started
           </button>
         </div>
       </header>
@@ -68,6 +68,9 @@ const LandingPage = () => {
           <img src={Boomer} alt="Boomer" className="Boomer" />
         </div>
       </main>
+      <footer className="footer">
+      <p className="footer-text">© Elev8.ai 2024 - Elevate Your Game</p>
+    </footer>
     </div>
   );
 };
