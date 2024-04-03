@@ -64,7 +64,7 @@ const Slider = ({ pageType }) => {
       dispatch(setPreviousPage('/dashpremium'));
       navigate("/profilesettings");
     } else {
-      dispatch(setPreviousPage('/dashpremium'));
+      dispatch(setPreviousPage('/dashregular'));
       navigate("/profilesettings");
     }
   };
@@ -80,7 +80,7 @@ const Slider = ({ pageType }) => {
       </div>
 
       <div className={styles.textContainer}>
-        <h1 className={styles.welcomeText}>Welcome to Elev8.ai!</h1>
+        <h1 className={styles.welcomeText}>Welcome to elev8.ai!</h1>
         <p className={styles.descriptionText}>
           Your New Best Friend for Smart and Friendly Investment Advice!
         </p>

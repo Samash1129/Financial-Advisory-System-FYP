@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
-import tut from '../../Assets/SVGs/tut.svg';
+import info from '../../Assets/SVGs/Info.svg';
 import reload from '../../Assets/SVGs/Reload.svg';
 import edit from '../../Assets/SVGs/Edit.svg';
 
@@ -24,8 +24,8 @@ const Header = () => {
                 <button className={styles.iconContainer} data-tooltip="Download PDF">
                     <img src={reload} alt="Reload" className={styles.headerIcon} />
                 </button>
-                <button className={styles.iconContainer} data-tooltip="Watch Tutorial">
-                    <img src={tut} alt="Tut" className={styles.headerIcon} />
+                <button className={styles.iconContainer} data-tooltip="More Info">
+                    <img src={info} alt="Info" className={styles.headerIcon} />
                 </button>
             </div>
         </div>

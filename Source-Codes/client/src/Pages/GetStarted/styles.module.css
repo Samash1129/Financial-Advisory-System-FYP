@@ -46,7 +46,6 @@ body {
   margin-top: 34%;
   font-size: 36px;
   font-weight: 600;
-  color: black;
 }
 
 .buttonContainer {
@@ -85,7 +84,7 @@ body {
 }
 
 .tutorialButton:hover {
-  background: rgba(107, 238, 155, 0.6);
+  background: rgba(125, 244, 168, 0.6);
 }
 
 .tutorialButton:active {

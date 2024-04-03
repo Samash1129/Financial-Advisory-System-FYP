@@ -7,25 +7,20 @@ import History from '../../Assets/SVGs/History.svg';
 import { useGetHistoryStockQuery } from '../../Slices/StockSlice/stockApiSlice';
 import { useDispatch } from 'react-redux';
 import { setHistoryStock } from '../../Slices/StockSlice/stockSlice';
+import LoadingSpinner from '../LoadingAnimation';
 
-// const getIconPath = (category) => {
-//     switch (category) {
-//         case 'Banking':
-//             return bankicon;
-//         case 'Technology':
-//             return techicon;
-//         case 'Stocks':
-//             return stockicon;
-//         default:
-//             return 'default-icon';
-//     }
-// };
-const SkeletonLoader = () => (
-    <div className={styles.skeletonContainer}>
-      <div className={styles.skeletonIcon}></div>
-      <div className={styles.skeletonText}></div>
-    </div>
-  );
+const getIconPath = (category) => {
+    switch (category) {
+        case 'Banking':
+            return bankicon;
+        case 'Technology':
+            return techicon;
+        case 'Stocks':
+            return stockicon;
+        default:
+            return 'default-icon';
+    }
+};
 
 const StockHistory = ({ pageType }) => {
 
@@ -41,24 +36,18 @@ const StockHistory = ({ pageType }) => {
                 <div className={styles.sRecentTitle}>Recently Viewed</div>
             </div>
             <ul className={`${styles.shSearchResults} ${pageType === 'premium' ? styles.shpremiumResults : ''} ${styles.scrollbar}`}>
-            {isLoading ? (
-          // Display skeleton loader while data is loading
-          <>
-            <SkeletonLoader />
-            <SkeletonLoader />
-            <SkeletonLoader />
-            <SkeletonLoader />
-          </>
-        ) : recentStocks ? (
+                {isLoading ? (
+                    <LoadingSpinner loadingText={'Loading Recently Viewed Stocks...'} />
+                ) : recentStocks ? (
                     recentStocks.map((item, index) => (
                         <li key={item.tickerSymbol} className={styles.shSearchItem}>
                             {/* Add span for numbering */}
                             {/* <span className={styles.listNumber}>{index + 1}</span> */}
-                            {/* <img
+                            <img
                                 src={getIconPath(item.category)}
                                 alt={`${item.securityName} icon`}
                                 className={styles.shIcon}
-                            /> */}
+                            />
                             <div className={styles.shItemInfo}>
                                 <div className={styles.shSymbol}>{item.tickerSymbol}</div>
                                 <div className={styles.shName}>{item.securityName}</div>

@@ -39,18 +39,18 @@ const SearchBar = ({ placeholder, data }) => {
         };
     }, []);
 
-    // const getIconPath = (category) => {
-    //     switch (category) {
-    //         case 'Banking':
-    //             return bankicon;
-    //         case 'Technology':
-    //             return techicon;
-    //         case 'Stocks':
-    //             return stockicon;
-    //         default:
-    //             return 'default-icon';
-    //     }
-    // };
+    const getIconPath = (category) => {
+        switch (category) {
+            case 'Banking':
+                return bankicon;
+            case 'Technology':
+                return techicon;
+            case 'Stocks':
+                return stockicon;
+            default:
+                return 'default-icon';
+        }
+    };
 
     return (
         <div className={styles.searchContainer}>
@@ -70,11 +70,11 @@ const SearchBar = ({ placeholder, data }) => {
                 <ul className={styles.searchResults}>
                     {filteredData.map(item => (
                         <li key={item.symbol} className={styles.searchItem}>
-                            {/* <img
+                            <img
                                 src={getIconPath(item.category)}
                                 alt={`${item.name} icon`}
                                 className={styles.icon}
-                            /> */}
+                            />
                             <div className={styles.itemInfo}>
                                 <div className={styles.symbol}>{item.symbol}</div>
                                 <div className={styles.name}>{item.name}</div>
