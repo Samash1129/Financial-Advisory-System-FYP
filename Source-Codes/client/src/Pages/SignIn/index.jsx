@@ -113,7 +113,7 @@ const SignIn = () => {
               handleBackButtonClick={handleBackButtonClick}
             />
             <form className={styles.signInForm} onSubmit={handleSubmit}>
-              <label htmlFor="email">EMAIL OR NUMBER:</label>
+              <label htmlFor="email">EMAIL ADDRESS:</label>
               <input
                 type="text"
                 id="email"
