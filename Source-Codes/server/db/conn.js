@@ -1,4 +1,5 @@
-const Db = process.env.MONGO_DB_KEY;
+// const Db = process.env.MONGO_DB_KEY;
+const Db = process.env.ATLAS_URI;
 
 
 
