@@ -1,4 +1,11 @@
-import { Route, Routes, Navigate, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  Navigate,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
@@ -11,13 +18,37 @@ import Payment from "./Pages/Payment";
 import PrivateRoute from "./Components/PrivateRoute";
 
 function App() {
-
   const filteredData = [
-    { name: 'Meezan Bank Ltd', symbol: 'MEZN', price: '797,022', category: 'Banking' },
-    { name: 'Silk Bank Ltd', symbol: 'SILK', price: '37,020', category: 'Banking' },
-    { name: 'Askari Bank Ltd', symbol: 'AKBL', price: '48,354', category: 'Banking' },
-    { name: 'Habib Bank Limited', symbol: 'HBL', price: '797,022', category: 'Banking' },
-    { name: 'Dubai Islamic Bank', symbol: 'DIB', price: '37,020', category: 'Banking' },
+    {
+      name: "Meezan Bank Ltd",
+      symbol: "MEZN",
+      price: "797,022",
+      category: "Banking",
+    },
+    {
+      name: "Silk Bank Ltd",
+      symbol: "SILK",
+      price: "37,020",
+      category: "Banking",
+    },
+    {
+      name: "Askari Bank Ltd",
+      symbol: "AKBL",
+      price: "48,354",
+      category: "Banking",
+    },
+    {
+      name: "Habib Bank Limited",
+      symbol: "HBL",
+      price: "797,022",
+      category: "Banking",
+    },
+    {
+      name: "Dubai Islamic Bank",
+      symbol: "DIB",
+      price: "37,020",
+      category: "Banking",
+    },
   ];
 
   const router = createBrowserRouter(
@@ -25,22 +56,27 @@ function App() {
       <>
         <Route path="/" index={true} element={<LandingPage />} />
         <Route path="/GetStarted" element={<GetStarted />} />
+        <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path='' element={<PrivateRoute />}>
+        <Route path="" element={<PrivateRoute />}>
           <Route path="/preferences" element={<Preferences />} />
           <Route path="/profilesettings" element={<ProfileSettings />} />
-          <Route path="/dashregular" element={<DashRegular filteredData={filteredData}/>} />
-          <Route path="/dashpremium" element={<DashPremium />} />
+          <Route
+            path="/dashregular"
+            element={<DashRegular filteredData={filteredData} />}
+          />
+          <Route
+            path="/dashpremium"
+            element={<DashPremium filteredData={filteredData} />}
+          />
           <Route path="/payment" element={<Payment />} />
         </Route>
       </>
     )
-  )
-
-  return (
-    <RouterProvider router={router} />
   );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

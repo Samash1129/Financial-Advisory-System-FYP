@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
   overflow-y: auto;
-  height: 800px;
+  height: 735px;
 }
 
 /* Hide scrollbar for Firefox */
@@ -131,7 +131,7 @@
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 8%;
+  margin-bottom: 4%;
 }
 
 .navbar a:hover {
@@ -197,4 +197,16 @@
 .main-content {
   position: relative;
   z-index: 1;
+}
+
+.footer {
+  background-color: #3692ff;
+  color: #fff;
+  text-align: center;
+  padding-top: 4px;
+  height: 60px;
+}
+
+.footer-text {
+  font-size: 16px;
 }

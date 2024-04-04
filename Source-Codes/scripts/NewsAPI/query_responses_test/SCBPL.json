@@ -4,12 +4,12 @@
             "title": "Standard Chartered chief laments \u2018crap\u2019 stock price as profits jump",
             "top_image": "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg",
             "images": [
-                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_print.svg",
                 "https://financial-times-financial-times.cdn.zephr.com/assets/icons/padlock_icon.svg",
-                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_trial.svg",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg",
+                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_premium.svg",
+                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_print.svg",
                 "https://spoor-api.ft.com/px.gif?data=%7B%22category%22%3A%22page%22%2C%22action%22%3A%22view%22%2C%22system%22%3A%7B%22source%22%3A%22non-ctm%22%7D%2C%22context%22%3A%7B%22name%22%3A%22barrier-page%22%2C%22product%22%3A%22next%22%2C%22data%22%3A%7B%22source%22%3A%22%5BSOURCE%5D%22%7D%7D%7D",
-                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_premium.svg"
+                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_trial.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg"
             ],
             "videos": [],
             "url": "https://www.ft.com/content/7bb64fbe-8746-4f4c-bf1d-d0a8a8aea387",
@@ -19,6 +19,30 @@
             "publisher": {
                 "href": "https://www.ft.com",
                 "title": "Financial Times"
+            }
+        },
+        {
+            "title": "Standard Chartered shares slide 12% as China losses hit earnings",
+            "top_image": "https://image.cnbcfm.com/api/v1/image/107052714-1651122656280-gettyimages-1238501211-UK_BANK_EARNINGS.jpeg?v=1698311672&w=1920&h=1080",
+            "images": [
+                "https://static-redesign.cnbcfm.com/dist/17269f1b6083fd5f61be.svg",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=1000004&cv=2.0&cj=1",
+                "https://image.cnbcfm.com/api/v1/image/101147459-1584616382281katrina18.jpg?v=1584616447&w=60&h=60&ffmt=webp",
+                "https://static-redesign.cnbcfm.com/dist/09c161b9810767a7849e.svg",
+                "https://static-redesign.cnbcfm.com/dist/a54b41835a8b60db28c2.svg",
+                "https://static-redesign.cnbcfm.com/dist/2469ed0a9a4cafdf055e.svg",
+                "https://static-redesign.cnbcfm.com/dist/7821ea3cb72f88388591.svg",
+                "https://image.cnbcfm.com/api/v1/image/107323412-16983082101698308207-31752908199-1080pnbcnews.jpg?v=1698310132&w=750&h=422&vtcrop=y",
+                "https://image.cnbcfm.com/api/v1/image/107052714-1651122656280-gettyimages-1238501211-UK_BANK_EARNINGS.jpeg?v=1698311672&w=1920&h=1080"
+            ],
+            "videos": [],
+            "url": "https://www.cnbc.com/2023/10/26/standard-chartered-shares-slide-12percent-as-china-losses-hit-earnings.html",
+            "date": "Thu, 26 Oct 2023 07:00:00 GMT",
+            "short_description": "Standard Chartered shares slide 12% as China losses hit earnings  CNBC",
+            "text": "watch now\n\nStandard Chartered shares slid Thursday as the bank's big bet on China hit a stumbling block, leading to significant losses in the country. Shares of the Asia-focused bank tanked as much as 17% in early deals in London, sparking a temporary halt in trade. The London-listed stock later closed 12% lower. The U.K.-headquartered bank reported pre-tax profit of $633 million for the third quarter \u2014 a 54% drop from the same period last year. The result was hit by the bank slashing the value of its investment in China Bohai Bank by $697 million. Standard Chartered also announced a credit impairment charge of $294 million \u2014 up $62 million on the year \u2014 including a $186 million charge relating to the China commercial real estate sector.\n\nStock Chart Icon Stock chart icon Standard Chartered shares\n\nStandard Bank Chief Financial Officer Andy Halford on Thursday told CNBC's \"Squawk Box Europe\" that the \"overall performance of the bank is very strong,\" despite the China news. Halford noted that China's commercial real estate sector \"clearly has been problematic,\" but said that GDP in the country is forecast to bounce back around 5% within the next two to three years. \"What we're seeing is probably a slower recovery post-Covid than in some countries. But it's a huge population to mobilize after such a big event,\" Halford said. \"Most countries would be more than happy to have that kind of growth level,\" Halford said. \"So we are very, very much of the view that this is a period that we need to go through. We'll stick with it [and] as the economy gets going, then that should be good with us and should be good for others.\" China's economic recovery has broadly disappointed since the end of the Covid-19 pandemic, although its third-quarter growth came in stronger than expected, boosting hopes that things could be about to turn around.\n\n'A blessing and a curse'",
+            "publisher": {
+                "href": "https://www.cnbc.com",
+                "title": "CNBC"
             }
         },
         {
@@ -36,30 +60,6 @@
             }
         },
         {
-            "title": "Standard Chartered shares slide 12% as China losses hit earnings",
-            "top_image": "https://image.cnbcfm.com/api/v1/image/107052714-1651122656280-gettyimages-1238501211-UK_BANK_EARNINGS.jpeg?v=1698311672&w=1920&h=1080",
-            "images": [
-                "https://static-redesign.cnbcfm.com/dist/7821ea3cb72f88388591.svg",
-                "https://image.cnbcfm.com/api/v1/image/107052714-1651122656280-gettyimages-1238501211-UK_BANK_EARNINGS.jpeg?v=1698311672&w=1920&h=1080",
-                "https://static-redesign.cnbcfm.com/dist/2469ed0a9a4cafdf055e.svg",
-                "https://image.cnbcfm.com/api/v1/image/107323412-16983082101698308207-31752908199-1080pnbcnews.jpg?v=1698310132&w=750&h=422&vtcrop=y",
-                "https://sb.scorecardresearch.com/p?c1=2&c2=1000004&cv=2.0&cj=1",
-                "https://static-redesign.cnbcfm.com/dist/a54b41835a8b60db28c2.svg",
-                "https://image.cnbcfm.com/api/v1/image/101147459-1584616382281katrina18.jpg?v=1584616447&w=60&h=60&ffmt=webp",
-                "https://static-redesign.cnbcfm.com/dist/17269f1b6083fd5f61be.svg",
-                "https://static-redesign.cnbcfm.com/dist/09c161b9810767a7849e.svg"
-            ],
-            "videos": [],
-            "url": "https://www.cnbc.com/2023/10/26/standard-chartered-shares-slide-12percent-as-china-losses-hit-earnings.html",
-            "date": "Thu, 26 Oct 2023 07:00:00 GMT",
-            "short_description": "Standard Chartered shares slide 12% as China losses hit earnings  CNBC",
-            "text": "watch now\n\nStandard Chartered shares slid Thursday as the bank's big bet on China hit a stumbling block, leading to significant losses in the country. Shares of the Asia-focused bank tanked as much as 17% in early deals in London, sparking a temporary halt in trade. The London-listed stock later closed 12% lower. The U.K.-headquartered bank reported pre-tax profit of $633 million for the third quarter \u2014 a 54% drop from the same period last year. The result was hit by the bank slashing the value of its investment in China Bohai Bank by $697 million. Standard Chartered also announced a credit impairment charge of $294 million \u2014 up $62 million on the year \u2014 including a $186 million charge relating to the China commercial real estate sector.\n\nStock Chart Icon Stock chart icon Standard Chartered shares\n\nStandard Bank Chief Financial Officer Andy Halford on Thursday told CNBC's \"Squawk Box Europe\" that the \"overall performance of the bank is very strong,\" despite the China news. Halford noted that China's commercial real estate sector \"clearly has been problematic,\" but said that GDP in the country is forecast to bounce back around 5% within the next two to three years. \"What we're seeing is probably a slower recovery post-Covid than in some countries. But it's a huge population to mobilize after such a big event,\" Halford said. \"Most countries would be more than happy to have that kind of growth level,\" Halford said. \"So we are very, very much of the view that this is a period that we need to go through. We'll stick with it [and] as the economy gets going, then that should be good with us and should be good for others.\" China's economic recovery has broadly disappointed since the end of the Covid-19 pandemic, although its third-quarter growth came in stronger than expected, boosting hopes that things could be about to turn around.\n\n'A blessing and a curse'",
-            "publisher": {
-                "href": "https://www.cnbc.com",
-                "title": "CNBC"
-            }
-        },
-        {
             "title": "Standard Chartered Stock Sinks After Sharp Profit Drop - The Wall Street Journal",
             "top_image": "https://www.wsj.com/livecoverage/stock-market-today-dow-jones-10-26-2023/card/not-ready-standard-chartered-shares-sink-12-after-sharp-profit-drop-08b7pWpiFFV6NQF8nHT7/favicon.ico",
             "images": [],
@@ -74,41 +74,19 @@
             }
         },
         {
-            "title": "Have Standard Chartered Insiders Been Selling Stock?",
-            "top_image": "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-            "images": [
-                "https://news.google.com/news/images/ios-badge.png",
-                "https://news.google.com/news/images/play-badge.png",
-                "https://news.google.com/news/images/blue-bear.svg",
-                "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-                "https://simplywall.st/cdn-cgi/image/width=1200,height=411,fit=cover,format=auto/https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-                "https://images.ctfassets.net/n07nr2koi959/220TWz80MMu5IKd31MX2Mh/5baf073475c70362f71c7471b9e72a3c/portrait.jpg?fit=thumb&w=64&h=64",
-                "https://images.simplywall.st/asset/chart/677433-insider-trading-volume-1-dark/1710738097904"
-            ],
-            "videos": [],
-            "url": "https://simplywall.st/stocks/gb/banks/lse-stan/standard-chartered-shares/news/have-standard-chartered-insiders-been-selling-stock",
-            "date": "Mon, 18 Mar 2024 05:03:45 GMT",
-            "short_description": "Have Standard Chartered Insiders Been Selling Stock?  Simply Wall St",
-            "text": "We wouldn't blame Standard Chartered PLC ( ) shareholders if they were a little worried about the fact that Simon Cooper, a company insider, recently netted about UK\u00a39.6m selling shares at an average price of UK\u00a36.50. Probably the most concerning element of the whole transaction is that the disposal amounted to 98% of their entire holding.\n\nStandard Chartered Insider Transactions Over The Last Year\n\nIn fact, the recent sale by Simon Cooper was the biggest sale of Standard Chartered shares made by an insider individual in the last twelve months, according to our records. So it's clear an insider wanted to take some cash off the table, even slightly below the current price of UK\u00a36.54. We generally consider it a negative if insiders have been selling, especially if they did so below the current price, because it implies that they considered a lower price to be reasonable. While insider selling is not a positive sign, we can't be sure if it does mean insiders think the shares are fully valued, so it's only a weak sign. It is worth noting that this sale was 98% of Simon Cooper's holding.\n\nOver the last year, we can see that insiders have bought 406.14k shares worth UK\u00a32.7m. But they sold 1.61m shares for UK\u00a311m. Over the last year we saw more insider selling of Standard Chartered shares, than buying. You can see a visual depiction of insider transactions (by companies and individuals) over the last 12 months, below. If you click on the chart, you can see all the individual transactions, including the share price, individual, and the date!\n\nIf you are like me, then you will not want to miss this free\n\nInsider Ownership Of Standard Chartered\n\nI like to look at how many shares insiders own in a company, to help inform my view of how aligned they are with insiders. We usually like to see fairly high levels of insider ownership. It appears that Standard Chartered insiders own 0.2% of the company, worth about UK\u00a339m. We've certainly seen higher levels of insider ownership elsewhere, but these holdings are enough to suggest alignment between insiders and the other shareholders.\n\nWhat Might The Insider Transactions At Standard Chartered Tell Us?\n\nUnfortunately, there has been more insider selling of Standard Chartered stock, than buying, in the last three months. And our longer term analysis of insider transactions didn't bring confidence, either. On the plus side, Standard Chartered makes money, and is growing profits. While insiders do own shares, they don't own a heap, and they have been selling. So we'd only buy after careful consideration. So these insider transactions can help us build a thesis about the stock, but it's also worthwhile knowing the risks facing this company. For example - Standard Chartered has we think you should be aware of.\n\nOf course Standard Chartered may not be the best stock to buy. So you may wish to see this free\n\nFor the purposes of this article, insiders are those individuals who report their transactions to the relevant regulatory body. We currently account for open market transactions and private dispositions of direct interests only, but not derivative transactions or indirect interests.\n\nValuation is complex, but we're helping make it simple. Find out whether Standard Chartered is potentially over or undervalued by checking out our comprehensive analysis, which includes fair value estimates, risks and warnings, dividends, insider transactions and financial health. View the Free Analysis\n\nHave feedback on this article? Concerned about the content? with us directly. Alternatively, email editorial-team (at) simplywallst.com.\n\n\n\nThis article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",
-            "publisher": {
-                "href": "https://simplywall.st",
-                "title": "Simply Wall St"
-            }
-        },
-        {
             "title": "StanChart announces $1 billion buyback after Q4 results beat market estimates",
             "top_image": "https://www.livemint.com/lm-img/img/2024/02/23/1600x900/Standard_Chartered_Plc_1708696241785_1708696242035.jpg",
             "images": [
                 "https://www.livemint.com/lm-img/static/static/1x1_img.gif",
-                "https://www.livemint.com/lm-img/img/2024/02/23/600x338/Standard_Chartered_Plc_1708696241785_1708696242035.jpg",
-                "https://www.livemint.com/lm-img/static/1yr/1x1_img.webp",
-                "https://www.livemint.com/lm-img/images/new/icross.png",
-                "https://www.livemint.com/lm-img/static/epaperIcon.png",
-                "https://www.livemint.com/lm-img/img/2024/02/23/1600x900/Standard_Chartered_Plc_1708696241785_1708696242035.jpg",
-                "https://sb.scorecardresearch.com/p?c1=2&c2=6035286&cv=3.6.0&cj=1",
                 "https://www.livemint.com/lm-img/static/whiteSearchIcon.png",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=6035286&cv=3.6.0&cj=1",
+                "https://www.livemint.com/lm-img/static/epaperIcon.png",
+                "https://www.livemint.com/lm-img/images/new/icross.png",
+                "https://www.livemint.com/lm-img/img/2024/02/23/1600x900/Standard_Chartered_Plc_1708696241785_1708696242035.jpg",
+                "https://www.livemint.com/lm-img/livemint-logo-v2.svg",
                 "https://www.livemint.com/lm-img/img/static/chatbot/hero-img.png",
-                "https://www.livemint.com/lm-img/livemint-logo-v2.svg"
+                "https://www.livemint.com/lm-img/img/2024/02/23/600x338/Standard_Chartered_Plc_1708696241785_1708696242035.jpg",
+                "https://www.livemint.com/lm-img/static/1yr/1x1_img.webp"
             ],
             "videos": [],
             "url": "https://www.livemint.com/companies/news/standard-chartered-announces-share-buyback-worth-1-billion-after-beating-market-estimates-11708695980452.html",
@@ -121,21 +99,50 @@
             }
         },
         {
-            "title": "Goldman upgrades Standard Chartered to 'buy'",
-            "top_image": "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo.jpg",
+            "title": "Standard Chartered Bank to sell its 7.18% stake in CDSL for $151 mn: Report",
+            "top_image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/6602e1907f51f-the-cdsl-stock-ended-01-per-cent-lower-at-rs-1-785-per-share-on-nse-on-tuesday-265406977-16x9.jpg",
             "images": [
-                "https://www.sharecast.com/pixel/media.php?cliente=3&par1=15379374",
-                "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo_620x350.jpg",
-                "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo.jpg"
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/logo/market_logo_11112022.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/eveconomics_new_18.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt500-wealth-creators.jpg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-renewable-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_thtwrk.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/6602e1907f51f-the-cdsl-stock-ended-01-per-cent-lower-at-rs-1-785-per-share-on-nse-on-tuesday-265406977-16x9.jpg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/2023-04/logo.png?size=45:45",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/btgolf-svg.svg",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=8549097&cv=2.0&cj=1",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-pwc-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-adani-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt_lgo_icon.svg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-accenture-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-500-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/best-bank-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_best_school.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_btdavos.svg",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/youtube-icon.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/tech-today-logo-07112023.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/6602e1907f51f-the-cdsl-stock-ended-01-per-cent-lower-at-rs-1-785-per-share-on-nse-on-tuesday-265406977-16x9.jpg?size=948:533",
+                "https://akm-img-a-in.tosshub.com/sites/businesstoday/coindcx_logo.png",
+                "https://akm-img-a-in.tosshub.com//businesstoday/resource/img/bt_ttl_icn.svg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt_pwa_35x19.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/zms-logo.png",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/bt-text-img.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/mpw-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/rhs_market_today.svg",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/rss-icon.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-banking-summit-xs.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/BT-Mindrush-logo.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/btgolf-1a.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/ttl_icn_bttv.svg"
             ],
             "videos": [],
-            "url": "https://www.sharecast.com/news/broker-recommendations/gs-on-stanchart--15379374.html",
-            "date": "Mon, 20 Nov 2023 08:00:00 GMT",
-            "short_description": "Goldman upgrades Standard Chartered to 'buy'  ShareCast",
-            "text": "Goldman Sachs has upgraded its rating on multinational banking group Standard Chartered from 'neutral' to 'buy', saying that upside risk isn't reflected in the current share price.\n\nThe stock currently trades close to record-low valuations, despite a near-decade-high return on tangible equity of 11% next year, and offering a 10% total capital return yield, Goldman said.\n\nMeanwhile, StanChart is set to show a \"rare out-performance relative to its bank peers over the next two years\", according to Goldman.\n\nAnalysts expect the bank to deliver a double-digit compound annual growth rate (CAGR) in earnings per share (EPS) and a 2.7 percentage-point improvement in return on equity (ROE), compared with low single-digit EPS CAGR and declining ROE at peer banks.\n\nGoldman said that improvements in EPS and ROE will be driven by four factors: an unwind of loss-making hedges put-on by the group during late 2021, starting in February 24; a better outlook for non-funds income; a new chief financial officer to be appointed next year who could focus on the outsized corporate office function relative to its peers; and the possibility for continued buyback with capital now at the top-end of the target range.\n\nThird-quarter results from StanChart last month came in about 10% below consensus forecasts on a pre-tax profit level. \"We expect 4Q23 results delivery to be cleaner, in-line with expectations, and to be further supported by a c.US$750mn buy-back announcement. The stock tends to react to earnings and can rise into a potential buy-back,\" Goldman said.\n\nGoldman cut its target price for the shares from 879p to 868p.\n\nThe stock was up 0.8% at 665.2p by 1008 GMT.",
+            "url": "https://www.businesstoday.in/markets/company-stock/story/standard-chartered-bank-to-sell-its-718-stake-in-cdsl-for-151-mn-report-422967-2024-03-26",
+            "date": "Tue, 26 Mar 2024 14:57:07 GMT",
+            "short_description": "Standard Chartered Bank to sell its 7.18% stake in CDSL for $151 mn: Report  Business Today",
+            "text": "Standard Chartered Bank may sell its entire stake in Central Depository Services (India) Ltd through block deals. The bank has a 7.2% stake in the company. The bank has put 75 lakh shares in a block for sale at Rs 1,672 per share, which is about 6.3% discount to the last close of Rs 1,785, CNBC TV18 reported. JPMorgan India is likely to be the advisor for the proposed block deal.\n\nThe CDSL stock ended 0.1 per cent lower at Rs 1,785 per share on NSE on Tuesday.\n\nAt the end of December 31, 2023, Standard Chartered held 75 lakh shares in CDSL, equivalent to 7.18 per cent of the depository\u2019s equity.\n\nCentral Depository Services (India) Limited, floated in 1997, is a publicly listed company engaged in the business of investment services. In February 1999, CDSL received its certificate of commencement of business from SEBI. CSDAL facilitates holding and transacting in securities in the electronic form and facilitates settlement of trades on stock exchanges.\n\nIn Q3 FY2024, CDSL's net profit was at Rs 85.72 crore, up by 36.69% from Rs 62.71 crore in December 2022. EBITDA was at Rs. 121.66 crore in December 2023 up 39.47% from Rs. 87.23 crore in December 2022. CDSL EPS increased to Rs 8.20 in December 2023 from Rs 6.00 in December 2022.",
             "publisher": {
-                "href": "https://www.sharecast.com",
-                "title": "ShareCast"
+                "href": "https://www.businesstoday.in",
+                "title": "Business Today"
             }
         },
         {
@@ -153,71 +160,34 @@
             }
         },
         {
-            "title": "In Brief: Standard Chartered to return billions to investors; ECB reports first loss since 2004",
-            "top_image": "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/standard-chartered-signage/13180169-1-eng-GB/Standard-Chartered-signage.jpg?source=specialist-tb-article&width=816",
+            "title": "Goldman upgrades Standard Chartered to 'buy'",
+            "top_image": "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo.jpg",
             "images": [
-                "https://static.thebanker.com/public/images/iconography/search.svg",
-                "https://static.thebanker.com/public/images/iconography/twitter.svg",
-                "https://static.thebanker.com/public/images/LogIn.svg",
-                "https://static.thebanker.com/public/images/iconography/print.svg",
-                "https://static.thebanker.com/public/images/thebanker_newlogo.svg",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/bank-of-japan2/13183840-1-eng-GB/Bank-of-Japan.jpg?source=design-system&width=495",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/deutsche-bank4/13184163-1-eng-GB/Deutsche-Bank.jpg?source=design-system&width=495",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/blm-barclays-400447866/13184361-1-eng-GB/BLM-Barclays-400447866.jpg?source=design-system&width=495",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/premier-li-qiang/13181281-1-eng-GB/Premier-Li-Qiang.jpg?source=design-system&width=333",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/standard-chartered-signage/13180169-1-eng-GB/Standard-Chartered-signage.jpg?source=specialist-tb-article&width=816",
-                "https://static.thebanker.com/public/images/CrossDark.svg",
-                "https://static.thebanker.com/public/images/iconography/share.svg",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/carlos-fernandez/13183408-1-eng-GB/Carlos-Fernandez.jpg?source=design-system&width=333",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/virgin-money/13181844-1-eng-GB/Virgin-Money.jpg?source=design-system&width=333",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/national-peoples-congress/13181201-1-eng-GB/National-Peoples-Congress.jpg?source=design-system&width=333",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/donald-trump-nomination/13181514-1-eng-GB/Donald-Trump-nomination.jpg?source=design-system&width=333",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/nibs/13184487-1-eng-GB/Nibs.jpg?source=design-system&width=495",
-                "https://static.thebanker.com/public/images/iconography/copy.svg"
+                "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo.jpg",
+                "https://www.sharecast.com/pixel/media.php?cliente=3&par1=15379374",
+                "https://img4.s3wfg.com/web/img/images_uploaded/a/c/dl-standard-chartered-stanchart-stan-chart-finance-financial-emerging-markets-asia-vietnam-logo_620x350.jpg"
             ],
             "videos": [],
-            "url": "https://www.thebanker.com/In-Brief-Standard-Chartered-to-return-billions-to-investors-ECB-reports-first-loss-since-2004-1708689078",
-            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
-            "short_description": "In Brief: Standard Chartered to return billions to investors; ECB reports first loss since 2004  The Banker",
-            "text": "Standard Chartered has announced plans to return cash back to shareholders as it reported a pre-tax profit of $5.7bn for 2023, up 19 per cent compared with the previous year. The Asia-focused lender will launch a $1bn share buyback and aims to return around $5bn to shareholders over the next three years.\n\nDuring a conference call today, CEO Bill Winters forthrightly acknowledged the bank\u2019s disappointing stock performance and committed to addressing it. \u201cThe share price is crap. I know that\u2019s going to be a quote,\u201d Winters told reporters. Standard Chartered share price had declined by 16 per cent in the last 12 months. Winters said the lender\u2019s market valuation does not reflect its performance based on historical returns for the industry, blaming a number of factors.",
+            "url": "https://www.sharecast.com/news/broker-recommendations/gs-on-stanchart--15379374.html",
+            "date": "Mon, 20 Nov 2023 08:00:00 GMT",
+            "short_description": "Goldman upgrades Standard Chartered to 'buy'  ShareCast",
+            "text": "Goldman Sachs has upgraded its rating on multinational banking group Standard Chartered from 'neutral' to 'buy', saying that upside risk isn't reflected in the current share price.\n\nThe stock currently trades close to record-low valuations, despite a near-decade-high return on tangible equity of 11% next year, and offering a 10% total capital return yield, Goldman said.\n\nMeanwhile, StanChart is set to show a \"rare out-performance relative to its bank peers over the next two years\", according to Goldman.\n\nAnalysts expect the bank to deliver a double-digit compound annual growth rate (CAGR) in earnings per share (EPS) and a 2.7 percentage-point improvement in return on equity (ROE), compared with low single-digit EPS CAGR and declining ROE at peer banks.\n\nGoldman said that improvements in EPS and ROE will be driven by four factors: an unwind of loss-making hedges put-on by the group during late 2021, starting in February 24; a better outlook for non-funds income; a new chief financial officer to be appointed next year who could focus on the outsized corporate office function relative to its peers; and the possibility for continued buyback with capital now at the top-end of the target range.\n\nThird-quarter results from StanChart last month came in about 10% below consensus forecasts on a pre-tax profit level. \"We expect 4Q23 results delivery to be cleaner, in-line with expectations, and to be further supported by a c.US$750mn buy-back announcement. The stock tends to react to earnings and can rise into a potential buy-back,\" Goldman said.\n\nGoldman cut its target price for the shares from 879p to 868p.\n\nThe stock was up 0.8% at 665.2p by 1008 GMT.",
             "publisher": {
-                "href": "https://www.thebanker.com",
-                "title": "The Banker"
+                "href": "https://www.sharecast.com",
+                "title": "ShareCast"
             }
         },
-        {
-            "title": "Standard Chartered\u2019s 2023 profit jumps 18%, ahead of market estimates; US$1 billion share buy-back launched",
-            "top_image": "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=0mkv-Hy2&v=1708660446",
-            "images": [
-                "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=2XEALWOg&v=1708660446",
-                "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2024/02/23/6af7f231-86d8-4294-8f5b-4d5d0454c97b_741288e3.jpg",
-                "https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=60,format=auto/sites/default/files/styles/300x300/public/enoch-yiu.png?itok=xdZvCNIO",
-                "https://assets-v2.i-scmp.com/production/_next/static/media/wheel-on-gray.af4a55f9.gif",
-                "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=0mkv-Hy2&v=1708660446"
-            ],
-            "videos": [],
-            "url": "https://www.scmp.com/business/article/3252933/standard-chartered-2023-profit-jumps-18-cent-beating-market-estimates",
-            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
-            "short_description": "Standard Chartered 2023 profit jumps 18%, beats market estimates  South China Morning Post",
-            "text": "The lender, one of Hong Kong\u2019s three currency-issuing banks, announced a fresh share buy-back of US$1 billion and said it had paid 27 US cents as dividend in the full year in 2023, 50 per cent higher than 18 US cents per share a year ago.\n\nThe emerging-markets focused lender posted a net profit of US$3.47billion in 2023, or US$1.08 per share, against a profit of US$2.95 billion posted a year ago. This is better than analysts\u2019 estimate of US$3.34 billion.\n\nStandard Chartered, reiterated its positive view on Hong Kong, the lender\u2019s single largest market, after it reported an 18 per cent jump in profit for 2023, beating street estimates as its bottom line was driven by higher interest income and a wealth management boom.\n\nThe London-based bank, which generates much of its revenues from Asia, reported US$5.09 billion in statutory pre-tax profit for 2023, up 19 per cent from US$4.28 billion in 2022, missing the US$5.39 billion estimate made by analysts in a Bloomberg poll.\n\nExterior of the Standard Chartered Exchange Square Branch in Central. Photo: Jonathan Wong\n\nUnderlying pre-tax profit in Hong Kong, its single largest market, rose 77 per cent to US$1.85 billion, a strong performance that Standard Chartered CEO Bill Winters said showed the city\u2019s potential.\n\n\u201cFrom our perspective, Hong Kong\u2019s record income, super growth, outstanding franchise, and huge connector role between mainland China and the rest of the world is what makes Hong Kong the heart of our business,\u201d he said when asked about a recent opinion piece by former Morgan Stanley chief economist Stephen Roach titled \u201cIt pains me to say Hong Kong is over\u201d.\n\n\u201cIt is a business as strong as it has ever been,\u201d said Winters while adding the internationalisation of the Chinese currency yuan, the development of the Greater Bay Area and the expansion of wealth management businesses will drive the city forward.\n\n\u201cClearly one of the areas of strength has been the wealth management products in Hong Kong, and also Singapore,\u201d he said.\n\n\u201cThe wealth trends in Asia are inexorable. They are very strong and we can look forward to high single digits, low double-digit growth in underlying wealth, and Hong Kong has been and will continue to be at the centre of that. Singapore, of course, is also doing quite well.\u201d\n\nStandard Chartered\u2019s Hong Kong CEO Mary Huen Wai-yi said an expected cut in interest rates this year will help boost loan growth.\n\n\u201cIn general, when the interest rate goes lower, demand for loans and wealth management products increases,\u201d she said in a media briefing in Hong Kong on Friday afternoon.\n\nWinters said the bank will continue to actively manage the group\u2019s capital position with a target to return at least US$5 billion to shareholders over the next three years.\n\nStandard Chartered set aside an aggregate US$1.2 billion towards credit impairment charges related to its exposure in China\u2019s commercial real estate sector, over the past three years.\n\n\u201cWe are very well provided for it right now,\u201d he said.\n\nIn 2023, the situation appeared to be less gloomy with credit impairment charges related to its China commercial real estate business falling to US$282 million from US$582 million in 2022. This reduced the bank\u2019s overall bad debt charges by 37 per cent year on year to US$528 million in 2023.\n\nFor the fourth quarter alone, Standard Chartered reported that its underlying pre-tax profit rose 74 per cent to US$1.1 billion.\n\nShares of Standard Chartered rose 3.7 per cent on Friday to close at HK$62.45 after the result announcement at Friday lunch break, its highest since November.\n\nStandard Chartered\u2019s performance was also hit by an impairment charge related to its investment in China Bohai Bank, which reduced the carrying value of its investment by US$850 million. It is one the founding shareholders of the Tianjin-based joint-stock commercial bank set up in 2006.\n\nOn Wednesday, HSBC reported its pre-tax profit for the fourth quarter dropped 80 per cent to US$1 billion, mainly due to a US$3 billion impairment charge on its 19.03 per cent stake in mainland lender Bank of Communications, caused by a reduction in its carrying value of investments.\n\nStandard Chartered\u2019s Asia business, which provides most of its revenues and profitability, made an underlying pre-tax profit of US$4.74 billion in 2023, an increase of 32 per cent from a year earlier.\n\nThe lender\u2019s Africa and Middle East profit rose 90 per cent to US$1.31 billion during the same period under review.\n\nIn contrast, the bank\u2019s Europe and America operations reported a loss of US$330 million in 2023, compared with a gain of US$834 million in 2022.\n\nIts net interest margin, an important measure of a bank\u2019s profitability, rose to 1.67 per cent in 2023, from 1.41 per cent a year earlier.\n\nA widened margin helped boost Standard Chartered\u2019s net interest income by 23 per cent to US$9.6 billion. Operating income, the equivalent of revenue in US accounting terms, rose 10 per cent to US$17.4 billion in 2023 at constant currency exchange rate.\n\nAnother key unit, the consumer, private banking and wealth management business, saw a 60 per cent profit growth during the year under review. The lender has rolled out a swathe of wealth management centres in recent years to tap the investment demand of the wealthy. Its corporate banking profit also increased 42 per cent last year.\n\nProfits were offset by losses in its new digital banking business. Its SC Ventures business losses widened by 12 per cent year on year to underlying pre-tax loss of US$408 million in 2023. The segment includes majority owned virtual banks, Mox in Hong Kong and Trust in Singapore.",
-            "publisher": {
-                "href": "https://www.scmp.com",
-                "title": "South China Morning Post"
-            }
-        }
-    ],
-    [
         {
             "title": "Those who invested in Standard Chartered (LON:STAN) three years ago are up 115%",
             "top_image": "https://media.zenfs.com/en/simply_wall_st__316/064d0b7911046f8efd85160776a9b33b",
             "images": [
-                "https://s.yimg.com/ny/api/res/1.2/NUA2o3431PKjKDe430Ho5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwODtoPTQ4/https://s.yimg.com/os/creatr-uploaded-images/2021-03/7d6207c0-7d34-11eb-bbee-858baefb8682",
-                "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_w_financev2.png",
-                "https://sb.scorecardresearch.com/p?c1=2&c2=7241469&c5=1183300001&c7=https%3A%2F%2Ffinance.yahoo.com%2Fnews%2Fthose-invested-standard-chartered-lon-071342315.html&c14=-1",
-                "https://media.zenfs.com/en/simply_wall_st__316/064d0b7911046f8efd85160776a9b33b",
+                "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_p_financev2.png",
                 "https://s.yimg.com/ny/api/res/1.2/SdohA9QqnjD3D2kM0lk_1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYwOA--/https://media.zenfs.com/en/simply_wall_st__316/76f286ce93aed1c6f085560e8e3cab00",
                 "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_p_finance_2.png",
-                "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_p_financev2.png"
+                "https://s.yimg.com/ny/api/res/1.2/NUA2o3431PKjKDe430Ho5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwODtoPTQ4/https://s.yimg.com/os/creatr-uploaded-images/2021-03/7d6207c0-7d34-11eb-bbee-858baefb8682",
+                "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_w_financev2.png",
+                "https://media.zenfs.com/en/simply_wall_st__316/064d0b7911046f8efd85160776a9b33b",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=7241469&c5=1183300001&c7=https%3A%2F%2Ffinance.yahoo.com%2Fnews%2Fthose-invested-standard-chartered-lon-071342315.html&c14=-1"
             ],
             "videos": [],
             "url": "https://finance.yahoo.com/news/those-invested-standard-chartered-lon-071342315.html",
@@ -230,19 +200,130 @@
             }
         },
         {
+            "title": "In Brief: Standard Chartered to return billions to investors; ECB reports first loss since 2004",
+            "top_image": "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/standard-chartered-signage/13180169-1-eng-GB/Standard-Chartered-signage.jpg?source=specialist-tb-article&width=816",
+            "images": [
+                "https://static.thebanker.com/public/images/iconography/print.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/national-peoples-congress/13181201-1-eng-GB/National-Peoples-Congress.jpg?source=design-system&width=333",
+                "https://static.thebanker.com/public/images/CrossDark.svg",
+                "https://static.thebanker.com/public/images/thebanker_newlogo.svg",
+                "https://static.thebanker.com/public/images/iconography/twitter.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/carlos-fernandez/13183408-1-eng-GB/Carlos-Fernandez.jpg?source=design-system&width=333",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/donald-trump-nomination/13181514-1-eng-GB/Donald-Trump-nomination.jpg?source=design-system&width=333",
+                "https://static.thebanker.com/public/images/iconography/copy.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/blm-barclays-400447866/13184361-1-eng-GB/BLM-Barclays-400447866.jpg?source=design-system&width=495",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/virgin-money/13181844-1-eng-GB/Virgin-Money.jpg?source=design-system&width=333",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/standard-chartered-signage/13180169-1-eng-GB/Standard-Chartered-signage.jpg?source=specialist-tb-article&width=816",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/bank-of-japan2/13183840-1-eng-GB/Bank-of-Japan.jpg?source=design-system&width=495",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/deutsche-bank4/13184163-1-eng-GB/Deutsche-Bank.jpg?source=design-system&width=495",
+                "https://static.thebanker.com/public/images/iconography/search.svg",
+                "https://static.thebanker.com/public/images/LogIn.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/premier-li-qiang/13181281-1-eng-GB/Premier-Li-Qiang.jpg?source=design-system&width=333",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/https://www.thebanker.com/var/ezflow_site/storage/images/media/images/nibs/13184487-1-eng-GB/Nibs.jpg?source=design-system&width=495",
+                "https://static.thebanker.com/public/images/iconography/share.svg"
+            ],
+            "videos": [],
+            "url": "https://www.thebanker.com/In-Brief-Standard-Chartered-to-return-billions-to-investors-ECB-reports-first-loss-since-2004-1708689078",
+            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
+            "short_description": "In Brief: Standard Chartered to return billions to investors; ECB reports first loss since 2004  The Banker",
+            "text": "Standard Chartered has announced plans to return cash back to shareholders as it reported a pre-tax profit of $5.7bn for 2023, up 19 per cent compared with the previous year. The Asia-focused lender will launch a $1bn share buyback and aims to return around $5bn to shareholders over the next three years.\n\nDuring a conference call today, CEO Bill Winters forthrightly acknowledged the bank\u2019s disappointing stock performance and committed to addressing it. \u201cThe share price is crap. I know that\u2019s going to be a quote,\u201d Winters told reporters. Standard Chartered share price had declined by 16 per cent in the last 12 months. Winters said the lender\u2019s market valuation does not reflect its performance based on historical returns for the industry, blaming a number of factors.",
+            "publisher": {
+                "href": "https://www.thebanker.com",
+                "title": "The Banker"
+            }
+        }
+    ],
+    [
+        {
+            "title": "CDSL shares drop 6% after Standard Chartered likely exits in Rs 1,250-crore block deal",
+            "top_image": "https://img.etimg.com/thumb/msid-108806843,width-1200,height-630,imgsize-12010,overlay-etmarkets/photo.jpg",
+            "images": [
+                "https://img.etimg.com/photo/msid-76920540,quality-100/et-markets-logo.jpg",
+                "https://img.etimg.com/photo/msid-74462387,quality-100/et-logo.jpg",
+                "https://img.etimg.com/photo/msid-87757765,quality-100/stockreport.jpg",
+                "https://img.etimg.com/photo/msid-76920425,quality-100/et-logo.jpg",
+                "https://img.etimg.com/photo/42031747.cms",
+                "https://news.google.com/thumb/msid-95467264,quality-100,width-190,height-145,imglength-43404,resizemode-1/markets/stocks/news/what-do-q2-lic-results-indicate-for-other-insurance-companies-two-life-and-3-non-life-insurance-players-with-buy-and-strong-buy-ratings.jpg",
+                "https://img.etimg.com/photo/104857408.cms",
+                "https://img.etimg.com/photo/47865640.cms",
+                "https://news.google.com/thumb/msid-95376981,quality-100,width-190,height-145,imglength-88698,resizemode-1/markets/stocks/news/higher-than-fd-returns-5-stocks-with-7-to-13-dividend-yields-and-continuous-dividend-payments-for-12-years.jpg",
+                "https://news.google.com/thumb/msid-96128726,quality-100,width-190,height-145,imglength-17272,resizemode-1/markets/stocks/news/4-stocks-with-5-to-8-87-dividend-yields-and-continuous-dividend-payments-for-7-years.jpg",
+                "https://news.google.com/thumb/msid-96127996,quality-100,width-190,height-145,imglength-27020,resizemode-1/markets/stocks/news/weekly-top-picks-eight-stocks-with-consistent-score-improvement-and-upside-potential-of-up-to-40.jpg",
+                "https://img.etimg.com/thumb/msid-108806843,width-1200,height-630,imgsize-12010,overlay-etmarkets/photo.jpg",
+                "https://news.google.com/thumb/msid-95372374,quality-100,width-190,height-145,imglength-34164,resizemode-1/markets/stocks/news/eight-midcap-stocks-2-with-strong-buy-and-6-with-buy-recommendations-with-potential-upside-of-up-to-35.jpg",
+                "https://news.google.com/thumb/msid-95377695,quality-100,width-190,height-145,imglength-33020,resizemode-1/markets/stocks/news/large-cap-stocks-including-three-large-private-insurance-player-and-global-agro-chem-major-with-upside-potential-of-more-than-25.jpg",
+                "https://news.google.com/thumb/msid-95160123,quality-100,width-190,height-145,imglength-54790,resizemode-1/markets/stocks/news/weekly-top-picks-six-high-roe-and-low-peg-ratio-stocks-right-combination-for-wealth-creation.jpg",
+                "https://news.google.com/thumb/msid-95470181,quality-100,width-190,height-145,imglength-27020,resizemode-1/markets/stocks/news/weekly-top-picks-seven-large-mid-caps-with-consistent-score-improvement-and-upside-potential-of-up-to-42.jpg",
+                "https://img.etimg.com/thumb/msid-108806843,width-210,height-158,imgsize-12010,resizemode-75/cdsl.jpg",
+                "https://img.etimg.com/photo/msid-74451948,quality-100/et-logo.jpg",
+                "https://img.etimg.com/photo/94935185.cms"
+            ],
+            "videos": [],
+            "url": "https://economictimes.indiatimes.com/markets/stocks/news/cdsl-shares-drop-6-after-standard-chartered-likely-exits-in-rs-1250-crore-block-deal/articleshow/108806856.cms?from=mdr",
+            "date": "Wed, 27 Mar 2024 04:12:59 GMT",
+            "short_description": "CDSL shares drop 6% after Standard Chartered likely exits in Rs 1,250-crore block deal  The Economic Times",
+            "text": "\n\n\n\n(You can now subscribe to our\n\n(You can now subscribe to our ETMarkets WhatsApp channel\n\nShares of Central Depository Services Ltd ( CDSL ) on Wednesday fell up to 6.4% to the day's low at Rs 1,675 on NSE amid a large block deal in which Standard Chartered Bank is believed to have sold its entire shareholding in the company.Investment banker JPMorgan had last evening issued a term sheet for a block deal in which Standard Chartered Bank offered to sell its entire 7.18% stake at a floor price of Rs 1,672 per share.The deal size is estimated to be worth Rs 1,250 crore at floor price. But a confirmation about the deal would come in the evening when exchanges release block deal data.CDSL was set up in 1999 by BSE, along with banks such as State Bank of India HDFC Bank , Standard Chartered Bank, and Union Bank of India.As a depository, CDSL facilitates the holding of securities in electronic form. CDSL and National Stock Exchange-promoted National Securities Depository Ltd are the only two depositories in India.Foreign portfolio investors in Category-I held over 10% stake in CDSL as of December end, insurance companies about 8%, and mutual funds nearly 13%.For the quarter ended December, CDSL reported a consolidated net profit of Rs 107 crore, compared to Rs 75 crore a year ago.In November last year, CDSL became the first depository to register 10 crore Demat accounts.CDSL, along with its subsidiaries, provides various services to financial intermediaries and markets. Its subsidiaries include CDSL Ventures, CDSL Insurance Repository Ltd, and CDSL Commodity Repository Ltd.",
+            "publisher": {
+                "href": "https://m.economictimes.com",
+                "title": "The Economic Times"
+            }
+        },
+        {
+            "title": "Standard Chartered's (LON:STAN) investors will be pleased with their respectable 41% return over the last three years",
+            "top_image": "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
+            "images": [
+                "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
+                "https://news.google.com/news/images/blue-bear.svg",
+                "https://images.ctfassets.net/n07nr2koi959/220TWz80MMu5IKd31MX2Mh/5baf073475c70362f71c7471b9e72a3c/portrait.jpg?fit=thumb&w=64&h=64",
+                "https://news.google.com/news/images/ios-badge.png",
+                "https://simplywall.st/cdn-cgi/image/width=1200,height=411,fit=cover,format=auto/https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
+                "https://images.simplywall.st/asset/chart/677433-earnings-per-share-growth-1-dark/1706948734300",
+                "https://news.google.com/news/images/play-badge.png"
+            ],
+            "videos": [],
+            "url": "https://simplywall.st/stocks/gb/banks/lse-stan/standard-chartered-shares/news/standard-chartereds-lonstan-investors-will-be-pleased-with-t",
+            "date": "Sat, 03 Feb 2024 08:00:00 GMT",
+            "short_description": "Standard Chartered's (LON:STAN) investors will be pleased with their respectable 41% return over the last three years  Simply Wall St",
+            "text": "One simple way to benefit from the stock market is to buy an index fund. But if you pick the right individual stocks, you could make more than that. Just take a look at Standard Chartered PLC ( ), which is up 33%, over three years, soundly beating the market return of 1.2% (not including dividends).\n\nWith that in mind, it's worth seeing if the company's underlying fundamentals have been the driver of long term performance, or if there are some discrepancies.\n\nThere is no denying that markets are sometimes efficient, but prices do not always reflect underlying business performance. One imperfect but simple way to consider how the market perception of a company has shifted is to compare the change in the earnings per share (EPS) with the share price movement.\n\nDuring three years of share price growth, Standard Chartered achieved compound earnings per share growth of 52% per year. The average annual share price increase of 10% is actually lower than the EPS growth. So it seems investors have become more cautious about the company, over time. We'd venture the lowish P/E ratio of 10.89 also reflects the negative sentiment around the stock.\n\nThe image below shows how EPS has tracked over time (if you click on the image you can see greater detail).\n\nWe know that Standard Chartered has improved its bottom line over the last three years, but what does the future have in store? You can see how its balance sheet has strengthened (or weakened) over time in this free .\n\nWhat About Dividends?\n\nIt is important to consider the total shareholder return, as well as the share price return, for any given stock. The TSR is a return calculation that accounts for the value of cash dividends (assuming that any dividend received was reinvested) and the calculated value of any discounted capital raisings and spin-offs. It's fair to say that the TSR gives a more complete picture for stocks that pay a dividend. In the case of Standard Chartered, it has a TSR of 41% for the last 3 years. That exceeds its share price return that we previously mentioned. The dividends paid by the company have thusly boosted the total shareholder return.\n\nA Different Perspective\n\nWhile the broader market lost about 3.3% in the twelve months, Standard Chartered shareholders did even worse, losing 10% (even including dividends). However, it could simply be that the share price has been impacted by broader market jitters. It might be worth keeping an eye on the fundamentals, in case there's a good opportunity. Longer term investors wouldn't be so upset, since they would have made 0.9%, each year, over five years. If the fundamental data continues to indicate long term sustainable growth, the current sell-off could be an opportunity worth considering. It's always interesting to track share price performance over the longer term. But to understand Standard Chartered better, we need to consider many other factors. Even so, be aware that , you should know about...\n\nFor those who like to find winning investments this free\n\nPlease note, the market returns quoted in this article reflect the market weighted average returns of stocks that currently trade on British exchanges.\n\nValuation is complex, but we're helping make it simple. Find out whether Standard Chartered is potentially over or undervalued by checking out our comprehensive analysis, which includes fair value estimates, risks and warnings, dividends, insider transactions and financial health. View the Free Analysis\n\nHave feedback on this article? Concerned about the content? with us directly. Alternatively, email editorial-team (at) simplywallst.com.\n\n\n\nThis article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",
+            "publisher": {
+                "href": "https://simplywall.st",
+                "title": "Simply Wall St"
+            }
+        },
+        {
+            "title": "Standard Chartered\u2019s 2023 profit jumps 18%, ahead of market estimates; US$1 billion share buy-back launched",
+            "top_image": "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=0mkv-Hy2&v=1708660446",
+            "images": [
+                "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=0mkv-Hy2&v=1708660446",
+                "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2024/02/23/661501a6-00b9-4f55-9a4e-e46739b73e0b_cc4218c5.jpg?itok=2XEALWOg&v=1708660446",
+                "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2024/02/23/6af7f231-86d8-4294-8f5b-4d5d0454c97b_741288e3.jpg",
+                "https://assets-v2.i-scmp.com/production/_next/static/media/wheel-on-gray.af4a55f9.gif",
+                "https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=60,format=auto/sites/default/files/styles/300x300/public/enoch-yiu.png?itok=xdZvCNIO"
+            ],
+            "videos": [],
+            "url": "https://www.scmp.com/business/article/3252933/standard-chartered-2023-profit-jumps-18-cent-beating-market-estimates",
+            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
+            "short_description": "Standard Chartered 2023 profit jumps 18%, beats market estimates  South China Morning Post",
+            "text": "The lender, one of Hong Kong\u2019s three currency-issuing banks, announced a fresh share buy-back of US$1 billion and said it had paid 27 US cents as dividend in the full year in 2023, 50 per cent higher than 18 US cents per share a year ago.\n\nThe emerging-markets focused lender posted a net profit of US$3.47billion in 2023, or US$1.08 per share, against a profit of US$2.95 billion posted a year ago. This is better than analysts\u2019 estimate of US$3.34 billion.\n\nStandard Chartered, reiterated its positive view on Hong Kong, the lender\u2019s single largest market, after it reported an 18 per cent jump in profit for 2023, beating street estimates as its bottom line was driven by higher interest income and a wealth management boom.\n\nThe London-based bank, which generates much of its revenues from Asia, reported US$5.09 billion in statutory pre-tax profit for 2023, up 19 per cent from US$4.28 billion in 2022, missing the US$5.39 billion estimate made by analysts in a Bloomberg poll.\n\nExterior of the Standard Chartered Exchange Square Branch in Central. Photo: Jonathan Wong\n\nUnderlying pre-tax profit in Hong Kong, its single largest market, rose 77 per cent to US$1.85 billion, a strong performance that Standard Chartered CEO Bill Winters said showed the city\u2019s potential.\n\n\u201cFrom our perspective, Hong Kong\u2019s record income, super growth, outstanding franchise, and huge connector role between mainland China and the rest of the world is what makes Hong Kong the heart of our business,\u201d he said when asked about a recent opinion piece by former Morgan Stanley chief economist Stephen Roach titled \u201cIt pains me to say Hong Kong is over\u201d.\n\n\u201cIt is a business as strong as it has ever been,\u201d said Winters while adding the internationalisation of the Chinese currency yuan, the development of the Greater Bay Area and the expansion of wealth management businesses will drive the city forward.\n\n\u201cClearly one of the areas of strength has been the wealth management products in Hong Kong, and also Singapore,\u201d he said.\n\n\u201cThe wealth trends in Asia are inexorable. They are very strong and we can look forward to high single digits, low double-digit growth in underlying wealth, and Hong Kong has been and will continue to be at the centre of that. Singapore, of course, is also doing quite well.\u201d\n\nStandard Chartered\u2019s Hong Kong CEO Mary Huen Wai-yi said an expected cut in interest rates this year will help boost loan growth.\n\n\u201cIn general, when the interest rate goes lower, demand for loans and wealth management products increases,\u201d she said in a media briefing in Hong Kong on Friday afternoon.\n\nWinters said the bank will continue to actively manage the group\u2019s capital position with a target to return at least US$5 billion to shareholders over the next three years.\n\nStandard Chartered set aside an aggregate US$1.2 billion towards credit impairment charges related to its exposure in China\u2019s commercial real estate sector, over the past three years.\n\n\u201cWe are very well provided for it right now,\u201d he said.\n\nIn 2023, the situation appeared to be less gloomy with credit impairment charges related to its China commercial real estate business falling to US$282 million from US$582 million in 2022. This reduced the bank\u2019s overall bad debt charges by 37 per cent year on year to US$528 million in 2023.\n\nFor the fourth quarter alone, Standard Chartered reported that its underlying pre-tax profit rose 74 per cent to US$1.1 billion.\n\nShares of Standard Chartered rose 3.7 per cent on Friday to close at HK$62.45 after the result announcement at Friday lunch break, its highest since November.\n\nStandard Chartered\u2019s performance was also hit by an impairment charge related to its investment in China Bohai Bank, which reduced the carrying value of its investment by US$850 million. It is one the founding shareholders of the Tianjin-based joint-stock commercial bank set up in 2006.\n\nOn Wednesday, HSBC reported its pre-tax profit for the fourth quarter dropped 80 per cent to US$1 billion, mainly due to a US$3 billion impairment charge on its 19.03 per cent stake in mainland lender Bank of Communications, caused by a reduction in its carrying value of investments.\n\nStandard Chartered\u2019s Asia business, which provides most of its revenues and profitability, made an underlying pre-tax profit of US$4.74 billion in 2023, an increase of 32 per cent from a year earlier.\n\nThe lender\u2019s Africa and Middle East profit rose 90 per cent to US$1.31 billion during the same period under review.\n\nIn contrast, the bank\u2019s Europe and America operations reported a loss of US$330 million in 2023, compared with a gain of US$834 million in 2022.\n\nIts net interest margin, an important measure of a bank\u2019s profitability, rose to 1.67 per cent in 2023, from 1.41 per cent a year earlier.\n\nA widened margin helped boost Standard Chartered\u2019s net interest income by 23 per cent to US$9.6 billion. Operating income, the equivalent of revenue in US accounting terms, rose 10 per cent to US$17.4 billion in 2023 at constant currency exchange rate.\n\nAnother key unit, the consumer, private banking and wealth management business, saw a 60 per cent profit growth during the year under review. The lender has rolled out a swathe of wealth management centres in recent years to tap the investment demand of the wealthy. Its corporate banking profit also increased 42 per cent last year.\n\nProfits were offset by losses in its new digital banking business. Its SC Ventures business losses widened by 12 per cent year on year to underlying pre-tax loss of US$408 million in 2023. The segment includes majority owned virtual banks, Mox in Hong Kong and Trust in Singapore.",
+            "publisher": {
+                "href": "https://www.scmp.com",
+                "title": "South China Morning Post"
+            }
+        },
+        {
             "title": "Our share price is \u2018crap\u2019, admits Standard Chartered boss",
             "top_image": "https://www.telegraph.co.uk/content/dam/business/2024/02/23/TELEMMGLPICT000367656479_17086819316990_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf-0Jyi0jPPD6Zx1hiwTPhlc.jpeg?impolicy=logo-overlay",
             "images": [
                 "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000347315086_17111409306880_trans_NvBQzQNjv4Bq3Z7i_2nUjuO-XXgVmfiyhMbHf4DfgeegiUIPq8ZyLgk.jpeg?imwidth=350",
+                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000369456882_17111447539090_trans_NvBQzQNjv4Bq8juO8C_Vdx2cT20LARTibnFLfv0ucAwTrkjYdq767p4.jpeg?imwidth=350",
                 "https://news.google.com/content/dam/business/2024/02/23/TELEMMGLPICT000367656479_17086819316990_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf-0Jyi0jPPD6Zx1hiwTPhlc.jpeg?imwidth=680",
-                "https://news.google.com/etc.clientlibs/settings/wcm/designs/telegraph/core/clientlibs/ui/dist/static/resources/images/flags/USA-SVG.svg",
+                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000280833417_17111336592160_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg?imwidth=350",
                 "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000362173679_17111438304020_trans_NvBQzQNjv4BqvWcivG3pA03OdPoNwlmerhYlaw4bBLNQksJNt4apZKM.jpeg?imwidth=350",
                 "https://www.telegraph.co.uk/content/dam/business/2024/02/23/TELEMMGLPICT000367656479_17086819316990_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf-0Jyi0jPPD6Zx1hiwTPhlc.jpeg?impolicy=logo-overlay",
-                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000310266620_17111140004240_trans_NvBQzQNjv4BqJne4mujmLBEy4Yfa2AGlszMHHb_1jynv-KOxOo3hozE.jpeg?imwidth=350",
-                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000280833417_17111336592160_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg?imwidth=350",
                 "https://news.google.com/etc.clientlibs/settings/wcm/designs/telegraph/core/clientlibs/ui/dist/static/resources/images/flags/UK-SVG.svg",
-                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000369456882_17111447539090_trans_NvBQzQNjv4Bq8juO8C_Vdx2cT20LARTibnFLfv0ucAwTrkjYdq767p4.jpeg?imwidth=350",
-                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000365662049_17111318293490_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.jpeg?imwidth=350"
+                "https://news.google.com/etc.clientlibs/settings/wcm/designs/telegraph/core/clientlibs/ui/dist/static/resources/images/flags/USA-SVG.svg",
+                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000365662049_17111318293490_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.jpeg?imwidth=350",
+                "https://news.google.com/content/dam/business/2024/03/22/TELEMMGLPICT000310266620_17111140004240_trans_NvBQzQNjv4BqJne4mujmLBEy4Yfa2AGlszMHHb_1jynv-KOxOo3hozE.jpeg?imwidth=350"
             ],
             "videos": [],
             "url": "https://www.telegraph.co.uk/business/2024/02/23/standard-chartered-boss-bill-winters-admit-share-price-crap/",
@@ -255,106 +336,27 @@
             }
         },
         {
-            "title": "Standard Chartered CEO Addresses Share Price Concerns Amid Dividend Boost and Buyback",
-            "top_image": "https://366e203a.rocketcdn.me/wp-content/uploads/2024/02/Standard-Chartered.jpg",
+            "title": "Standard Chartered announces $1 billion buyback as profit beats",
+            "top_image": "https://imagevars.gulfnews.com/2022/08/17/Stock---Standard-Chartered_182ac539e56_medium.jpg",
             "images": [
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20365%20330'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20356'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20960%20640'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2020/10/anna-siampani-150x150.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20728%2090'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/03/air-pollution-1-365x330.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20173%2054'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/02/Businessman-365x330.jpg",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/03/Statkraft-365x330.jpg",
-                "https://366e203a.rocketcdn.me/wp-includes/images/spinner.gif",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2021/05/CEOWORLD-magazine-Logo.png",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%2048'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/02/Office-365x330.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%2078'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20140%20140'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/03/Comtech-365x330.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20288%2090'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2023/05/CEOWORLD-magazine-Logo-54.png",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2024/02/Standard-Chartered.jpg",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2023/09/CEOWORLD-magazine-Print-2.png",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2021/05/depositphotos.png",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20950%20250'%3E%3C/svg%3E",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2023/05/CEOWORLD-magazine-Logo.png",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2023/09/CEOWORLD-magazine-Print.png",
-                "https://366e203a.rocketcdn.me/wp-content/uploads/2023/09/CEOWORLD-magazine-Print-1.png",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E"
+                "https://assets.gulfnews.com/images/site-large.png",
+                "https://assets.gulfnews.com/svg/logo-gn-white.svg",
+                "https://assets.gulfnews.com/images/gn_round_logo.png",
+                "https://assets.gulfnews.com/images/spacer.gif",
+                "https://assets.gulfnews.com/images/logo-gn.svg",
+                "https://assets.gulfnews.com/images/image_stamp.png",
+                "https://assets.gulfnews.com/svg/logo-gn.svg",
+                "https://imagevars.gulfnews.com/2022/08/17/Stock---Standard-Chartered_182ac539e56_medium.jpg",
+                "https://assets.gulfnews.com/images/logo-gulfnews2x.png"
             ],
             "videos": [],
-            "url": "https://ceoworld.biz/2024/02/23/standard-chartered-ceo-addresses-share-price-concerns-amid-dividend-boost-and-buyback/",
+            "url": "https://gulfnews.com/business/banking/standard-chartered-announces-1-billion-buyback-as-profit-beats-1.1708682186044",
             "date": "Fri, 23 Feb 2024 08:00:00 GMT",
-            "short_description": "Standard Chartered CEO Addresses Share Price Concerns Amid Dividend Boost and Buyback  CEOWORLD magazine",
-            "text": "Bill Winters, Chief Executive Officer of Standard Chartered PLC, acknowledged the bank\u2019s disappointing share price performance and pledged to address it as the lender unveiled increased dividends, a new $1 billion buyback, and an 18% rise in annual profit.\n\nWinters candidly remarked on the bank\u2019s share price during a conference call with reporters, acknowledging its lackluster performance, which had declined by 4% year-to-date and 16% over the last 12 months. He attributed this to various factors, asserting that the bank\u2019s market valuation does not align with its historical sector returns.\n\nDespite the share price challenges, Standard Chartered\u2019s shares surged 5% in London and had risen 2% in Hong Kong early on. The bank reported a 2023 statutory pre-tax profit of $5.09 billion, meeting expectations, and announced an increase in dividends alongside the buyback. However, it provided conservative guidance for 2024, expecting income growth at the higher end of 5-7%, lower than the previous estimate of 8-10%.\n\nAdditionally, Standard Chartered aims to steadily increase returns on tangible equity from the current 10% to 12% by 2026, abandoning its previous forecast to reach 11% this year. The bank faced an $850 million impairment, mainly from its stake in Chinese lender Bohai Bank, reflecting challenges in China\u2019s property market and increasing bad loans.\n\nDespite these challenges, Standard Chartered announced a final dividend resulting in a 50% increase in its full-year dividend payout, reflecting a trend among European peers to prioritize shareholder rewards amid a challenging operating environment.\n\nWinters stated the bank\u2019s goal to return at least $5 billion to shareholders over the next three years. His total pay package rose to $9.88 million, while the group bonus pool for staff decreased slightly to $1.6 billion.\n\nHave you read?\n\nStudy: These are the Most Popular Tourist Attractions of America.\n\nStudy: Wealthiest Americans of All Time.\n\nRevealed: The Biggest Beer Companies in the World, 2023.\n\nRanked: Most Popular Dog Breeds in the U.S. of 2023.\n\nRevealed: Countries With the Highest Suicide Rates, 2023.\n\nRanked: These Are The Most Dangerous Jobs in the World, 2023.\n\nThis report/news/ranking/statistics has been prepared only for general guidance on matters of interest and does not constitute professional advice. You should not act upon the information contained in this publication without obtaining specific professional advice.\n\nNo representation or warranty (express or implied) is given as to the accuracy or completeness of the information contained in this publication, and, to the extent permitted by law, CEOWORLD magazine does not accept or assume any liability, responsibility or duty of care for any consequences of you or anyone else acting, or refraining to act, in reliance on the information contained in this publication or for any decision based on it. This publication (and any extract from it) must not be copied, redistributed or placed on any website, without CEOWORLD magazine' prior written consent.\n\nEmail Address* Name\n\nCEOWORLD magazine Latest Banking and Finance Standard Chartered CEO Addresses Share Price Concerns Amid Dividend Boost and Buyback\n\nCopyright 2024 The CEOWORLD magazine . All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For media queries, please contact: info@ceoworld.biz",
+            "short_description": "Standard Chartered announces $1 billion buyback as profit beats  Gulf News",
+            "text": "Standard Chartered Plc pledged to hand back more money to shareholders as it outlined efforts to improve returns and reduce complexity at the emerging markets-focused lender.\n\nReporting fourth-quarter profits that beat analyst estimates, the London-headquartered bank said it would kick off a fresh $1 billion buyback. The firm said a new \"Fit for Growth\" program will save about $1.5 billion in expenses over the next three years, but also add a similar amount to costs for the permanent organizational changes.\n\nChief Executive Officer Bill Winters, who joined the group almost nine years ago, has been looking for ways to bolster returns for investors and galvanize the stock, which has sunk more than 15 per cent in the past year.\n\n\"We're not happy with the share price at all,\" Winters said on Bloomberg Television. The market has \"a sense that it's hard to get things done at Standard Chartered and this Fit for Growth program is going to tackle that head on.\"\n\nFinal dividend\n\nStandard Chartered's adjusted pretax profit rose 63 per cent to $1.06 billion in the three months through December, beating an estimate of $989.6 million.\n\nThe lender declared a final dividend of 21 cents a share, raising the full-year payout by 50 per cent. It unveiled new guidance, targeting a 12 per cent return on tangible equity in 2026 and a 5 to 7 per cent growth in operating income for 2024 to 2026.\n\nShares jumped as much as 6.9 per cent in early London trading on Friday.\n\nOptions\n\nDespite its exposure to some of the world's fastest growing markets in Asia, Africa and the Middle East, Standard Chartered shares have performed poorly in recent months and are almost 40 per cent below the level they were when Winters joined the bank in June 2015.\n\nThe bank is weighing restructuring its institutional banking arm, the unit that houses the firm's investment bankers and traders, Bloomberg News reported earlier. Options include separating its investment bank from its corporate and commercial banking operations, according to people familiar with the matter. The move could lead to job cuts and is one of several possibilities being weighed with no final decisions made yet, the people said, asking not to be identified discussing matters still under consideration.\n\n\"We've taken very material provisions there, well ahead of our peers who have investments in Chinese banks,\" Winters told reporters on a media call.",
             "publisher": {
-                "href": "https://ceoworld.biz",
-                "title": "CEOWORLD magazine"
-            }
-        },
-        {
-            "title": "Standard Chartered Share Price Plunged 17.6% on Q3 Profit Slump",
-            "top_image": "https://www.asktraders.com/wp-content/uploads/2023/10/Standard-Chartered-branch.jpg",
-            "images": [
-                "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                "https://www.asktraders.com/wp-content/uploads/2020/02/Tickmill-T5-Logo-1.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/08/how-to-trade-stocks-01-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2019/07/skilling-logo-600x93.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/09/admirals-logo-small.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/09/Best-Sustainable-ETFs-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2020/09/pepperstone-logo-small.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/09/plus500-logo-82-rw.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/03/Spreadex-Financials-Logo-Top5.png",
-                "https://www.asktraders.com/wp-content/uploads/2022/11/Aston-Martin-V12-Vantage-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/flags/united-kingdom.png",
-                "https://www.asktraders.com/wp-content/uploads/2019/06/ipo-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2021/09/VWAP-Trading-Strategy-Guide-Examples-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2023/10/Standard-Chartered-branch.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2022/12/eToro-Analysis-of-Trading-Signals-Sentiment-Resources-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2020/03/Best-Scalping-Trading-Strategies-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2020/09/etoro-top-5-new.png",
-                "https://www.asktraders.com/wp-content/uploads/2023/11/JD-Wetherspoons-pub-location-150x150.jpg",
-                "https://lh7-us.googleusercontent.com/_pgTupRjw7OlFulICfdgZV-zRyz0s51548Y1g42QgslhxAK8pv53W91IFwEleOkoeDn2QUgZ0MgITjqZao436PRYV1YfVVEZDuT1OEH7yVWmRGmZhqe-THhq81wurkL3WaYCWgxpWYmjC1oJsO8Mr-c",
-                "https://www.asktraders.com/wp-content/uploads/2023/10/fxgt-logo-small.png",
-                "https://www.asktraders.com/wp-content/uploads/2024/03/Darktrace-office-150x150.jpg",
-                "https://www.asktraders.com/wp-content/uploads/2019/12/avatrade-top-5-Logo.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/03/Simon_mungo-150x150.png",
-                "https://www.asktraders.com/wp-content/uploads/2019/12/IG-Logo-150x46-1.png",
-                "https://www.asktraders.com/wp-content/uploads/2020/07/Lloyds-Bank-Logo-150x150.jpg"
-            ],
-            "videos": [],
-            "url": "https://www.asktraders.com/analysis/standard-chartered-share-price-plunged-17-6-on-q3-profit-slump/",
-            "date": "Thu, 26 Oct 2023 07:00:00 GMT",
-            "short_description": "Standard Chartered Share Price Plunged 18% on Q3 Profit Slump  AskTraders",
-            "text": "The Standard Chartered PLC (LON: STAN) share price plunged 17.6% after its third-quarter earnings results were released. The result showed that the global bank lost almost $1 billion from its exposure to China\u2019s real estate and banking sectors.\n\nOPEN DEMO ACCOUNT YOUR CAPITAL IS AT RISK. 76% OF RETAIL CFD ACCOUNTS LOSE MONEY .\n\nThe UK-headquartered bank revealed a $700 million impairment charge related to its stake in China Bohai Bank and an additional $186 million associated with its exposure to Chinese commercial real estate.\n\nInvestors reacted negatively to the news, as evidenced by the 17.6% decline in Standard Chartere\u2019s share price earlier today, which triggered a halt in trading of the shares. Today\u2019s decline marks the most significant one-day decline since February 24, 2022, when Russia invaded Ukraine.\n\nStandard Chartered, a U.K.-based bank that primarily generates its revenue from the Asian market, reported a statutory pre-tax profit of $633 million for July-September. This represented a significant drop compared to $996 million in the same period the previous year and fell below the $1.41 billion average estimated by 16 analysts polled by the bank.\n\nThe substantial loss incurred in China, where Standard Chartered has concentrated much of its expansion efforts, highlights its challenges in improving returns while dealing with a slowing economy and increasing loan losses.\n\nDespite various government measures to stimulate economic growth, China's financial stability remains fragile, mainly due to ongoing issues in its property market, such as high-profile debt-repayment defaults and a lack of state support in the sector.\n\nStandard Chartered attributed the impact on its 16% stake in China Bohai, a lender located in the eastern coastal city of Tianjin, to lower projected interest rates and reduced lending margins reported in the Chinese bank's half-year results.\n\nStandard Chartered's exposure to the Chinese real estate sector amounted to $2.7 billion, a $200 million decrease from the previous quarter. The valuation slump could reignite takeover interest in the bank, as First Abu Dhabi Bank (FAB) had considered but abandoned a bid in January of this year.\n\nDespite the disappointing financial results, Standard Chartered expressed confidence in achieving its return-on-tangible-equity t(RoTE) targets of 10% for the current year and 11% by 2024.\n\nStandard Chartered (STAN) share price.\n\nThe Standard Chartered (STAN) share price plunged 17.55% to trade at 588.15p from Wednesday\u2019s closing price of 713.30p.\n\nSearching for the Perfect Broker? Discover our top-recommended brokers for trading stocks, forex, cryptos, and beyond. Dive in and test their capabilities with complimentary demo accounts today! eToro Top stock trading platform with 0% commission \u2013 Read our Review\n\n\u2013 Read our Review Tickmill Regulated by the FCA \u2013 Read our Review\n\n\u2013 Read our Review Admirals (Admiral Markets) More than 4500 stocks & ETFs available \u2013 Read our Review YOUR CAPITAL IS AT RISK. 76% OF RETAIL CFD ACCOUNTS LOSE MONEY",
-            "publisher": {
-                "href": "https://www.asktraders.com",
-                "title": "AskTraders"
-            }
-        },
-        {
-            "title": "STAN Stock: Standard Chartered Plc Announces Share Buyback",
-            "top_image": "https://media.valuethemarkets.com/seo/Favicon-48x48@3x-1635282064.png",
-            "images": [
-                "https://media.valuethemarkets.com/seo/Favicon-48x48@3x-1635282064.png",
-                "https://files.valuethemarkets.com/containers/assets/qy003--banners--set-07-468x60-px.jpg/10d8acb68c7f82f7bd2b2af53c6b4248.jpg",
-                "https://media.valuethemarkets.com/vtm-logos/vtm-logo-alt.svg",
-                "https://media.valuethemarkets.com/vtm-logos/vtm-logo.svg",
-                "https://files.valuethemarkets.com/containers/assets/standard-chartered-stock-buyback.jpg/af916a5c56ca29d640ce2c8174f5c5aa.jpg",
-                "https://files.valuethemarkets.com/containers/assets/qy003--banners--set-07-300x250-px-1701075879.jpg/090dd03576b0d51ce6b3c1dbcc1c0474.jpg"
-            ],
-            "videos": [],
-            "url": "https://www.valuethemarkets.com/analysis/standard-chartered-plc-to-return-more-money-to-shareholders-following-strong-q4-profit",
-            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
-            "short_description": "STAN Stock Beats Analyst Estimates 63% Rise in Q4 Profits  Value the Markets",
-            "text": "What You Need To Know\n\nStandard Chartered Plc (LON: STAN), an emerging markets-focused lender, plans to return more money to shareholders as part of its efforts to boost returns and simplify its operations. The bank reported fourth-quarter profits that exceeded analysts' expectations and announced a new $1 billion buyback.\n\nAdditionally, the bank introduced a \"Fit for Growth\" program, which aims to save $1.5 billion in expenses over the next three years. However, these cost savings will be partially offset by costs related to organizational changes.\n\nStandard Chartered's CEO, Bill Winters, has been focused on improving investor returns and increasing the bank's stock performance, which has declined by more than 20% in the past year. The bank aims to deliver sustained, long-term value for its shareholders.\n\nStandard Chartered reported a 63% increase in fourth-quarter adjusted pretax profit, and it plans to raise its full-year dividend by 50%. The bank also provided new guidance, targeting a 12% return on tangible equity by 2026 and a 5% to 7% rise in operating income from 2024 to 2026.\n\nDespite its exposure to high-growth markets, the bank's shares have performed poorly in recent months, prompting the possibility of restructuring its institutional banking arm. Options being considered include separating the investment bank from corporate and commercial banking operations, which may lead to job cuts.\n\nStandard Chartered faced challenges in the third quarter due to charges related to investments in China. Overall, the bank is focused on improving its financial performance and overall shareholder value.\n\nWhy This Is Important for Retail Investors\n\nIncreased shareholder returns: Standard Chartered's plans to return more money to shareholders and introduce a buyback program is beneficial to shareholders and retail investors who rely on these forms of income and value the opportunity to participate in buybacks. Financial performance: STAN bank's strong fourth-quarter profits and improved financial performance provide reassurance to retail investors about the stability and profitability of their investment in Standard Chartered. This can help build confidence and attract new investors to STAN stock. Long-term value creation: Standard Chartered's focus on sustained, long-term value creation aligns with the goals of many retail investors who prioritize stable and growing investments. The bank's guidance for higher returns and operating income growth in the coming years can be seen as a positive long-term outlook for investors. Transparency and communication: The statements from the CEO and Chairman regarding the underperformance of the Standard Chartered bank's share price demonstrate a commitment to open communication with shareholders. Retail investors often appreciate transparency from company leadership and may find it comforting to see proactive efforts being taken to address share price concerns. Consideration for retail investors: Standard Chartered's latest actions, such as the dividend increase and the potential restructuring to improve stock performance, indicate that the bank is taking into account the interests and concerns of retail investors. This shows a commitment to creating value for all shareholders and can foster a sense of trust and loyalty from retail investors.\n\nHow Can You Use This Information?\n\nHere are some of the investing ideas that can be explored using this information:\n\nValue Investing\n\nStandard Chartered's commitment to improving shareholder returns and potential restructuring could make it an interesting option for value investors looking for undervalued opportunities.\n\nDividend Investing\n\nThe bank's plans to return more money to shareholders, including a higher dividend payout, may attract dividend-focused investors seeking consistent income.\n\nDefensive investing\n\nStandard Chartered's focus on cost-saving measures and efforts to improve financial performance could make it an appealing choice for defensive investors who prioritize stability and risk mitigation.\n\nEvent-Driven Strategy\n\nThe potential restructuring and organizational changes in Standard Chartered's institutional banking arm can create opportunities for event-driven investors who seek to capitalize on market reactions to significant corporate events.\n\nSector Rotation\n\nWith Standard Chartered's focus on emerging markets, retail investors interested in sector rotation strategies may consider exposure to the financial sector and the Asian, African, and Middle Eastern regions that the bank serves.\n\nRead What Others Are Saying\n\nFT: Standard Chartered chief says bank's share price too influenced by 'downside concerns'",
-            "publisher": {
-                "href": "https://www.valuethemarkets.com",
-                "title": "Value the Markets"
+                "href": "https://gulfnews.com",
+                "title": "Gulf News"
             }
         },
         {
@@ -362,11 +364,11 @@
             "top_image": "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg",
             "images": [
                 "https://financial-times-financial-times.cdn.zephr.com/assets/icons/padlock_icon.svg",
-                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_trial.svg",
                 "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_premium.svg",
+                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_print.svg",
                 "https://spoor-api.ft.com/px.gif?data=%7B%22category%22%3A%22page%22%2C%22action%22%3A%22view%22%2C%22system%22%3A%7B%22source%22%3A%22non-ctm%22%7D%2C%22context%22%3A%7B%22name%22%3A%22barrier-page%22%2C%22product%22%3A%22next%22%2C%22data%22%3A%7B%22source%22%3A%22%5BSOURCE%5D%22%7D%7D%7D",
-                "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg",
-                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_print.svg"
+                "https://financial-times-financial-times.cdn.zephr.com/assets/icons/primary_product_icon_trial.svg",
+                "https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&format=svg"
             ],
             "videos": [],
             "url": "https://www.ft.com/content/225b3b31-9264-412a-bad4-011b5a4ed7a4",
@@ -393,19 +395,91 @@
             }
         },
         {
+            "title": "CDSL share price slumps over 6% amid report of block deal by Standard Chartered Bank",
+            "top_image": "https://www.livemint.com/lm-img/img/2024/03/27/1600x900/3-0-86449917-iStock-1167137273-0_1679792587527_1711511768060.jpg",
+            "images": [
+                "https://www.livemint.com/lm-img/static/static/1x1_img.gif",
+                "https://www.livemint.com/lm-img/img/2024/03/27/1600x900/3-0-86449917-iStock-1167137273-0_1679792587527_1711511768060.jpg",
+                "https://www.livemint.com/lm-img/static/whiteSearchIcon.png",
+                "https://www.livemint.com/lm-img/img/2024/03/27/600x338/3-0-86449917-iStock-1167137273-0_1679792587527_1711511768060.jpg",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=6035286&cv=3.6.0&cj=1",
+                "https://www.livemint.com/lm-img/static/epaperIcon.png",
+                "https://www.livemint.com/lm-img/images/new/icross.png",
+                "https://www.livemint.com/lm-img/livemint-logo-v2.svg",
+                "https://www.livemint.com/lm-img/img/static/chatbot/hero-img.png",
+                "https://www.livemint.com/lm-img/static/1yr/1x1_img.webp"
+            ],
+            "videos": [],
+            "url": "https://www.livemint.com/market/stock-market-news/cdsl-share-price-slumps-over-6-amid-report-of-block-deal-by-standard-chartered-bank-11711511568165.html",
+            "date": "Wed, 27 Mar 2024 04:01:36 GMT",
+            "short_description": "CDSL share price slumps over 6% amid report of block deal by Standard Chartered Bank | Mint  Mint",
+            "text": "Central Depository Services (India) Ltd (CDSL) share price slumped over 6% on Wednesday's session, following reports that Standard Chartered Bank intends to exit its investment by selling its entire ownership through a block deal. A term sheet that Mint examined indicated that the bank will sell 7.5 million shares, or 7.18% of its holdings in CDSL. CDSL share price today opened at \u20b91,718.55 apiece on NSE.\n\nIt is projected that the deal will be worth up to $151 million in total. The shares are being sold by Standard Chartered at a floor price of \u20b91,672 apiece, which represents a 6.5% discount from CDSL's Tuesday closing price of \u20b91,788.90 on the NSE.\n\nAlso Read: Buy or sell stock: Reliance Power share price takes a pause after 35% rise in eight days\n\n\"Exciting news! Mint is now on WhatsApp Channels \ud83d\ude80 Subscribe today by clicking the link and stay updated with the latest financial insights!\" Click here!\n\nRajesh Bhosale, Equity Technical and Derivative Analyst, Angel One, said that post the overnight news of the stake sale, the stock prices have seen a gap-down opening. We have seen the spurt in volume with the stake sale happening at the opening. As of now, the momentum is weak but the overall trend is positive. Any dip further towards \u20b91,600\u20131,550 would be an excellent opportunity to buy in the near term, whereas 1800 is immediate resistance.\n\nAccording to news reports, around 1 crore shares, or 9.6% stake in CDSL worth \u20b91,712.9 crore, changed hands.\n\nAlso Read: ABB India shares surge 6.60% to hit new all-time high after UBS lifts target price\n\nThe Standard Chartered selling process is reportedly being handled by JP Morgan India Private Limited. A CDSL representative did not immediately respond to an email, according to mint.\n\nAs to a JM Financial research report dated February 7, CDSL benefits from India's great economic potential and stable political and macroeconomic climate, which puts the country's capital markets in a good growth position. \"However, we believe the stock remains fairly valued at current valuations of 44x/40x FY25/26E P/E,\" the research report stated.\n\nAlso Read: Sensex Today | Share Market Live Updates: Sensex up 350pts, Nifty above 22,100; O&G, Bank, Auto, FS gain, FMCG, IT muted\n\nDisclaimer: The views and recommendations above are those of individual analysts, experts and broking companies, not of Mint. We advise investors to check with certified experts before making any investment decisions.\n\nANGEL ONE More Information\n\nMilestone Alert! Livemint tops charts as the fastest growing news website in the world \ud83c\udf0f Click here to know more.\n\nUnlock a world of Benefits! From insightful newsletters to real-time stock tracking, breaking news and a personalized newsfeed \u2013 it's all here, just a click away! Login Now!",
+            "publisher": {
+                "href": "https://www.livemint.com",
+                "title": "Mint"
+            }
+        },
+        {
+            "title": "CDSL shares plunge 6% amid high turnover; Standard Chartered Bank likely seller",
+            "top_image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/66039f6d50070-cdsl-shares-plunge-6-amid-high-turnover-standard-chartered-bank-likely-seller-272411900-16x9.jpg",
+            "images": [
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/logo/market_logo_11112022.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/eveconomics_new_18.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt500-wealth-creators.jpg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-renewable-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_thtwrk.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/btgolf-svg.svg",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=8549097&cv=2.0&cj=1",
+                "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/66039f6d50070-cdsl-shares-plunge-6-amid-high-turnover-standard-chartered-bank-likely-seller-272411900-16x9.jpg?size=948:533",
+                "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202403/66039f6d50070-cdsl-shares-plunge-6-amid-high-turnover-standard-chartered-bank-likely-seller-272411900-16x9.jpg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-pwc-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-adani-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt_lgo_icon.svg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-accenture-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-500-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/best-bank-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_best_school.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/evt_lgo_btdavos.svg",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/youtube-icon.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/tech-today-logo-07112023.png",
+                "https://akm-img-a-in.tosshub.com/sites/businesstoday/coindcx_logo.png",
+                "https://akm-img-a-in.tosshub.com//businesstoday/resource/img/bt_ttl_icn.svg",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt_pwa_35x19.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/zms-logo.png",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/bt-text-img.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/mpw-new.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/rhs_market_today.svg",
+                "https://akm-img-a-in.tosshub.com/sites/mailer/rss-icon.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/bt-banking-summit-xs.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/2022-10/screenshot-2022-10-04-at-2.35.30-pm.png?size=45:45",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/BT-Mindrush-logo.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/btgolf-1a.png",
+                "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/ttl_icn_bttv.svg"
+            ],
+            "videos": [],
+            "url": "https://www.businesstoday.in/markets/company-stock/story/cdsl-shares-plunge-6-amid-high-turnover-standard-chartered-bank-likely-seller-423011-2024-03-27",
+            "date": "Wed, 27 Mar 2024 04:25:26 GMT",
+            "short_description": "CDSL shares plunge 6% amid high turnover; Standard Chartered Bank likely seller  Business Today",
+            "text": "Shares of Central Depository Services (India) Ltd (CDSL) fell over 6 per cent in Wednesday's trade amid high turnover. A total of 1 crore shares, or 9.6 per cent equity, worth Rs 1,712.90 crore change hands on the counter, CNBC TV-18 reported. Standard Chartered Bank was reportedly looking to offload its entire 7.18 per cent stake in the depository via block deal today.\n\nThe floor price for the transaction, as per the media report, was set at Rs 1,672 per share and the deal size was estimated at $151 million. Business Today could not independently verify the report.\n\nFollowing the development, the NSE-listed stock fell 6.36 per cent to hit a low of Rs 1,675. The stock is still up 86 per cent in the last one year.\n\nStandard Chartered Bank was said to have put 75 lakh shares on block and the floor price was at 6 per cent discount to Wednesday's closing price. CDSL shares ended at Rs 1,785 on NSE, down 0.13 per cent. The listed depository offers facilitates holding and transacting securities in the electronic form and settlement of trades on stock exchanges. CDSL maintains and services 10 crore-plus demat accounts of investors or beneficial owners (BOs) spread across India.",
+            "publisher": {
+                "href": "https://www.businesstoday.in",
+                "title": "Business Today"
+            }
+        },
+        {
             "title": "Standard Chartered Q3 results: Profit dips 33% due to nearly $1 billion hit from China exposure, shares tumble 12%",
             "top_image": "https://www.livemint.com/lm-img/img/2023/10/26/1600x900/STANCHART-RESULTS--0_1698325987239_1698326021568.JPG",
             "images": [
-                "https://sb.scorecardresearch.com/p?c1=2&c2=6035286&cv=3.6.0&cj=1",
-                "https://www.livemint.com/lm-img/static/1yr/1x1_img.webp",
                 "https://www.livemint.com/lm-img/static/static/1x1_img.gif",
-                "https://www.livemint.com/lm-img/images/new/icross.png",
-                "https://www.livemint.com/lm-img/img/static/chatbot/hero-img.png",
-                "https://www.livemint.com/lm-img/static/epaperIcon.png",
-                "https://www.livemint.com/lm-img/livemint-logo-v2.svg",
                 "https://www.livemint.com/lm-img/img/2023/10/26/1600x900/STANCHART-RESULTS--0_1698325987239_1698326021568.JPG",
+                "https://www.livemint.com/lm-img/static/whiteSearchIcon.png",
+                "https://sb.scorecardresearch.com/p?c1=2&c2=6035286&cv=3.6.0&cj=1",
                 "https://www.livemint.com/lm-img/img/2023/10/26/600x338/STANCHART-RESULTS--0_1698325987239_1698326021568.JPG",
-                "https://www.livemint.com/lm-img/static/whiteSearchIcon.png"
+                "https://www.livemint.com/lm-img/static/epaperIcon.png",
+                "https://www.livemint.com/lm-img/images/new/icross.png",
+                "https://www.livemint.com/lm-img/livemint-logo-v2.svg",
+                "https://www.livemint.com/lm-img/img/static/chatbot/hero-img.png",
+                "https://www.livemint.com/lm-img/static/1yr/1x1_img.webp"
             ],
             "videos": [],
             "url": "https://www.livemint.com/companies/company-results/standard-chartered-q3-results-profit-dips-33-due-to-nearly-1-billion-hit-from-china-exposure-shares-tumble-12-11698325989159.html",
@@ -415,66 +489,6 @@
             "publisher": {
                 "href": "https://www.livemint.com",
                 "title": "Mint"
-            }
-        },
-        {
-            "title": "Standard Chartered's (LON:STAN) investors will be pleased with their respectable 41% return over the last three years",
-            "top_image": "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-            "images": [
-                "https://images.ctfassets.net/n07nr2koi959/220TWz80MMu5IKd31MX2Mh/5baf073475c70362f71c7471b9e72a3c/portrait.jpg?fit=thumb&w=64&h=64",
-                "https://images.simplywall.st/asset/chart/677433-earnings-per-share-growth-1-dark/1706948734300",
-                "https://news.google.com/news/images/blue-bear.svg",
-                "https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-                "https://simplywall.st/cdn-cgi/image/width=1200,height=411,fit=cover,format=auto/https://images.simplywall.st/asset/industry/7012000-choice1-main-header/1585186660482",
-                "https://news.google.com/news/images/play-badge.png",
-                "https://news.google.com/news/images/ios-badge.png"
-            ],
-            "videos": [],
-            "url": "https://simplywall.st/stocks/gb/banks/lse-stan/standard-chartered-shares/news/standard-chartereds-lonstan-investors-will-be-pleased-with-t",
-            "date": "Sat, 03 Feb 2024 08:00:00 GMT",
-            "short_description": "Standard Chartered's (LON:STAN) investors will be pleased with their respectable 41% return over the last three years  Simply Wall St",
-            "text": "One simple way to benefit from the stock market is to buy an index fund. But if you pick the right individual stocks, you could make more than that. Just take a look at Standard Chartered PLC ( ), which is up 33%, over three years, soundly beating the market return of 1.2% (not including dividends).\n\nWith that in mind, it's worth seeing if the company's underlying fundamentals have been the driver of long term performance, or if there are some discrepancies.\n\nThere is no denying that markets are sometimes efficient, but prices do not always reflect underlying business performance. One imperfect but simple way to consider how the market perception of a company has shifted is to compare the change in the earnings per share (EPS) with the share price movement.\n\nDuring three years of share price growth, Standard Chartered achieved compound earnings per share growth of 52% per year. The average annual share price increase of 10% is actually lower than the EPS growth. So it seems investors have become more cautious about the company, over time. We'd venture the lowish P/E ratio of 10.89 also reflects the negative sentiment around the stock.\n\nThe image below shows how EPS has tracked over time (if you click on the image you can see greater detail).\n\nWe know that Standard Chartered has improved its bottom line over the last three years, but what does the future have in store? You can see how its balance sheet has strengthened (or weakened) over time in this free .\n\nWhat About Dividends?\n\nIt is important to consider the total shareholder return, as well as the share price return, for any given stock. The TSR is a return calculation that accounts for the value of cash dividends (assuming that any dividend received was reinvested) and the calculated value of any discounted capital raisings and spin-offs. It's fair to say that the TSR gives a more complete picture for stocks that pay a dividend. In the case of Standard Chartered, it has a TSR of 41% for the last 3 years. That exceeds its share price return that we previously mentioned. The dividends paid by the company have thusly boosted the total shareholder return.\n\nA Different Perspective\n\nWhile the broader market lost about 3.3% in the twelve months, Standard Chartered shareholders did even worse, losing 10% (even including dividends). However, it could simply be that the share price has been impacted by broader market jitters. It might be worth keeping an eye on the fundamentals, in case there's a good opportunity. Longer term investors wouldn't be so upset, since they would have made 0.9%, each year, over five years. If the fundamental data continues to indicate long term sustainable growth, the current sell-off could be an opportunity worth considering. It's always interesting to track share price performance over the longer term. But to understand Standard Chartered better, we need to consider many other factors. Even so, be aware that , you should know about...\n\nFor those who like to find winning investments this free\n\nPlease note, the market returns quoted in this article reflect the market weighted average returns of stocks that currently trade on British exchanges.\n\nValuation is complex, but we're helping make it simple. Find out whether Standard Chartered is potentially over or undervalued by checking out our comprehensive analysis, which includes fair value estimates, risks and warnings, dividends, insider transactions and financial health. View the Free Analysis\n\nHave feedback on this article? Concerned about the content? with us directly. Alternatively, email editorial-team (at) simplywallst.com.\n\n\n\nThis article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",
-            "publisher": {
-                "href": "https://simplywall.st",
-                "title": "Simply Wall St"
-            }
-        },
-        {
-            "title": "Cheap Standard Chartered share price can hit 1,000p \u2013 analyst",
-            "top_image": "https://invezz.com/wp-content/uploads/2023/08/48399615-m-normal-none-1024x683.jpg",
-            "images": [
-                "https://invezz.com/wp-content/uploads/2024/02/image-174-1024x570.png",
-                "https://invezz.com/wp-content/uploads/2021/01/the-wall-street-journal.png",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20192%2040%22%3E%3C%2Fsvg%3E",
-                "https://invezz.com/wp-content/uploads/2021/01/barrons.png",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20612%20408%22%3E%3C%2Fsvg%3E",
-                "https://invezz.com/wp-content/uploads/2021/01/coindesk.png",
-                "https://invezz.com/wp-content/themes/invezz-theme/static/logo-dark.svg",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%20570%22%3E%3C%2Fsvg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2076%2040%22%3E%3C%2Fsvg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20205%2040%22%3E%3C%2Fsvg%3E",
-                "https://invezz.com/wp-content/uploads/2021/01/forbes.png",
-                "https://invezz.com/wp-content/uploads/2023/04/crispus-nyaga-150x150.png",
-                "https://invezz.com/wp-content/uploads/2018/06/plus500.svg",
-                "https://invezz.com/wp-content/uploads/2023/08/48399615-m-normal-none.jpg",
-                "https://invezz.com/wp-content/themes/invezz-theme/static/menu-icon.svg",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20103%2040%22%3E%3C%2Fsvg%3E",
-                "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20110%20110%22%3E%3C%2Fsvg%3E",
-                "https://invezz.com/wp-content/themes/invezz-theme/static/logo-light.svg",
-                "https://invezz.com/wp-content/uploads/2021/01/the-guardian.png",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20192%2060%22%3E%3C%2Fsvg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20228%2040%22%3E%3C%2Fsvg%3E",
-                "https://invezz.com/wp-content/uploads/2023/08/48399615-m-normal-none-1024x683.jpg"
-            ],
-            "videos": [],
-            "url": "https://invezz.com/news/2024/02/23/cheap-standard-chartered-share-price-can-hit-1000p-analyst/",
-            "date": "Fri, 23 Feb 2024 08:00:00 GMT",
-            "short_description": "Cheap Standard Chartered share price can hit 1,000p - analyst  Invezz",
-            "text": "Standard Chartered (LON: STAN) share price surged by more than 6.50% on Friday after the company published strong financial results. It roared back to 645p, its highest level since January 9th. It has surged by more than 13% from its lowest point this year.\n\nAnalyst boosts STAN target\n\nCopy link to section\n\nStandard Chartered published strong financial results even as concerns about its Chinese exposure remained.\n\nThe company\u2019s operating income rose by 7% in the fourth quarter to $4 billion. Its net interest income jumped by 6% to $2.4 billion while its wealth management revenue soared by 16%.\n\nMost importantly, Standard Chartered\u2019s Return on Tangible Equity (RoTE) rose by 2% to 10.1%. RoTE is an important number that is calculated by dividing post-tax profit with the tangible equity and is one of the most important profit metrics.\n\nSome analysts believe that Standard Chartered\u2019s shares have more upside in the long term. In a note, analysts at Shore Capital noted that the stock could jump to 1,000p in the coming months.\n\nFeatured Broker Looking to invest? Invest and trade CFD stocks, ETFs, digital assets & commodities in minutes with our highest-rated broker. Buy or sell stock CFDs with Plus500. 82% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you can afford to take the high risk of losing your money. Open your account Buy or sell stock CFDs with Plus500. 82% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you can afford to take the high risk of losing your money. Ad\n\nIf this is accurate, it means that it could jump by more than 54% from the current level. It also means that the stock will have to surge to its highest point since 2015.\n\nAre you looking for fast-news, hot-tips and market analysis? Sign-up for the Invezz newsletter, today.\n\nThe analyst believes that the company is inherently undervalued. For one, it trades at a price-to-book value of 0.6. The P/B ratio is a number that looks at the value of its assets that are shown in its balance sheet. A number less than 1 is a sign that a bank is being highly undervalued.\n\nThis discount is mostly because of its Chinese business, where Standard Chartered makes a substantial amount of money. The economy is slowing down, foreign direct investment (FDI) has tumbled, interest rates have fallen, and the real estate sector has plummeted.\n\nThe PBoC slashed its interest rate unexpectedly this week in a move that could hurt the country\u2019s banks, including StanChart.\n\nFurther, the company has an exposure to other emerging market countries that are not doing well. While it exited some African markets, it still has a presence in some like Kenya, Nigeria, Ghana, South Africa, and Uganda.\n\nStandard Chartered share price forecast\n\nCopy link to section\n\nSTAN chart by TradingView\n\nTurning to the weekly chart, we see that the STAN stock price formed a double-top pattern at 765p between January and October 2023. The neckline of this pattern was at 576p. In price action analysis, this is one of the most bearish signs.\n\nHowever, in the long term, the stock has formed an ascending channel, which you can see in red. It has now moved above the lower side of this channel. It is also attempting to move above the 100-week moving average.\n\nTherefore, the outlook for the stock is neutral, with the key support and resistance levels to watch being at 575p and 678p. A break below the support at 576p will point to more downside while a move above 677p will signal more gains to the upper side of the channel at 750p.",
-            "publisher": {
-                "href": "https://invezz.com",
-                "title": "Invezz"
             }
         }
     ]

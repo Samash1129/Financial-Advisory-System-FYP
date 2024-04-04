@@ -13,7 +13,7 @@
 
 .welcomeText {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 26px;
   font-weight: 600;
   line-height: normal;
   margin-right: 10px;
@@ -26,7 +26,7 @@
   color: #ffffff;
   text-align: left;
   width: fit-content;
-  font-size: 1.1rem;
+  font-size: 17px;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -42,7 +42,7 @@
 .upgradeBtn {
   text-align: center;
   font-family: Outfit;
-  font-size: 16px;
+  font-size: 18px;
   padding: 13px;
   font-weight: 400;
   line-height: normal;
@@ -62,7 +62,7 @@
 .rechargeBtn {
   text-align: center;
   font-family: Outfit;
-  font-size: 16px;
+  font-size: 18px;
   padding: 13px;
   font-weight: 400;
   line-height: normal;
@@ -87,7 +87,7 @@
   color: white; /* Set text color to white */
   background-color: transparent;
   font-family: Outfit;
-  font-size: 17px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -106,7 +106,7 @@
   color: white;
   background-color: transparent;
   font-family: Outfit;
-  font-size: 17px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

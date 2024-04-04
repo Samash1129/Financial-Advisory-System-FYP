@@ -1,0 +1,42 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8.ai that helps naive investors in investing in the Pakistan Stock Exchange, your job is to help based on facts given with the user about Habib Bank Limited. Latest Relevant news :[]"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "system",
+    "content": "Success"
+  }
+]

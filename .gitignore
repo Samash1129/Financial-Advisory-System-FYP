@@ -2,3 +2,5 @@ Source-Codes/NewsAPI/env/
 Source-Codes/PythonScripts/env
 Source-Codes/PythonScripts/env/
 Source-Codes/NewsAPI/.env
+Source-Codes/NewsAPI/query_responses/
+Source-Codes/NewsAPI/queries.json

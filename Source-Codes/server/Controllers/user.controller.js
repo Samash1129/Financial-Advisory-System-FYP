@@ -89,7 +89,7 @@ module.exports.signIn = async (req, res) => {
       refreshToken,
       email: user.email,
       name: user.name,
-      isPremium: false
+      isPremium: true
     });
   } catch (err) {
     handleError(res, err);

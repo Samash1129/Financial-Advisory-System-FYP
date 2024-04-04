@@ -9,6 +9,16 @@ import pymongo
 from dotenv import load_dotenv
 from datetime import datetime
 
+load_dotenv()
+import nltk
+from nltk.tokenize import word_tokenize
+
+
+
+queries_file_path = "queries.json"
+directory = "query_responses_test"
+summary_directory = "summary"
+
 MONGO_DB_KEY = os.getenv("MONGO_DB_KEY")
 client = pymongo.MongoClient(MONGO_DB_KEY)
 db = client["news"]
@@ -21,7 +31,6 @@ with open("queries.json", "r") as queries_file:
 
 
 def generate_summary(text, language='english'):
-
     parser = PlaintextParser.from_string(text, Tokenizer(language))
     summarizer = LsaSummarizer()
     summary = summarizer(parser.document, 5)
@@ -46,7 +55,8 @@ def save_summaries_to_db(articles_info, ticker):
         collection.update_one(filter_query, update_query, upsert=True)
 
 
-def process_data(directory, summary_directory):
+def process_data():
+    x=False
 
     for query, ticker in queries.items():
         file_name = f"{ticker}.json"
@@ -65,25 +75,31 @@ def process_data(directory, summary_directory):
                     title = article.get("title", "")
                     date = article.get("date", "")
                     text = article.get("text", "")
+                    short_description = article.get("short_description", "")
 
-                    processed_text = text.replace("\n", " ")
+                    processed_title = title.replace("\n", " ")
+
+                    processed_desc = short_description.replace("\n", " ")
 
                     company_name = query.replace("Share Stock", "")
                     company_name = company_name.replace("Ltd", "")
                     company_name = company_name.replace("Limited", "")
+                    company_name = company_name.replace("Pakistan", "")
 
                     company_name = company_name.strip().lower()
-                    processed_text = processed_text.strip().lower()
-                    company_name = re.sub(r'[^\w\s]', '', company_name)
-                    processed_text = re.sub(r'[^\w\s]', '', processed_text)
-                    
+                    processed_title = processed_title.strip().lower()
+                    processed_desc = processed_desc.strip().lower()
 
-                    to_summarize = company_name in processed_text
+                    company_name = re.sub(r'[^\w\s.]', '', company_name)
+                    processed_title = re.sub(r'[^\w\s.]', '', processed_title)
+                    processed_desc = re.sub(r'[^\w\s.]', '', processed_desc)
 
-                    
+                    to_summarize1 = company_name in processed_desc
+                    to_summarize2 = company_name in processed_title
+
+                    to_summarize = to_summarize1 or to_summarize2
+
                     summary = ""
-
-                    
 
                     if to_summarize:
                         summaries+=text
@@ -106,15 +122,14 @@ def process_data(directory, summary_directory):
                         "title": title,
                         "date": date,
                         "to_summarize": to_summarize,
-                        #"text": text,
-                        "summary": summary,
+                        #"summary": summary,
                     }
 
                     if to_summarize:
                         articles_info.append(article_info)
 
-                        #print(to_print)        
-                        #print()              
+                        print(to_print)        
+            print()              
 
 
             if articles_info:
@@ -125,15 +140,10 @@ def process_data(directory, summary_directory):
 
             #print("Complete Summary for", ticker, ":", summaries)
             #print("Summary for", ticker, generate_summary(summaries))
-            print()
+            x=True
 
     print()
     print("Processing complete. Total files processed:", len(os.listdir(directory)))
+    return x
 
-# Paths
-queries_file_path = "queries.json"
-directory = "query_responses_test"
-summary_directory = "summary"
-
-process_data(directory, summary_directory)
 

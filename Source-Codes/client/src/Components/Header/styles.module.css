@@ -46,12 +46,12 @@
 .iconContainer:hover::after {
   content: attr(data-tooltip); /* Update this line */
   position: absolute;
-  top: calc(100% + 5px);
+  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 14px;
   white-space: nowrap;
   color: #fff;
   font-family: Outfit;
@@ -60,4 +60,5 @@
   padding: 11px;
   /* Add z-index to ensure the tooltip is above other elements if necessary */
   z-index: 100;
+  backdrop-filter: blur(25px);
 }
