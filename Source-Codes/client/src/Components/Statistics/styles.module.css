@@ -1,0 +1,30 @@
+.statisticsContainer {
+  width: 80%; /* Adjust width as needed */
+  margin-left: -80px;
+}
+
+.statistic {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.statistic span {
+  margin-right: 10px;
+  color: #f0f0f0;
+  font-size: 16px;
+}
+
+.statisticValue {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 5px;
+  color: #f0f0f0;
+  font-size: 15px;
+}
+
+h2 {
+  color: white; /* Set heading color to white */
+  font-weight: 500;
+  font-size: 22px;
+}
