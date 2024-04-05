@@ -5,7 +5,7 @@ import ElevyGPT from "../../Assets/SVGs/ElevyGPT.svg";
 import Send from "../../Assets/SVGs/send.svg";
 import user from "../../Assets/SVGs/User.svg";
 import Disclaimer from "../../Assets/SVGs/Info.svg";
-import GraphPanel from "../GraphPanel";
+import GraphPanel from "../GraphPanel/index";
 
 const PremiumStockReports = () => {
   const [loading, setLoading] = useState(true);
