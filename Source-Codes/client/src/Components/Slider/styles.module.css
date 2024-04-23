@@ -80,28 +80,36 @@
 }
 
 .profileBtn {
-  display: flex; /* Enable Flexbox layout */
-  align-items: center; /* Vertically center the items */
-  justify-content: center; /* Horizontally center the items */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   gap: 10px;
-  color: white; /* Set text color to white */
+  color: white;
   background-color: transparent;
   font-family: Outfit;
   font-size: 18px;
+  width: 100%;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 13px;
+  /* border: 4px solid rgba(255, 255, 255, 0.2); */
+}
+
+.profileBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* border: 4px solid transparent; */
 }
 
 .logoutBtn {
-  display: flex; /* Enable Flexbox layout */
-  align-items: center; /* Vertically center the items */
-  justify-content: center; /* Horizontally center the items */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   gap: 10px;
   color: white;
   background-color: transparent;
@@ -109,16 +117,24 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  width: 100%;
   line-height: normal;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  padding: 13px;
+  text-align: left;
+  
+}
+
+.logoutBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .divider {
   border: 0;
-  height: 1px;
+  height: 1.5px;
   background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
   margin-top: 10%;
@@ -126,7 +142,7 @@
 
 .imageContainer {
   width: 20vh;
-  margin-top: -35px;
+  margin-top: -30px;
   margin-left: -140px;
 }
 
@@ -139,11 +155,6 @@
   mix-blend-mode: overlay;
 }
 
-.buttonContent {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
 
 .icon {
   width: 22px;
@@ -155,5 +166,25 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: -10px;
+}
+
+.userName {
+  font-family: "Outfit";
+  color: white;
+  background-color: #3692ff;
+  background-color: rgb(43, 173, 212); /* rgba(255, 255, 255, 0.2) */
+
+  padding: 7px 0px 7px 0px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  border: 2px solid white;
+  width: 100%;
+  text-align: center;
+}
+
+.userName {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }

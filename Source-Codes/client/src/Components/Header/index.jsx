@@ -5,18 +5,16 @@ import tut from '../../Assets/SVGs/tut.svg';
 import reload from '../../Assets/SVGs/Reload.svg';
 import edit from '../../Assets/SVGs/Edit.svg';
 
-const Header = () => {
-
+const Header = ({name}) => {
     const navigate = useNavigate();
-
     const handlePreferencesClick = () => {
         // Navigate to the /preferences route
         navigate('/preferences');
     };
-
     return (
         <div className={styles.headerContainer}>
-            <div className={styles.headerTitle}>My Dashboard</div>
+            <div className={styles.headerTitle}>My Dashboard </div>
+            {/* <div className={styles.userName}>{name}</div> */}
             <div className={styles.headerIcons}>
                 <button className={styles.iconContainer} data-tooltip="Edit Preferences" onClick={handlePreferencesClick}>
                     <img src={edit} alt="Edit" className={styles.headerIcon} />
@@ -31,5 +29,4 @@ const Header = () => {
         </div>
     );
 };
-
 export default Header;

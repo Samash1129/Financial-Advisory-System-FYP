@@ -24,6 +24,10 @@ const Statistics = ({ isVisible }) => {
           <span>Equity:</span>
           <div className={styles.statisticValue}>500</div>
         </div>
+        <div className={styles.statistic}>
+          <span>Sales:</span>
+          <div className={styles.statisticValue}>500</div>
+        </div>
       </div>
     </div>
   );

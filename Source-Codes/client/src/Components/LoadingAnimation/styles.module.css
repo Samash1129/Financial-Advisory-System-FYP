@@ -8,7 +8,8 @@
   height: 100vh;
 }
 
-.failureContainer, .successContainer{
+.failureContainer,
+.successContainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -27,7 +28,6 @@
   height: 50px;
   animation: spin 1.5s linear infinite;
 }
-
 .loadingText {
   margin-top: 20px;
   font-size: 25px;
@@ -35,9 +35,14 @@
   color: #000;
 }
 
-.successText, .failureText {
+.successText{
   font-size: 25px;
-  margin-top: -40px;
+  margin-top: -45px;
+}
+
+.failureText {
+  font-size: 25px;
+  margin-top: -5px;
 }
 
 /* Spinner animation */
@@ -49,4 +54,3 @@
     transform: rotate(360deg);
   }
 }
-

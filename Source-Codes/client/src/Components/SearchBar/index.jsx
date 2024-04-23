@@ -4,13 +4,11 @@ import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
 import bankicon from '../../Assets/SVGs/bank-icon.svg';
 import searchIcon from '../../Assets/SVGs/search-icon.svg';
-
 const SearchBar = ({ placeholder, data }) => {
     const [inputValue, setInputValue] = useState(''); // State for the input value
     const [filteredData, setFilteredData] = useState(data); // State for the filtered data
     const inputRef = useRef(null); // Ref for the input element
     const [isSearchClicked, setIsSearchClicked] = useState(false);
-
     // Effect for filtering data based on input
     useEffect(() => {
         const filtered = inputValue === ''
@@ -20,17 +18,14 @@ const SearchBar = ({ placeholder, data }) => {
             );
         setFilteredData(filtered);
     }, [inputValue, data]);
-
     const handleSearchClick = () => {
         setIsSearchClicked(true);
     };
-
     const handleOutsideClick = (event) => {
         if (inputRef.current && !inputRef.current.contains(event.target)) {
             setIsSearchClicked(false);
         }
     };
-
     // Effect to reset the filter when the input is clicked
     useEffect(() => {
         document.addEventListener('mousedown', handleOutsideClick);
@@ -85,9 +80,6 @@ const SearchBar = ({ placeholder, data }) => {
                 </ul>
             )}
         </div>
-
     );
-
 };
-
 export default SearchBar;

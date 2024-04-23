@@ -18,8 +18,7 @@ body {
   padding: 0;
 }
 
-.logo 
-{
+.logo {
   display: flex;
   justify-content: center;
 }
@@ -33,7 +32,7 @@ body {
 .rightContainer {
   width: 50%;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 0px;
 }
 
 .signInContainer {
@@ -105,11 +104,22 @@ body {
 
 .errorMessage {
   color: red; /* Change color as needed */
-  margin-top: -8px;
+  margin-top: -18px;
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .LoadingSpinner {
   margin-top: 1140px;
+}
+
+.topError {
+  color: rgb(255, 80, 80);
+  margin-top: -8px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: rgba(244, 133, 125, 0.15);
+  padding: 10px;
+  padding-left: 10px;
 }

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import styles from './styles.module.css';
-import Lottie from 'react-lottie';
-import successAnimationData from '../../Assets/Animations/Tickk.json'; // Import the JSON for success animation
-import failureAnimationData from '../../Assets/Animations/Cross.json'; // Import the JSON for failure animation
+import React, { useState, useEffect } from "react";
+import styles from "./styles.module.css";
+import Lottie from "react-lottie";
+import successAnimationData from "../../Assets/Animations/Tickk.json"; // Import the JSON for success animation
+import failureAnimationData from "../../Assets/Animations/Cross.json"; // Import the JSON for failure animation
 
-const LoadingSpinner = ({ children, loadingText }) => {
+const LoadingSpinner = ({ children, loadingText, success, failure }) => {
   const [isLoading, setLoading] = useState(true);
   const [isSuccess, setSuccess] = useState(false);
   const [isFailure, setFailure] = useState(false);
@@ -16,6 +16,18 @@ const LoadingSpinner = ({ children, loadingText }) => {
 
     return () => clearTimeout(loadingTimer);
   }, []);
+
+  useEffect(() => {
+    if (success) {
+      setSuccess(true);
+    }
+  }, [success]);
+
+  useEffect(() => {
+    if (failure) {
+      setFailure(true);
+    }
+  }, [failure]);
 
   return isLoading ? (
     <div className={styles.loadingSpinnerContainer}>
@@ -30,13 +42,13 @@ const LoadingSpinner = ({ children, loadingText }) => {
           autoplay: true,
           animationData: successAnimationData,
           rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-          }
+            preserveAspectRatio: "xMidYMid slice",
+          },
         }}
-        height={170}
-        width={170}
+        height={200}
+        width={200}
       />
-      <p className={styles.successText}>Logged In</p>
+      <p className={styles.successText}>Logged in</p>
     </div>
   ) : isFailure ? (
     <div className={styles.failureContainer}>
@@ -46,13 +58,13 @@ const LoadingSpinner = ({ children, loadingText }) => {
           autoplay: true,
           animationData: failureAnimationData,
           rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-          }
+            preserveAspectRatio: "xMidYMid slice",
+          },
         }}
-        height={170}
-        width={170}
+        height={100}
+        width={100}
       />
-      <p className={styles.failureText}>Login Error</p>
+      <p className={styles.failureText}>Try again</p>
     </div>
   ) : (
     children

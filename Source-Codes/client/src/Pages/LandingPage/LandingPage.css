@@ -3,34 +3,7 @@
   position: relative;
   z-index: 1;
   overflow-y: auto;
-  height: 735px;
-}
-
-/* Hide scrollbar for Firefox */
-.landing-page {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Scrollbar Track Color and Scrollbar Thumb Color */
-}
-
-/* Hide scrollbar for Webkit */
-.landing-page::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
-}
-
-/* Scrollbar Track */
-.landing-page::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1); /* Track color */
-}
-
-/* Scrollbar Thumb */
-.landing-page::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5); /* Thumb color */
-  border-radius: 5px; /* Radius of the thumb */
-}
-
-/* Scrollbar Thumb on hover */
-.landing-page::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Thumb color on hover */
+  height: 100vh;
 }
 
 .header {
@@ -40,14 +13,12 @@
   padding: 20px;
   background-color: transparent;
 }
-
 .Logo {
   width: 4%;
   height: auto;
   margin-left: 2%;
   margin-right: 5%;
 }
-
 .navbar a {
   text-decoration: none;
   margin: 0 10px;
@@ -57,11 +28,9 @@
   padding-bottom: 4px;
   transition: border-color 0.4s;
 }
-
 .auth-buttons {
   display: flex;
 }
-
 .sign-in-btn,
 .sign-up-btn {
   padding: 10px 20px;
@@ -70,64 +39,64 @@
   border: none;
   cursor: pointer;
 }
-
 .sign-in-btn {
   background-color: #efefef;
   font-family: "Outfit", sans-serif;
   color: #333;
-  font-size: 17px;
+  font-size: 18px;
 }
-
 .sign-up-btn {
   background-color: #3692ff;
   font-family: "Outfit", sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 18px;
 }
-
 .main-content {
   margin: 20px;
 }
-
 .hero {
   display: flex;
   align-items: center;
   margin-top: 4%;
   margin-bottom: 4%;
-  margin-left: 2%;
+  margin-left: 6%;
 }
-
 .Textt {
   max-width: 45%;
   height: auto;
   margin-right: 8%;
 }
-
 .hero-content {
-  flex-basis: 580px;
+  flex-basis: 640px;
   color: rgba(0, 0, 0, 0.7);
   font-family: Outfit;
-  font-size: 19px;
+  font-size: 21px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 32px;
   justify-content: flex-start;
 }
-
 .read-more-btn {
   color: #000000;
-
   cursor: pointer;
   background-color: transparent;
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+  border: none;
   border-bottom: 2.5px solid transparent;
+  text-decoration: none;
   padding-bottom: 4px;
   transition: border-color 0.4s;
 }
-
 .big-image .Boomer {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 4%;
+}
+
+.big-image .placeholder {
   width: 100%;
   height: auto;
   display: block;
@@ -138,42 +107,34 @@
   border-bottom: 2.5px solid #3692ff;
   padding-bottom: 4px;
 }
-
 .sign-in-btn:hover {
   background-color: #d8d8d8;
 }
-
 .sign-up-btn:hover {
   background-color: #0073ff;
 }
-
 .read-more-btn:hover {
   border-bottom: 2.5px solid #3692ff;
   padding-bottom: 4px;
 }
-
 .navbar a {
-  /* Your existing styles */
-  position: relative; /* Ensure this is set to allow pseudo-element positioning */
-  margin-right: 20px; /* Adjust space between the links and the dots */
+  position: relative; 
+  margin-right: 20px;
+  font-size: 17px; 
 }
 
-/* Only add the dots after the first through the second-to-last links */
 .navbar a:not(:last-child)::after {
   content: "•";
-  color: #2d2d2d; /* Color of the dot */
+  color: #2d2d2d; 
   position: absolute;
-  right: -20px; /* Adjust horizontal position of the dot */
-  bottom: -2px; /* Adjust vertical position of the dot if needed */
-  font-size: 2em; /* Adjust the size of the dot */
-  line-height: 1; /* Adjust to vertically center the dot with the link text */
+  right: -20px; 
+  bottom: -7px; 
+  font-size: 2em; 
 }
 
-/* Adjust the margin on the last link if necessary */
 .navbar a:last-child {
   margin-right: 0;
 }
-
 .lottie-background1 {
   position: absolute;
   top: 0px;
@@ -182,7 +143,6 @@
   z-index: -1;
   opacity: 0.4;
 }
-
 .lottie-background2 {
   position: absolute;
   top: 0px;
@@ -192,7 +152,6 @@
   opacity: 0.2;
   rotate: 180deg;
 }
-
 .header,
 .main-content {
   position: relative;
@@ -203,10 +162,11 @@
   background-color: #3692ff;
   color: #fff;
   text-align: center;
-  padding-top: 4px;
-  height: 60px;
+  padding: 2px;
 }
 
 .footer-text {
-  font-size: 16px;
+  font-size: 18px;
 }
+
+

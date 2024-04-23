@@ -1,6 +1,5 @@
 .statisticsContainer {
-  width: 80%; /* Adjust width as needed */
-  margin-left: -80px;
+  width: 100%; /* Adjust width as needed */
 }
 
 .statistic {
@@ -10,9 +9,9 @@
 }
 
 .statistic span {
-  margin-right: 10px;
+  margin-right: 12px;
   color: #f0f0f0;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .statisticValue {
@@ -26,5 +25,5 @@
 h2 {
   color: white; /* Set heading color to white */
   font-weight: 500;
-  font-size: 22px;
+  font-size: 25px;
 }

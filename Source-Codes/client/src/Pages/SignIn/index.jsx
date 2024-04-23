@@ -6,9 +6,13 @@ import NavBar from "../../Components/NavBar";
 import backgroundImage from "../../Assets/Images/background.png";
 import LoadingSpinner from "../../Components/LoadingAnimation";
 import LogoAnimation from "../../Components/LogoAnimation";
+import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useSigninMutation } from "../../Slices/User/UserSlice/userApiSlice";
-import { setCredentials } from "../../Slices/User/AuthSlice/authSlice";
+import {
+  setUserData,
+  // removeUserData
+} from "../../Slices/User/AuthSlice/authSlice";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 
 const SignIn = () => {
@@ -16,44 +20,54 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [isFailure, setFailure] = useState(false);
-
+  // const [isFailure, setFailure] = useState(false);
+  const [topError, setTopError] = useState('');
 
   const dispatch = useDispatch();
+  // const [signout] = useSignoutMutation();
   const navigate = useNavigate();
 
   // Calling the API
   const [signin, { isLoading, isSuccess }] = useSigninMutation();
 
   // Accessing the current state
-  const EMAIL = useSelector((state) => state.auth.email);
-  const IS_PREMIUM = useSelector((state) => state.auth.isPremium);
+  // const currentUserData = useSelector(state => state.auth);
+
+  const previousPage = useSelector(state => state.previousPage.previousPage);
+  const [loadingText1, setLoadingText1] = useState("");
 
   useEffect(() => {
-    if (EMAIL && IS_PREMIUM === true) {
-      dispatch(setPreviousPage("/signin"));
-      navigate("/dashpremium");
-    } else if (EMAIL && IS_PREMIUM === false) {
-      dispatch(setPreviousPage("/signin"));
-      navigate("/dashpremium");
-    }
-  }, [EMAIL, IS_PREMIUM, dispatch, navigate]);
+
+    if (previousPage === "/dashboard") { setLoadingText1("Logging Out"); }
+    else if (previousPage === "/signup") { setLoadingText1("Proceeding"); }
+    else { setLoadingText1("Loading"); }
+
+  }, [previousPage]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!email || !password) {
+      setTopError('Please fill both input fields!');
+      return;
+    }
+
+    if (emailError || passwordError) {
+      return;
+    }
+
+    setTopError('');
+
     try {
-      // calling the signin api slice
       const response = await signin({ email, password }).unwrap();
-      dispatch(setCredentials(response));
-      dispatch(setPreviousPage("/signin"));
-      if (response.isPremium === true) {
-        navigate("/dashpremium");
-      } else {
-        navigate("/dashpremium");
-      }
-    } catch (err) {
-      console.error(err);
-      setFailure(true); // Set isFailure to true upon sign in failure
+
+      dispatch(setUserData({ token: true, name: response.name, email: response.email, preferences: response.preferences }));
+
+      dispatch(setPreviousPage(null));
+      navigate("/dashboard");
+    } catch (response) {
+      setTopError(response.data.error);
     }
   };
 
@@ -69,6 +83,7 @@ const SignIn = () => {
   const handleEmailChange = (e) => {
     const value = e.target.value;
     setEmail(value);
+    setTopError('');
     if (!validateEmail(value)) {
       setEmailError("Please enter a valid email address.");
     } else {
@@ -79,6 +94,7 @@ const SignIn = () => {
   const handlePasswordChange = (e) => {
     const value = e.target.value;
     setPassword(value);
+    setTopError('');
     if (value.length < 8) {
       setPasswordError("Password must be at least 8 characters long.");
     } else {
@@ -105,14 +121,15 @@ const SignIn = () => {
       </div>
       <div className={styles.rightContainer}>
         {isLoading && <LoadingSpinner loadingText="Signing In" />}
-        <LoadingSpinner loadingText="Signing">
+        <LoadingSpinner loadingText={loadingText1}>
           <div className={styles.signInContainer}>
             <NavBar
               title="Sign In"
               handleBackButtonClick={handleBackButtonClick}
             />
+            {topError && <div className={styles.topError}>{topError}</div>}
             <form className={styles.signInForm} onSubmit={handleSubmit}>
-              <label htmlFor="email">EMAIL ADDRESS:</label>
+              <label htmlFor="email">EMAIL ADDRESS</label>
               <input
                 type="text"
                 id="email"
@@ -124,7 +141,7 @@ const SignIn = () => {
                 <div className={styles.errorMessage}>{emailError}</div>
               )}
 
-              <label htmlFor="password">PASSWORD:</label>
+              <label htmlFor="password">PASSWORD</label>
               <input
                 type="password"
                 id="password"
@@ -142,7 +159,7 @@ const SignIn = () => {
 
               <Button text="Log In" />
               <div className={styles.secondaryAction}>
-                Need an account?
+                Not registered?
                 <p onClick={handleChangeToSignUp} className={styles.signUpLink}>
                   Sign up
                 </p>

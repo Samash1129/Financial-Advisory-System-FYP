@@ -1,4 +1,4 @@
-const User = require("../models/user.model");
+const User = require("../Models/user.model");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
@@ -9,40 +9,95 @@ const handleError = (res, error) => {
   res.status(500).json({ error: "Internal server error" });
 };
 
-
-// Controller for user sign-up
-exports.signUp = async (req, res) => {
-  // Check for validation errors
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+// Controller for get all-users - Done
+module.exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal server error" });
   }
+};
+
+// Controller for user sign-up-2-step-step1 - Done
+module.exports.tempSignUp = async (req, res) => {
+  const { name, email, password } = req.body;
 
   try {
-    const { name, password, email, role, preference } = req.body;
-    // Email must be unique
+    // Check if the email already exists
     let user = await User.findOne({ email });
     if (user) {
-      return res.status(400).json({ error: "Email already exists" });
+      return res.status(400).json({ error: "User already registered!" });
     }
 
-    // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
-    // Create a new user
-    const newUser = new User({ name, password: hashedPassword, email, role, preference });
+
+    const newUser = new User({
+      name,
+      email,
+      password: hashedPassword,
+      preferences: null, // Leave preferences as null initially
+    });
+
     await newUser.save();
 
     res.json({
-      message: "User added successfully"
+      message: "Basic Info Stored",
+      name,
+      email,
     });
   } catch (err) {
-    handleError(res, err);
+    console.error("Error in basicSignUp:", err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
-}
+};
 
-// Controller for user sign-in
+// Controller for user sign-up-2-step-step2 - Done
+module.exports.finalSignUp = async (req, res) => {
+  const {
+    email,
+    investmentGoals,
+    riskTolerance,
+    amountToInvest,
+    preferredIndustries,
+    stockType,
+  } = req.body;
+
+  try {
+    // Find the user by email
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(400).json({ error: "User not found" });
+    }
+
+    const formattedAmountToInvest = parseFloat(amountToInvest);
+
+    // Update the user's preferences
+    user.preferences = {
+      investmentGoals,
+      riskTolerance,
+      amountToInvest: formattedAmountToInvest,
+      preferredIndustries,
+      stockType,
+    };
+
+    // Save the updated user document
+    await user.save();
+
+    res.json({
+      message: "Preferences updated successfully",
+      user,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error creating user" });
+  }
+};
+
+// Controller for user sign-in - Done
 module.exports.signIn = async (req, res) => {
-  console.log("in signIn");
   // Check for validation errors
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -51,71 +106,129 @@ module.exports.signIn = async (req, res) => {
 
   try {
     const { email, password } = req.body;
-    // Check if user exists
-    console.log("about to query");
+
     let user = await User.findOne({ email });
-    console.log("successful query", user);
     if (!user) {
-      return res.status(400).json({ error: "user doesn't exist" });
+      return res.status(400).json({ error: "User not registered!" });
     }
-    console.log("user found");
+    // console.log("user found");
+
     // Check if password is correct
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
-      return res.status(400).json({ error: "Incorrect password" });
+      // console.log(password);
+      // console.log(user.password);
+      return res.status(400).json({ error: "Incorrect password!" });
     }
     console.log("correct password");
     // Create and send a JWT token upon successful login
-    const accessToken = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: "4h",
-    });
-    const refreshToken = jwt.sign({ id: user._id }, process.env.REFRESH_TOKEN_SECRET, {
-      expiresIn: "1d",
-    });
+    const accessToken = jwt.sign(
+      { id: user._id },
+      process.env.ACCESS_TOKEN_SECRET,
+      {
+        expiresIn: "4h",
+      }
+    );
+
+    const refreshToken = jwt.sign(
+      { id: user._id },
+      process.env.REFRESH_TOKEN_SECRET,
+      {
+        expiresIn: "1d",
+      }
+    );
 
     // save the token in cookie
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
-      maxAge: 1000 * 60 * 60 * 4
-      // 4 hours
+      sameSite: "None",
+      //maxAge: 1000 * 60 * 60 * 4
     });
 
-    // res.json({ message: "Sign in successful", accessToken, refreshToken });
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+      //maxAge: 1000 * 60 * 60 * 24
+    });
+
     res.json({
       message: "Sign in successful",
-      accessToken,
-      refreshToken,
       email: user.email,
       name: user.name,
-      isPremium: true
+      preferences: user.preferences,
     });
+
+    //console.log("access token cookie: ",req.cookies.accessToken);
   } catch (err) {
     handleError(res, err);
   }
-}
+};
 
-// Controller for token refresh
-module.exports.refreshToken = async (req, res) => {
-  try {
-    // token in authorization header
-    const token = req.headers["authorization"].split(" ")[1];
-    const user = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
-    const accessToken = jwt.sign({ id: user.id }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: "1h",
-    });
-    res.json({ accessToken });
-  } catch (err) {
-    res.status(500).json({ message: err });
+// Controller for update-profile - Done
+module.exports.updateProfile = async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
   }
-}
 
-// Read
+  try {
+    // const token = req.header("authorization").split(" ")[1];
+    const token = req.cookies.accessToken;
+
+    if (!token) {
+      return res.status(401).json({ error: "You must be logged in" });
+    }
+    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    const updatedUser = {};
+    if (req.body.name) {
+      updatedUser.name = req.body.name;
+    }
+
+    if (req.body.password && req.body.password !== "") {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+      updatedUser.password = hashedPassword;
+    }
+
+    const user = await User.findByIdAndUpdate(decoded.id, updatedUser, {
+      new: true,
+    });
+    if (!user) {
+      return res.status(400).json({ error: "User does not exist" });
+    }
+
+    res.json({
+      name: user.name,
+      cookie: token,
+    });
+  } catch (err) {
+    console.log(err.message);
+    handleError(res, err);
+  }
+};
+
+// Controller for sign-out - Done
+module.exports.signout = async (req, res) => {
+  try {
+    // Clear the JSON Web Token cookies
+    res.clearCookie("refreshToken");
+    res.clearCookie("accessToken");
+
+    console.log("User signed out");
+    res.json({ message: "User logged out successfully" });
+  } catch (err) {
+    handleError(res, err);
+  }
+};
+
+// Controller for get-profile - Done
 module.exports.getProfile = async (req, res) => {
   try {
     // Get the token from the header
-    const token = req.header('authorization').split(' ')[1];
+    const token = req.header("authorization").split(" ")[1];
     if (!token) {
       return res.status(401).json({ error: "You must be logged in" });
     }
@@ -128,93 +241,246 @@ module.exports.getProfile = async (req, res) => {
       return res.status(400).json({ error: "User does not exist" });
     }
     // Send the user details excluding the password
-    res.json({ user: { name: user.name, email: user.email, preference: user.preference } });
+    res.json({
+      user: {
+        name: user.name,
+        email: user.email,
+        preference: user.preferences,
+      },
+    });
   } catch (err) {
     handleError(res, err);
   }
-}
+};
 
-// update
-module.exports.updateUser = async (req, res) => {
-  // Check for validation errors
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
+// Controller for token refresh
+module.exports.refreshToken = async (req, res) => {
   try {
-    const token = req.header('authorization').split(' ')[1];
-    if (!token) {
-      return res.status(401).json({ error: "You must be logged in" });
-    }
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-    let user = await User.findById(decoded.id);
-    if (!user) {
-      return res.status(400).json({ error: "User does not exist" });
-    }
-    if (req.body.name) {
-      user.name = req.body.name;
-    }
-    if (req.body.email) {
-      // Email must be unique
-      email = req.body.email;
-      let user = await User.findOne({ email });
-      if (user) {
-        return res.status(400).json({ error: "Email already exists" });
+    // token in authorization header
+    const token = req.headers["authorization"].split(" ")[1];
+    const user = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+    const accessToken = jwt.sign(
+      { id: user.id },
+      process.env.ACCESS_TOKEN_SECRET,
+      {
+        expiresIn: "1h",
       }
-      user.email = req.body.email;
-    }
-    if (req.body.password) {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
-      user.password = hashedPassword;
-    }
-    await user.save();
-    res.json({ user: { name: user.name, email: user.email } });
+    );
+    res.json({ accessToken });
   } catch (err) {
-    handleError(res, err);
+    res.status(500).json({ message: err });
   }
+};
 
-}
-
-
-// delete
+// Controller for delete-user - May use later
 module.exports.deleteUser = async (req, res) => {
   try {
-    // Get the token from the header
-    const token = req.header("authorization").split(" ")[1];
-    if (!token) {
-      return res.status(401).json({ error: "You must be logged in" });
+    // Get the email address from the request body
+    const email = req.body.email;
+    if (!email) {
+      return res.status(400).json({ error: "Email address is required" });
     }
 
-    // Verify the token
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-
-    // Find the user by their ID
-    const user = await User.findById(decoded.id);
+    // Find the user by their email address
+    const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ error: "User does not exist" });
+      return res.status(404).json({ error: "User not found" });
     }
 
     // Delete the user from the database
-    await User.findByIdAndDelete(decoded.userId);
+    await User.findByIdAndDelete(user._id);
 
     // Respond with a success message
     res.json({ message: "User deleted successfully" });
   } catch (err) {
     handleError(res, err);
   }
-}
+};
 
-// SignOut Api Controller
-module.exports.signout = async (req, res) => {
-  try {
-    // Clear the JSON Web Token cookies
-    res.clearCookie('refreshToken');
-    res.clearCookie('accessToken');
+// Code that was used before but now is not bieng used in the project
+// Controller for delete-user - May use later
+// module.exports.deleteUser = async (req, res) => {
+//   try {
+//     // Get the token from the header
+//     const token = req.header("authorization").split(" ")[1];
+//     if (!token) {
+//       return res.status(401).json({ error: "You must be logged in" });
+//     }
 
-    res.json({ message: "User logged out successfully" });
-  } catch(err) {
-    handleError(res, err);
-    // console.log(err);
-  }
-}
+//     // Verify the token
+//     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+//     // Find the user by their ID
+//     const user = await User.findById(decoded.id);
+//     if (!user) {
+//       return res.status(400).json({ error: "User does not exist" });
+//     }
+
+//     // Delete the user from the database
+//     await User.findByIdAndDelete(decoded.userId);
+
+//     // Respond with a success message
+//     res.json({ message: "User deleted successfully" });
+//   } catch (err) {
+//     handleError(res, err);
+//   }
+// };
+
+// // Controller for user sign-up - Done
+// module.exports.signUp = async (req, res) => {
+//   // Check for validation errors
+//   const errors = validationResult(req);
+//   if (!errors.isEmpty()) {
+//     return res.status(400).json({ errors: errors.array() });
+//   }
+
+//   try {
+//     const { name, password, email, role, preferences } = req.body;
+//     // Email must be unique
+//     let user = await User.findOne({ email });
+//     if (user) {
+//       return res.status(400).json({ error: "Email already exists" });
+//     }
+
+//     // Hash the password
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     // Create a new user
+//     const newUser = new User({
+//       name,
+//       password: hashedPassword,
+//       email,
+//       role,
+//       preferences,
+//     });
+
+//     await newUser.save();
+
+//     const accessToken = jwt.sign(
+//       { id: newUser._id },
+//       process.env.ACCESS_TOKEN_SECRET,
+//       {
+//         expiresIn: "4h",
+//       }
+//     );
+//     const refreshToken = jwt.sign(
+//       { id: newUser._id },
+//       process.env.REFRESH_TOKEN_SECRET,
+//       {
+//         expiresIn: "1d",
+//       }
+//     );
+
+//     // save the token in cookie
+//     res.cookie("accessToken", accessToken, {
+//       httpOnly: true,
+//       secure: true,
+//       sameSite: "strict",
+//       maxAge: 1000 * 60 * 60 * 4,
+//       // 4 hours
+//     });
+
+//     res.cookie("refreshToken", refreshToken, {
+//       httpOnly: true,
+//       secure: true,
+//       sameSite: "strict",
+//       maxAge: 1000 * 60 * 60 * 24,
+//       // 1 day
+//     });
+
+//     res.json({
+//       message: "Sign up successful",
+//       accessToken,
+//       refreshToken,
+//       email,
+//       name,
+//       preferences,
+//     });
+//   } catch (err) {
+//     handleError(res, err);
+//   }
+// };
+
+//   // Controller for user sign-up-2-step-step1 - Done
+// module.exports.basicSignUp = async (req, res) => {
+//   const { name, email, password } = req.body;
+
+//   req.session.basicSignUpInfo = { name, email, password };
+
+//   // console.log(req.session.basicSignUpInfo);
+
+//   res.json({
+//     message: "Basic Info Stored",
+//     name,
+//     email,
+//   });
+// };
+
+// // Controller for user sign-up-2-step-step2 - Done
+// module.exports.preferenceSignUp = async (req, res) => {
+//   try {
+//     // Retrieve basic sign-up information from session
+//     const basicSignUp = req.session.basicSignUpInfo;
+
+//     if (!basicSignUp || typeof basicSignUp !== "object") {
+//       return res
+//         .status(400)
+//         .json({ error: "Basic sign-up information is missing or invalid" });
+//     }
+
+//     const {
+//       investmentGoals,
+//       riskTolerence,
+//       amountToInvest,
+//       preferredIndustries,
+//       stockType,
+//     } = req.body;
+
+//     // console.log({
+//     //   investmentGoals,
+//     //   riskTolerence,
+//     //   amountToInvest,
+//     //   preferredIndustries,
+//     //   stockType,
+//     // });
+
+//     // Hash the password
+//     const hashedPassword = await bcrypt.hash(basicSignUp.password, 10);
+
+//     // Create a new user with preferences
+//     const newUser = new User({
+//       name: basicSignUp.name,
+//       email: basicSignUp.email,
+//       password: hashedPassword,
+//       preferences: {
+//         investmentGoals,
+//         riskTolerence,
+//         amountToInvest,
+//         preferredIndustries,
+//         stockType,
+//       },
+//     });
+
+//     // Save the user to the database
+//     const savedUser = await newUser.save();
+
+//     // Clear the basic sign-up information from the session
+//     req.session.basicSignUp = null;
+
+//     // Respond with success message and user details
+//     res.status(201).json({
+//       message: "User registered successfully",
+//       user: {
+//         name: savedUser.name,
+//         email: savedUser.email,
+//         investmentGoals: savedUser.preferences.investmentGoals,
+//         riskTolerance: savedUser.preferences.riskTolerance,
+//         amountToInvest: savedUser.preferences.amountToInvest,
+//         preferredIndustries: savedUser.preferences.preferredIndustries,
+//         stockType: savedUser.preferences.stockType,
+//       },
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: "Error creating user" });
+//   }
+// };

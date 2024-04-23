@@ -1,8 +1,8 @@
-const Db = process.env.MONGO_DB_KEY;
-
-
-
 const mongoose = require("mongoose");
+
+
+const Db = process.env.ATLAS_URI;
+
 //configure mongoose
 mongoose.connect(Db, {
   useNewUrlParser: true,

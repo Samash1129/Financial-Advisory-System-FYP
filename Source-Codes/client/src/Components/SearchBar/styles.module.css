@@ -17,7 +17,6 @@
   border-color: transparent;
   line-height: normal;
 }
-
 .searchContainer input {
   width: 100%;
   margin-bottom: 10px;
@@ -25,12 +24,11 @@
   font-size: 18px;
   padding: 10px;
   padding-left: 47px;
-  border-radius: 5px;
+  border-radius: 7px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   display: flex;
   color: white;
-
 }
 
 .searchContainer {
@@ -58,38 +56,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
+  padding: 18px;
 }
 
 .searchResults li:last-child {
   border-bottom: none;
 }
-
 .icon {
   width: 35px;
   height: 35px;
   margin-right: 8px;
 }
-
 .itemInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
 }
-
 .symbol {
   font-size: 1.9em;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: -3px;
 }
-
 .name {
   font-size: 1.5em;
   color: #f0f0f0;
 }
-
 .searchPrice {
   font-size: 1.8em;
   font-weight: bold;
@@ -97,13 +90,11 @@
   padding-right: 10px;
   font-weight: 500;
 }
-
 .inputWrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .searchIcon {
   position: absolute;
   left: 10px;
@@ -116,15 +107,11 @@
 .searchResults::-webkit-scrollbar {
   width: 5px;
 }
-
 .searchResults::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
 }
-
 .searchResults::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
+  background: #ffffff;
 }
 
 .searchResults li:hover {

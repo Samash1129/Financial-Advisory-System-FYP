@@ -1,2 +1,8 @@
 /.env
 /node_modules
+/scripts/Helpers/env/
+/scripts/Helpers/__pycache__/
+/scripts/Helpers/ml_models/BankingIndustry/env/
+/scripts/Helpers/ml_models/BankingIndustry/__pycache__/
+/scripts/Helpers/ml_models/BankingIndustry/.env
+/scripts/Helpers/.env
