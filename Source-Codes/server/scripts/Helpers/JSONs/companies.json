@@ -1,0 +1,23 @@
+{
+    "Banking": {
+        "Allied Bank Limited": "ABL",
+        "Askari Bank Limited": "AKBL",
+        "Bank Al-Falah": "BAFL",
+        "Bank Al-Habib": "BAHL",
+        "Bank Islami Pakistan": "BIPL",
+        "Bank Makramah": "BML",
+        "Bank of Khyber": "BOK",
+        "Bank of Punjab": "BOP",
+        "Faysal Bank Limited": "FABL",
+        "Habib Bank Limited": "HBL",
+        "Habib Metropolitan Bank": "HMB",
+        "JS Bank Limited": "JSBL",
+        "MCB Bank Limited": "MCB",
+        "Meezan Bank Limited": "MEBL",
+        "National Bank of Pakistan": "NBP",
+        "Standard Chartered Bank Limited": "SCBPL",
+        "SILK Bank Limited": "SILK",
+        "Soneri Bank Limited": "SNBL",
+        "United Bank Limited": "UBL"
+    }
+}

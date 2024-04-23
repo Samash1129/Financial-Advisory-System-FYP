@@ -1,101 +1,95 @@
 const express = require("express");
 const { body } = require("express-validator");
-const User = require("../models/user.model");
-const { signUp, signIn, getProfile, updateUser, deleteUser, refreshToken, signout } = require("../Controllers/user.controller");
+const User = require("../Models/user.model");
+const {
+  /*signUp,*/
+  signIn,
+  getProfile,
+  updateProfile,
+  deleteUser,
+  refreshToken,
+  signout,
+  getAllUsers,
+  tempSignUp,
+  finalSignUp,
+  basicSignUp,
+  preferenceSignUp,
+} = require("../Controllers/user.controller");
 
 // recordRoutes is an instance of the express router.
 const recordRoutes = express.Router();
 
-
 // test api
-recordRoutes.route("/getAllUsers").get(async (req, res) => {
-  try {
-    const users = await User.find({});
-    res.json(users);
-  } catch (err) {
-    console.error(error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
+recordRoutes.route("/getAllUsers").get(getAllUsers);
 
-// signup and signin api
-recordRoutes.route("/signUp").post(
-  [
-    // Validate name (required)
-    body("name").notEmpty().withMessage("Name is required"),
+// Sign-Up Route Step 1 of 2
+recordRoutes.route("/signup-temp").post(tempSignUp);
 
-    // Validate email (required and must be an email)
-    body("email")
-      .notEmpty()
-      .withMessage("Email is required")
-      .isEmail()
-      .withMessage("Invalid email format"),
+// Sign-Up Route Step 2 of 2
+recordRoutes.route("/signup-final").post(finalSignUp);
 
-    // Validate password (required and must be at least 6 characters)
-    body("password")
-      .notEmpty()
-      .withMessage("Password is required")
-      .isLength({ min: 8 })
-      .withMessage("Password must be at least 8 characters long"),
-
-    body("role")
-        .notEmpty()
-        .withMessage("Role is required")
-        .isLength({ min: 4 })
-        .withMessage("Role must be at least 4 characters long"),
-    
-    body("preference")
-        .notEmpty()
-        .withMessage("Preferance is required")
-        .isLength({ min: 4 })
-        .withMessage("Preferance must be defined"),
-  ],
-  signUp
-);
-
+// Sign-In Route
 recordRoutes.route("/signin").post(
   [
     // Validate email (required)
-    body("email")
-      .notEmpty()
-      .withMessage("Email is required"),
-
+    body("email").notEmpty().withMessage("Email is required"),
 
     // Validate password (required)
-    body("password")
-      .notEmpty()
-      .withMessage("Password is required"),
+    body("password").notEmpty().withMessage("Password is required"),
   ],
   signIn
 );
 
+// Update Profile Route
+recordRoutes.route("/updateprofile").patch(updateProfile);
+
+// Sign-Out Route
+recordRoutes.route("/signout").post(signout);
+
+// Get User Profile Route
+recordRoutes.route("/getuser").get(getProfile);
+
 // refresh token api to generate new access token
 recordRoutes.route("/refreshToken").post(refreshToken);
 
-recordRoutes.route("/user").get(getProfile);
-
-recordRoutes.route("/user").patch(
-  [
-    // Validate name (optional)
-    body("name").optional().notEmpty().withMessage("Name is required"),
-
-    // Validate email (optional and must be an email)
-    body("email")
-      .optional()
-      .isEmail()
-      .withMessage("Invalid email format"),
-
-    // Validate password (optional and must be at least 6 characters)
-    body("password")
-      .optional()
-      .isLength({ min: 8 })
-      .withMessage("Password must be at least 8 characters long"),
-  ],
-  updateUser
-);
-
-recordRoutes.route("/user").delete(deleteUser);
-
-recordRoutes.route("/signout").post(signout);
+// Delete User
+recordRoutes.route("/deleteuser").delete(deleteUser);
 
 module.exports = recordRoutes;
+
+// Code that was used before but now is not bieng used in the project
+//
+// // Previosuly Used Sign-Up Route
+// recordRoutes.route("/signup").post(
+//   [
+//     // Validate name (required)
+//     body("name").notEmpty().withMessage("Name is required"),
+
+//     // Validate email (required and must be an email)
+//     body("email")
+//       .notEmpty()
+//       .withMessage("Email is required")
+//       .isEmail()
+//       .withMessage("Invalid email format"),
+
+//     // Validate password (required and must be at least 6 characters)
+//     body("password")
+//       .notEmpty()
+//       .withMessage("Password is required")
+//       .isLength({ min: 8 })
+//       .withMessage("Password must be at least 8 characters long"),
+
+//     body("preferences")
+//       .notEmpty()
+//       .withMessage("Preferances are required")
+//       .isLength({ min: 4 })
+//       .withMessage("Preferances must be defined"),
+//   ],
+//   signUp
+// );
+//
+// // Temp Sign-Up Route - Step 1 of 2
+// recordRoutes.route("/signup/basic").post(basicSignUp);
+
+// // Temp Sign-Up Route - Step 2 of 2
+// recordRoutes.route("/signup/preference").post(preferenceSignUp);

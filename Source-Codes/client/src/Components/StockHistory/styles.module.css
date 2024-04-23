@@ -2,35 +2,42 @@
   width: 99.6%;
   height: 100%;
   margin: 0 auto;
+  overflow-y: auto;
   font-family: "Outfit", sans-serif;
-  font-size: 8px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
-
+  z-index: 999;
+  position: relative;
 }
 
 .shSearchResults {
   padding: 0;
   margin: 0;
-  height: auto;
   overflow-y: auto;
-  height: 210px; /* Fixed height for container */
+  height: 182px; /* Fixed height for container */
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0px 0px 8px 8px;
+  z-index: 999;
+  position: relative;
 }
 
 .shSearchResults li {
   display: flex;
   align-items: center;
+  overflow-y: auto;
   justify-content: space-between;
-  padding: 6px;
-  padding-left: 10px;
+  padding: 10px;
+  padding-left: 18px;
+  z-index: 999;
+  position: relative;
 }
 
 .shSearchResults li:last-child {
   border-bottom: none;
   padding-bottom: 10px;
+  z-index: 999;
+  position: relative;
 }
 
 .shIcon {
@@ -44,22 +51,25 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  z-index: 999;
+  position: relative;
 }
 
 .shSymbol {
-  font-size: 1.9em;
+  font-size: 18px;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: -3px;
 }
 
 .shName {
-  font-size: 1.5em;
+  font-size: 14px;
+  margin-top: 2px;
   color: #f0f0f0;
 }
 
 .shDate {
-  font-size: 1.8em;
+  font-size: 18px;
   font-weight: 500;
   color: #ffffff;
   padding-right: 8px;
@@ -69,6 +79,8 @@
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 999;
+  position: relative;
 }
 
 .shSearchIcon {
@@ -85,7 +97,8 @@
 }
 
 .shpremiumResults li:hover {
-  background: linear-gradient(91deg, #3692ff 52.09%, #7ff4a7 111.89%);
+  background: #3692ff;
+  /* background: linear-gradient(91deg, #3692ff 52.09%, #7ff4a7 111.89%); */
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
@@ -100,11 +113,11 @@
   height: 24px;
   margin-right: 10px;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .sRecentTitle {
-  font-size: 2.2em;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.9);
   font-family: Outfit;
   font-style: normal;
@@ -114,16 +127,41 @@
 }
 
 .shSearchResults::-webkit-scrollbar {
-  width: 4px;
+  width: 4.5px;
+  z-index: 0;
 }
 
 .shSearchResults::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  padding: 5px;
+  padding: 4px;
 }
 
 .shSearchResults::-webkit-scrollbar-thumb {
   background: #ffffff;
+}
+
+/* Skeleton loader container */
+.skeletonContainer {
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  opacity: 30%;
+}
+
+/* Skeleton loader icon placeholder */
+.skeletonIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  border-radius: 50%;
+  opacity: 40%;
+  margin-right: 16px;
+}
+
+.skeletonText {
+  flex: 1;
+  height: 12px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  opacity: 30%;
   border-radius: 4px;
 }

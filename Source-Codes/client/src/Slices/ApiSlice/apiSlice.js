@@ -3,6 +3,10 @@ import { baseurl } from '../../constants';
 
 const baseQuery = fetchBaseQuery({
     // baseUrl: '',
+<<<<<<< HEAD
+=======
+    credentials: "include",
+>>>>>>> AliMashoud
     baseUrl: baseurl,
 })
 

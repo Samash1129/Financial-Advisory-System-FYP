@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import Button from "../../Components/Button";
@@ -7,99 +7,130 @@ import ToggleButton from "../../Components/ToggleButton"; // The updated compone
 import Dropdown from "../../Components/Dropdown";
 import backgroundImage from "../../Assets/Images/background.png";
 import LogoAnimation from "../../Components/LogoAnimation";
+import LoadingSpinner from '../../Components/LoadingAnimation';
 import { useDispatch, useSelector } from "react-redux";
+import { useSignUpFinalMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
-import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
-import { removeCredentials } from "../../Slices/User/AuthSlice/authSlice";
+// import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { useDeleteUserMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { removeUserData, setUserData } from "../../Slices/User/AuthSlice/authSlice";
 
-// Options for the Amount to Invest / Disposable Income dropdown
-const amountToInvestOptions = [
-  "$0 - $1,000",
-  "$1,001 - $5,000",
-  "$5,001 - $10,000",
-  "More than $10,000",
-];
-
-// Options for the Stock Type dropdown
 const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
 const Preferences = () => {
-  const [investmentGoals, setInvestmentGoals] = useState([]);
-  const [riskTolerance, setRiskTolerance] = useState([]);
+  const [investmentGoals, setInvestmentGoals] = useState("");
+  const [riskTolerance, setRiskTolerance] = useState("");
   const [preferredIndustries, setPreferredIndustries] = useState([]);
-  const [amountToInvest, setAmountToInvest] = useState("");
   const [stockType, setStockType] = useState("");
+  const [amountToInvest, setAmountToInvest] = useState("");
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const previousPage = useSelector((state) => state.previousPage.previousPage);
-  const userState = useSelector((state) => state.auth);
+  const currentUserData = useSelector(state => state.auth);
 
-  const handleToggleInvestmentGoal = (goal) => {
-    if (investmentGoals.includes(goal)) {
-      setInvestmentGoals(investmentGoals.filter((item) => item !== goal));
-    } else {
-      setInvestmentGoals([...investmentGoals, goal]);
+  useEffect(() => {
+    if (currentUserData.preferences) {
+      const { investmentGoals, riskTolerance, preferredIndustries, stockType, amountToInvest } = currentUserData.preferences;
+      setInvestmentGoals(investmentGoals || "Long Term");
+      setRiskTolerance(riskTolerance || "Low");
+      if (preferredIndustries.length > 0) { setPreferredIndustries(preferredIndustries); }
+      else { setPreferredIndustries(["Banking"]); }
+      setStockType(stockType || "Dividend");
+      if (amountToInvest === 0) { setAmountToInvest("100"); }
+      else { setAmountToInvest(amountToInvest.toLocaleString()); }
+      //setAmountToInvest(amountToInvest.toLocaleString() || "100");
     }
+  }, [currentUserData]);
+
+
+  const [signUpFinal, { isLoading }] = useSignUpFinalMutation();
+  const [deleteUser] = useDeleteUserMutation();
+
+  const formatCurrency = (value) => {
+    // Remove non-digit characters
+    const cleanedValue = value.replace(/\D/g, '');
+    // Format with commas
+    return cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
+  const handleAmountChange = (e) => {
+    const value = e.target.value;
+    setAmountToInvest(formatCurrency(value));
+
+    if (value < 100) {
+      setError('Amount must be more than PKR 100');
+    }
+    else {
+      setError('');
+    }
+  };
+
+  // const previousPage = useSelector((state) => state.previousPage.previousPage);
+  // const userState = useSelector((state) => state.auth);
+
+  const handleToggleInvestmentGoals = (goal) => {
+    setInvestmentGoals(goal);
   };
 
   const handleToggleRiskTolerance = (risk) => {
-    if (riskTolerance.includes(risk)) {
-      setRiskTolerance(riskTolerance.filter((item) => item !== risk));
-    } else {
-      setRiskTolerance([...riskTolerance, risk]);
-    }
+    setRiskTolerance(risk);
   };
 
   const handleTogglePreferredIndustry = (industry) => {
-    if (preferredIndustries.includes(industry)) {
-      setPreferredIndustries(
-        preferredIndustries.filter((item) => item !== industry)
-      );
-    } else {
+    if (preferredIndustries.length > 1 && preferredIndustries.includes(industry)) {
+      setPreferredIndustries(preferredIndustries.filter((item) => item !== industry));
+    } else if (!preferredIndustries.includes(industry)) {
       setPreferredIndustries([...preferredIndustries, industry]);
     }
   };
 
-  const handleDropdownAmountToInvest = (selectedOption) => {
-    setAmountToInvest(selectedOption);
-  };
 
   const handleDropdownStockType = (selectedOption) => {
     setStockType(selectedOption);
   };
 
   const handleSubmit = async () => {
-    console.log(investmentGoals);
-    console.log(riskTolerance);
-    console.log(preferredIndustries);
-    console.log(amountToInvest);
-    console.log(stockType);
-    // Navigate to the /dashboard route
-    // At the moment navigating to premium dashboard to show the route
-    navigate("/dashpremium");
-  };
-  const [signout] = useSignoutMutation();
 
+    if (error) {
+      return;
+    }
+
+    try {
+      const formattedAmountToInvest = parseFloat(amountToInvest.replace(/,/g, ''));
+      const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest: formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
+      console.log(response);
+
+      let token1 = false;
+
+      if (currentUserData.token === true) { token1 = true; }
+      else { token1 = false; }
+
+      dispatch(setUserData({ token: token1, name: response.user.name, email: response.user.email, preferences: response.user.preferences }));
+
+      dispatch(setPreviousPage(null));
+
+      if (token1 === true) { navigate('/dashboard'); }
+      else {
+        dispatch(removeUserData());
+        navigate('/signin');
+      }
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // const [signout] = useSignoutMutation();
 
   const handleBackButtonClick = async () => {
-    try {
-      if (previousPage === '/signup') {
-        await signout().unwrap();
-        dispatch(removeCredentials());
-        dispatch(setPreviousPage(null));
-        navigate(previousPage);
-      }
-      if (userState.isPremium === true) {
-        navigate('/dashpremium')
-        dispatch(setPreviousPage(null))
-      } else {
-        navigate('/dashregular')
-        dispatch(setPreviousPage(null))
-      }
-    } catch (error) {
-      console.error(error);
+
+    dispatch(setPreviousPage(null));
+    if (currentUserData.token === true) { navigate('/dashboard'); }
+    else {
+      deleteUser(currentUserData.email).unwrap();
+      navigate('/signup');
     }
   };
 
@@ -111,12 +142,13 @@ const Preferences = () => {
         </div>
         <img
           src={backgroundImage}
-          alt="Cover Image"
+          alt="Cover"
           className={styles.coverImage}
         />
       </div>
 
       <div className={styles.rightContainer}>
+        {isLoading && <LoadingSpinner loadingText="Saving Preferences" />}
         <div className={styles.preferences}>
           <NavBar
             title="Preferences"
@@ -127,13 +159,13 @@ const Preferences = () => {
             <div className={styles.toggleContainer1}>
               <ToggleButton
                 label="Short Term"
-                onClick={() => handleToggleInvestmentGoal("Short Term")}
-              // additionalOnClick={() => console.log("Additional onClick for Short Term")}
+                onClick={() => handleToggleInvestmentGoals("Short Term")}
+                isSelected={investmentGoals === "Short Term"}
               />
               <ToggleButton
                 label="Long Term"
-                onClick={() => handleToggleInvestmentGoal("Long Term")}
-              // additionalOnClick={() => console.log("Additional onClick for Long Term")}
+                onClick={() => handleToggleInvestmentGoals("Long Term")}
+                isSelected={investmentGoals === "Long Term"}
               />
             </div>
           </div>
@@ -144,40 +176,52 @@ const Preferences = () => {
               <ToggleButton
                 label="Low"
                 onClick={() => handleToggleRiskTolerance("Low")}
+                isSelected={riskTolerance === "Low"}
               />
               <ToggleButton
                 label="Medium"
                 onClick={() => handleToggleRiskTolerance("Medium")}
+                isSelected={riskTolerance === "Medium"}
               />
               <ToggleButton
                 label="High"
                 onClick={() => handleToggleRiskTolerance("High")}
+                isSelected={riskTolerance === "High"}
               />
             </div>
           </div>
 
           <div className={styles.section}>
-            <h2>Amount to Invest / Disposable Income</h2>
-            <Dropdown
-              options={amountToInvestOptions}
-              onOptionSelect={handleDropdownAmountToInvest}
-            />
+            <h2>Amount to Invest (PKR)</h2>
+            <div className={styles.psrInputContainer}>
+              <input
+                type="text"
+                className={styles.psrInputField}
+                placeholder="Enter your investing amount"
+                value={amountToInvest}
+                onChange={handleAmountChange}
+              />
+              {error && <div className={styles.errorMessage}>{error}</div>}
+            </div>
           </div>
 
           <div className={styles.section}>
             <h2>Preferred Industries</h2>
             <div className={styles.toggleContainer3}>
               <ToggleButton
-                label="Clothing"
-                onClick={() => handleTogglePreferredIndustry("Clothing")}
+                label="Banking"
+                onClick={() => handleTogglePreferredIndustry("Banking")}
+                isSelected={preferredIndustries.includes("Banking")}
               />
               <ToggleButton
-                label="Cosmetics"
-                onClick={() => handleTogglePreferredIndustry("Cosmetics")}
+                label="Textile"
+                onClick={() => handleTogglePreferredIndustry("Textile")}
+                isSelected={preferredIndustries.includes("Textile")}
               />
               <ToggleButton
-                label="Logistics"
-                onClick={() => handleTogglePreferredIndustry("Logistics")}
+                label="Automobile"
+                onClick={() => handleTogglePreferredIndustry("Automobile")}
+                isSelected={preferredIndustries.includes("Automobile")}
               />
             </div>
           </div>
@@ -187,6 +231,7 @@ const Preferences = () => {
             <Dropdown
               options={stockTypeOptions}
               onOptionSelect={handleDropdownStockType}
+              selectedOption={stockType}
             />
           </div>
 

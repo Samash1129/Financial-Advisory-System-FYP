@@ -1,0 +1,124 @@
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: "Outfit", sans-serif;
+}
+
+.popupBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.popupContent {
+  position: relative;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1001;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButtonContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backArrow {
+  width: 14px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.backTitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: #3692ff;
+}
+
+.popupMainContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+position: relative;
+padding: 10px;
+}
+
+
+.popupActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+
+.textareaField {
+  width:94%; /* Adjust width to 100% */
+  height: 200px;
+  font-family: "Outfit", sans-serif;
+background-color: #eeeeee;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  resize: none;
+}
+
+.textareaField::placeholder {
+  color: #bbbbbb;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+.textareaField:focus {
+  outline: none;
+  
+}
+
+.sendButton {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 7px;
+  color: #fff;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #3692ff;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.sendButton:hover {
+  background-color: #0073ff;
+}
+
+.popupMainContent h2 {
+  color: #000;
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: -10px;
+}

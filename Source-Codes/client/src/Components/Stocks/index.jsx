@@ -4,10 +4,9 @@ import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
 import bankicon from '../../Assets/SVGs/bank-icon.svg';
 import riseicon from '../../Assets/SVGs/Riseicon.svg';
-import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
-import { useDispatch } from 'react-redux';
-import { setRecommendedStocks } from '../../Slices/StockSlice/stockSlice';
-import LoadingSpinner from '../LoadingAnimation';
+// import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
+// import { useDispatch } from 'react-redux';
+// import { setRecommendedStocks } from '../../Slices/StockSlice/stockSlice';
 
 const getIconPath = (category) => {
     switch (category) {
@@ -22,12 +21,22 @@ const getIconPath = (category) => {
     }
 };
 
-const Stocks = ({ pageType }) => {
+const SkeletonLoader = () => (
+    <div className={styles.skeletonContainer}>
+      <div className={styles.skeletonIcon}></div>
+      <div className={styles.skeletonText}></div>
+    </div>
+  );
 
-    const dispatch = useDispatch();
-    const { data: recommendedStocks, isLoading } = useGetRecommendedStocksQuery();
+const Stocks = ({ pageType, filteredData }) => {
 
-    dispatch(setRecommendedStocks(recommendedStocks));
+    //const dispatch = useDispatch();
+    //const { data: recommendedStocks, isLoading } = useGetRecommendedStocksQuery();
+
+    //dispatch(setRecommendedStocks(recommendedStocks));
+
+    const recommendedStocks = filteredData;
+    const isLoading = false;
 
     return (
         <div className={styles.ssearchContainer}>
@@ -36,10 +45,16 @@ const Stocks = ({ pageType }) => {
                 <div className={styles.srecommendedTitle}>Recommended Stocks</div>
             </div>
             <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}>
-                {isLoading ? (
-                    <LoadingSpinner loadingText={'Loading Recommended Stocks...'}/>
-                ) : recommendedStocks ? (
-                    recommendedStocks.map((item, index) => (
+            {isLoading ? (
+          // Display skeleton loader while data is loading
+          <>
+            <SkeletonLoader />
+            <SkeletonLoader />
+            <SkeletonLoader />
+            <SkeletonLoader />
+          </>
+        ) : recommendedStocks ? (
+          recommendedStocks.map((item, index) => (
                         <li key={item.tickerSymbol} className={styles.ssearchItem}>
                             {/* Add span for numbering */}
                             <span className={styles.listNumber}>{index + 1}</span>

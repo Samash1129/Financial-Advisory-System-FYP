@@ -1,46 +1,117 @@
-import { Route, Routes, Navigate, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  Navigate,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import Preferences from "./Pages/Preferences";
 import ProfileSettings from "./Pages/ProfileSettings";
-import DashRegular from "./Pages/DashRegular";
-import DashPremium from "./Pages/DashPremium";
+import Dashboard from "./Pages/Dashboard";
 import Payment from "./Pages/Payment";
 import PrivateRoute from "./Components/PrivateRoute";
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import store, { persistor } from './store/store';
+
 
 function App() {
-
   const filteredData = [
-    { name: 'Meezan Bank Ltd', symbol: 'MEZN', price: '797,022', category: 'Banking' },
-    { name: 'Silk Bank Ltd', symbol: 'SILK', price: '37,020', category: 'Banking' },
-    { name: 'Askari Bank Ltd', symbol: 'AKBL', price: '48,354', category: 'Banking' },
-    { name: 'Habib Bank Limited', symbol: 'HBL', price: '797,022', category: 'Banking' },
-    { name: 'Dubai Islamic Bank', symbol: 'DIB', price: '37,020', category: 'Banking' },
+    {
+      securityName: "Meezan Bank Ltd",
+      tickerSymbol: "MEZN",
+      stockPrice: "797,022",
+      category: "Banking",
+    },
+    {
+      securityName: "Silk Bank Ltd",
+      tickerSymbol: "SILK",
+      stockPrice: "37,020",
+      category: "Banking",
+    },
+    {
+      securityName: "Askari Bank Ltd",
+      tickerSymbol: "AKBL",
+      stockPrice: "48,354",
+      category: "Banking",
+    },
+    {
+      securityName: "Habib Bank Limited",
+      tickerSymbol: "HBL",
+      stockPrice: "797,022",
+      category: "Banking",
+    },
+    {
+      securityName: "Dubai Islamic Bank",
+      tickerSymbol: "DIB",
+      stockPrice: "37,020",
+      category: "Banking",
+    },
+    {
+      securityName: "Meezan Bank Ltd",
+      tickerSymbol: "MEZN",
+      stockPrice: "797,022",
+      category: "Banking",
+    },
+    {
+      securityName: "Silk Bank Ltd",
+      tickerSymbol: "SILK",
+      stockPrice: "37,020",
+      category: "Banking",
+    },
+    {
+      securityName: "Askari Bank Ltd",
+      tickerSymbol: "AKBL",
+      stockPrice: "48,354",
+      category: "Banking",
+    },
+    {
+      securityName: "Habib Bank Limited",
+      tickerSymbol: "HBL",
+      stockPrice: "797,022",
+      category: "Banking",
+    },
+    {
+      securityName: "Dubai Islamic Bank",
+      tickerSymbol: "DIB",
+      stockPrice: "37,020",
+      category: "Banking",
+    },
   ];
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" index={true} element={<LandingPage />} />
-        <Route path="/GetStarted" element={<GetStarted />} />
+        <Route path="/getstarted" element={<GetStarted />} />
+        <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path='' element={<PrivateRoute />}>
-          <Route path="/preferences" element={<Preferences />} />
+        <Route path="" element={<PrivateRoute />}>
+        <Route path="/preferences" element={<Preferences />} />
           <Route path="/profilesettings" element={<ProfileSettings />} />
-          <Route path="/dashregular" element={<DashRegular filteredData={filteredData}/>} />
-          <Route path="/dashpremium" element={<DashPremium />} />
+          <Route
+            path="/dashboard"
+            element={<Dashboard filteredData={filteredData} />}
+          />
           <Route path="/payment" element={<Payment />} />
         </Route>
       </>
     )
-  )
+  );
 
   return (
-    <RouterProvider router={router} />
-  );
+    <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <RouterProvider router={router} />
+    </PersistGate>
+  </Provider>
+);
 }
 
 export default App;

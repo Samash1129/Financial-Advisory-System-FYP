@@ -53,7 +53,8 @@ body {
 
 .profileSettingsForm input[type="text"],
 .profileSettingsForm input[type="password"],
-.profileSettingsForm input[type="email"] {
+.profileSettingsForm input[type="email"]
+ {
   padding: 10px;
   margin-bottom: 18px;
   border: 0px solid;
@@ -67,6 +68,7 @@ body {
 
 .profileSettingsForm input[type="text"]:focus,
 .profileSettingsForm input[type="password"]:focus,
+.profileSettingsForm input[id="confirm-password"]:focus,
 .profileSettingsForm input[type="email"]:focus {
   border: 0px solid;
   outline: none;
@@ -103,9 +105,10 @@ body {
   margin-bottom: 15px;
 }
 
-.profileSettingsForm input[type="password"] {
+
+.profileSettingsForm input[id="confirm-password"] {
   padding: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 45px;
   border: 0px solid;
   line-height: regular;
   height: 27px;
@@ -123,3 +126,15 @@ body {
   margin-top: 0px;
   cursor: pointer;
 }
+
+.emailInput
+{
+  color: rgb(0, 0, 0);
+  background-color: #dddddd;
+  cursor: not-allowed;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+}
+

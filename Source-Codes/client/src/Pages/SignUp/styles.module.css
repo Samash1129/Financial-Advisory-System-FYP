@@ -18,8 +18,7 @@ body {
   padding: 0;
 }
 
-.logo 
-{
+.logo {
   display: flex;
   justify-content: center;
 }
@@ -49,7 +48,7 @@ body {
 }
 
 .signUpForm label {
-  margin: 10px 0 5px;
+  margin: 3px 0 5px;
   font-size: 17px;
   font-weight: 400;
 }
@@ -68,8 +67,21 @@ body {
   background-color: rgba(240, 240, 240, 0.8);
 }
 
+.signUpForm input[id="confirm-password"] {
+  padding: 10px;
+  margin-bottom: 45px;
+  border: 0px solid;
+  line-height: regular;
+  height: 27px;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
 .signUpForm input[type="text"]:focus,
 .signUpForm input[type="password"]:focus,
+.signUpForm input[id="confirm-password"]:focus,
 .signUpForm input[type="email"]:focus {
   border: 0px solid;
   outline: none;
@@ -112,4 +124,15 @@ body {
   margin-top: -8px;
   font-size: 1rem;
   margin-bottom: 15px;
+}
+
+.topError {
+  color: rgb(255, 80, 80);
+  margin-top: -8px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: rgba(244, 133, 125, 0.15);
+  padding: 10px;
+  padding-left: 10px;
 }

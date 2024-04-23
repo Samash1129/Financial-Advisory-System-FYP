@@ -1,0 +1,23 @@
+{
+    "queries": {
+        "ABL": ["Allied Bank Ltd Share Stock", "Allied Bank news", "Allied Bank updates"],
+        "AKBL": ["Askari Bank Share Stock", "Askari Bank news", "Askari Bank updates"],
+        "BAFL": ["Bank Alfalah Share Stock", "Bank Alfalah news", "Bank Alfalah updates"],
+        "BAHL": ["Bank Al Habib Share Stock", "Bank Al Habib news", "Bank Al Habib updates"],
+        "BIPL": ["BankIslami Pakistan Share Stock", "BankIslami Pakistan news", "BankIslami Pakistan updates"],
+        "BML": ["Bank Makramah Limited Share Stock", "Bank Makramah news", "Bank Makramah updates", "Summit Bank news", "Summit Bank updates"],
+        "BOK": ["Bank of Khyber Share Stock", "Bank of Khyber news", "Bank of Khyber updates"],
+        "BOP": ["Bank of Punjab Pakistan Share Stock", "Bank of Punjab Pakistan news", "Bank of Punjab Pakistan updates"],
+        "FABL": ["Faysal Bank Share Stock", "Faysal Bank news", "Faysal Bank updates"],
+        "HBL": ["HBL Share Stock", "HBL news", "HBL updates"],
+        "HMB": ["Habib Metropolitan Bank Share Stock", "Habib Metropolitan Bank news", "Habib Metropolitan Bank updates"],
+        "JSBL": ["JS Bank Share Stock", "JS Bank news", "JS Bank updates"],
+        "MCB": ["MCB Bank Share Stock", "MCB Bank news", "MCB Bank updates"],
+        "MEBL": ["Meezan Bank Share Stock", "Meezan Bank news", "Meezan Bank updates"],
+        "NBP": ["NBP (National Bank of Pakistan) Share Stock", "National Bank of Pakistan news", "National Bank of Pakistan updates"],
+        "SCBPL": ["Standard Chartered Bank Share Stock", "Standard Chartered Bank news", "Standard Chartered Bank updates"],
+        "SILK": ["Silk Bank Limited Share Stock", "Silk Bank news", "Silk Bank updates"],
+        "SNBL": ["Soneri Bank Limited Share Stock", "Soneri Bank news", "Soneri Bank updates"],
+        "UBL": ["UBL Pakistan Share Stock", "UBL Pakistan news", "UBL Pakistan updates"]
+    }
+}

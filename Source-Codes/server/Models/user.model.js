@@ -13,37 +13,24 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required : true,
+    required: true,
   },
-  role: {
-    type: String,
-    enum: ['Admin', 'SuperAdmin', 'User'],
-    default: 'User',
-  },
-  preference: {
+  preferences: {
+    investmentGoals: {
+      type: String
+    },
     riskTolerance: {
-      type: String,
-      enum: ['High', 'Medium', 'Low'],
-      default: 'Medium',
+      type: String
     },
-    investmentFrequency: {
-      type: Number,
-      min: 1,
-      max: 365,
-      },
     amountToInvest: {
-      type: Number,
-      min: 0,
+      type: Number
     },
-    preferredIndustry:{
-      type:String,
-      enum: ['Information Technology', 'Banking', 'Automobile', 'Textile'],
-    },
-    investmentPriority:{
-      type: String,
-      enum: ['Dividend', 'Capital-Growth', 'Export Industries']
+    preferredIndustries: [{
+      type: String
+    }],
+    stockType: {
+      type: String
     }
-
   },
 });
 

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './styles.module.css';
 import Button from '../../Components/Button';
 import { useNavigate } from 'react-router-dom';
-import blankBackground from '../../Assets/Images/blankBackground.png';
 import background from '../../Assets/Images/background.png'
 import bottomLogo from '../../Assets/Images/bottomLogo.png';
 import LogoAnimation from '../../Components/LogoAnimation';

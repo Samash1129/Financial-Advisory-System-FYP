@@ -3,8 +3,12 @@ Source-Codes/PythonScripts/env
 Source-Codes/PythonScripts/env/
 Source-Codes/NewsAPI/.env
 Source-Codes/NewsAPI/query_responses/
+<<<<<<< HEAD
 Source-Codes/NewsAPI/queries.json
 Source-Codes/scripts/NewsAPI/env/
 Source-Codes/scripts/NewsAPI/query_responses/
 Source-Codes/scripts/NewsAPI/__pycache__
 Source-Codes/scripts/NewsAPI/queries.json
+=======
+Source-Codes/NewsAPI/queries.json
+>>>>>>> AliMashoud
