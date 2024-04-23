@@ -4,31 +4,6 @@
             "title": "Record profit: MCB Bank posts earnings of Rs65.3bn in 2023, up over 89% YoY",
             "top_image": "https://i.brecorder.com/large/2024/02/062010018d38067.jpg?r=201005",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://www.brecorder.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/22150021ba0d647.jpg?r=150540",
-                "https://news.google.com/_img/logo.png",
-                "https://i.brecorder.com/medium/2022/01/61e8e0f994886.png",
-                "https://i.brecorder.com/thumbnail/2024/03/22010850cf6bcc5.jpg?r=010954",
-                "https://i.brecorder.com/thumbnail/2024/03/2212130609f5a80.jpg?r=121316",
-                "https://i.brecorder.com/thumbnail/2024/03/23154741dc63f10.jpg?r=154849",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.brecorder.com/thumbnail/2024/03/21155121f5c0add.jpg?r=155731",
-                "https://i.brecorder.com/thumbnail/2024/03/2218005884b12ad.jpg?r=180556",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff402ce4ee7.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff3bad891b5.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/22142005af51ac7.jpg?r=143422",
-                "https://i.brecorder.com/medium/2023/07/241836140c0cd7e.jpg?r=183619",
-                "https://i.brecorder.com/thumbnail/2024/03/65fca785bc60a.jpg",
-                "https://i.brecorder.com/primary/2024/02/062010018d38067.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff44ce899b1.jpg",
-                "https://i.brecorder.com/large/2024/02/062010018d38067.jpg?r=201005",
-                "https://i.brecorder.com/thumbnail/2024/03/65fca66786dc5.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff4497f0d9a.jpg",
-                "https://i.brecorder.com/thumbnail/2022/09/6311d2877b06a.png",
-                "https://i.brecorder.com/thumbnail/2024/03/221411090891b73.jpg?r=141133",
-                "https://i.brecorder.com/thumbnail/2024/03/22210313885bb61.jpg?r=210434"
-=======
                 "https://i.brecorder.com/thumbnail/2024/03/65f3703a1c322.jpg",
                 "https://i.brecorder.com/thumbnail/2024/03/14122710fa0af2a.jpg?r=122837",
                 "https://i.brecorder.com/medium/2022/01/61e8e0f994886.png",
@@ -53,10 +28,9 @@
                 "https://www.brecorder.com/_img/logo.png",
                 "https://i.brecorder.com/thumbnail/2024/03/65f4da9c1ba37.jpg",
                 "https://news.google.com/_img/logo.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
-            "url": "https://www.brecorder.com/news/40287579/record-profit-mcb-bank-posts-earnings-of-rs653bn-in-2023-up-over-89-yoy",
+            "url": "https://www.brecorder.com/news/40287579",
             "date": "Tue, 06 Feb 2024 08:00:00 GMT",
             "short_description": "Record profit: MCB Bank posts earnings of Rs65.3bn in 2023, up over 89% YoY  Business Recorder",
             "text": "MCB Bank Limited, one of Pakistan\u2019s largest commercial banks, reported its highest-ever yearly profit, driven by an increase in its interest-based income.\n\nIn a consolidated statement released to the Pakistan Stock Exchange (PSX) on Tuesday, the bank posted a profit after tax of Rs65.27 billion in 2023, with an over 89% increase against Rs34.45 billion recorded in the same period of the previous year.\n\nMCB demonstrated \u201cexceptional financial performance for the outgoing year,\u201d said Arif Habib Limited (AHL). \u201cThis jump in overall earnings was mainly on the back of growth in total income,\u201d added the brokerage house.\n\nMCB\u2019s total income grew by 65% to Rs200.82 billion in 2023 from Rs121.87 billion recorded in 2022.\n\nThe bank announced a final cash dividend of Rs9 per share i.e. 90% for the year ended on December 31, 2023. This is in addition to an interim dividend(s) already paid at Rs21 per share i.e. 210%.\n\nJan-Jun: MCB Bank\u2019s earnings increase over 150% year-on-year\n\nIts profit before tax during the said period increased to Rs137.52 billion from Rs75.34 billion recorded in the same period the previous year, reflecting an increase of 83%.\n\nEarnings per share of the bank in 2023 stood at Rs54.94 compared to Rs29 in 2022.\n\nThe bank\u2019s net interest income in 2023 increased to Rs165.42 billion from Rs95.97 billion a year earlier i.e. a jump of 73%. Non-markup income rose to Rs35.4 billion, against Rs25.9 billion in the 2022.\n\nDuring 2023, MCB saw its total non-markup interest expenses jump 28% to Rs63.57 billion, as compared to Rs49.85 billion in SPLY.",
@@ -69,18 +43,6 @@
             "title": "Driven by historic growth in deposits, MCB posted highest ever Profit Before Tax of Rs. 125.2bn (+75%) for the year 2023",
             "top_image": "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/02/MCB-House-Lahore.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2022/11/PR-image.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/02/MCB-House-Lahore-696x461.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/02/MCB-House-Lahore.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/themes/Newspaper-child/images/profit-urdu.png",
-                "https://www.facebook.com/tr?id=2983550451904217&ev=PageView        &noscript=1",
-                "https://secure.gravatar.com/avatar/d4a2a5355deb33c213b7ae387daa329d?s=50&d=blank&r=pg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2020/06/PTProfit-e1710496544180-300x122.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC"
-=======
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2020/06/PTProfit-e1710496544180-300x122.png",
                 "https://profit.pakistantoday.com.pk/wp-content/themes/Newspaper-child/images/profit-urdu.png",
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/02/MCB-House-Lahore-696x461.jpg",
@@ -91,7 +53,6 @@
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC",
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/02/MCB-House-Lahore.jpg",
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
             "url": "https://profit.pakistantoday.com.pk/2024/02/06/driven-by-historic-growth-in-deposits-mcb-posted-highest-ever-profit-before-tax-of-rs-125-2bn-75-for-the-year-2023/",
@@ -107,30 +68,6 @@
             "title": "Stocks extend losses on economic uncertainty",
             "top_image": "https://i.dawn.com/large/2024/03/65ea37b28946b.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/primary/2024/03/65ea37b28946b.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "https://i.dawn.com/large/2024/03/65ea37b28946b.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://news.google.com/_img/social/icon-comment-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://www.dawn.com/_img/logo.png"
-=======
                 "https://news.google.com/_img/social/icon-print-black.png",
                 "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
                 "https://news.google.com/_img/social/icon-whatsapp-black.png",
@@ -153,7 +90,6 @@
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
                 "https://news.google.com/_img/social/icon-comment-black.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
             "url": "https://www.dawn.com/news/1819876",
@@ -186,10 +122,6 @@
                 "https://news.google.com/_assets/images/marketintelligence/logo-mi.png",
                 "https://platform.mi.spglobal.com/Articles\\hpimages\\423132011.jpeg",
                 "https://www.snl.com/Articles/423147002.png",
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://platform.mi.spglobal.com/Articles\\hpimages\\423132011.jpeg",
-=======
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
                 "https://www.snl.com/Articles/423147003.png"
             ],
             "videos": [],
@@ -208,17 +140,10 @@
             "images": [
                 "https://thefridaytimes.com/assets/thefridaytimes/images/nayadaur_logo.png",
                 "https://thefridaytimes.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866387-4345.jpg",
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://thefridaytimes.com/assets/thefridaytimes/images/logo_publishrr_light.png",
-                "https://thefridaytimes.com/uploads/theme/logo-1691665104.png",
-                "https://thefridaytimes.com/assets/thefridaytimes/images/newwave_logo.png",
-                "https://news.google.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866378-7232.png"
-=======
                 "https://thefridaytimes.com/uploads/theme/logo-1691665104.png",
                 "https://news.google.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866378-7232.png",
                 "https://thefridaytimes.com/assets/thefridaytimes/images/logo_publishrr_light.png",
                 "https://thefridaytimes.com/assets/thefridaytimes/images/newwave_logo.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
             "url": "https://thefridaytimes.com/13-Nov-2023/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points",
@@ -231,47 +156,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-            "title": "MCB Bank full-year profits soar 89pc, hikes dividend payout",
-            "top_image": "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-07/l_1155185_051511_updates.jpg",
-            "images": [
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171565_120934_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/twitter.svg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171559_112143_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171560_112832_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171553_095744_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/Thenews-logo.svg",
-                "https://www.thenews.com.pk/assets/front/images/whatsapp.svg",
-                "https://www.thenews.com.pk/assets/front/images/close_black.png",
-                "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-07/l_1155185_051511_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171547_101006_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/thenews.png",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171563_115055_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171556_102932_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-07/1155185_9200183_dfgdhf_akhbar.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-23/s_1171561_113543_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/facebook.svg"
-            ],
-            "videos": [],
-            "url": "https://www.thenews.com.pk/print/1155185-mcb-bank-full-year-profits-soar-89pc-hikes-dividend-payout",
-            "date": "Wed, 07 Feb 2024 08:00:00 GMT",
-            "short_description": "MCB Bank full-year profits soar 89pc, hikes dividend payout  The News International",
-            "text": "LAHORE: MCB Bank Limited reported a 89 percent jump in annual profit on Tuesday, boosted by higher interest income and a reversal of provisions.\n\nThe MCB's logo is seen on a wall outside the bank's head office. \u2014 MCB website\n\nThe bank posted a net profit of Rs65.27 billion for the year ended Dec. 31, 2023, compared with Rs34.45 billion a year earlier, according to a stock exchange filing.\n\nEarnings per share rose to Rs54.94 from Rs28.95.\n\nThe board of directors declared a final cash dividend of Rs9 per share, or 90 percent, taking the total payout for the year to Rs30 per share, or 300 percent.\n\nMCB's net interest income, the difference between interest earned and interest paid, surged 72 petrcent to Rs165.42 billion, as interest-earning assets grew 66 percent to Rs364.45 billion.\n\nNon-interest income, which includes fees, commissions and gains from securities, increased 37 percent to Rs35.4 billion.\n\nThe bank also reversed Rs1.08 billion of provisions for bad loans, compared with a charge of Rs2.64 billion in 2022. Operating expenses rose 28 percent to Rs63.57 billion. The bank's share of profit from associates, mainly from its stake in MCB Islamic Bank Limited, nearly doubled to Rs1.35 billion. MCB paid Rs72.25 billion in income tax, up 77 percent from 2022.\n\n\"MCB achieved significant growth in core earnings to post a historic Profit Before Tax of Rs125.2 billion; registering an impressive increase of 75 percent over last year,\" the bank said in a statement.\n\n\"Total asset base of the bank grew by 16 percent and was reported at Rs. 2.43 trillion. Net investments increased by Rs271 billion whereas gross advances reported a decrease of Rs. 175 billion over December 31, 2022.\"\n\nThe statement said there was a un-precedented growth of Rs180 billion in average current deposits.\n\n\"Despite a 7.3 percent increase in average policy rate during the year, the domestic cost of deposits was contained at 9.12 percent as compared to 6.51 percent in the year 2022.\"\n\nReturn on Assets and Return on Equity significantly improved to 2.64 percent and 31.60 percent respectively, whereas the book value per share was reported at Rs174.35. During the year, MCB attracted home remittance inflows of $3,247 million.\n\nAttock Refinery declares 25pc dividend as profit rises\n\nAttock Refinery Limited on Tuesday reported a 10.4 percent increase in its half-yearly profit after tax, boosted by higher sales and other income.\n\nThe refinery earned Rs17.56 billion or Rs164.7 per share in the six months ended Dec. 31, 2023, compared with Rs15.91 billion rupees or Rs149.21 per share a year earlier.\n\nThe company also announced an interim cash dividend of Rs2.5 per share, or 25 percent, for the period.\n\nAttock Refinery's net revenue rose 8.9 percent to Rs205.96 billion, as its gross sales surged 18.1 percent to Rs270.29 billion, despite higher taxes, duties, levies and price differential costs.\n\nThe company's cost of sales increased 10 percent to Rs184.96 billion, resulting in a marginal improvement in gross profit to Rs21 billion.\n\nThe refinery's expenses also rose, with distribution cost up 1.4 percent, administrative expenses up 7.3 percent and other expenses up 19.3 percent.\n\nHowever, the company's profitability was supported by a 32.8 percent jump in other income to Rs7.49 billion and a 10.7 percent rise in share of profit of associates to Rs1.65 billion.\n\nThe company also reported a reversal of impairment on financial assets of Rs24.43 million, compared with a loss of Rs26.86 million a year ago.\n\nAttock Refinery recorded a net finance income of Rs85.53 million, versus a net finance cost of Rs213.34 million in the same period last year. The company's tax expense increased 40.4 percent to Rs10.01 billion, reflecting its higher income.\n\nAttock Petroleum profit surges 41pc on higher sales, lower costs\n\nAttock Petroleum Limited reported a 41 percent jump in half-yearly profit on Tuesday, boosted by higher sales and lower operating expenses.\n\nThe company posted a net profit of Rs7.8 billion or Rs62.49 per share, for the six months ended Dec. 31, 2023, compared with Rs5.54 billion, or Rs44.51 per share, in the same period a year earlier.\n\nThe board declared an interim cash dividend of Rs10 per share, or 100 percent, for the half year.\n\nAPL's revenue rose 13.6 percent to Rs278.41 billion, driven by higher volumes and prices of petroleum products. The company sold 2.23 million tonnes of products in the half year, up 9.4 percent from a year ago.\n\nThe company's gross profit margin improved to 4.92 percent from 4.87 percent a year earlier, as the cost of goods sold increased at a slower pace than revenue. Operating expenses fell 25.6 percent to Rs3.85 billion, mainly due to lower distribution and administrative costs.\n\nHowever, other expenses surged 58.4 percent to Rs938.31 million, mainly due to higher exchange losses and donations. Other income and share of profit from associates also declined by 43.9 percent and 88.1 percent respectively, to Rs473.05 million and Rs22.71 million.\n\nThe company's net finance income soared to Rs3.64 billion from Rs1.07 billiona year ago, as finance income increased by 63.4 percent to Rs4.34 billion and finance costs decreased by 26.4 percent to Rs698.67 million.\n\nThe company's effective tax rate increased to 38.9 percent from 32.7 percent a year ago, as it paid Rs4.96 billion in income tax, up 84.2 percent from a year earlier.\n\nPakistan Oilfields posts 23pc profit rise\n\nPakistan Oilfields Limited (POL) reported a 23.4 percent increase in its half-yearly profit after tax, boosted by higher revenues and lower exploration costs, the company said on Tuesday.\n\nPOL, which operates oil and gas fields in Pakistan, said its profit after tax rose to Rs17.92 billion in the six months ended Dec. 31, 2023, from Rs14.52 billion a year earlier.\n\nEarnings per share (EPS) stood at Rs63.06 , up from Rs51.07 in the same period last year.\n\nThe company also announced an interim cash dividend of Rs25 per share, or 250 percent, for the half year.\n\nPOL's net sales increased by 13.41 percent to Rs34.78 billion, as the company benefited from higher oil and gas prices and production volumes.\n\nThe company's exploration costs fell by 79.31 percent to Rs1.13 billion, as it incurred lower seismic and drilling expenses.\n\nHowever, POL's other expenses rose by 57.41 percent to Rs1.82 billion rupees, mainly due to higher depreciation and amortisation charges.\n\nThe company also recorded a lower other income of Rs7.65 billion, down by 7 percent from Rs8.23 billion a year ago. POL's finance costs decreased by 31.86 percent to Rs1.6 billion. The company's tax expense increased by 77 percent to Rs9.27 billion.\n\nNRL narrows net loss in first half as revenues rise\n\nNational Refinery Limited reported a 15.15 percent year-on-year decrease in its net loss for the first half of fiscal year 2024, as higher revenues were offset by rising taxes and expenses.\n\nThe company posted a net loss of Rs4.653 billion or Rs58.19 per share for the six months ended Dec. 31, 2023, compared with a net loss of Rs5.484 billion or Rs68.58 per share in the same period a year earlier, according to a filing to the Pakistan Stock Exchange on Tuesday.\n\nRevenue from contracts with customers increased by 8.03 percent year-on-year to Rs197.56 billion, driven\n\nby higher sales volumes and prices of petroleum products.\n\nHowever, the net revenue, which excludes taxes, duties, levies, and price differentials paid by the company, declined by 2.7 percent year-on-year to Rs155.55 billion, as the company paid Rs42.01 billion in taxes and other charges, up 82.59 percent year-on-year.\n\nThe company also recorded a negative gross profit of Rs2.25 billion, compared with a positive gross profit of Rs102.12 million in the same period last year. The cost of sales decreased by 1.9 percent year-on-year to Rs157.8 billion.\n\nThe company's expenses also weighed on its bottom line, as administrative expenses rose by 19.41 percent year-on-year to Rs587.25 million, while distribution costs and other expenses fell by 78.33 percent and 51.03 percent year-on-year to Rs178.86 million and Rs14.87 million, respectively.\n\nOther income decreased by 8.7 percent year-on-year to Rs133.18 million. The company's finance costs dropped by 44.41 percent year-on-year to Rs3.45 billion, despite higher interest rates in the country.\n\nThe company also received a tax rebate of Rs1.68 billion, down 7.13 percent year-on-year, against a tax credit of Rs1.81 billion in the same period last year.",
-            "publisher": {
-                "href": "https://www.thenews.com.pk",
-                "title": "The News International"
-            }
-        },
-        {
-            "title": "PSX hits fresh record, nears 60k milestone - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiTmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODIwMS9wc3gtaGl0cy1mcmVzaC1yZWNvcmQtbmVhcnMtNjBrLW1pbGVzdG9uZdIBVGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODIwMS9wc3gtaGl0cy1mcmVzaC1yZWNvcmQtbmVhcnMtNjBrLW1pbGVzdG9uZT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiTmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODIwMS9wc3gtaGl0cy1mcmVzaC1yZWNvcmQtbmVhcnMtNjBrLW1pbGVzdG9uZdIBVGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODIwMS9wc3gtaGl0cy1mcmVzaC1yZWNvcmQtbmVhcnMtNjBrLW1pbGVzdG9uZT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Tue, 28 Nov 2023 08:00:00 GMT",
-            "short_description": "PSX hits fresh record, nears 60k milestone  The Express Tribune",
-            "text": "PSX hits fresh record, nears 60k milestone  The Express Tribune",
-=======
             "title": "Stocks spike as SBP keeps rate on hold - The Express Tribune",
             "top_image": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZNIBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZD9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
             "images": [],
@@ -280,40 +164,12 @@
             "date": "Wed, 20 Mar 2024 07:00:00 GMT",
             "short_description": "Stocks spike as SBP keeps rate on hold  The Express Tribune",
             "text": "Stocks spike as SBP keeps rate on hold  The Express Tribune",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             "publisher": {
                 "href": "https://tribune.com.pk",
                 "title": "The Express Tribune"
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-            "title": "Stocks eke out gains amid slow trading",
-            "top_image": "https://i.dawn.com/large/2024/03/65f8d41e13bcf.jpg",
-            "images": [
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/large/2024/03/65f8d41e13bcf.jpg",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://news.google.com/_img/social/icon-comment-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://i.dawn.com/primary/2024/03/65f8d41e13bcf.jpg",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://www.dawn.com/_img/logo.png"
-=======
             "title": "Stocks rally 612 points on steady policy rate",
             "top_image": "https://i.dawn.com/large/2024/03/65fa251ac0cca.jpg",
             "images": [
@@ -338,7 +194,6 @@
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
                 "https://news.google.com/_img/social/icon-comment-black.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
             "url": "https://www.dawn.com/news/1822617",
@@ -363,37 +218,11 @@
                 "href": "https://tribune.com.pk",
                 "title": "The Express Tribune"
             }
-        }
-    ],
-    [
+        },
         {
             "title": "Stocks rise 484 points on cherry-picking",
             "top_image": "https://i.dawn.com/large/2024/02/65dff7f4768d5.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/primary/2024/02/65dff7f4768d5.jpg",
-                "https://news.google.com/_img/social/icon-comment-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/large/2024/02/65dff7f4768d5.jpg",
-                "https://www.dawn.com/_img/logo.png"
-=======
                 "https://news.google.com/_img/social/icon-print-black.png",
                 "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
                 "https://news.google.com/_img/social/icon-whatsapp-black.png",
@@ -416,7 +245,6 @@
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
                 "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
                 "https://news.google.com/_img/social/icon-comment-black.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             ],
             "videos": [],
             "url": "https://www.dawn.com/news/1817921",
@@ -482,57 +310,6 @@
             }
         },
         {
-            "title": "In another record, PSX crosses 59k mark - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0NzkxOC9pbi1hbm90aGVyLXJlY29yZC1wc3gtY3Jvc3Nlcy01OWstbWFya9IBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0NzkxOC9pbi1hbm90aGVyLXJlY29yZC1wc3gtY3Jvc3Nlcy01OWstbWFyaz9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0NzkxOC9pbi1hbm90aGVyLXJlY29yZC1wc3gtY3Jvc3Nlcy01OWstbWFya9IBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0NzkxOC9pbi1hbm90aGVyLXJlY29yZC1wc3gtY3Jvc3Nlcy01OWstbWFyaz9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Sat, 25 Nov 2023 08:00:00 GMT",
-            "short_description": "In another record, PSX crosses 59k mark  The Express Tribune",
-            "text": "In another record, PSX crosses 59k mark  The Express Tribune",
-            "publisher": {
-                "href": "https://tribune.com.pk",
-                "title": "The Express Tribune"
-            }
-        },
-        {
-            "title": "Stocks rally 796 points on pre-poll buying",
-            "top_image": "https://i.dawn.com/large/2024/02/65c2ba41ee16f.jpg",
-            "images": [
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://i.dawn.com/large/2024/02/65c2ba41ee16f.jpg",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.dawn.com/primary/2024/02/65c2ba41ee16f.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://news.google.com/_img/social/icon-comment-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/2414595600553de.jpg?r=151411",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd03d42546.jpg",
-                "https://www.dawn.com/_img/logo.png"
-            ],
-            "videos": [],
-            "url": "https://www.dawn.com/news/1811805",
-            "date": "Wed, 07 Feb 2024 08:00:00 GMT",
-            "short_description": "Stocks rally 796 points on pre-poll buying  DAWN.com",
-            "text": "KARACHI: The stock market turned in a robust performance on Tuesday on strong corporate results and reports of positive interaction with the International Monetary Fund (IMF) on energy sector circular debt resolution and reduction in industrial power tariff which triggered aggressive buying ahead of general elections.\n\nTopline Securities Ltd said the benchmark KSE 100-share index extended its overnight rally on renewed buying in Oil and Gas Development Company and Pakistan Petroleum Ltd as the caretaker government began formal discussions with the IMF to settle gas circular debt to the tune of around Rs1.2 trillion.\n\nIn the banking sector, MCB Bank gained 0.94 per cent as it announced an earnings per share of Rs50.32 and a cash dividend of Rs9 per share for the year 2023. Activity in the cement sector was also observed, with DG Khan Cement rose 2.64pc, Lucky Cement 1.08pc and Cherat Cement 1.05pc due to a drop in international coal prices to $94 per tonne.\n\nAhsan Mehanti of Arif Habib Corporation said Standards and Poor\u2019s projections for Pakistan\u2019s credit rating upgrade after general elections upon working together with financial institutions for securing another IMF bailout after completion of the current $3bn Stand-By Arrangement in March along with better export performance with sharp contraction in trade deficit and earnings season fuelled rally on the PSX.\n\nAs a result, the KSE-100 index closed at 63,799.02 points after gaining 796.10 points or 1.26 per cent from the preceding session.\n\nThe overall trading volume jumped 25.56pc to 330.92 million shares. The traded value also surged by 41.61pc to Rs15.19bn on a day-on-day basis.\n\nStocks contributing significantly to the traded volume included Pakistan International Airline Corporation Ltd (47.06m shares), Oil and Gas Development Company Ltd (23.12m shares), Cnergyico PK (21.27m shares), Pakistan Refinery Ltd (21.26m shares) and Pakistan Petroleum Ltd (19.90m shares).\n\nShares registering the biggest increases in their share prices in absolute terms were Mari Petroleum (Rs77.73), Pakistan Servi\u00adces Ltd (Rs39.00), Ismail Industries Ltd (Rs35.00), Ibrahim Fibres Ltd (Rs21.70) and Hallmark Company Ltd (Rs18.30).\n\nCompanies registering the biggest decreases in their share prices in absolute terms were Attock Petroleum Ltd (Rs11.88), Balochistan Wheels Ltd (Rs10.87), Feroze1888 Mills (Rs6.76), Jubilee Life Insu\u00adrance (Rs4.97) and Masood Textile Ltd (Rs3.82).\n\nForeign investors remained net buyers as they picked shares worth $2.07m.\n\nPublished in Dawn, February 7th, 2024",
-            "publisher": {
-                "href": "https://www.dawn.com",
-                "title": "DAWN.com"
-            }
-        },
-        {
             "title": "PSX ends nearly flat on profit-booking - The Express Tribune",
             "top_image": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODU0OS9wc3gtZW5kcy1uZWFybHktZmxhdC1vbi1wcm9maXQtYm9va2luZ9IBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ0ODU0OS9wc3gtZW5kcy1uZWFybHktZmxhdC1vbi1wcm9maXQtYm9va2luZz9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
             "images": [],
@@ -541,20 +318,6 @@
             "date": "Fri, 01 Dec 2023 08:00:00 GMT",
             "short_description": "PSX ends nearly flat on profit-booking  The Express Tribune",
             "text": "PSX ends nearly flat on profit-booking  The Express Tribune",
-            "publisher": {
-                "href": "https://tribune.com.pk",
-                "title": "The Express Tribune"
-            }
-        },
-        {
-            "title": "Stocks spike as SBP keeps rate on hold - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZNIBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZD9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiS2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZNIBUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1OTg5Mi9zdG9ja3Mtc3Bpa2UtYXMtc2JwLWtlZXBzLXJhdGUtb24taG9sZD9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Wed, 20 Mar 2024 03:15:48 GMT",
-            "short_description": "Stocks spike as SBP keeps rate on hold  The Express Tribune",
-            "text": "Stocks spike as SBP keeps rate on hold  The Express Tribune",
             "publisher": {
                 "href": "https://tribune.com.pk",
                 "title": "The Express Tribune"
@@ -589,8 +352,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-=======
             "title": "PSX extends gains, nears 66,000 mark - The Express Tribune",
             "top_image": "https://news.google.com/rss/articles/CBMiR2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ2MDYzNy9wc3gtZXh0ZW5kcy1nYWlucy1uZWFycy02NjAwMC1tYXJr0gFNaHR0cHM6Ly90cmlidW5lLmNvbS5way9zdG9yeS8yNDYwNjM3L3BzeC1leHRlbmRzLWdhaW5zLW5lYXJzLTY2MDAwLW1hcms_YW1wPTE?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
             "images": [],
@@ -619,7 +380,6 @@
             }
         },
         {
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             "title": "Political, security fears drive PSX down - The Express Tribune",
             "top_image": "https://news.google.com/rss/articles/CBMiTGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1NDk0Ni9wb2xpdGljYWwtc2VjdXJpdHktZmVhcnMtZHJpdmUtcHN4LWRvd27SAVJodHRwczovL3RyaWJ1bmUuY29tLnBrL3N0b3J5LzI0NTQ5NDYvcG9saXRpY2FsLXNlY3VyaXR5LWZlYXJzLWRyaXZlLXBzeC1kb3duP2FtcD0x?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
             "images": [],
@@ -634,16 +394,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-            "title": "PSX tumbles on pre-election fears - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiRmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1MDU4Mi9wc3gtdHVtYmxlcy1vbi1wcmUtZWxlY3Rpb24tZmVhcnPSAUxodHRwczovL3RyaWJ1bmUuY29tLnBrL3N0b3J5LzI0NTA1ODIvcHN4LXR1bWJsZXMtb24tcHJlLWVsZWN0aW9uLWZlYXJzP2FtcD0x?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiRmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1MDU4Mi9wc3gtdHVtYmxlcy1vbi1wcmUtZWxlY3Rpb24tZmVhcnPSAUxodHRwczovL3RyaWJ1bmUuY29tLnBrL3N0b3J5LzI0NTA1ODIvcHN4LXR1bWJsZXMtb24tcHJlLWVsZWN0aW9uLWZlYXJzP2FtcD0x?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Wed, 20 Dec 2023 08:00:00 GMT",
-            "short_description": "PSX tumbles on pre-election fears  The Express Tribune",
-            "text": "PSX tumbles on pre-election fears  The Express Tribune",
-=======
             "title": "Stocks soar to record high on SOEs sell-off - The Express Tribune",
             "top_image": "https://news.google.com/rss/articles/CBMiUGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ2MDg4Ni9zdG9ja3Mtc29hci10by1yZWNvcmQtaGlnaC1vbi1zb2VzLXNlbGwtb2Zm0gFWaHR0cHM6Ly90cmlidW5lLmNvbS5way9zdG9yeS8yNDYwODg2L3N0b2Nrcy1zb2FyLXRvLXJlY29yZC1oaWdoLW9uLXNvZXMtc2VsbC1vZmY_YW1wPTE?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
             "images": [],
@@ -652,23 +402,12 @@
             "date": "Fri, 29 Mar 2024 04:39:28 GMT",
             "short_description": "Stocks soar to record high on SOEs sell-off  The Express Tribune",
             "text": "Stocks soar to record high on SOEs sell-off  The Express Tribune",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             "publisher": {
                 "href": "https://tribune.com.pk",
                 "title": "The Express Tribune"
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/MCB.json
-            "title": "Stocks soar to record high on SOEs sell-off - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiUGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ2MDg4Ni9zdG9ja3Mtc29hci10by1yZWNvcmQtaGlnaC1vbi1zb2VzLXNlbGwtb2Zm0gFWaHR0cHM6Ly90cmlidW5lLmNvbS5way9zdG9yeS8yNDYwODg2L3N0b2Nrcy1zb2FyLXRvLXJlY29yZC1oaWdoLW9uLXNvZXMtc2VsbC1vZmY_YW1wPTE?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiUGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ2MDg4Ni9zdG9ja3Mtc29hci10by1yZWNvcmQtaGlnaC1vbi1zb2VzLXNlbGwtb2Zm0gFWaHR0cHM6Ly90cmlidW5lLmNvbS5way9zdG9yeS8yNDYwODg2L3N0b2Nrcy1zb2FyLXRvLXJlY29yZC1oaWdoLW9uLXNvZXMtc2VsbC1vZmY_YW1wPTE?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Fri, 29 Mar 2024 04:39:28 GMT",
-            "short_description": "Stocks soar to record high on SOEs sell-off  The Express Tribune",
-            "text": "Stocks soar to record high on SOEs sell-off  The Express Tribune",
-=======
             "title": "PSX posts thin gains ahead of IMF review",
             "top_image": "https://i.tribune.com.pk/media/images/11698525442-0/11698525442-0.jpg",
             "images": [
@@ -722,7 +461,6 @@
             "date": "Sun, 29 Oct 2023 07:00:00 GMT",
             "short_description": "PSX posts thin gains ahead of IMF review  The Express Tribune",
             "text": "Pakistan Stock Exchange (PSX) recorded gains of just 0.4% in the outgoing week as investors awaited the International Monetary Fund (IMF) review and monetary policy announcement next week.\n\nInvestors\u2019 interest was driven by encouraging corporate results, which triggered activity in specific stocks while some results did not meet market expectations, leading to selling pressure.\n\nContinuously depreciating rupee and a significant fall in the State Bank of Pakistan\u2019s (SBP) foreign currency reserves piled pressure on the bourse, which restricted the market\u2019s rapid advance.\n\nAt the beginning of the week, the PSX commenced trading on a robust note as it crossed the psychological barrier of 51,000 points owing to investor confidence aided by easing political uncertainties and positive economic data projections.\n\nHowever, the market lost momentum on Tuesday in a volatile session owing to selling pressure arising from geopolitical tensions and anxiety about the IMF\u2019s review under the $3 billion standby arrangement. On Wednesday, the bourse recovered, driven by earnings announcements and optimism about the IMF review, which would lead to the release of second loan tranche of $700 million.\n\nOn Thursday, the KSE-100 index ended nearly flat in range-bound trading as investors\u2019 spirit weakened over depreciation of Pakistani rupee and the decline in foreign currency reserves.\n\nOn the last day of the trading week, the index suffered losses as bears took the driving seat ahead of the monetary policy announcement and due to the looming uncertainty surrounding talks with the IMF.\n\nThe market closed at 50,944, up 212 points, or 0.42% week-on-week (WoW). In his market review, JS Global analyst Muhammad Waqas Ghani wrote that the KSE-100 index closed the week at 50,944, gaining 0.4% WoW. However, average volumes dropped 10% WoW to 366 million shares.\n\n\u201cAbove-expected earnings/ dividends announcement by Bank AL Habib, Fauji Cement, MCB Bank and Pakistan Aluminium Beverage Cans triggered activity in these stocks,\u201d he said.\n\nOn the other hand, below-expected earnings and dividend announcement by Fauji Fertiliser Company impacted investors\u2019 sentiment and led to a 3.3% WoW decline in the stock\u2019s price. During the week, the auto assemblers announced 2-3% reduction in car prices to account for the recent appreciation of the rupee.\n\nOn the political front, the PML-N supremo returned to Pakistan who cited reduction in government expenditures, increase in tax revenue, rise in exports, IT sector reforms and improving relations with neighbouring countries as top issues on his party\u2019s agenda.\n\nOn the macroeconomic front, as the IMF review was approaching fast, the government became more aggressive in pursuing its economic targets and implementing policy measures.\n\nOn a similar note, the ECC approved the much-awaited increase in gas prices while the budget deficit contracted to 0.9% of GDP in 1QFY24 from 1% of GDP during the same period of last year.\n\nPakistan also surpassed its primary surplus criterion set by the IMF, which was reported at 0.4% of GDP for 1QFY24, the JS analyst added. Arif Habib Limited (AHL) commented that the market kicked off trading on a positive note, driven by the approval of gas tariff hike, a significant step towards meeting one of the prerequisites for the IMF\u2019s review scheduled to commence on November 2, 2023.\n\nNotably, the current account deficit was recorded at $8 million for September 2023, down 95% month-on-month. \u201cThe momentum was further bolstered by the results season, which contributed to the positive trajectory,\u201d it said.\n\nHowever, the consistent appreciation of the rupee ended, resulting in the currency closing at Rs280.57 against the greenback, depreciating by Rs1.77, or 0.64% WoW. Moreover, SBP\u2019s reserves decreased $220 million to $7.5 billion, AHL said.\n\nForeigners turned net sellers as they sold stocks worth $3.47 million compared to net buying of $2.32 million last week, AHL added.\n\nPublished in The Express Tribune, October 29th, 2023.\n\nLike Business on Facebook, follow @TribuneBiz on Twitter to stay informed and join in the conversation.",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/MCB.json
             "publisher": {
                 "href": "https://tribune.com.pk",
                 "title": "The Express Tribune"

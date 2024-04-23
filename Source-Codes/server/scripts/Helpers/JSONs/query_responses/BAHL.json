@@ -4,21 +4,12 @@
             "title": "Another Record: Stock Exchange Surges To Unprecedented Heights, Breezes Past 56,000 Points",
             "top_image": "https://thefridaytimes.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866387-4345.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://thefridaytimes.com/assets/thefridaytimes/images/newwave_logo.png",
-                "https://thefridaytimes.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866387-4345.jpg",
-                "https://thefridaytimes.com/assets/thefridaytimes/images/logo_publishrr_light.png",
-                "https://thefridaytimes.com/assets/thefridaytimes/images/nayadaur_logo.png",
-                "https://thefridaytimes.com/uploads/theme/logo-1691665104.png",
-                "https://news.google.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866378-7232.png"
-=======
                 "https://thefridaytimes.com/assets/thefridaytimes/images/nayadaur_logo.png",
                 "https://news.google.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866378-7232.png",
                 "https://thefridaytimes.com/uploads/theme/logo-1691665104.png",
                 "https://thefridaytimes.com/digital_images/large/2023-11-13/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points-1699866387-4345.jpg",
                 "https://thefridaytimes.com/assets/thefridaytimes/images/logo_publishrr_light.png",
                 "https://thefridaytimes.com/assets/thefridaytimes/images/newwave_logo.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://thefridaytimes.com/13-Nov-2023/another-record-stock-exchange-surges-to-unprecedented-heights-breezes-past-56-000-points",
@@ -59,29 +50,6 @@
             "title": "Al-Habib, Soneri\u2019s earnings surge",
             "top_image": "https://i.dawn.com/large/2024/02/01102832953646c.jpg?r=102837",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://i.dawn.com/large/2024/02/01102832953646c.jpg?r=102837",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://news.google.com/_img/social/icon-comment-black.png"
-=======
                 "https://news.google.com/_img/social/icon-comment-black.png",
                 "https://news.google.com/_img/social/icon-fb-black.png",
                 "https://i.dawn.com/medium/2017/06/5931466588b47.png",
@@ -103,7 +71,6 @@
                 "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
                 "https://news.google.com/_img/social/icon-email-black.png",
                 "https://news.google.com/_img/social/icon-twitter-black.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://www.dawn.com/news/1810200",
@@ -116,62 +83,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-            "title": "Bank AL Habib launches currency exchange subsidiary",
-            "top_image": "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/03/IMG-20240326-WA0016.jpg",
-            "images": [
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/03/IMG-20240326-WA0016.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2020/06/PTProfit-e1710496544180-300x122.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC",
-                "https://www.facebook.com/tr?id=2983550451904217&ev=PageView        &noscript=1",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2019/10/Profit-logo-final-2.png",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2024/03/IMG-20240326-WA0016-696x327.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/themes/Newspaper-child/images/profit-urdu.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=",
-                "https://secure.gravatar.com/avatar/341c319c75b5b57f130f139430cea002?s=50&d=blank&r=pg"
-            ],
-            "videos": [],
-            "url": "https://profit.pakistantoday.com.pk/2024/03/26/bank-al-habib-launches-currency-exchange-subsidiary/",
-            "date": "Tue, 26 Mar 2024 09:38:59 GMT",
-            "short_description": "Bank AL Habib launches currency exchange subsidiary  Profit by Pakistan Today",
-            "text": "Bank AL Habib Limited (BAHL) has officially started operations of its fully owned subsidiary, Al Habib Exchange Company (Private) Limited today.\n\nThe launch was announced through a notice to the Pakistan Stock Exchange (PSX).\n\nThe establishment of Al Habib Exchange Company marks a significant milestone for Bank AL Habib, following the receipt of the necessary operational licence from the State Bank of Pakistan (SBP).\n\nThe approval for this new venture was initially confirmed on September 22, 2023, after the bank\u2019s board sanctioned the creation of an Exchange Company with a declared share capital of Rs1 billion.\n\nThis strategic move aligns with the recent regulatory reforms by the SBP, aimed at enhancing the structure of the foreign exchange market.\n\nThe reforms encourage banks involved in foreign exchange activities to set up wholly owned Exchange Companies.\n\nThis initiative is intended to meet the currency exchange needs of the public efficiently while addressing regulatory concerns observed in the operations of existing Exchange Companies.",
-            "publisher": {
-                "href": "https://profit.pakistantoday.com.pk",
-                "title": "Profit by Pakistan Today"
-            }
-        },
-        {
-            "title": "Bank AL Habib declares 50pc final cash dividend",
-            "top_image": "https://i.brecorder.com/large/2024/03/65e8d92f8b858.png",
-            "images": [
-                "https://i.brecorder.com/thumbnail/2024/03/25144736592f67e.jpg?r=144744",
-                "https://www.brecorder.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/251556016860582.jpg?r=155610",
-                "https://i.brecorder.com/thumbnail/2024/03/66034aea2a00d.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/2714482464a40c2.jpg?r=144909",
-                "https://i.brecorder.com/thumbnail/2024/03/6603433e65fee.jpg",
-                "https://i.brecorder.com/large/2024/03/65e8d92f8b858.png",
-                "https://i.brecorder.com/thumbnail/2024/03/25085155f221d86.jpg?r=085310",
-                "https://news.google.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/66033d4859317.jpg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.brecorder.com/thumbnail/2024/03/2511253820b0abe.jpg?r=112720",
-                "https://i.brecorder.com/thumbnail/2024/03/6600ccf03a237.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/6600b99c64c3b.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/66033f7ce02e3.jpg",
-                "https://i.brecorder.com/medium/2023/07/241836140c0cd7e.jpg?r=183619",
-                "https://i.brecorder.com/thumbnail/2024/03/6600b8f6963be.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/2707032834f2972.jpg?r=070434",
-                "https://i.brecorder.com/thumbnail/2022/09/6311d2877b06a.png",
-                "https://i.brecorder.com/medium/2022/01/61e8e0f994886.png",
-                "https://i.brecorder.com/primary/2024/03/65e8d92f8b858.png",
-                "https://i.brecorder.com/thumbnail/2024/03/6600b035e0ff4.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/6600cd024e20d.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/66033ed98cac3.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/66009fe37c41d.png",
-                "https://i.brecorder.com/thumbnail/2024/03/6603584bf389b.jpg"
-=======
             "title": "Bank AL Habib declares 50pc final cash dividend",
             "top_image": "https://i.brecorder.com/large/2024/03/65e8d92f8b858.png",
             "images": [
@@ -201,7 +112,6 @@
                 "https://i.brecorder.com/thumbnail/2024/03/66033ed98cac3.jpg",
                 "https://i.brecorder.com/thumbnail/2024/03/6603433e65fee.jpg",
                 "https://i.brecorder.com/thumbnail/2024/03/66034aea2a00d.jpg"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://www.brecorder.com/news/40292354/bank-al-habib-declares-50pc-final-cash-dividend",
@@ -217,24 +127,6 @@
             "title": "BAHL announces 115pc profit growth",
             "top_image": "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-01/l_1153336_021544_updates.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169258_112248_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169273_112328_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169264_101500_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169182_060448_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/thenews.png",
-                "https://www.thenews.com.pk/assets/front/images/close_black.png",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169253_093910_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/twitter.svg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169252_101250_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169271_110525_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-01/l_1153336_021544_updates.jpg",
-                "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169270_110703_updates.jpg",
-                "https://www.thenews.com.pk/assets/front/images/whatsapp.svg",
-                "https://www.thenews.com.pk/assets/front/images/Thenews-logo.svg",
-                "https://www.thenews.com.pk/assets/front/images/facebook.svg",
-                "https://www.thenews.com.pk/assets/uploads/akhbar/2024-02-01/1153336_1457668_flkjgfkgj_akhbar.jpg"
-=======
                 "https://www.thenews.com.pk/assets/front/images/Thenews-logo.svg",
                 "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169182_060448_updates.jpg",
                 "https://www.thenews.com.pk/assets/front/images/twitter.svg",
@@ -251,7 +143,6 @@
                 "https://www.thenews.com.pk/assets/uploads/updates/2024-03-17/s_1169253_093910_updates.jpg",
                 "https://www.thenews.com.pk/assets/front/images/facebook.svg",
                 "https://www.thenews.com.pk/assets/front/images/whatsapp.svg"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://www.thenews.com.pk/print/1153336-bahl-announces-115pc-profit-growth",
@@ -281,17 +172,10 @@
             "title": "Pakistani banks log best Q4 stock returns in Asia-Pacific amid record rally",
             "top_image": "https://platform.mi.spglobal.com/Articles\\hpimages\\423132011.jpeg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://platform.mi.spglobal.com/Articles\\hpimages\\423132011.jpeg",
-                "https://www.snl.com/Articles/423147003.png",
-                "https://www.snl.com/Articles/423147002.png",
-                "https://news.google.com/_assets/images/marketintelligence/logo-mi.png"
-=======
                 "https://www.snl.com/Articles/423147003.png",
                 "https://news.google.com/_assets/images/marketintelligence/logo-mi.png",
                 "https://platform.mi.spglobal.com/Articles\\hpimages\\423132011.jpeg",
                 "https://www.snl.com/Articles/423147002.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/pakistani-banks-log-best-q4-stock-returns-in-asia-pacific-amid-record-rally-79932770",
@@ -307,55 +191,6 @@
             "title": "Bank Al Habib Records Highest-Ever Annual Profit",
             "top_image": "https://propakistani.pk/wp-content/uploads/2020/03/Bank-Al-Habib-feature.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://propakistani.pk/wp-content/uploads/2024/03/Allied-Bank-395x235.jpg",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/prosports.png",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/carbase-m.png",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/proprice-m.png",
-                "https://propakistani.pk/wp-content/uploads/2024/01/slg-395x235.jpg",
-                "https://propakistani.pk/perspective/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-05-at-19.50.39-185x135.jpeg",
-                "https://propakistani.pk/wp-content/uploads/2020/09/pp_site_logo.png",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/how-to.png",
-                "https://propakistani.pk/perspective/wp-content/uploads/2021/10/outsourcing-services-image-185x135.png",
-                "https://propakistani.pk/wp-content/uploads/2020/03/Bank-Al-Habib-feature.jpg",
-                "https://propakistani.pk/wp-content/uploads/2022/08/03.png",
-                "https://propakistani.pk/perspective/wp-content/uploads/2021/04/Arvelon-185x135.jpg",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/logo-mini.png",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/will-smith-150x150.jpg",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/Spotify-K-Pop-150x150.jpg",
-                "https://propakistani.pk/wp-content/uploads/2022/08/SNGPL-and-SSGC-395x235.jpg",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/propak.png",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%200'%3E%3C/svg%3E",
-                "https://propakistani.pk/wp-content/uploads/2023/12/google-news-icon.png",
-                "https://propakistani.pk/wp-content/uploads/2024/01/GFKbBDmacAA2bI4.jpg",
-                "https://secure.gravatar.com/avatar/289f55b3ab08b0255708c58da30070e2?s=32&d=mm&r=g",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/footer-light.png",
-                "https://propakistani.pk/perspective/wp-content/uploads/2022/09/CX-PP-768x430.jpg",
-                "https://propakistani.pk/wp-content/uploads/2020/12/Jam-Kamal-395x235.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%2060'%3E%3C/svg%3E",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/footer-dark.png",
-                "https://secure.gravatar.com/avatar/f0b25a9d42ffdcc54cbcb4c83ad0e98c?s=32&d=mm&r=g",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20592%201035'%3E%3C/svg%3E",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/anwar-1-150x150.jpg",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/urwa-farhan-150x150.jpg",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/lens-m.png",
-                "https://secure.gravatar.com/avatar/5be4e8bc6cec237a8c14442a5a406d28?s=32&d=mm&r=g",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/bob-dylan-timothee-chalamet-768x432.jpg",
-                "https://propakistani.pk/perspective/wp-content/uploads/2021/04/Pranks-in-Pakistan-185x135.jpg",
-                "https://propakistani.pk/perspective/wp-content/uploads/2021/07/Image-185x135.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20395%20235'%3E%3C/svg%3E",
-                "https://propakistani.pk/wp-content/uploads/2024/03/suzuki-helicopter-1-395x235.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20228%2031'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20273%2044'%3E%3C/svg%3E",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E",
-                "https://www.facebook.com/tr?id=2379577595643494&ev=PageView&noscript=1",
-                "https://propakistani.pk/lens/wp-content/uploads/2024/03/psl-9-1-150x150.jpg",
-                "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20185%20201'%3E%3C/svg%3E",
-                "https://secure.gravatar.com/avatar/7c90791dee124dafbdf6de15cebbe276?s=32&d=mm&r=g",
-                "https://propakistani.pk/wp-content/themes/ppv5/img/mob-logos/property-m.png"
-=======
                 "https://secure.gravatar.com/avatar/7c90791dee124dafbdf6de15cebbe276?s=32&d=mm&r=g",
                 "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E",
                 "https://propakistani.pk/wp-content/uploads/2024/01/GFKbBDmacAA2bI4.jpg",
@@ -403,7 +238,6 @@
                 "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20228%2031'%3E%3C/svg%3E",
                 "https://propakistani.pk/perspective/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-05-at-19.50.39-185x135.jpeg",
                 "https://propakistani.pk/wp-content/uploads/2024/01/slg-395x235.jpg"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://propakistani.pk/2024/01/31/bank-al-habib-records-highest-ever-profit-of-rs-35-9-billion-in-2023/",
@@ -419,29 +253,6 @@
             "title": "Oil sector leads gains on stock market",
             "top_image": "https://i.dawn.com/large/2024/01/65b1e15536a52.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/primary/2024/01/65b1e15536a52.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/thumbnail/2024/03/23161226fb17119.jpg?r=161241",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/large/2024/01/65b1e15536a52.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://news.google.com/_img/social/icon-comment-black.png"
-=======
                 "https://i.dawn.com/primary/2024/01/65b1e15536a52.jpg",
                 "https://news.google.com/_img/social/icon-comment-black.png",
                 "https://news.google.com/_img/social/icon-fb-black.png",
@@ -463,7 +274,6 @@
                 "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
                 "https://news.google.com/_img/social/icon-email-black.png",
                 "https://news.google.com/_img/social/icon-twitter-black.png"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://www.dawn.com/news/1808447",
@@ -479,19 +289,6 @@
             "title": "PSX drops 532 points as volatility continues to dominate",
             "top_image": "https://profit.pakistantoday.com.pk/wp-content/uploads/2023/12/psx-down.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2020/06/PTProfit-e1710496544180-300x122.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC",
-                "https://secure.gravatar.com/avatar/894ff0399455db1b7ccb14f63fd4f82e?s=50&d=blank&r=pg",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2019/10/Profit-logo-final-2.png",
-                "https://www.facebook.com/tr?id=2983550451904217&ev=PageView        &noscript=1",
-                "https://secure.gravatar.com/avatar/4058827aba2b793b2ba45b78f8cbc2fd?s=50&d=blank&r=pg",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2023/12/psx-down.jpg",
-                "https://profit.pakistantoday.com.pk/wp-content/themes/Newspaper-child/images/profit-urdu.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=",
-                "https://profit.pakistantoday.com.pk/wp-content/uploads/2023/12/psx-down-696x368.jpg"
-=======
                 "https://www.facebook.com/tr?id=2983550451904217&ev=PageView        &noscript=1",
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2019/10/Profit-logo-final-2.png",
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2023/12/psx-down.jpg",
@@ -503,7 +300,6 @@
                 "https://profit.pakistantoday.com.pk/wp-content/uploads/2020/06/PTProfit-e1710496544180-300x122.png",
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC",
                 "https://secure.gravatar.com/avatar/894ff0399455db1b7ccb14f63fd4f82e?s=50&d=blank&r=pg"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             ],
             "videos": [],
             "url": "https://profit.pakistantoday.com.pk/2024/01/16/psx-drops-532-points-as-volatility-continues-to-dominate/",
@@ -531,73 +327,10 @@
                 "title": "The Express Tribune"
             }
         },
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-        {
-            "title": "Bank AL Habib declares 50pc final cash dividend",
-            "top_image": "https://i.brecorder.com/large/2024/03/65e8d92f8b858.png",
-            "images": [
-                "https://i.brecorder.com/thumbnail/2024/03/65fca785bc60a.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/23154741dc63f10.jpg?r=154849",
-                "https://i.brecorder.com/thumbnail/2024/03/2212130609f5a80.jpg?r=121316",
-                "https://i.brecorder.com/thumbnail/2024/03/65fca66786dc5.jpg",
-                "https://www.brecorder.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/22010850cf6bcc5.jpg?r=010954",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff4497f0d9a.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff402ce4ee7.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/22142005af51ac7.jpg?r=143422",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff3bad891b5.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/2218005884b12ad.jpg?r=180556",
-                "https://i.brecorder.com/large/2024/03/65e8d92f8b858.png",
-                "https://i.brecorder.com/thumbnail/2024/03/22150021ba0d647.jpg?r=150540",
-                "https://news.google.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/221411090891b73.jpg?r=141133",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.brecorder.com/thumbnail/2024/03/21155121f5c0add.jpg?r=155731",
-                "https://i.brecorder.com/medium/2023/07/241836140c0cd7e.jpg?r=183619",
-                "https://i.brecorder.com/thumbnail/2022/09/6311d2877b06a.png",
-                "https://i.brecorder.com/medium/2022/01/61e8e0f994886.png",
-                "https://i.brecorder.com/primary/2024/03/65e8d92f8b858.png",
-                "https://i.brecorder.com/thumbnail/2024/03/65ff44ce899b1.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/22210313885bb61.jpg?r=210434"
-            ],
-            "videos": [],
-            "url": "https://www.brecorder.com/news/40292354",
-            "date": "Thu, 07 Mar 2024 08:00:00 GMT",
-            "short_description": "Bank AL Habib declares 50pc final cash dividend  Business Recorder",
-            "text": "KARACHI: The Annual General Meeting of Bank AL Habib Limited was held at Bank\u2019s premises located at 128-C, Old Bahawalpur Road, Multan on Wednesday.\n\nThe shareholders approved the Annual Accounts for the year ended December 31, 2023, along with payment of 50% final cash Dividend. This final Dividend is in addition to 90 percent interim cash dividends paid earlier, thus, making a total of 140 percent i.e., Rs. 14.00 per share.\n\nCopyright Business Recorder, 2024",
-            "publisher": {
-                "href": "https://www.brecorder.com",
-                "title": "Business Recorder"
-            }
-        },
-=======
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
         {
             "title": "Oil sector leads gains on stock market",
             "top_image": "https://i.dawn.com/large/2024/01/65b1e15536a52.jpg",
             "images": [
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/thumbnail/2024/03/23161226fb17119.jpg?r=161241",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/primary/2024/01/65b4271018698.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/01/65b4271018698.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-=======
                 "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
                 "https://i.dawn.com/large/2024/02/16125537351049d.png",
                 "https://news.google.com/_img/social/icon-whatsapp-black.png",
@@ -796,7 +529,6 @@
                 "https://news.google.com/_img/social/icon-email-black.png",
                 "https://www.dawn.com/_img/logo.png",
                 "https://news.google.com/_img/social/icon-twitter-black.png",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
                 "https://news.google.com/_img/social/icon-comment-black.png"
             ],
             "videos": [],
@@ -810,173 +542,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-            "title": "PSX rebounds on political stability optimism - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbdIBV2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbdIBV2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Tue, 20 Feb 2024 08:00:00 GMT",
-            "short_description": "PSX rebounds on political stability optimism  The Express Tribune",
-            "text": "PSX rebounds on political stability optimism  The Express Tribune",
-            "publisher": {
-                "href": "https://tribune.com.pk",
-                "title": "The Express Tribune"
-            }
-        },
-        {
-            "title": "Habib Metropolitan Bank says it will establish wholly-owned EC",
-            "top_image": "https://i.brecorder.com/large/2023/10/101657199890375.png?r=165822",
-            "images": [
-                "https://www.brecorder.com/_img/logo.png",
-                "https://i.brecorder.com/primary/2023/10/101657199890375.png",
-                "https://i.brecorder.com/thumbnail/2024/03/65f4da9c1ba37.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65f0d1826b7ec.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/14114111f0b7155.jpg?r=114120",
-                "https://i.brecorder.com/thumbnail/2024/03/65f4d46dc8509.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65f21e0bc78b4.jpg",
-                "https://i.brecorder.com/large/2023/10/101657199890375.png?r=165822",
-                "https://i.brecorder.com/thumbnail/2024/03/65f2197af13d9.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65f4b7475fb22.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65f3703a1c322.jpg",
-                "https://news.google.com/_img/logo.png",
-                "https://i.brecorder.com/thumbnail/2024/03/65f4d660e3996.jpg",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://i.brecorder.com/thumbnail/2024/03/130842286ec8faa.jpg?r=084307",
-                "https://i.brecorder.com/thumbnail/2024/03/65f4e5cd9b860.jpg",
-                "https://i.brecorder.com/thumbnail/2024/03/65f21cab2f693.jpg",
-                "https://i.brecorder.com/medium/2023/07/241836140c0cd7e.jpg?r=183619",
-                "https://i.brecorder.com/thumbnail/2024/03/141935378e8ee8e.jpg?r=193550",
-                "https://i.brecorder.com/thumbnail/2022/09/6311d2877b06a.png",
-                "https://i.brecorder.com/thumbnail/2024/03/15170701797443b.jpg?r=170930",
-                "https://i.brecorder.com/medium/2022/01/61e8e0f994886.png",
-                "https://i.brecorder.com/thumbnail/2024/03/14122710fa0af2a.jpg?r=122837",
-                "https://i.brecorder.com/thumbnail/2024/03/65f21cc367f6d.jpg"
-            ],
-            "videos": [],
-            "url": "https://www.brecorder.com/news/40267370/habib-metropolitan-bank-says-it-will-establish-wholly-owned-ec",
-            "date": "Tue, 10 Oct 2023 07:00:00 GMT",
-            "short_description": "Habib Metropolitan Bank says it will establish wholly-owned EC  Business Recorder",
-            "text": "The Board of Directors of Habib Metropolitan Bank (HMB), a subsidiary of Habib Bank AG Zurich \u2013 Switzerland, announced on Tuesday that it will establish an Exchange Company (EC) as a wholly-owned subsidiary, becoming the seventh banking entity to make such an announcement to date.\n\nThe development was shared by the bank in its notice to the Pakistan Stock Exchange (PSX).\n\n\u201cThe Board of Directors of Habib Metropolitan Bank Limited through circular resolution dated October 09, 2023 has approved the establishment of an EC with an authorized capital of Rs1 billion,\u201d read the notice.\n\nHMB said the establishment of the EC is subject to approval and clearance by the State Bank of Pakistan (SBP), Securities & Exchange Commission of Pakistan (SECP) and completion of other regulatory compliance requirements\n\n\u201cThis EC shall be a wholly owned subsidiary of Habib Metropolitan Bank Limited,\u201d it added.\n\nLast month, the SBP, in its bid to strengthen controls amid the massive fall in rupee\u2019s value in the open market, decided to introduce \u2018structural reforms\u2019 in the EC sector.\n\n\u201cAs part of these reforms, leading banks actively engaged in foreign exchange business will establish wholly-owned Exchange Companies (EC) to cater to the legitimate foreign exchange needs of general public,\u201d said the SBP in a statement.\n\nFollowing this, Bank Alfalah, Faysal Bank Limited (FABL), Bank Al Habib Limited (BAHL), MCB Bank Limited, Meezan Bank Limited, and United Bank Limited (UBL) also announced they would establish an EC as a wholly-owned subsidiary.\n\nThe SBP has also raised the minimum capital requirement for EC from Rs200 million to Rs500 million, raising the barrier to entry for the private sector.",
-            "publisher": {
-                "href": "https://www.brecorder.com",
-                "title": "Business Recorder"
-            }
-        },
-        {
-            "title": "Stocks extend losses on economic uncertainty",
-            "top_image": "https://i.dawn.com/large/2024/03/65ea37b28946b.jpg",
-            "images": [
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://i.dawn.com/large/2024/03/65ea37b28946b.jpg",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/primary/2024/03/65ea37b28946b.jpg",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://news.google.com/_img/social/icon-comment-black.png"
-            ],
-            "videos": [],
-            "url": "https://www.dawn.com/news/1819876",
-            "date": "Fri, 08 Mar 2024 08:00:00 GMT",
-            "short_description": "Stocks extend losses on economic uncertainty  DAWN.com",
-            "text": "KARACHI: Amid falling foreign exchange reserves of the State Bank of Pakistan and uncertainty about the interest rate outlook, the stock market extended its losing streak for the third straight day on Thursday as some investors resorted to profit-taking as a result the benchmark KSE 100-share index saw another day of losses in a volatile session.\n\nAhsan Mehanti of Arif Habib Corporation said the market sentiments remained depressed due to economic uncertainty due to the International Monetary Fund\u2019s new conditions for liberalising imports, higher taxation and power tariff reforms.\n\nHe said the oil sector outperformed on strong financials and Govt revised refineries policy supporting upgradation.\n\nTopline Securities Ltd said the index witnessed a volatile session marked by an intraday high of 217.53 points and an intraday low of 468.94 points.\n\nOn the political front, Prime Minister Shehbaz Sharif has pledged to devote himself tirelessly to resolving the country\u2019s crisis, with expectations that his cabinet members\u2019 names would be finalised within the next 48 hours.\n\nHowever, the fall in international coal prices to $100 per tonne attracted buying interest cement sector as a result DG Khan Cement was up 1.29pc, Pioneer Cement 0.92pc and Kohat Cement Company 2.16pc.\n\nConsequently, the banking, oil exploration, fertiliser and power sectors made positive contributions to the index, with OGDC, Pak Electron Ltd, Hub Power, Pakistan Petr\u00adoleum Ltd and Dawood Hercules Corporation Ltd collectively adding 134 points. However, Bank AlHabib, MCB Bank, Engro Corporation and Meezan Bank Ltd came under selling pressure cumulatively wiping out 121 points from the index.\n\nAs a result, the KSE-100 index closed at 65,603.09 points after shedding 53.53 points or 0.08 per cent from the preceding session.\n\nThe overall trading volume fell 15.62pc to 354.15 million shares. The traded value also dipped 21.27pc to Rs14.43bn on a day-on-day basis.\n\nStocks contributing significantly to the traded volume included Pak Elek\u00adtron (31.07m shares), Tele\u00adcard Ltd (22.63m shares), P.I.A.C.(A) (21.56m shares), WorldCall Tele\u00adcom Ltd (20.84m shares), and Cnergyico PK Ltd (19.36 million shares).\n\nShares registering the biggest increases in their share prices in absolute terms were Unilever Pakistan Foods (Rs400), Rafhan Maize Products Company Ltd (Rs111.12), Sazgar Engineering (Rs28.72) Al-Abbas Sugar Mills Ltd (Rs16.60) and Mari Petroleum Ltd (Rs7.54).\n\nCompanies registering the biggest decreases in their share prices in absolute terms were Nestle Pakistan (Rs310.00), Meh\u00admood Textile (Rs22.50), Dawood Lawrencepur (Rs11.75), Pakistan Hotels Developers Ltd (Rs11.27) and Service Industries Ltd (Rs6.44).\n\nForeign investors remai\u00adned net buyers as they pic\u00adked shares worth $3.49m.\n\nPublished in Dawn, March 8th, 2024",
-            "publisher": {
-                "href": "https://www.dawn.com",
-                "title": "DAWN.com"
-            }
-        },
-        {
-            "title": "Bulls keep control as stocks extend rally - The Express Tribune",
-            "top_image": "https://news.google.com/rss/articles/CBMiTmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1NDI5OC9idWxscy1rZWVwLWNvbnRyb2wtYXMtc3RvY2tzLWV4dGVuZC1yYWxsedIBVGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1NDI5OC9idWxscy1rZWVwLWNvbnRyb2wtYXMtc3RvY2tzLWV4dGVuZC1yYWxseT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
-            "images": [],
-            "videos": [],
-            "url": "https://news.google.com/rss/articles/CBMiTmh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1NDI5OC9idWxscy1rZWVwLWNvbnRyb2wtYXMtc3RvY2tzLWV4dGVuZC1yYWxsedIBVGh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1NDI5OC9idWxscy1rZWVwLWNvbnRyb2wtYXMtc3RvY2tzLWV4dGVuZC1yYWxseT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "date": "Thu, 25 Jan 2024 08:00:00 GMT",
-            "short_description": "Bulls keep control as stocks extend rally  The Express Tribune",
-            "text": "Bulls keep control as stocks extend rally  The Express Tribune",
-            "publisher": {
-                "href": "https://tribune.com.pk",
-                "title": "The Express Tribune"
-            }
-        },
-        {
-            "title": "Stocks finish weekend session on bearish note",
-            "top_image": "https://i.dawn.com/large/2024/03/1611140072b8454.jpg?r=111449",
-            "images": [
-                "https://i.dawn.com/large/2024/03/1611140072b8454.jpg?r=111449",
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://i.dawn.com/primary/2024/03/65f4df74e3075.jpg",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://news.google.com/_img/social/icon-comment-black.png"
-            ],
-            "videos": [],
-            "url": "https://www.dawn.com/news/1821825",
-            "date": "Sat, 16 Mar 2024 07:00:00 GMT",
-            "short_description": "Stocks finish weekend session on bearish note  DAWN.com",
-            "text": "KARACHI: After a robust overnight rally, the stock market came under renewed profit-selling by nervous investors amid growing economic uncertainty as a result the benchmark KSE 100-share index settled below the 65,000 level on Friday.\n\nAhsan Mehanti of Arif Habib Corporation said challenges over external financing, uncertainty about the outcome of the ongoing IMF review and status quo expectations in the monetary policy announcement on March 18 amid SPI inflation surging 32.89pc year-on-year played a catalyst role in the bearish close.\n\nTopline Securities Ltd attributed the market volatility to news reports that the IMF mission has expressed displeasure over the Ministry of Finance\u2019s verdict that it had materialised all structural benchmarks before the completion of the review by the visiting mission.\n\nThe major positive contribution came from Engro Fertilisers, Meezan Bank Ltd, Lucky Cement, National Bank of Pakistan, Mari Petroleum Ltd and Systems Ltd, which cumulatively added 135 points to the index. On the other hand, Oil and Gas Development Company, Hub Power, Pakistan Petroleum Ltd, Bank Al-Habib, United Bank Ltd and PSO wiped out 179 points.\n\nThe index traded between its intraday high of 289 points and low of 248 points. As a result, the KSE-100 index closed at 64,816.47 points after losing 247.80 points or 0.38 per cent from the preceding session.\n\nThe overall trading dipped 17.72pc to 259.37 million shares. The traded value also declined 3.49pc to Rs10.12bn on a day-on-day basis.\n\nStocks contributing significantly to the traded volume included Hascol Petroleum Ltd (56.95m shares), Cnergyico PK Ltd (19.63m shares), WorldCall Telecom (16.54m shares), Telecard Ltd (9.77m shares) and Bank of Punjab (9.03m shares).\n\nShares registering the biggest increases in their share prices in absolute terms were Unilever Pakistan Foods Ltd (Rs100.00), Indus Motor Ltd (Rs21.86), Mari Petroleum Ltd (Rs15.97), Sazgar Engineering Works Ltd (Rs14.02) and Pakistan Services Ltd (Rs13.01).\n\nCompanies registering the biggest decreases in their share prices in absolute terms were Premium Textile Mills Ltd (Rs24.50), Mehmood Textile Mills Ltd (Rs16.67), Services Industries Ltd (Rs11.88), Packages Ltd (Rs10.82) and The Thal Industries Corporation Ltd(Rs10.20).\n\nForeign investors remained net sellers as they offloaded shares worth $0.29m.\n\nPublished in Dawn, March 16th, 2024",
-            "publisher": {
-                "href": "https://www.dawn.com",
-                "title": "DAWN.com"
-            }
-        },
-        {
-            "title": "Stocks lose 524 points on profit-taking",
-            "top_image": "https://i.dawn.com/large/2024/01/65b3295181c20.jpg",
-            "images": [
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/thumbnail/2024/03/2209060161770da.png?r=090701",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://i.dawn.com/thumbnail/2024/03/65fcd5b0b630c.jpg",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/primary/2024/01/65b3295181c20.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/large/2024/01/65b3295181c20.jpg",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-=======
             "title": "Stocks lose 524 points on profit-taking",
             "top_image": "https://i.dawn.com/large/2024/01/65b3295181c20.jpg",
             "images": [
@@ -1001,7 +566,6 @@
                 "https://news.google.com/_img/social/icon-email-black.png",
                 "https://www.dawn.com/_img/logo.png",
                 "https://news.google.com/_img/social/icon-twitter-black.png",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
                 "https://news.google.com/_img/social/icon-comment-black.png"
             ],
             "videos": [],
@@ -1015,39 +579,6 @@
             }
         },
         {
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/query_responses_test/BAHL.json
-            "title": "Stocks settle above 60,000 on cherry-picking",
-            "top_image": "https://i.dawn.com/large/2024/02/65d425c299a97.jpg",
-            "images": [
-                "https://www.dawn.com/_img/logo.png",
-                "https://i.dawn.com/large/2024/02/65d425c299a97.jpg",
-                "https://i.dawn.com/medium/2023/12/271218272d8d534.jpg?r=121856",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42cf5e8.png",
-                "https://i.dawn.com/large/2024/02/16125537351049d.png",
-                "https://news.google.com/_img/social/icon-twitter-black.png",
-                "https://news.google.com/_img/social/icon-fb-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42d5669.png",
-                "https://i.dawn.com/medium/2017/06/5931466588b47.png",
-                "https://i.dawn.com/thumbnail/2024/02/080925032506f93.png",
-                "https://i.dawn.com/thumbnail/2024/03/26204908ec49619.jpg?r=205547",
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Vw8AAmEBb87E6jIAAAAASUVORK5CYII=",
-                "https://www.dawn.com/_img/logo-white.png",
-                "https://news.google.com/_img/social/icon-email-black.png",
-                "https://news.google.com/_img/social/icon-whatsapp-black.png",
-                "https://i.dawn.com/thumbnail/2024/03/27084931260d25e.jpg?r=085014",
-                "https://news.google.com/_img/social/icon-print-black.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c430f9b2.png",
-                "https://i.dawn.com/primary/2024/02/65d425c299a97.jpg",
-                "https://i.dawn.com/thumbnail/2021/05/60a360ab86d68.png",
-                "https://i.dawn.com/thumbnail/2019/02/5c611c42ce48d.png",
-                "https://news.google.com/_img/social/icon-comment-black.png"
-            ],
-            "videos": [],
-            "url": "https://www.dawn.com/news/1815657/stocks-settle-above-60000-on-cherry-picking",
-            "date": "Tue, 20 Feb 2024 08:00:00 GMT",
-            "short_description": "Stocks settle above 60,000 on cherry-picking - Newspaper - DAWN.COM  DAWN.com",
-            "text": "KARACHI: Despite persistent political volatility, the stock market on Monday reversed the gloomy trend on renewed buying interest in selective sectors as a result the benchmark KSE 100-share index partially recovered overnight losses to settle above the 60,000 level.\n\nHowever, global credit agency Fitch Ratings in its latest report has warned that the closely contested election outcome has raised serious concerns about Pakistan\u2019s pursuit to reach a crucial financing agreement with the International Monetary Fund after the expiration of the current $3bn Stand-By Arrangement next month.\n\nTopline Securities Ltd said the market opened on a negative note as the index declined to make an intraday low of 681 points to 59,191.86 amid a lack of clarity on the formation of a new government.\n\nHowever, investors went for cherry-picking after the Supreme Court postponed the hearing of the petition that sought to declare the Feb 8 general elections as \u2018null and void\u2019 due to the petitioner\u2019s non-appearance.\n\nOil and Gas Development Company Ltd, Pakistan Petroleum Ltd, Hub Power Company Ltd, Engro Corporation and Bank Al-Habib cumulatively contributed 419 points to the index\u2019s positive performance. On the flip side, United Bank Ltd, Nestle Pakistan, Colgate-Palmolive, Dawood Hercules and Pakistan Oilfield Ltd took away 88 points.\n\nAhsan Mehanti of Arif Habib Corporation said speculations about a breakthrough in negotiations between PML-N and Pakistan Peoples Party over a coalition government power-sharing formula later in the day eased political instability fuelling a sharp recovery at the PSX.\n\nAs a result, the KSE-100 index closed at 60,459.75 points after adding 586.79 points or 0.98 per cent from the preceding session.\n\nThe overall trading volume dipped 16.68pc to 261.79 million shares. The traded value also fell 19.07pc to Rs9.90bn on a day-on-day basis.\n\nStocks contributing significantly to the traded volume included Pakistan Pakistan International Airlines Corporation (21.40m shares), WorldCall Telecom Ltd (20.03m shares), Pakistan Refinery Ltd (15.16m shares), Cnergyico PK Ltd (14.12m shares) and K-Electric (13.20m shares).\n\nShares registering the biggest increases in their share prices in absolute terms were Rafhan Maize Ltd (Rs373.75), Indus Motor Company Ltd (Rs51.28), Pakistan Tob\u00adacco Company Ltd (Rs48.66), Shield Corp\u00adoration Ltd (Rs18.04) and Sazgar Engineering Ltd (Rs16.57).\n\nCompanies registering the biggest decreases in their share prices in absolute terms were Nestle Pakistan (Rs289.89), Pakistan Engineering Com\u00adpany Ltd (Rs38.25), Meh\u00admood Textile (Rs35.87), Colgate-Palm\u00adolive (Rs19.46) and Siemens Pakistan Ltd (Rs19.04).\n\nForeign investors turned net sellers as they offloaded shares worth $1.05m.\n\nPublished in Dawn, February 20th, 2024",
-=======
             "title": "Stocks finish weekend session on bearish note",
             "top_image": "https://i.dawn.com/large/2024/03/1611140072b8454.jpg?r=111449",
             "images": [
@@ -1079,10 +610,23 @@
             "date": "Sat, 16 Mar 2024 07:00:00 GMT",
             "short_description": "Stocks finish weekend session on bearish note  DAWN.com",
             "text": "KARACHI: After a robust overnight rally, the stock market came under renewed profit-selling by nervous investors amid growing economic uncertainty as a result the benchmark KSE 100-share index settled below the 65,000 level on Friday.\n\nAhsan Mehanti of Arif Habib Corporation said challenges over external financing, uncertainty about the outcome of the ongoing IMF review and status quo expectations in the monetary policy announcement on March 18 amid SPI inflation surging 32.89pc year-on-year played a catalyst role in the bearish close.\n\nTopline Securities Ltd attributed the market volatility to news reports that the IMF mission has expressed displeasure over the Ministry of Finance\u2019s verdict that it had materialised all structural benchmarks before the completion of the review by the visiting mission.\n\nThe major positive contribution came from Engro Fertilisers, Meezan Bank Ltd, Lucky Cement, National Bank of Pakistan, Mari Petroleum Ltd and Systems Ltd, which cumulatively added 135 points to the index. On the other hand, Oil and Gas Development Company, Hub Power, Pakistan Petroleum Ltd, Bank Al-Habib, United Bank Ltd and PSO wiped out 179 points.\n\nThe index traded between its intraday high of 289 points and low of 248 points. As a result, the KSE-100 index closed at 64,816.47 points after losing 247.80 points or 0.38 per cent from the preceding session.\n\nThe overall trading dipped 17.72pc to 259.37 million shares. The traded value also declined 3.49pc to Rs10.12bn on a day-on-day basis.\n\nStocks contributing significantly to the traded volume included Hascol Petroleum Ltd (56.95m shares), Cnergyico PK Ltd (19.63m shares), WorldCall Telecom (16.54m shares), Telecard Ltd (9.77m shares) and Bank of Punjab (9.03m shares).\n\nShares registering the biggest increases in their share prices in absolute terms were Unilever Pakistan Foods Ltd (Rs100.00), Indus Motor Ltd (Rs21.86), Mari Petroleum Ltd (Rs15.97), Sazgar Engineering Works Ltd (Rs14.02) and Pakistan Services Ltd (Rs13.01).\n\nCompanies registering the biggest decreases in their share prices in absolute terms were Premium Textile Mills Ltd (Rs24.50), Mehmood Textile Mills Ltd (Rs16.67), Services Industries Ltd (Rs11.88), Packages Ltd (Rs10.82) and The Thal Industries Corporation Ltd(Rs10.20).\n\nForeign investors remained net sellers as they offloaded shares worth $0.29m.\n\nPublished in Dawn, March 16th, 2024",
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/query_responses/BAHL.json
             "publisher": {
                 "href": "https://www.dawn.com",
                 "title": "DAWN.com"
+            }
+        },
+        {
+            "title": "PSX rebounds on political stability optimism - The Express Tribune",
+            "top_image": "https://news.google.com/rss/articles/CBMiUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbdIBV2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en/favicon.ico",
+            "images": [],
+            "videos": [],
+            "url": "https://news.google.com/rss/articles/CBMiUWh0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbdIBV2h0dHBzOi8vdHJpYnVuZS5jb20ucGsvc3RvcnkvMjQ1Njk3NC9wc3gtcmVib3VuZHMtb24tcG9saXRpY2FsLXN0YWJpbGl0eS1vcHRpbWlzbT9hbXA9MQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "date": "Tue, 20 Feb 2024 08:00:00 GMT",
+            "short_description": "PSX rebounds on political stability optimism  The Express Tribune",
+            "text": "PSX rebounds on political stability optimism  The Express Tribune",
+            "publisher": {
+                "href": "https://tribune.com.pk",
+                "title": "The Express Tribune"
             }
         }
     ]

@@ -1,10 +1,6 @@
 // models/pythonRunner.js
 
-<<<<<<< HEAD
-const { PythonShell } = require('python-shell');
-=======
 const { PythonShell } = require("python-shell");
->>>>>>> AliMashoud
 
 module.exports = {
   runPythonScript: async (scriptPath, args) => {

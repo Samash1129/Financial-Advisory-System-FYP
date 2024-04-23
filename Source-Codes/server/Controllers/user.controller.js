@@ -157,11 +157,7 @@ module.exports.signIn = async (req, res) => {
       message: "Sign in successful",
       email: user.email,
       name: user.name,
-<<<<<<< HEAD
-      isPremium: true
-=======
       preferences: user.preferences,
->>>>>>> AliMashoud
     });
 
     //console.log("access token cookie: ",req.cookies.accessToken);

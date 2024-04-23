@@ -81,10 +81,7 @@ def analyze_sentiment_for_files():
 
     save2db(sentiment_scores)
     print("Sentiment scores saved to MongoDB.")
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/analyze.py
-=======
     
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/analyze_textblob.py
     if sentiment_scores:
         return True
     else:

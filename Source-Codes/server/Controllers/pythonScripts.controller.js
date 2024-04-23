@@ -1,29 +1,7 @@
-<<<<<<< HEAD
-// controllers/summaryController.js
-=======
->>>>>>> AliMashoud
 const axios = require('axios')
 
 const pythonRunner = require('../Models/PythonRunner');
 
-<<<<<<< HEAD
-exports.getSummary = async (req, res) => {
-  try {
-    const result = await pythonRunner.runPythonScript('summary.py', []);
-    res.json(result);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-};
-
-
-exports.sentimentAnalysis = async(req, res) => {
-  try {
-    const response = axios.get('http://13.229.231.220:8000/analyze-sentiment')
-
-    res.json(response.data);
-=======
 
 const ip = "0.0.0.0:5020"
 
@@ -56,14 +34,10 @@ exports.sentimentAnalysisVader = async(req, res) => {
     const response = await axios.get(`http://${ip}/analyze-sentiment-vader`)
     //const response = await axios.get('http://0.0.0.0:5020/analyze-sentiment-vader');
     return res.status(response.status).json(response.data);
->>>>>>> AliMashoud
     // consolse.log(response.data)
   } catch (err) {
     console.error(err)
   }
-<<<<<<< HEAD
-}
-=======
 };
 
 
@@ -118,4 +92,3 @@ exports.generateFundamentals = async(req, res) => {
     console.error(err)
   }
 }
->>>>>>> AliMashoud

@@ -15,14 +15,7 @@
         "MCB Bank Share Stock": "MCB",
         "Meezan Bank Share Stock": "MEBL",
         "NBP Share Stock": "NBP",
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/queries.json
-        "Standard Chartered Bank Share Stock": "SCBPL",
-        "SilkBank Limited Share Stock": "SILK",
-        "Soneri Bank Limited Share Stock": "SNBL",
-        "UBL Share Stock": "UBL"
-=======
         "Soneri Bank Limited Share Stock": "SNBL",
         "UBL Pakistan Share Stock": "UBL"
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/JSONs/queries.json
     }
 }

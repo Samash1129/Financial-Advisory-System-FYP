@@ -117,11 +117,6 @@ def fetch_news_for_all_queries():
     except Exception as e:
         print("Error fetching news:", e)
         return False  # Return False if there's an error during execution
-<<<<<<< HEAD:Source-Codes/scripts/NewsAPI/newsapi.py
-
-
-=======
->>>>>>> AliMashoud:Source-Codes/server/scripts/Helpers/newsapi2.py
 
 
 
@@ -137,5 +132,3 @@ def fetch_news_for_all_queries():
 #print(len(news))
 #save_to_db(query, news)
 #save_to_json(ticker, news)
-
-
