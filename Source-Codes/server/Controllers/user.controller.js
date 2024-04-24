@@ -158,6 +158,7 @@ module.exports.signIn = async (req, res) => {
       email: user.email,
       name: user.name,
       preferences: user.preferences,
+      conversations: user.conversations,
     });
 
     //console.log("access token cookie: ",req.cookies.accessToken);
@@ -294,6 +295,49 @@ module.exports.deleteUser = async (req, res) => {
     res.json({ message: "User deleted successfully" });
   } catch (err) {
     handleError(res, err);
+  }
+};
+
+module.exports.saveConversation = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  try {
+    const token = req.cookies.accessToken;
+
+    if (!token) {
+      return res.status(401).json({ error: "You must be logged in" });
+    }
+
+    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const userId = decoded.id;
+    const { conversationID, ticker } = req.body;
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(400).json({ error: "User does not exist" });
+    }
+
+    const conversationExists = user.conversations.some(
+      (conversation) => conversation.conversationID === conversationID
+    );
+
+    if (conversationExists) {
+      return res
+        .status(400)
+        .json({ error: "Conversation already exists for this user" });
+    }
+
+    user.conversations.push({ conversationID, ticker });
+    await user.save();
+
+    res.json({ message: "Conversation saved successfully" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ error: "Server Error" });
   }
 };
 

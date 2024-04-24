@@ -15,6 +15,7 @@ router.route("/fetch-news").get(fetchNewsController);
 router.route("/sentiment-analysis-vader").get(sentimentAnalysisVader);
 router.route("/summarize").get(generateSummaries);
 router.route("/elevychat").post(elevychat);
+router.route("/getChatHistory").post(pythonScriptsController.fetchChatHistory);
 router.route("/generatefundamentals").get(generateFundamentals);
 
 module.exports = router;

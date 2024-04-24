@@ -12,8 +12,9 @@ const {
   getAllUsers,
   tempSignUp,
   finalSignUp,
-  basicSignUp,
-  preferenceSignUp,
+  saveConversation,
+  // basicSignUp,
+  // preferenceSignUp,
 } = require("../Controllers/user.controller");
 
 // recordRoutes is an instance of the express router.
@@ -54,6 +55,8 @@ recordRoutes.route("/refreshToken").post(refreshToken);
 
 // Delete User
 recordRoutes.route("/deleteuser").delete(deleteUser);
+
+recordRoutes.route("/save-conversation").post(saveConversation)
 
 module.exports = recordRoutes;
 

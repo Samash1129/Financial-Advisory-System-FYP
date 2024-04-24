@@ -32,6 +32,14 @@ const userSchema = new mongoose.Schema({
       type: String
     }
   },
+  conversations: [{
+    conversationID: {
+      type: String
+    },
+    ticker: {
+      type: String
+    }
+  }]
 });
 
 const User = mongoose.model('User', userSchema);
