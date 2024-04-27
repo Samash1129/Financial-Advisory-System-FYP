@@ -11,7 +11,7 @@ import LoadingSpinner from '../../Components/LoadingAnimation';
 import { useDispatch, useSelector } from "react-redux";
 import { useSignUpFinalMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
-// import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { useDeleteUserMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { removeUserData, setUserData } from "../../Slices/User/AuthSlice/authSlice";
 
@@ -38,7 +38,7 @@ const Preferences = () => {
       if (preferredIndustries.length > 0) { setPreferredIndustries(preferredIndustries); }
       else { setPreferredIndustries(["Banking"]); }
       setStockType(stockType || "Dividend");
-      if (amountToInvest === 0) { setAmountToInvest("100"); }
+      if (amountToInvest==0) { setAmountToInvest("100"); } 
       else { setAmountToInvest(amountToInvest.toLocaleString()); }
       //setAmountToInvest(amountToInvest.toLocaleString() || "100");
     }
@@ -54,21 +54,21 @@ const Preferences = () => {
     // Format with commas
     return cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
-
+  
   const handleAmountChange = (e) => {
     const value = e.target.value;
     setAmountToInvest(formatCurrency(value));
-
+  
     if (value < 100) {
       setError('Amount must be more than PKR 100');
-    }
+    } 
     else {
       setError('');
     }
   };
 
-  // const previousPage = useSelector((state) => state.previousPage.previousPage);
-  // const userState = useSelector((state) => state.auth);
+  const previousPage = useSelector((state) => state.previousPage.previousPage);
+  const userState = useSelector((state) => state.auth);
 
   const handleToggleInvestmentGoals = (goal) => {
     setInvestmentGoals(goal);
@@ -85,7 +85,7 @@ const Preferences = () => {
       setPreferredIndustries([...preferredIndustries, industry]);
     }
   };
-
+  
 
   const handleDropdownStockType = (selectedOption) => {
     setStockType(selectedOption);
@@ -97,40 +97,41 @@ const Preferences = () => {
       return;
     }
 
-    try {
+    try { 
       const formattedAmountToInvest = parseFloat(amountToInvest.replace(/,/g, ''));
-      const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest: formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
+      const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest:formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
       console.log(response);
 
       let token1 = false;
 
-      if (currentUserData.token === true) { token1 = true; }
+      if (currentUserData.token == true) { token1 = true; }
       else { token1 = false; }
+     
+      dispatch(setUserData({ token: token1, name:response.user.name, email:response.user.email, preferences: response.user.preferences}));
+      
+      { dispatch(setPreviousPage('/signup')); }
 
-      dispatch(setUserData({ token: token1, name: response.user.name, email: response.user.email, preferences: response.user.preferences }));
-
-      dispatch(setPreviousPage(null));
-
-      if (token1 === true) { navigate('/dashboard'); }
-      else {
+      if (token1 == true) { navigate('/dashboard'); }
+      else 
+      { 
         dispatch(removeUserData());
-        navigate('/signin');
+        navigate('/signin'); 
       }
-
+      
     } catch (err) {
       console.error(err);
     }
   };
 
-  // const [signout] = useSignoutMutation();
+  const [signout] = useSignoutMutation();
 
   const handleBackButtonClick = async () => {
 
-    dispatch(setPreviousPage(null));
-    if (currentUserData.token === true) { navigate('/dashboard'); }
-    else {
+    dispatch(setPreviousPage("/preferences"));
+    if (currentUserData.token == true) { navigate('/dashboard'); }
+    else { 
       deleteUser(currentUserData.email).unwrap();
-      navigate('/signup');
+      navigate('/signup'); 
     }
   };
 
@@ -142,13 +143,13 @@ const Preferences = () => {
         </div>
         <img
           src={backgroundImage}
-          alt="Cover"
+          alt="Cover Image"
           className={styles.coverImage}
         />
       </div>
 
       <div className={styles.rightContainer}>
-        {isLoading && <LoadingSpinner loadingText="Saving Preferences" />}
+      { isLoading && <LoadingSpinner loadingText="Saving Preferences" /> }
         <div className={styles.preferences}>
           <NavBar
             title="Preferences"

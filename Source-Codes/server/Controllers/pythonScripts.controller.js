@@ -1,9 +1,18 @@
 const axios = require("axios");
-
 const pythonRunner = require("../Models/PythonRunner");
 
-// const ip = "0.0.0.0:5020"
+// const ip = '0.0.0.0:5020'
 const ip = "127.0.0.1:8000";
+
+exports.checkPython = async (req, res) => {
+  try {
+    const response = await axios.get(`http://${ip}/hello-python`);
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 
 exports.fetchNewsController = async (req, res) => {
   try {
@@ -32,6 +41,7 @@ exports.sentimentAnalysis = async (req, res) => {
       .json({ status_code: 500, content: "Something went wrong" });
   }
 };
+
 exports.sentimentAnalysisVader = async (req, res) => {
   try {
     const response = await axios.get(`http://${ip}/analyze-sentiment-vader`);
@@ -69,9 +79,9 @@ exports.elevychat = async (req, res) => {
         });
     }
 
-    console.log(user_input);
-    console.log(conversation_id);
-    console.log(ticker);
+    // console.log(user_input)
+    // console.log(conversation_id)
+    // console.log(ticker)
 
     const response = await axios.post(`http://${ip}/start-conversation`, {
       user_input: user_input,
@@ -79,10 +89,28 @@ exports.elevychat = async (req, res) => {
       ticker: ticker,
     });
 
+    //console.log(response);
+
     return res.status(response.status).json(response.data);
   } catch (err) {
-    console.error(err);
+    //console.error(err);
     return res.status(500).json({ error: "Something went wrong" });
+  }
+};
+
+exports.fetchChatHistory = async (req, res) => {
+  const { conversation_id } = req.body;
+  //console.log("Convo ID: ",conversation_id);
+
+  try {
+    const response = await axios.post(`http://${ip}/load-conversation`, {
+      conversation_id: conversation_id,
+    });
+
+    res.status(200).json(response.data);
+  } catch (error) {
+    //console.error('Error fetching chat history:', error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
@@ -94,23 +122,6 @@ exports.generateFundamentals = async (req, res) => {
     return res.status(response.status).json(response.data);
     // consolse.log(response.data)
   } catch (err) {
-    console.error(err);
-  }
-};
-
-exports.fetchChatHistory = async (req, res) => {
-  const { conversation_id } = req.body;
-
-  try {
-    const response = await axios.get(`http://${ip}/load-conversation`, {
-      conversation_id: conversation_id,
-    });
-    //const response = await axios.get('http://0.0.0.0:5020/load-conversation');
-    console.log(response.status);
-    return res.status(response.status).json(response.data);
-    // consolse.log(response.data)
-  } catch (err) {
-    res.status(500).json({ error: 'Internal Server Error' });
     console.error(err);
   }
 };

@@ -24,7 +24,7 @@ LLAMA = OpenAI(
 
 queries_file_path = "queries.json"
 directory = "JSONs/query_responses"
-summary_directory = "summary"
+summary_directory = "JSONs/summary"
 
 MONGO_DB_KEY = os.getenv("MONGO_DB_KEY")
 client = pymongo.MongoClient(MONGO_DB_KEY)
@@ -34,7 +34,6 @@ collection = db["article_summaries"]
 processed_collection = db["processed_news"] 
 
 
-# with open("queries.json", "r") as queries_file:
 with open("JSONs/queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
     queries = queries_data.get("queries", {})
@@ -208,7 +207,7 @@ def process_data():
 
 def load_news_summaries(ticker):
     # Define the directory containing the JSON files
-    summary_directory = "summary"
+    summary_directory = "JSONs/summary"
 
     # Construct the file path for the JSON file based on the security ticker
     file_path = os.path.join(summary_directory, f"{ticker}.json")
@@ -229,7 +228,7 @@ def load_news_summaries(ticker):
 
 
 def parse_company_name(ticker):
-    with open("queries.json", "r") as queries_file:
+    with open("JSONs/queries.json", "r") as queries_file:
         queries_data = json.load(queries_file)
         queries = queries_data.get("queries", {})
     
@@ -259,7 +258,7 @@ def openai_chat(conversation):
     return reply
 
 def saveprocessedsummary2db():
-    processed_directory = "summary_processed"
+    processed_directory = "JSONs/summary_processed"
     for query, ticker in queries.items():
         summary_file_path = os.path.join(summary_directory, f"{ticker}.json")
 
@@ -276,7 +275,7 @@ def saveprocessedsummary2db():
 
 async def llama_process():
     conversations = []
-    summary_processed_directory = "summary_processed"
+    summary_processed_directory = "JSONs/summary_processed"
     count=0
     
     for query, ticker in queries.items():

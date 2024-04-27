@@ -147,7 +147,7 @@ const SignUp = () => {
         </div>
         <img
           src={backgroundImage}
-          alt="Cover"
+          alt="Cover Image"
           className={styles.coverImage}
         />
       </div>

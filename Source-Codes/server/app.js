@@ -4,12 +4,11 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 require("dotenv").config({ path: "./.env" });
-require("./db/conn");
 
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: process.env.BASE_URI,
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed request headers
@@ -27,6 +26,7 @@ app.use(
   })
 );
 
+
 const port = process.env.PORT || 4500;
 
 app.use(express.json());
@@ -35,9 +35,12 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-app.use("/api", require("./Routes/user.routes"));
-app.use("/api/pythonScripts", require("./Routes/pythonScripts.routes"));
+// Calling the respective Routes
+app.use("/api", require("./routes/user.routes"));
+app.use("/api", require("./routes/pythonScripts.routes"));
+
+require("./db/conn");
 
 app.listen(port, () => {
-  console.log(`Server running at Port ${port}!`);
+  console.log(`Server running at Port ${port}`);
 });

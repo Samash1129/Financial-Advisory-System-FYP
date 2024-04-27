@@ -11,23 +11,20 @@ load_dotenv()
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
-    base_url="https://api.llama-api.com"
+    base_url=os.getenv("LLAMA_BASE_URI")
+    # base_url="https://api.llama-api.com"
 )
 
+
 def load_news_summaries(ticker):
-    # Define the directory containing the JSON files
-    # summary_directory = "summary_processed"
     summary_directory = "JSONs/summary_processed"
 
-    # Construct the file path for the JSON file based on the security ticker
     file_path = os.path.join(summary_directory, f"{ticker}.json")
 
-    # Check if the file exists
     if not os.path.exists(file_path):
         print(f"No news summaries found for '{ticker}'.")
         return []
 
-    # Load the JSON file
     with open(file_path, "r") as json_file:
         data = json.load(json_file)
 
@@ -36,13 +33,50 @@ def load_news_summaries(ticker):
     return data
 
 
+def read_high_low_values(ticker):
+    file_path = os.path.join(
+        "JSONs/High_Low_Values", f"{ticker}_high_low_values.json")
+
+    if not os.path.exists(file_path):
+        print(f"No high-low values found for '{ticker}'.")
+        return None, None
+
+    with open(file_path, "r") as json_file:
+        data = json.load(json_file)
+
+    historical_values = data.get("HistoricalVal", [])
+    predicted_values = data.get("PredictedVal", [])
+
+    return historical_values, predicted_values
+
+
+def read_high_low_values_rounded_to_2_dp(ticker):
+    file_path = f"JSONs/High_Low_Values/{ticker}_high_low_values.json"
+
+    try:
+        with open(file_path, "r") as json_file:
+            data = json.load(json_file)
+    except FileNotFoundError:
+        print(f"No high-low values found for '{ticker}'.")
+        return None, None
+
+    historical_values = data.get("HistoricalVal", [])
+    predicted_values = data.get("PredictedVal", [])
+
+    for value_set in [historical_values, predicted_values]:
+        for item in value_set:
+            for key, value in item.items():
+                if isinstance(value, float):
+                    item[key] = round(value, 2)
+
+    return historical_values, predicted_values
 
 
 def parse_company_name(ticker):
-    with open("queries.json", "r") as queries_file:
+    with open("JSONs/queries.json", "r") as queries_file:
         queries_data = json.load(queries_file)
         queries = queries_data.get("queries", {})
-    
+
     for query, company_ticker in queries.items():
         if company_ticker.lower() == ticker.lower():
             company_name = re.sub(r'Share Stock$', '', query)
@@ -50,11 +84,9 @@ def parse_company_name(ticker):
     return None
 
 
-
 async def openai_chat(conversation):
-    # Define the model name and create a conversation object
     model_name = "llama-7b-chat"
-    #Make the API call
+    # Make the API call
     try:
         response = client.chat.completions.create(
             model=model_name,
@@ -65,12 +97,12 @@ async def openai_chat(conversation):
         return {"message": "Error occurred"}
 
     reply = response.choices[0].message.content
-    #print("Assistant Reply: ", reply)
+    # print("Assistant Reply: ", reply)
     return reply
 
 
 def load_conversation_history(conversation_id):
-    conversation_file_path = f"./conversations/{conversation_id}.json"
+    conversation_file_path = f"JSONs/conversations/{conversation_id}.json"
     try:
         with open(conversation_file_path, "r") as conversation_file:
             conversation_history = json.load(conversation_file)
@@ -80,24 +112,20 @@ def load_conversation_history(conversation_id):
 
 
 def save_conversation_history(conversation_id, conversation_history):
-    conversation_directory = "./conversations/"
-    os.makedirs(conversation_directory, exist_ok=True)  # Create the directory if it doesn't exist
-    conversation_file_path = os.path.join(conversation_directory, f"{conversation_id}.json")
-    
+    conversation_directory = "JSONs/conversations/"
+    os.makedirs(conversation_directory, exist_ok=True)
+    conversation_file_path = os.path.join(
+        conversation_directory, f"{conversation_id}.json")
+
     try:
         with open(conversation_file_path, "r") as conversation_file:
-            # File exists, no need to create it
             pass
     except FileNotFoundError:
-        # File doesn't exist, create it
         with open(conversation_file_path, "w") as conversation_file:
             json.dump([], conversation_file)  # Initialize with an empty list
-    
-    # Now open the file for writing and save the conversation history
+
     with open(conversation_file_path, "w") as conversation_file:
         json.dump(conversation_history, conversation_file, indent=2)
-
-
 
 
 async def start_conversation_helper(conversation_id: str, user_input: str, ticker: str):
@@ -106,7 +134,7 @@ async def start_conversation_helper(conversation_id: str, user_input: str, ticke
     if conversation_id:
         # Load conversation history if conversation ID is provided
         print(conversation_id)
-        conversation_file_path = f"./conversations/{conversation_id}.json"
+        conversation_file_path = f"JSONs/conversations/{conversation_id}.json"
         with open(conversation_file_path, "r") as conversation_id_file:
             conversation = json.load(conversation_id_file)
         conversation = load_conversation_history(conversation_id)
@@ -125,10 +153,28 @@ async def start_conversation_helper(conversation_id: str, user_input: str, ticke
         if company_name:
             print("Company Name:", company_name)
         summaries = load_news_summaries(ticker)
-        system_content = f"You are elevy by elev8, a PSX investor help app. Identify as elevy only. Generate concise and informative responses for investors seeking insights on stocks listed on the Pakistan Stock Exchange particularly {company_name}. Some Relevant news :{summaries}. Your goal is to provide clear and factual information about companies, their fundamentals, and the latest news. Ensure that responses are brief, ideally less than 100 words, and aim for a target length of around 50 words to maintain clarity and relevance."
+
+        historical_values, predicted_values = read_high_low_values_rounded_to_2_dp(ticker)
+        # print("Historical values:", historical_values)
+        # print("Predicted values:", predicted_values)
+
+        # Prompt for any sort of testing to reduce tokens
+        system_content = f"You are elevy by elev8, a PSX investor help app. "
+
+        # Elevy running prompt for normal conditions
+        # system_content = f"You are elevy by elev8, a PSX investor help app. Identify as elevy only. Generate concise and informative responses for investors seeking insights on stocks listed on the Pakistan Stock Exchange particularly {company_name}. Some Relevant news :{summaries}. Your goal is to provide clear and factual information about companies, their fundamentals, and the latest news. Ensure that responses are brief, ideally less than 100 words, and aim for a target length of around 50 words to maintain clarity and relevance."
+
+        # Prompt with predicted values and historical values sent to llama
+        # system_content = f"You are elevy by elev8, a PSX investor help app. Identify as elevy only. Generate concise and informative responses for investors seeking insights on stocks listed on the Pakistan Stock Exchange particularly {company_name}. Some Relevant news :{summaries}. If asked to forecast, use our internal machine learning model results. Here are predicted values: {predicted_values}, recent values are: {historical_values}. Your goal is to provide clear and factual information about companies, their fundamentals, and the latest news. Ensure that responses are brief, ideally less than 100 words, and aim for a target length of around 50 words to maintain clarity and relevance."
+
         conversation = [{"role": "system", "content": system_content}]
         conversation.append({"role": "user", "content": user_input})
         assistant_reply = await openai_chat(conversation)
+
+        print("system_content:", system_content)
+
+        # assistant_reply = "Test"
+
         conversation.append({"role": "assistant", "content": assistant_reply})
         print("elevy :", assistant_reply)
         save_conversation_history(conversation_id, conversation)
@@ -148,6 +194,6 @@ async def test():
         print("Conversation ID:", conversation_id)
         # print("Conversation History:", conversation_history)
         print("\n")
-        
+
 
 # asyncio.run(test())

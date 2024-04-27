@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! *blinks* I'm here to help you with any questions or problems you might have. How can I assist you today?"
+  }
+]

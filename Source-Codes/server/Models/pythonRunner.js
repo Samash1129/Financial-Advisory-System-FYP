@@ -1,6 +1,6 @@
 // models/pythonRunner.js
 
-const { PythonShell } = require("python-shell");
+const { PythonShell } = require('python-shell');
 
 module.exports = {
   runPythonScript: async (scriptPath, args) => {

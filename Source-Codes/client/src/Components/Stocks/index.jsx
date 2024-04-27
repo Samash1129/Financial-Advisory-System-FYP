@@ -4,9 +4,8 @@ import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
 import bankicon from '../../Assets/SVGs/bank-icon.svg';
 import riseicon from '../../Assets/SVGs/Riseicon.svg';
-// import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
-// import { useDispatch } from 'react-redux';
-// import { setRecommendedStocks } from '../../Slices/StockSlice/stockSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { updateCurrentChatHistory, updateCurrentTicker, updateCurrentConvoID } from "../../Slices/User/AuthSlice/authSlice";
 
 const getIconPath = (category) => {
     switch (category) {
@@ -28,15 +27,18 @@ const SkeletonLoader = () => (
     </div>
   );
 
-const Stocks = ({ pageType, filteredData }) => {
+const Stocks = ({ pyRunning, filteredData }) => {
 
-    //const dispatch = useDispatch();
-    //const { data: recommendedStocks, isLoading } = useGetRecommendedStocksQuery();
-
-    //dispatch(setRecommendedStocks(recommendedStocks));
-
+    const userState = useSelector(state => state.auth);
+    const dispatch = useDispatch();
     const recommendedStocks = filteredData;
     const isLoading = false;
+
+    const handleItemClick = (tickerSymbol) => {
+        dispatch(updateCurrentChatHistory([]));
+        if (pyRunning==true) { dispatch(updateCurrentTicker(tickerSymbol)); }
+        dispatch(updateCurrentConvoID(""));
+    };
 
     return (
         <div className={styles.ssearchContainer}>
@@ -44,7 +46,8 @@ const Stocks = ({ pageType, filteredData }) => {
                 <img src={riseicon} alt="Recommended" className={styles.srecommendedIcon} />
                 <div className={styles.srecommendedTitle}>Recommended Stocks</div>
             </div>
-            <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}>
+            {/* <ul className={`${styles.ssearchResults} ${pageType === 'premium' ? styles.premiumResults : ''}`}> */}
+            <ul className={styles.ssearchResults}>
             {isLoading ? (
           // Display skeleton loader while data is loading
           <>
@@ -55,7 +58,15 @@ const Stocks = ({ pageType, filteredData }) => {
           </>
         ) : recommendedStocks ? (
           recommendedStocks.map((item, index) => (
-                        <li key={item.tickerSymbol} className={styles.ssearchItem}>
+                        <li key={item.tickerSymbol} 
+                        //className={styles.ssearchItem}
+                        className={`${styles.ssearchItem} ${
+                            item.tickerSymbol === userState.currentTicker &&
+                            userState.currentConvoID === ""
+                              ? styles.highlight
+                              : ""
+                          }`}
+                        >
                             {/* Add span for numbering */}
                             <span className={styles.listNumber}>{index + 1}</span>
                             <img
@@ -63,7 +74,10 @@ const Stocks = ({ pageType, filteredData }) => {
                                 alt={`${item.securityName} icon`}
                                 className={styles.sicon}
                             />
-                            <div className={styles.sitemInfo}>
+                            <div
+                            className = {styles.sitemInfo}
+                            onClick={() => handleItemClick(item.tickerSymbol)}
+                            >
                                 <div className={styles.ssymbol}>{item.tickerSymbol}</div>
                                 <div className={styles.sname}>{item.securityName}</div>
                             </div>

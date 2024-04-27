@@ -41,9 +41,20 @@ export const userApiSlice = apiSlice.injectEndpoints({
       query: (email) => ({
         url: "/deleteuser",
         method: "DELETE",
-        body: { email },
+        body: { email }, 
       }),
     }),
+    saveConversation: builder.mutation({
+      query: (data) => ({
+        url: "/save-conversation",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    checkPython: builder.query({
+      query: () => '/check-python',
+    })
+
   }),
 });
 
@@ -54,4 +65,6 @@ export const {
   useSignUpFinalMutation,
   useUpdateUserMutation,
   useDeleteUserMutation,
+  useSaveConversationMutation,
+  useCheckPythonQuery 
 } = userApiSlice;

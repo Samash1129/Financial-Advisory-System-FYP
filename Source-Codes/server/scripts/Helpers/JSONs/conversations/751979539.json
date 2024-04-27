@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "what is a bank"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\ude0a Hello! A bank is an institution that provides financial services, such as accepting deposits, providing loans, and facilitating transactions. Banks act as intermediaries between savers and borrowers, and their primary goal is to provide financial stability and security to their customers.\n\nBanks can take various forms, such as retail banks, commercial banks, investment banks, and central banks. Retail banks focus on providing basic banking services to individuals and small businesses, while commercial banks cater to larger businesses and corporations. Investment banks, on the other hand, help clients raise capital by underwriting and selling securities. Central banks, which are responsible for regulating the money supply and maintaining financial stability in a country, are typically owned and controlled by the government.\n\nBanks offer a range of services, including:\n\n1. Deposit accounts: Checking and savings accounts that allow customers to deposit and withdraw money.\n2. Loans: Banks provide loans to customers for various purposes, such as buying a home or starting a business.\n3. Credit cards: Banks issue credit cards that allow customers to make purchases and pay back the balance later.\n4. Investment products: Banks offer investment products such as mutual funds, CDs, and IRAs.\n5. Online banking: Many banks provide online banking services that allow customers to access their accounts, pay bills, and transfer funds from their computer or mobile device.\n6. Mobile banking: Some banks also offer mobile banking apps that allow customers to access their accounts, make payments, and transfer funds using their smartphones.\n\nOverall, banks play a crucial role in the economy by providing financial services to individuals, businesses, and governments, and by facilitating economic growth and development. \ud83d\udcb0"
+  }
+]

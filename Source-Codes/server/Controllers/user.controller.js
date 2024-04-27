@@ -111,7 +111,7 @@ module.exports.signIn = async (req, res) => {
     if (!user) {
       return res.status(400).json({ error: "User not registered!" });
     }
-    // console.log("user found");
+    console.log("user found");
 
     // Check if password is correct
     const passwordMatch = await bcrypt.compare(password, user.password);
@@ -211,6 +211,50 @@ module.exports.updateProfile = async (req, res) => {
   }
 };
 
+// Controller for save-conversation - Done
+module.exports.saveConversation = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  try {
+    const token = req.cookies.accessToken;
+
+    if (!token) {
+      return res.status(401).json({ error: "You must be logged in" });
+    }
+
+    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const userId = decoded.id;
+    const { conversationID, ticker } = req.body;
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(400).json({ error: "User does not exist" });
+    }
+
+    const conversationExists = user.conversations.some(
+      (conversation) => conversation.conversationID === conversationID
+    );
+
+    if (conversationExists) {
+      return res
+        .status(400)
+        .json({ error: "Conversation already exists for this user" });
+    }
+
+    user.conversations.push({ conversationID, ticker });
+    await user.save();
+
+    res.json({ message: "Conversation saved successfully" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ error: "Server Error" });
+  }
+};
+
 // Controller for sign-out - Done
 module.exports.signout = async (req, res) => {
   try {
@@ -225,7 +269,7 @@ module.exports.signout = async (req, res) => {
   }
 };
 
-// Controller for get-profile - Done
+// Controller for get-profile - Done 
 module.exports.getProfile = async (req, res) => {
   try {
     // Get the token from the header
@@ -273,7 +317,7 @@ module.exports.refreshToken = async (req, res) => {
   }
 };
 
-// Controller for delete-user - May use later
+// Controller for delete-user 
 module.exports.deleteUser = async (req, res) => {
   try {
     // Get the email address from the request body
@@ -297,78 +341,6 @@ module.exports.deleteUser = async (req, res) => {
     handleError(res, err);
   }
 };
-
-module.exports.saveConversation = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
-  try {
-    const token = req.cookies.accessToken;
-
-    if (!token) {
-      return res.status(401).json({ error: "You must be logged in" });
-    }
-
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-    const userId = decoded.id;
-    const { conversationID, ticker } = req.body;
-
-    const user = await User.findById(userId);
-
-    if (!user) {
-      return res.status(400).json({ error: "User does not exist" });
-    }
-
-    const conversationExists = user.conversations.some(
-      (conversation) => conversation.conversationID === conversationID
-    );
-
-    if (conversationExists) {
-      return res
-        .status(400)
-        .json({ error: "Conversation already exists for this user" });
-    }
-
-    user.conversations.push({ conversationID, ticker });
-    await user.save();
-
-    res.json({ message: "Conversation saved successfully" });
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).json({ error: "Server Error" });
-  }
-};
-
-// Code that was used before but now is not bieng used in the project
-// Controller for delete-user - May use later
-// module.exports.deleteUser = async (req, res) => {
-//   try {
-//     // Get the token from the header
-//     const token = req.header("authorization").split(" ")[1];
-//     if (!token) {
-//       return res.status(401).json({ error: "You must be logged in" });
-//     }
-
-//     // Verify the token
-//     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-
-//     // Find the user by their ID
-//     const user = await User.findById(decoded.id);
-//     if (!user) {
-//       return res.status(400).json({ error: "User does not exist" });
-//     }
-
-//     // Delete the user from the database
-//     await User.findByIdAndDelete(decoded.userId);
-
-//     // Respond with a success message
-//     res.json({ message: "User deleted successfully" });
-//   } catch (err) {
-//     handleError(res, err);
-//   }
-// };
 
 // // Controller for user sign-up - Done
 // module.exports.signUp = async (req, res) => {
@@ -444,87 +416,30 @@ module.exports.saveConversation = async (req, res) => {
 //   }
 // };
 
-//   // Controller for user sign-up-2-step-step1 - Done
-// module.exports.basicSignUp = async (req, res) => {
-//   const { name, email, password } = req.body;
-
-//   req.session.basicSignUpInfo = { name, email, password };
-
-//   // console.log(req.session.basicSignUpInfo);
-
-//   res.json({
-//     message: "Basic Info Stored",
-//     name,
-//     email,
-//   });
-// };
-
-// // Controller for user sign-up-2-step-step2 - Done
-// module.exports.preferenceSignUp = async (req, res) => {
+// Controller for delete-user - May use later
+// module.exports.deleteUser = async (req, res) => {
 //   try {
-//     // Retrieve basic sign-up information from session
-//     const basicSignUp = req.session.basicSignUpInfo;
-
-//     if (!basicSignUp || typeof basicSignUp !== "object") {
-//       return res
-//         .status(400)
-//         .json({ error: "Basic sign-up information is missing or invalid" });
+//     // Get the token from the header
+//     const token = req.header("authorization").split(" ")[1];
+//     if (!token) {
+//       return res.status(401).json({ error: "You must be logged in" });
 //     }
 
-//     const {
-//       investmentGoals,
-//       riskTolerence,
-//       amountToInvest,
-//       preferredIndustries,
-//       stockType,
-//     } = req.body;
+//     // Verify the token
+//     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
-//     // console.log({
-//     //   investmentGoals,
-//     //   riskTolerence,
-//     //   amountToInvest,
-//     //   preferredIndustries,
-//     //   stockType,
-//     // });
+//     // Find the user by their ID
+//     const user = await User.findById(decoded.id);
+//     if (!user) {
+//       return res.status(400).json({ error: "User does not exist" });
+//     }
 
-//     // Hash the password
-//     const hashedPassword = await bcrypt.hash(basicSignUp.password, 10);
+//     // Delete the user from the database
+//     await User.findByIdAndDelete(decoded.userId);
 
-//     // Create a new user with preferences
-//     const newUser = new User({
-//       name: basicSignUp.name,
-//       email: basicSignUp.email,
-//       password: hashedPassword,
-//       preferences: {
-//         investmentGoals,
-//         riskTolerence,
-//         amountToInvest,
-//         preferredIndustries,
-//         stockType,
-//       },
-//     });
-
-//     // Save the user to the database
-//     const savedUser = await newUser.save();
-
-//     // Clear the basic sign-up information from the session
-//     req.session.basicSignUp = null;
-
-//     // Respond with success message and user details
-//     res.status(201).json({
-//       message: "User registered successfully",
-//       user: {
-//         name: savedUser.name,
-//         email: savedUser.email,
-//         investmentGoals: savedUser.preferences.investmentGoals,
-//         riskTolerance: savedUser.preferences.riskTolerance,
-//         amountToInvest: savedUser.preferences.amountToInvest,
-//         preferredIndustries: savedUser.preferences.preferredIndustries,
-//         stockType: savedUser.preferences.stockType,
-//       },
-//     });
+//     // Respond with a success message
+//     res.json({ message: "User deleted successfully" });
 //   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: "Error creating user" });
+//     handleError(res, err);
 //   }
 // };

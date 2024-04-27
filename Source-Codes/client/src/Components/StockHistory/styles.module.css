@@ -22,6 +22,14 @@
   position: relative;
 }
 
+.listNumber {
+  font-size: 20px; /* Adjust the font size of the numbers */
+  font-weight: 500;
+  color: #ffffff; /* Adjust the color of the numbers */
+  margin-right: 13px;
+  padding-left: 3px; /* Adjust the margin between number and content */
+}
+
 .shSearchResults li {
   display: flex;
   align-items: center;
@@ -31,6 +39,11 @@
   padding-left: 18px;
   z-index: 999;
   position: relative;
+}
+
+.shItemInfo
+{
+  margin-left: 20px;
 }
 
 .shSearchResults li:last-child {
@@ -106,6 +119,30 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.highlight
+{
+  background-color: #52a0ff;
+}
+
+.blankText
+{
+  color: white;
+  font-family: Outfit;
+  padding: 20px 0px 20px 20px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.errorText
+{
+  color:rgb(248, 163, 65);
+  font-family: Outfit;
+  padding: 20px 0px 20px 0px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 .sRecentIcon {

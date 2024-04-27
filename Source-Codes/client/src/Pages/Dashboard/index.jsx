@@ -9,12 +9,14 @@ import Stocks from '../../Components/Stocks';
 import StockHistory from '../../Components/StockHistory';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserData, removeUserData } from "../../Slices/User/AuthSlice/authSlice";
-import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { useSignoutMutation, useSaveConversationMutation, useCheckPythonQuery } from "../../Slices/User/UserSlice/userApiSlice";
 
 const Dashboard = ({ filteredData }) => {
 
+const { data: pyResponse, error } = useCheckPythonQuery();    
 const name1 = useSelector((state) => state.auth.name);
 const [modifiedName, setModifiedName] = useState('');
+const [pyRunning, setPyRunning] = useState(false);
 const dispatch = useDispatch();
 const [signout] = useSignoutMutation();
 
@@ -29,6 +31,20 @@ const [signout] = useSignoutMutation();
 //       window.removeEventListener('popstate', handleBackButton);
 //     };
 //   }, []);
+
+useEffect(() => {
+    if (error) {
+      console.log("Error occurred while checking Python status:", error);
+      // Check if the error status is 500 (Internal Server Error)
+      if (error.status === 500) {
+        console.log("Internal Server Error: Python server is not running");
+        setPyRunning(false);
+      } 
+    } else {
+      console.log("Python running!");
+      setPyRunning(true);
+    }
+  }, [error]); 
 
   useEffect(() => {
     const names = name1.split(' ');
@@ -58,15 +74,15 @@ const [signout] = useSignoutMutation();
                         <SearchBar placeholder="Search for your desired stocks" data={filteredData} />
                         </div>
                         <div className={styles.stocksContainer}>
-                        <Stocks filteredData={filteredData} pageType="premium" />
+                        <Stocks pyRunning={pyRunning} filteredData={filteredData} />
                         </div>
                         <div className={styles.stocksHistoryContainer}>
-                            <StockHistory filteredData={filteredData} pageType="premium" />
+                            <StockHistory pyRunning={pyRunning} />
                         </div>
                     </div>
 
                     <div className={styles.col2}>
-                        <ElevyChat />
+                        <ElevyChat pyRunning={pyRunning}/>
                     </div>
                 </div>
             </div>

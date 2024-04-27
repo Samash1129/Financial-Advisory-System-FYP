@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "How is the stock market today?"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm happy to help you with your question. However, I'm a large language model, I don't have access to real-time stock market data. The stock market can be volatile and can change rapidly, so I cannot provide you with accurate and up-to-date information.\n\nBut, I can suggest some reputable sources where you can find the latest stock market news and data. Some popular options include:\n\n1. Yahoo Finance: Yahoo Finance is a popular website that provides real-time stock quotes, financial news, and market data.\n2. Google Finance: Google Finance is another reliable source for stock market news and data. It provides real-time quotes, financial news, and market data.\n3. Bloomberg: Bloomberg is a well-known financial news and data provider that offers real-time stock quotes, financial news, and market data.\n4. Investing.com: Investing.com is a financial portal that provides real-time stock quotes, financial news, and market data.\n\nRemember, it's always important to consult multiple sources and do your own research before making any investment decisions.\n\nIs there anything else I can help you with?"
+  }
+]

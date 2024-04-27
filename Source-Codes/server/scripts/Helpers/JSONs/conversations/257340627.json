@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\ude0a Hello there! I'm here to help answer any questions you may have about investing in the stock market. Do you have a specific question or topic you'd like to discuss? \ud83e\udd14"
+  }
+]

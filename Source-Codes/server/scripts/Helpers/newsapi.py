@@ -37,7 +37,6 @@ def save_to_db(query, data):
     client.close()
     
 def save_to_json(ticker, data):
-    # directory = "query_responses"
     directory = "JSONs/query_responses"
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -104,8 +103,7 @@ def retrieve_all_articles(queries):
 
 def fetch_news_for_all_queries():
     try:
-        # queries = load_queries("queries2.json")
-        queries = load_queries("scripts\Helpers\JSONs\queries2.json")
+        queries = load_queries("JSONs/queries2.json")
         all_articles = retrieve_all_articles(queries)
         for ticker, news in all_articles.items():
             all_text = ""

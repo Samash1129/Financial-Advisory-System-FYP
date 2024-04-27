@@ -8,7 +8,8 @@ import PlaceholderImage from "../../Assets/Images/placeholder.jpg";
 import Initializer from "../../Components/InitializingAnimation";
 import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { removeUserData } from "../../Slices/User/AuthSlice/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import {
   removeHistoryStock,
   removeRecommendedStocks,
@@ -22,11 +23,9 @@ const LandingPage = () => {
   const handleSignUp = () => {
     navigate("/getstarted"); // Navigate to the GetStarted page when Sign Up button is clicked
   };
-
-  // const handleSignIn = () => {
-  //   navigate("/signin"); // Navigate to the SignIn page when Sign In button is clicked
-  // };
-  
+  const handleSignIn = () => {
+    navigate("/signin"); // Navigate to the SignIn page when Sign In button is clicked
+  };
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showInitializer, setShowInitializer] = useState(true);
 
@@ -44,7 +43,7 @@ const LandingPage = () => {
     }, 3000);
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
-  }, [dispatch, signout]);
+  }, []);
 
   return (
     <div className="landing-page">
@@ -60,9 +59,9 @@ const LandingPage = () => {
               <a href="#about-us">ABOUT US</a>
             </nav>
             <div className="auth-buttons">
-              {/* <button className="sign-in-btn" onClick={handleSignIn}>
+              <button className="sign-in-btn" onClick={handleSignIn}>
                 Sign In
-              </button> */}
+              </button>
               <button className="sign-up-btn" onClick={handleSignUp}>
                 Get Started
               </button>

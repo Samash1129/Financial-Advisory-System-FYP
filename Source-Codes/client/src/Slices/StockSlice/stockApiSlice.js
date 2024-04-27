@@ -13,11 +13,30 @@ export const stockApiSlice = apiSlice.injectEndpoints({
                 url: '/recentstocks',
                 method: 'GET'
             })
-        })
+        }),
+       
+        elevychat: builder.mutation({
+            query: (data) => ({
+                url: '/elevychat',
+                method: 'POST',
+                body: data, 
+            })
+        }),
+
+        fetchChatHistory: builder.mutation({
+            query: (data) => ({
+              url: '/getChatHistory',
+              method: 'POST',
+              body: data,
+            })
+          })
+
     })
-})
+});
 
 export const { 
     useGetRecommendedStocksQuery,
-    useGetHistoryStockQuery
+    useGetHistoryStockQuery,
+    useElevychatMutation,
+    useFetchChatHistoryMutation
 } = stockApiSlice;

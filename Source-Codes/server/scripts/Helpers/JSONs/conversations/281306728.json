@@ -1,0 +1,22 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "asdasdsad"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\ude0a Hey there! I'm here to help. How can I assist you today? \ud83e\udd16 Do you have any questions or topics you'd like to discuss? \ud83e\uddd0"
+  },
+  {
+    "role": "user",
+    "content": "dasdasd"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\ude0a Sorry, it looks like you entered a spaceship command. Can you please provide more context or clarify what you are trying to say? I'm here to help with any questions or problems you might have. \ud83e\udd16["
+  }
+]

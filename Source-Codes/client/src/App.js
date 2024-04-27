@@ -18,71 +18,11 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from './store/store';
+import { bankNames } from './constants';
 
 
 function App() {
-  const filteredData = [
-    {
-      securityName: "Meezan Bank Ltd",
-      tickerSymbol: "MEZN",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Silk Bank Ltd",
-      tickerSymbol: "SILK",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Askari Bank Ltd",
-      tickerSymbol: "AKBL",
-      stockPrice: "48,354",
-      category: "Banking",
-    },
-    {
-      securityName: "Habib Bank Limited",
-      tickerSymbol: "HBL",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Dubai Islamic Bank",
-      tickerSymbol: "DIB",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Meezan Bank Ltd",
-      tickerSymbol: "MEZN",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Silk Bank Ltd",
-      tickerSymbol: "SILK",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Askari Bank Ltd",
-      tickerSymbol: "AKBL",
-      stockPrice: "48,354",
-      category: "Banking",
-    },
-    {
-      securityName: "Habib Bank Limited",
-      tickerSymbol: "HBL",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Dubai Islamic Bank",
-      tickerSymbol: "DIB",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-  ];
+  const filteredData = bankNames;
 
   const router = createBrowserRouter(
     createRoutesFromElements(

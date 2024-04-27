@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const { toString } = require("express-validator/src/utils");
+const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -17,31 +18,35 @@ const userSchema = new mongoose.Schema({
   },
   preferences: {
     investmentGoals: {
-      type: String
+      type: String,
     },
     riskTolerance: {
-      type: String
+      type: String,
     },
     amountToInvest: {
-      type: Number
+      type: Number,
     },
-    preferredIndustries: [{
-      type: String
-    }],
+    preferredIndustries: [
+      {
+        type: String,
+      },
+    ],
     stockType: {
-      type: String
-    }
-  },
-  conversations: [{
-    conversationID: {
-      type: String
+      type: String,
     },
-    ticker: {
-      type: String
-    }
-  }]
+  },
+  conversations: [
+    {
+      conversationID: {
+        type: String,
+      },
+      ticker: {
+        type: String,
+      },
+    },
+  ],
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;

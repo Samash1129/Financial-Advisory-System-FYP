@@ -17,8 +17,24 @@
   border-radius: 0px 0px 8px 8px;
 }
 
+
 .ssearchResults::-webkit-scrollbar {
-  width: 0; /* hide the scrollbar */
+  width: 4.5px;
+  z-index: 0;
+}
+
+.ssearchResults::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px;
+}
+
+.ssearchResults::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+.highlight
+{
+  background-color: #52a0ff;
 }
 
 .ssearchResults li {

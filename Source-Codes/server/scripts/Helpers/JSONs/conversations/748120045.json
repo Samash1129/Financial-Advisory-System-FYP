@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "Define investment very briefly"
+  },
+  {
+    "role": "assistant",
+    "content": "Investment is the act of allocating money or assets towards something with the expectation of earning profits or returns in the future. It can involve buying stocks, bonds, real estate, or other financial instruments, and is often done through various financial platforms or institutions. \n\nPlease let me know if you have any other questions!"
+  }
+]

@@ -1,8 +1,8 @@
+const Db = "mongodb+srv://dev:CITsI6uEkchPWJmV@elev8.rzawmjq.mongodb.net/";
+
+
+
 const mongoose = require("mongoose");
-
-
-const Db = process.env.ATLAS_URI;
-
 //configure mongoose
 mongoose.connect(Db, {
   useNewUrlParser: true,
