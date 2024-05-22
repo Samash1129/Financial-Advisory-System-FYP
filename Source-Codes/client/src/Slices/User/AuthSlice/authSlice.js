@@ -49,10 +49,23 @@ const authSlice = createSlice({
             console.log("Current ConvoID:", state.currentConvoID);
 
         },
+        
         updateConversations: (state, action) => {
-            state.conversations = [...state.conversations, ...action.payload];
-            console.log("Conversations:", state.conversations);
+            const newConvo = action.payload;
+            const existingIndex = state.conversations.findIndex(convo => convo.conversationID === newConvo.conversationID);
+            
+            if (existingIndex !== -1) {
+                state.conversations[existingIndex] = {
+                    ...state.conversations[existingIndex],
+                    lastModified: newConvo.lastModified
+                };
+            } else {
+                state.conversations.push(newConvo);
+            }
+        
+            //console.log("Conversations:", state.conversations);
         },
+        
         updateCurrentChatHistory: (state, action) => {
             const currentChatHistory = action.payload;
             state.currentChatHistory = currentChatHistory;

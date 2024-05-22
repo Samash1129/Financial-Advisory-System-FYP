@@ -1,0 +1,65 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  /* background-color: lightcoral; */
+  height: 100%;
+}
+
+.headerIcons {
+  display: flex;
+  margin-left: auto;
+}
+.headerIcon {
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  
+}
+.iconContainer {
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  position: relative;
+}
+.iconContainer:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.17);
+}
+.iconContainer:hover::after {
+  content: attr(data-tooltip); /* Update this line */
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #fff;
+  font-family: Outfit;
+  font-weight: 400;
+  line-height: 0px;
+  padding: 11px;
+  /* Add z-index to ensure the tooltip is above other elements if necessary */
+  z-index: 100;
+  backdrop-filter: blur(25px);
+}
+
+.userName
+{
+  font-family: "Outfit";
+  color: white;
+  background-color: #3692ff;
+  padding:7px 20px 7px 20px;
+  border-radius: 20px;
+  margin-left: 0%;
+  font-size: 16px;
+}

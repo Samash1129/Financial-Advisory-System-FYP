@@ -13,6 +13,39 @@ import { updateConversations, updateCurrentChatHistory, updateCurrentTicker, upd
 import { bankNames } from "../../constants";
 import ErrorIcon from '@mui/icons-material/Error';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { ArrowForward } from "@mui/icons-material";
+import { styled } from '@mui/system';
+
+const StyledOutlinedInput = styled(OutlinedInput)(({ theme }) => ({
+  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  color: 'rgba(255, 255, 255, 1)',
+  width: '100%',
+  borderRadius: '6px',
+  fontFamily: '"Outfit", sans-serif',
+  fontWeight: 400,
+  lineHeight: 'normal',
+  paddingRight: '0',
+  height: '55px',
+  '& .MuiOutlinedInput-notchedOutline': {
+    border: 'none',
+  },
+}));
+
+const SendMessageButton = styled(ArrowForward)(({ theme }) => ({
+  background: 'rgba(255, 255, 255, 0.1)',
+  padding: '0px 18px',
+  color: 'white',
+  cursor: 'pointer',
+  right: '0',
+  height: '55px',
+  fontSize: '25px',
+  borderTopRightRadius: '6px',
+  borderBottomRightRadius: '6px'
+}));
 
 const ElevyChat = ({pyRunning}) => {
   const userState = useSelector(state => state.auth);
@@ -25,9 +58,13 @@ const ElevyChat = ({pyRunning}) => {
   const [responses, setResponses] = useState([]);
   const psrSummaryContainerRef = useRef(null);
   const dispatch = useDispatch();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (message.trim() === "") {
+      return;
+    }
     setUserInputs([...userInputs, message]);
     setMessage("");
     try {
@@ -37,14 +74,14 @@ const ElevyChat = ({pyRunning}) => {
       const ticker = userState.currentTicker;
       dispatch(updateCurrentConvoID(conversationID));
       const saveResponse = await saveConvoID({conversationID, ticker}); 
-      if (userState.currentConvoID != conversationID)
-      {
+      
       const newConversation = {
-        conversationID: conversationID,
-        ticker: ticker
+        conversationID: saveResponse.data.conversationID,
+        ticker: saveResponse.data.ticker,
+        lastModified: saveResponse.data.lastModified
       };
-      dispatch(updateConversations([newConversation]));
-      }
+    
+      dispatch(updateConversations(newConversation));
         
       console.log(response);
       setResponses([...responses, response.data.conversation_history[response.data.conversation_history.length - 1].content]);
@@ -59,13 +96,16 @@ const ElevyChat = ({pyRunning}) => {
   };
 
   useEffect(() => {
-    console.log("Py running:",pyRunning);
     dispatch(updateCurrentTicker(""));
   }, []);
 
   useEffect(() => {
     psrSummaryContainerRef.current.scrollTop = psrSummaryContainerRef.current.scrollHeight;
-  }, [responses]);
+  }, [responses, userInputs]);
+
+  useEffect(() => {
+    psrSummaryContainerRef.current.scrollTop = 0;
+}, [userState.currentTicker]);
 
 
   useEffect(() => {
@@ -97,7 +137,7 @@ const ElevyChat = ({pyRunning}) => {
         <div className={styles.psrHeader}>
           <img src={ElevyGPT} alt="Reports" className={styles.psrIcon} />
           <div className={styles.psrTitleContainer}>
-            <div className={styles.psrMainTitle}>Elevy</div>
+            <div className={styles.psrMainTitle}>Elevy -</div>
             <div className={styles.psrCompanyTitle}>
             {userState.currentTicker && bankNames.find(bank => bank.tickerSymbol === userState.currentTicker)?.securityName}
             </div>
@@ -111,7 +151,7 @@ const ElevyChat = ({pyRunning}) => {
 
         {pyRunning !== true && (
         <div className={styles.errorText}><ReportProblemIcon className={styles.warningIcon}/>
-        &nbsp;&nbsp;Not connected to chat server<br/>Elevy can't be initialized
+        &nbsp;&nbsp;Elevy can't be initialized
         </div>
         )}
 
@@ -147,26 +187,29 @@ const ElevyChat = ({pyRunning}) => {
 </div>
       </div>
 
+        
       {pyRunning==true && userState.currentTicker!="" && (
       <div className={styles.psrInputContainer}>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className={styles.psrInputField}
+        <StyledOutlinedInput
             placeholder="Message Elevy"
             value={message}
             onChange={handleMessageChange}
+            endAdornment={
+              <InputAdornment position="end">
+                <SendMessageButton onClick={handleSubmit}/>
+              </InputAdornment>
+            }
+            
           />
-          <button type="submit" className={styles.psrInputButton}>
-            <img src={Send} alt="Send" className={styles.psrInputIcon} />
-          </button>
-        </form>
+          </form>
       </div> )}
+        
 
       {pyRunning==true && userState.currentTicker!="" && (
       <div className={styles.DisclaimerContainer}>
         <p className={styles.psrDisclaimerParagraph}>
-          Elevy can make mistakes. Consider fact-checking important information.
+          Elevy can make mistakes. Always verify important information.
         </p>
       </div> )}
       

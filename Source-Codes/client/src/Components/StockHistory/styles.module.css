@@ -1,25 +1,25 @@
 .shSearchContainer {
-  width: 99.6%;
-  height: 100%;
+  width: 100%;
+  height: 28vh;
   margin: 0 auto;
-  overflow-y: auto;
   font-family: "Outfit", sans-serif;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   z-index: 999;
   position: relative;
+  
 }
 
 .shSearchResults {
   padding: 0;
   margin: 0;
   overflow-y: auto;
-  height: 182px; /* Fixed height for container */
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
   border-radius: 0px 0px 8px 8px;
   z-index: 999;
-  position: relative;
+  height: 22vh;
+  
 }
 
 .listNumber {
@@ -43,7 +43,7 @@
 
 .shItemInfo
 {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .shSearchResults li:last-child {
@@ -70,7 +70,7 @@
 
 .shSymbol {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: regular;
   color: #ffffff;
   margin-bottom: -3px;
 }
@@ -132,7 +132,7 @@
   font-family: Outfit;
   padding: 20px 0px 20px 20px;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  user-select: none;
 }
 
 .errorText
@@ -141,8 +141,15 @@
   font-family: Outfit;
   padding: 20px 0px 20px 0px;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+ 
   text-align: center;
+  user-select: none;
+}
+
+.warningIcon {
+  font-size: 30px;
+  padding-top: 0px;
+  vertical-align: bottom;
 }
 
 .sRecentIcon {
@@ -161,6 +168,7 @@
   font-weight: 500;
   line-height: normal;
   margin-top: 5px;
+  user-select: none;
 }
 
 .shSearchResults::-webkit-scrollbar {

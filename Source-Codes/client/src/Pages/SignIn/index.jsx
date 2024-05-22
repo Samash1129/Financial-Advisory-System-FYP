@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSigninMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { setUserData, removeUserData } from "../../Slices/User/AuthSlice/authSlice";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
+import { Grid, Box} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 const SignIn = () => {
@@ -20,6 +22,7 @@ const SignIn = () => {
   const [passwordError, setPasswordError] = useState("");
   const [isFailure, setFailure] = useState(false);
   const [topError, setTopError] = useState('');
+  const isMobile = useMediaQuery('(max-width:900px)');
 
   const dispatch = useDispatch();
   const [signout] = useSignoutMutation();
@@ -109,8 +112,10 @@ const SignIn = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftContainer}>
+    <Box sx={{ flexGrow: 1 }}>
+    <Grid container spacing={0} className={styles.container}>
+    {!isMobile &&
+      <Grid item xs={12} md={6}  className={styles.leftContainer}>
         <div className={styles.logo}>
           <LogoAnimation />
         </div>
@@ -119,8 +124,9 @@ const SignIn = () => {
           alt="Cover Image"
           className={styles.coverImage}
         />
-      </div>
-      <div className={styles.rightContainer}>
+      </Grid>
+      }
+      <Grid item xs={12} md={6} className={styles.rightContainer}>
       { isLoading && <LoadingSpinner loadingText="Signing In" /> } 
         <LoadingSpinner loadingText={loadingText1}>
           <div className={styles.signInContainer}>
@@ -168,8 +174,9 @@ const SignIn = () => {
             </form>
           </div>
         </LoadingSpinner>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
+    </Box>
   );
 };
 

@@ -14,6 +14,8 @@ import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { useDeleteUserMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { removeUserData, setUserData } from "../../Slices/User/AuthSlice/authSlice";
+import { Grid, Box} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
@@ -24,6 +26,7 @@ const Preferences = () => {
   const [stockType, setStockType] = useState("");
   const [amountToInvest, setAmountToInvest] = useState("");
   const [error, setError] = useState('');
+  const isMobile = useMediaQuery('(max-width:900px)');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -136,19 +139,22 @@ const Preferences = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftContainer}>
-        <div className={styles.logo}>
-          <LogoAnimation />
-        </div>
-        <img
-          src={backgroundImage}
-          alt="Cover Image"
-          className={styles.coverImage}
-        />
-      </div>
+    <Box sx={{ flexGrow: 1 }}>
+    <Grid container spacing={0} className={styles.container}>
+        {!isMobile &&
+        <Grid item xs={12} md={6} className={styles.leftContainer}>
+          <div className={styles.logo}>
+            <LogoAnimation />
+          </div>
+          <img
+            src={backgroundImage}
+            alt="Cover Image"
+            className={styles.coverImage}
+          />
+        </Grid>
+        }
 
-      <div className={styles.rightContainer}>
+      <Grid item xs={12} md={6} className={styles.rightContainer}>
       { isLoading && <LoadingSpinner loadingText="Saving Preferences" /> }
         <div className={styles.preferences}>
           <NavBar
@@ -213,16 +219,19 @@ const Preferences = () => {
                 label="Banking"
                 onClick={() => handleTogglePreferredIndustry("Banking")}
                 isSelected={preferredIndustries.includes("Banking")}
+                isRestricted={false}
               />
               <ToggleButton
                 label="Textile"
-                onClick={() => handleTogglePreferredIndustry("Textile")}
-                isSelected={preferredIndustries.includes("Textile")}
+                // onClick={() => handleTogglePreferredIndustry("Automobile")}
+                // isSelected={preferredIndustries.includes("Automobile")}
+                isRestricted={true}
               />
               <ToggleButton
                 label="Automobile"
-                onClick={() => handleTogglePreferredIndustry("Automobile")}
-                isSelected={preferredIndustries.includes("Automobile")}
+                // onClick={() => handleTogglePreferredIndustry("Automobile")}
+                // isSelected={preferredIndustries.includes("Automobile")}
+                isRestricted={true}
               />
             </div>
           </div>
@@ -240,8 +249,9 @@ const Preferences = () => {
             <Button text="Save Preferences" onClick={handleSubmit} />
           </div>
         </div>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
+    </Box>
   );
 };
 

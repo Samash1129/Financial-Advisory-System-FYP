@@ -20,6 +20,80 @@ module.exports.getAllUsers = async (req, res) => {
   }
 };
 
+// // Controller for user sign-up - Done
+// module.exports.signUp = async (req, res) => {
+//   // Check for validation errors
+//   const errors = validationResult(req);
+//   if (!errors.isEmpty()) {
+//     return res.status(400).json({ errors: errors.array() });
+//   }
+
+//   try {
+//     const { name, password, email, role, preferences } = req.body;
+//     // Email must be unique
+//     let user = await User.findOne({ email });
+//     if (user) {
+//       return res.status(400).json({ error: "Email already exists" });
+//     }
+
+//     // Hash the password
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     // Create a new user
+//     const newUser = new User({
+//       name,
+//       password: hashedPassword,
+//       email,
+//       role,
+//       preferences,
+//     });
+
+//     await newUser.save();
+
+//     const accessToken = jwt.sign(
+//       { id: newUser._id },
+//       process.env.ACCESS_TOKEN_SECRET,
+//       {
+//         expiresIn: "4h",
+//       }
+//     );
+//     const refreshToken = jwt.sign(
+//       { id: newUser._id },
+//       process.env.REFRESH_TOKEN_SECRET,
+//       {
+//         expiresIn: "1d",
+//       }
+//     );
+
+//     // save the token in cookie
+//     res.cookie("accessToken", accessToken, {
+//       httpOnly: true,
+//       secure: true,
+//       sameSite: "strict",
+//       maxAge: 1000 * 60 * 60 * 4,
+//       // 4 hours
+//     });
+
+//     res.cookie("refreshToken", refreshToken, {
+//       httpOnly: true,
+//       secure: true,
+//       sameSite: "strict",
+//       maxAge: 1000 * 60 * 60 * 24,
+//       // 1 day
+//     });
+
+//     res.json({
+//       message: "Sign up successful",
+//       accessToken,
+//       refreshToken,
+//       email,
+//       name,
+//       preferences,
+//     });
+//   } catch (err) {
+//     handleError(res, err);
+//   }
+// };
+
 // Controller for user sign-up-2-step-step1 - Done
 module.exports.tempSignUp = async (req, res) => {
   const { name, email, password } = req.body;
@@ -130,6 +204,10 @@ module.exports.signIn = async (req, res) => {
       }
     );
 
+    // Set the Authorization header
+    res.setHeader("Authorization", `Bearer ${accessToken}`);
+    console.log("Authorization Header Set: ", res.getHeader("Authorization"));
+
     const refreshToken = jwt.sign(
       { id: user._id },
       process.env.REFRESH_TOKEN_SECRET,
@@ -159,6 +237,7 @@ module.exports.signIn = async (req, res) => {
       name: user.name,
       preferences: user.preferences,
       conversations: user.conversations,
+      accessToken: accessToken,
     });
 
     //console.log("access token cookie: ",req.cookies.accessToken);
@@ -167,8 +246,53 @@ module.exports.signIn = async (req, res) => {
   }
 };
 
-// Controller for update-profile - Done
+// // Controller for update-profile - Done
+// module.exports.updateProfile = async (req, res) => {
+//   // Check for validation errors
+//   const errors = validationResult(req);
+//   if (!errors.isEmpty()) {
+//     return res.status(400).json({ errors: errors.array() });
+//   }
+
+//   try {
+//     // const token = req.header("authorization").split(" ")[1];
+//     const token = req.cookies.accessToken;
+
+//     if (!token) {
+//       return res.status(401).json({ error: "You must be logged in" });
+//     }
+//     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+//     const updatedUser = {};
+//     if (req.body.name) {
+//       updatedUser.name = req.body.name;
+//     }
+
+//     if (req.body.password && req.body.password !== "") {
+//       const hashedPassword = await bcrypt.hash(req.body.password, 10);
+//       updatedUser.password = hashedPassword;
+//     }
+
+//     const user = await User.findByIdAndUpdate(decoded.id, updatedUser, {
+//       new: true,
+//     });
+//     if (!user) {
+//       return res.status(400).json({ error: "User does not exist" });
+//     }
+
+//     res.json({
+//       name: user.name,
+//       cookie: token
+//     });
+//   } catch (err) {
+//     console.log(err.message);
+//     handleError(res, err);
+//   }
+// };
+
 module.exports.updateProfile = async (req, res) => {
+  console.log("hi");
+  console.log(req.headers);
   // Check for validation errors
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -176,15 +300,29 @@ module.exports.updateProfile = async (req, res) => {
   }
 
   try {
-    // const token = req.header("authorization").split(" ")[1];
+    // Extract the Authorization header and access token from cookies
+    const authHeader = req.headers["authorization"];
     const token = req.cookies.accessToken;
 
-    if (!token) {
+    console.log("authHeader", authHeader);
+    console.log("token", token);
+
+    let decoded;
+    let jwtToken;
+
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      jwtToken = authHeader.split(" ")[1];
+    } else if (token) {
+      jwtToken = token;
+    } else {
       return res.status(401).json({ error: "You must be logged in" });
     }
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    // Verify the token
+    decoded = jwt.verify(jwtToken, process.env.ACCESS_TOKEN_SECRET);
 
     const updatedUser = {};
+
     if (req.body.name) {
       updatedUser.name = req.body.name;
     }
@@ -197,6 +335,7 @@ module.exports.updateProfile = async (req, res) => {
     const user = await User.findByIdAndUpdate(decoded.id, updatedUser, {
       new: true,
     });
+
     if (!user) {
       return res.status(400).json({ error: "User does not exist" });
     }
@@ -211,7 +350,6 @@ module.exports.updateProfile = async (req, res) => {
   }
 };
 
-// Controller for save-conversation - Done
 module.exports.saveConversation = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -235,20 +373,28 @@ module.exports.saveConversation = async (req, res) => {
       return res.status(400).json({ error: "User does not exist" });
     }
 
-    const conversationExists = user.conversations.some(
+    const currentDateTime = new Date();
+    const conversation = user.conversations.find(
       (conversation) => conversation.conversationID === conversationID
     );
 
-    if (conversationExists) {
-      return res
-        .status(400)
-        .json({ error: "Conversation already exists for this user" });
+    if (conversation) {
+      conversation.lastModified = currentDateTime;
+    } else {
+      user.conversations.push({
+        conversationID,
+        ticker,
+        lastModified: currentDateTime,
+      });
     }
-
-    user.conversations.push({ conversationID, ticker });
     await user.save();
 
-    res.json({ message: "Conversation saved successfully" });
+    res.json({
+      message: "Conversation saved successfully",
+      conversationID,
+      ticker,
+      lastModified: currentDateTime,
+    });
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ error: "Server Error" });
@@ -268,8 +414,7 @@ module.exports.signout = async (req, res) => {
     handleError(res, err);
   }
 };
-
-// Controller for get-profile - Done 
+// Controller for get-profile - Done
 module.exports.getProfile = async (req, res) => {
   try {
     // Get the token from the header
@@ -317,105 +462,6 @@ module.exports.refreshToken = async (req, res) => {
   }
 };
 
-// Controller for delete-user 
-module.exports.deleteUser = async (req, res) => {
-  try {
-    // Get the email address from the request body
-    const email = req.body.email;
-    if (!email) {
-      return res.status(400).json({ error: "Email address is required" });
-    }
-
-    // Find the user by their email address
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ error: "User not found" });
-    }
-
-    // Delete the user from the database
-    await User.findByIdAndDelete(user._id);
-
-    // Respond with a success message
-    res.json({ message: "User deleted successfully" });
-  } catch (err) {
-    handleError(res, err);
-  }
-};
-
-// // Controller for user sign-up - Done
-// module.exports.signUp = async (req, res) => {
-//   // Check for validation errors
-//   const errors = validationResult(req);
-//   if (!errors.isEmpty()) {
-//     return res.status(400).json({ errors: errors.array() });
-//   }
-
-//   try {
-//     const { name, password, email, role, preferences } = req.body;
-//     // Email must be unique
-//     let user = await User.findOne({ email });
-//     if (user) {
-//       return res.status(400).json({ error: "Email already exists" });
-//     }
-
-//     // Hash the password
-//     const hashedPassword = await bcrypt.hash(password, 10);
-//     // Create a new user
-//     const newUser = new User({
-//       name,
-//       password: hashedPassword,
-//       email,
-//       role,
-//       preferences,
-//     });
-
-//     await newUser.save();
-
-//     const accessToken = jwt.sign(
-//       { id: newUser._id },
-//       process.env.ACCESS_TOKEN_SECRET,
-//       {
-//         expiresIn: "4h",
-//       }
-//     );
-//     const refreshToken = jwt.sign(
-//       { id: newUser._id },
-//       process.env.REFRESH_TOKEN_SECRET,
-//       {
-//         expiresIn: "1d",
-//       }
-//     );
-
-//     // save the token in cookie
-//     res.cookie("accessToken", accessToken, {
-//       httpOnly: true,
-//       secure: true,
-//       sameSite: "strict",
-//       maxAge: 1000 * 60 * 60 * 4,
-//       // 4 hours
-//     });
-
-//     res.cookie("refreshToken", refreshToken, {
-//       httpOnly: true,
-//       secure: true,
-//       sameSite: "strict",
-//       maxAge: 1000 * 60 * 60 * 24,
-//       // 1 day
-//     });
-
-//     res.json({
-//       message: "Sign up successful",
-//       accessToken,
-//       refreshToken,
-//       email,
-//       name,
-//       preferences,
-//     });
-//   } catch (err) {
-//     handleError(res, err);
-//   }
-// };
-
 // Controller for delete-user - May use later
 // module.exports.deleteUser = async (req, res) => {
 //   try {
@@ -443,3 +489,27 @@ module.exports.deleteUser = async (req, res) => {
 //     handleError(res, err);
 //   }
 // };
+
+module.exports.deleteUser = async (req, res) => {
+  try {
+    // Get the email address from the request body
+    const email = req.body.email;
+    if (!email) {
+      return res.status(400).json({ error: "Email address is required" });
+    }
+
+    // Find the user by their email address
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Delete the user from the database
+    await User.findByIdAndDelete(user._id);
+
+    // Respond with a success message
+    res.json({ message: "User deleted successfully" });
+  } catch (err) {
+    handleError(res, err);
+  }
+};

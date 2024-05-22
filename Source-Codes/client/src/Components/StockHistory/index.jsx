@@ -1,4 +1,4 @@
-import {React, useEffect } from 'react';
+import {React, useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
@@ -8,15 +8,20 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateCurrentChatHistory, updateCurrentTicker, updateCurrentConvoID } from "../../Slices/User/AuthSlice/authSlice";
 import { useFetchChatHistoryMutation } from "../../Slices/StockSlice/stockApiSlice";
 import { bankNames } from "../../constants";
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 
 
 const StockHistory = ({pyRunning}) => {
 
     const userState = useSelector((state) => state.auth);
-    let chats = userState.conversations;
-    chats = chats.slice().reverse();
+    const [sortedChats, setSortedChats] = useState([]);
     const dispatch = useDispatch();
     const [chatHistory] = useFetchChatHistoryMutation();
+
+    useEffect(() => {
+        const chats = userState.conversations.slice().sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified));
+        setSortedChats(chats);
+    }, [userState.conversations]);
 
     const handleItemClick = async (conversationID, ticker) => {
         const history = await chatHistory({ conversation_id: conversationID});
@@ -32,14 +37,8 @@ const StockHistory = ({pyRunning}) => {
                 <div className={styles.sRecentTitle}>Chat History</div>
             </div>
 
-            {pyRunning!=true || chats.length === 0 ? (
-                <div className={pyRunning !== true ? styles.errorText : styles.blankText}>
-                {pyRunning !== true ? "Chats couldn't be loaded" : "No chats to show"}
-                </div>
-            ) : (
-                
             <ul className={styles.shSearchResults}>
-                {pyRunning==true && chats.map((conversation, index) => (
+                {pyRunning==true && sortedChats.map((conversation, index) => (
                     <li 
                     className={`${styles.shSearchItem} ${conversation.conversationID === userState.currentConvoID && userState.currentTicker!="" ? styles.highlight : ''}`}
                     key={index} 
@@ -52,8 +51,14 @@ const StockHistory = ({pyRunning}) => {
                         </div>
                     </li>
                 ))}
+
+                {(pyRunning!=true || sortedChats.length === 0) &&
+                <div className={pyRunning !== true ? styles.errorText : styles.blankText}>
+                {pyRunning !== true && <ReportProblemIcon className={styles.warningIcon}/> }
+                {pyRunning !== true ? "  Chats can't be loaded" : "No chats to show"}
+                </div> }
             </ul>
-        )}
+        
         </div>
     );
 };

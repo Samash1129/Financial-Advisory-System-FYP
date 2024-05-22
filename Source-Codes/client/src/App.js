@@ -1,12 +1,7 @@
-import {
-  Route,
-  Routes,
-  Navigate,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
+import { Route, Routes, Navigate, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
+import Services from "./Pages/Services/Services";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
@@ -30,6 +25,8 @@ function App() {
         <Route path="/" index={true} element={<LandingPage />} />
         <Route path="/getstarted" element={<GetStarted />} />
         <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="" element={<PrivateRoute />}>

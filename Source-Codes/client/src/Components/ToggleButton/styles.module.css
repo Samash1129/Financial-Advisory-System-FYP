@@ -33,3 +33,9 @@
   transition: 0.4s;
   
 }
+
+.restricted
+{
+  cursor: not-allowed;
+  background-color: rgb(212, 212, 212);
+}

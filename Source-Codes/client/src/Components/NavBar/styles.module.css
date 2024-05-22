@@ -15,18 +15,26 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  width: min-content;
+  padding: 6px;
+  border-radius: 5px;
+  margin-left: 4px;
+}
+
+.backButtonContainer:hover {
+  background-color:#f4f4f4;
+}
+
+.backTitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: #3692ff;
 }
 
 .backArrow {
   width: 12px;
   height: auto;
   margin-right: 5px;
-}
-
-.backTitle {
-  font-size: 18px;
-  font-weight: 500;
-  color: #3692ff;
 }
 
 .titleContainer h1 {

@@ -5,6 +5,7 @@ import { combineReducers } from 'redux';
 
 import authSlice from '../Slices/User/AuthSlice/authSlice';
 import stockSlice from '../Slices/StockSlice/stockSlice';
+import stockSearchSlice from '../Slices/StockSlice/stockSearchSlice';
 import { apiSlice } from '../Slices/ApiSlice/apiSlice';
 import previousPageSlice from '../Slices/PageSlice/pageSlice';
 import { stockApiSlice } from '../Slices/StockSlice/stockApiSlice';
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   api: apiSlice.reducer,
   previousPage: previousPageSlice,
   stockSlice: stockSlice,
+  stockSearch: stockSearchSlice,
   page: pageSlice
 });
 

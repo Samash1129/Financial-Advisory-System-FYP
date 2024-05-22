@@ -1,1 +1,32 @@
-{"HistoricalHighLow": {"High": {"Date": "2024-04-24", "Value": 99.5}, "Low": {"Date": "2024-04-15", "Value": 86.0}}, "PredictedHighLow": {"High": {"Date": "2024-04-29", "Value": 99.12893676757812}, "Low": {"Date": "2024-05-04", "Value": 93.17792510986328}}, "PredictedOpenClose": {"Open": {"Date": "2024-04-27", "Value": 89.07845306396484}, "Close": {"Date": "2024-04-27", "Value": 95.40174102783203}}}
+{
+    "HistoricalHighLow": {
+        "High": {
+            "Date": "2024-04-24",
+            "Value": 99.5
+        },
+        "Low": {
+            "Date": "2024-04-15",
+            "Value": 86.0
+        }
+    },
+    "PredictedHighLow": {
+        "High": {
+            "Date": "2024-04-29",
+            "Value": 99.12893676757812
+        },
+        "Low": {
+            "Date": "2024-05-04",
+            "Value": 93.17792510986328
+        }
+    },
+    "PredictedOpenClose": {
+        "Open": {
+            "Date": "2024-04-27",
+            "Value": 89.07845306396484
+        },
+        "Close": {
+            "Date": "2024-04-27",
+            "Value": 95.40174102783203
+        }
+    }
+}

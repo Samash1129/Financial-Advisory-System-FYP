@@ -12,6 +12,8 @@ import { useSignUpTempMutation } from "../../Slices/User/UserSlice/userApiSlice"
 import { useDispatch, useSelector } from "react-redux";
 import { setUserData } from "../../Slices/User/AuthSlice/authSlice";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
+import { Grid, Box} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -23,6 +25,7 @@ const SignUp = () => {
   const [passwordError, setPasswordError] = useState("");
   const [topError, setTopError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  const isMobile = useMediaQuery('(max-width:900px)');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -140,89 +143,93 @@ const SignUp = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftContainer}>
-        <div className={styles.logo}>
-          <LogoAnimation />
-        </div>
-        <img
-          src={backgroundImage}
-          alt="Cover Image"
-          className={styles.coverImage}
-        />
-      </div>
-
-      <div className={styles.rightContainer}>
-        <LoadingSpinner loadingText={loadingText1}>
-          <div className={styles.signUpContainer}>
-            <NavBar
-              title="Sign Up"
-              handleBackButtonClick={handleBackButtonClick}
-            />
-            {topError && <div className={styles.topError}>{topError}</div>}
-            <form className={styles.signUpForm} onSubmit={handleSubmit}>
-              <label htmlFor="name">FULL NAME</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                value={name}
-                onChange={handleNameChange}
-              />
-              {nameError && (
-                <div className={styles.errorMessage}>{nameError}</div>
-              )}
-
-              <label htmlFor="email">EMAIL ADDRESS</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Enter your email address"
-                value={email}
-                onChange={handleEmailChange}
-              />
-              {emailError && (
-                <div className={styles.errorMessage}>{emailError}</div>
-              )}
-
-              <label htmlFor="password">PASSWORD</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={handlePasswordChange}
-              />
-              {passwordError && (
-                <div className={styles.errorMessage}>{passwordError}</div>
-              )}
-
-              <label htmlFor="confirm-password">CONFIRM PASSWORD</label>
-              <input
-                type="password"
-                id="confirm-password"
-                placeholder="Confirm your password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
-              />
-              {confirmPasswordError && (
-                <div className={styles.errorMessage}>
-                  {confirmPasswordError}
-                </div>
-              )}
-              <Button text="Sign Up" />
-            </form>
-
-            <div className={styles.secondaryAction}>
-              Already registered?
-              <p onClick={handleChangeToSignIn} className={styles.signInLink}>
-                Sign In
-              </p>
-            </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={0} className={styles.container}>
+        {!isMobile &&
+        <Grid item xs={12} md={6} className={styles.leftContainer}>
+          <div className={styles.logo}>
+            <LogoAnimation />
           </div>
-        </LoadingSpinner>
-      </div>
-    </div>
+          <img
+            src={backgroundImage}
+            alt="Cover Image"
+            className={styles.coverImage}
+          />
+        </Grid>
+        }
+
+        <Grid item xs={12} md={6} className={styles.rightContainer}>
+          <LoadingSpinner loadingText={loadingText1}>
+            <div className={styles.signUpContainer}>
+              <NavBar
+                title="Sign Up"
+                handleBackButtonClick={handleBackButtonClick}
+              />
+              {topError && <div className={styles.topError}>{topError}</div>}
+              <form className={styles.signUpForm} onSubmit={handleSubmit}>
+                <label htmlFor="name">FULL NAME</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={handleNameChange}
+                />
+                {nameError && (
+                  <div className={styles.errorMessage}>{nameError}</div>
+                )}
+
+                <label htmlFor="email">EMAIL ADDRESS</label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter your email address"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                {emailError && (
+                  <div className={styles.errorMessage}>{emailError}</div>
+                )}
+
+                <label htmlFor="password">PASSWORD</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
+                {passwordError && (
+                  <div className={styles.errorMessage}>{passwordError}</div>
+                )}
+
+                <label htmlFor="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  placeholder="Confirm your password"
+                  value={confirmPassword}
+                  onChange={handleConfirmPasswordChange}
+                />
+                {confirmPasswordError && (
+                  <div className={styles.errorMessage}>
+                    {confirmPasswordError}
+                  </div>
+                )}
+                <Button text="Sign Up" />
+              </form>
+
+              <div className={styles.secondaryAction}>
+                Already registered?
+                <p onClick={handleChangeToSignIn} className={styles.signInLink}>
+                  Sign In
+                </p>
+              </div>
+            </div>
+          </LoadingSpinner>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
