@@ -110,7 +110,7 @@ const ElevyChat = ({pyRunning}) => {
 
   useEffect(() => {
 
-    if (pyRunning==true && userState.currentTicker!= "")
+    if (pyRunning===true && userState.currentTicker!== "")
     {
     // existing chat
       if (userState.currentChatHistory.length !== 0) 

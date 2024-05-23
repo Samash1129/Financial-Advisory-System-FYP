@@ -1,4 +1,4 @@
-import {React, useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import stockicon from '../../Assets/SVGs/stock-icon.svg';
 import techicon from '../../Assets/SVGs/tech-icon.svg';
@@ -11,7 +11,7 @@ import { bankNames } from "../../constants";
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 
 
-const StockHistory = ({pyRunning}) => {
+const StockHistory = ({ pyRunning }) => {
 
     const userState = useSelector((state) => state.auth);
     const [sortedChats, setSortedChats] = useState([]);
@@ -24,7 +24,7 @@ const StockHistory = ({pyRunning}) => {
     }, [userState.conversations]);
 
     const handleItemClick = async (conversationID, ticker) => {
-        const history = await chatHistory({ conversation_id: conversationID});
+        const history = await chatHistory({ conversation_id: conversationID });
         dispatch(updateCurrentChatHistory(history));
         dispatch(updateCurrentTicker(ticker));
         dispatch(updateCurrentConvoID(conversationID));
@@ -38,27 +38,27 @@ const StockHistory = ({pyRunning}) => {
             </div>
 
             <ul className={styles.shSearchResults}>
-                {pyRunning==true && sortedChats.map((conversation, index) => (
-                    <li 
-                    className={`${styles.shSearchItem} ${conversation.conversationID === userState.currentConvoID && userState.currentTicker!="" ? styles.highlight : ''}`}
-                    key={index} 
-                    onClick={() => handleItemClick(conversation.conversationID, conversation.ticker)}>
+                {pyRunning == true && sortedChats.map((conversation, index) => (
+                    <li
+                        className={`${styles.shSearchItem} ${conversation.conversationID === userState.currentConvoID && userState.currentTicker != "" ? styles.highlight : ''}`}
+                        key={index}
+                        onClick={() => handleItemClick(conversation.conversationID, conversation.ticker)}>
                         <span className={styles.listNumber}>{index + 1}</span>
-                        <div className={styles.shItemInfo}>             
-                        <div className={styles.shSymbol}>
-                        {bankNames.find(bank => bank.tickerSymbol === conversation.ticker)?.securityName} &nbsp;({conversation.ticker})
-                        </div>
+                        <div className={styles.shItemInfo}>
+                            <div className={styles.shSymbol}>
+                                {bankNames.find(bank => bank.tickerSymbol === conversation.ticker)?.securityName} &nbsp;({conversation.ticker})
+                            </div>
                         </div>
                     </li>
                 ))}
 
-                {(pyRunning!=true || sortedChats.length === 0) &&
-                <div className={pyRunning !== true ? styles.errorText : styles.blankText}>
-                {pyRunning !== true && <ReportProblemIcon className={styles.warningIcon}/> }
-                {pyRunning !== true ? "  Chats can't be loaded" : "No chats to show"}
-                </div> }
+                {(pyRunning != true || sortedChats.length === 0) &&
+                    <div className={pyRunning !== true ? styles.errorText : styles.blankText}>
+                        {pyRunning !== true && <ReportProblemIcon className={styles.warningIcon} />}
+                        {pyRunning !== true ? "  Chats can't be loaded" : "No chats to show"}
+                    </div>}
             </ul>
-        
+
         </div>
     );
 };

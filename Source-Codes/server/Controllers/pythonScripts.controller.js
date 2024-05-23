@@ -89,7 +89,7 @@ exports.elevychat = async (req, res) => {
       ticker: ticker,
     });
 
-    //console.log(response);
+    console.log(response);
 
     return res.status(response.status).json(response.data);
   } catch (err) {

@@ -33,43 +33,43 @@ def load_news_summaries(ticker):
     return data
 
 
-def read_high_low_values(ticker):
-    file_path = os.path.join(
-        "JSONs/High_Low_Values", f"{ticker}_high_low_values.json")
+# def read_high_low_values(ticker):
+#     file_path = os.path.join(
+#         "JSONs/High_Low_Values", f"{ticker}_high_low_values.json")
 
-    if not os.path.exists(file_path):
-        print(f"No high-low values found for '{ticker}'.")
-        return None, None
+#     if not os.path.exists(file_path):
+#         print(f"No high-low values found for '{ticker}'.")
+#         return None, None
 
-    with open(file_path, "r") as json_file:
-        data = json.load(json_file)
+#     with open(file_path, "r") as json_file:
+#         data = json.load(json_file)
 
-    historical_values = data.get("HistoricalVal", [])
-    predicted_values = data.get("PredictedVal", [])
+#     historical_values = data.get("HistoricalVal", [])
+#     predicted_values = data.get("PredictedVal", [])
 
-    return historical_values, predicted_values
+#     return historical_values, predicted_values
 
 
-def read_high_low_values_rounded_to_2_dp(ticker):
-    file_path = f"JSONs/High_Low_Values/{ticker}_high_low_values.json"
+# def read_high_low_values_rounded_to_2_dp(ticker):
+#     file_path = f"JSONs/High_Low_Values/{ticker}_high_low_values.json"
 
-    try:
-        with open(file_path, "r") as json_file:
-            data = json.load(json_file)
-    except FileNotFoundError:
-        print(f"No high-low values found for '{ticker}'.")
-        return None, None
+#     try:
+#         with open(file_path, "r") as json_file:
+#             data = json.load(json_file)
+#     except FileNotFoundError:
+#         print(f"No high-low values found for '{ticker}'.")
+#         return None, None
 
-    historical_values = data.get("HistoricalVal", [])
-    predicted_values = data.get("PredictedVal", [])
+#     historical_values = data.get("HistoricalVal", [])
+#     predicted_values = data.get("PredictedVal", [])
 
-    for value_set in [historical_values, predicted_values]:
-        for item in value_set:
-            for key, value in item.items():
-                if isinstance(value, float):
-                    item[key] = round(value, 2)
+#     for value_set in [historical_values, predicted_values]:
+#         for item in value_set:
+#             for key, value in item.items():
+#                 if isinstance(value, float):
+#                     item[key] = round(value, 2)
 
-    return historical_values, predicted_values
+#     return historical_values, predicted_values
 
 
 def parse_company_name(ticker):
@@ -154,7 +154,7 @@ async def start_conversation_helper(conversation_id: str, user_input: str, ticke
             print("Company Name:", company_name)
         summaries = load_news_summaries(ticker)
 
-        historical_values, predicted_values = read_high_low_values_rounded_to_2_dp(ticker)
+        # historical_values, predicted_values = read_high_low_values_rounded_to_2_dp(ticker)
         # print("Historical values:", historical_values)
         # print("Predicted values:", predicted_values)
 
