@@ -1,6 +1,7 @@
 from fastapi import HTTPException
 import json
 from pydantic import BaseModel
+from generate_Recommendations import genRec
 from fastapi import FastAPI, Request, Body
 from fastapi.responses import JSONResponse
 from newsapi2 import fetch_news_for_all_queries
@@ -10,6 +11,7 @@ from analyze_vader import analyze_sentiment_for_files_vader
 from summary import llama_process
 from llama_api import start_conversation_helper, load_conversation_history
 import driver
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -138,7 +140,6 @@ async def load_conversation(data: ConversationID):
 
 @app.post("/generate-summary-llama")
 async def generate_summary_llama():
-
     try:
         result = llama_process()
 
@@ -156,11 +157,26 @@ async def generate_summary_llama():
 async def generate_fundementals():
     try:
         result = await driver.fundValDriver()
-        if result == True:
+        if result:
             return JSONResponse(content={"status_code": 200, "content": "Successful"})
         else:
             return JSONResponse(content={"status_code": 404, "content": "Invalid Request"})
 
+    except Exception as e:
+        print(f"Error occured : {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+
+@app.get("/generate-recommendations")
+async def generate_recommendations():
+    try:
+        result = await genRec()
+        print(result)
+        if result:
+            return JSONResponse(content={"status_code": 200, "content": "Successful"})
+        else:
+            return JSONResponse(content={"status_code": 404, "content": "Invalid Request"}) 
+        
     except Exception as e:
         print(f"Error occured : {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")

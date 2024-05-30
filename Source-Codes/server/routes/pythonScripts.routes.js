@@ -9,6 +9,7 @@ const {
   elevychat,
   fetchChatHistory,
   generateFundamentals,
+  generateRecommendations
 } = require("../Controllers/pythonScripts.controller");
 
 router.route("/check-python").get(checkPython);
@@ -19,5 +20,6 @@ router.route("/summarize").get(generateSummaries);
 router.route("/elevychat").post(elevychat);
 router.route("/getChatHistory").post(fetchChatHistory);
 router.route("/generatefundamentals").get(generateFundamentals);
+router.route("/generaterecommendations").get(generateRecommendations);
 
 module.exports = router;

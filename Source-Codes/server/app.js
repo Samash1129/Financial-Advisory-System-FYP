@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 
 // Calling the respective Routes
 app.use("/api", require("./routes/user.routes"));
-app.use("/api", require("./routes/pythonScripts.routes"));
+app.use("/api", require("./routes/pythonScripts.routes.js"));
 
 require("./db/conn");
 

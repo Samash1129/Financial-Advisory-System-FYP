@@ -116,3 +116,14 @@ exports.generateFundamentals = async(req, res) => {
     console.error(err)
   }
 }
+
+exports.generateRecommendations = async(req, res) => {
+  try {
+    const response = await axios.get(`http://${ip}/generate-recommendations`)
+
+    console.log(response.status)
+    return res.status(response.status).json(response.data)
+  } catch (err) {
+    console.error(err)
+  }
+}
