@@ -345,3 +345,29 @@
   padding-top: 0px;
   vertical-align: bottom;
 }
+
+/* Skeleton loader container */
+.skeletonContainer {
+  display: flex;
+  align-items: center;
+  padding: 13px;
+  opacity: 30%;
+}
+
+/* Skeleton loader icon placeholder */
+.skeletonIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  border-radius: 50%;
+  opacity: 40%;
+  margin-right: 16px;
+}
+
+.skeletonText {
+  flex: 1;
+  height: 12px;
+  background-color: #f0f0f0; /* Placeholder background color */
+  opacity: 30%;
+  border-radius: 4px;
+}

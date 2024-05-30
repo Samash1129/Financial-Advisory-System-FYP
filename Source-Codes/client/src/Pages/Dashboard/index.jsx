@@ -21,7 +21,8 @@ const Dashboard = ({ filteredData }) => {
 const { data: pyResponse, error } = useCheckPythonQuery();    
 const name1 = useSelector((state) => state.auth.name);
 const [modifiedName, setModifiedName] = useState('');
-const [pyRunning, setPyRunning] = useState(false);
+const [pyRunning, setPyRunning] = useState(0);
+const [loading, setLoading] = useState(true)
 const dispatch = useDispatch();
 const [signout] = useSignoutMutation();
 
@@ -41,14 +42,25 @@ useEffect(() => {
 
 
 useEffect(() => {
-    if (error) {
-      if (error.status === 500) {
-        setPyRunning(false);
-      } 
-    } else {
-      setPyRunning(true);
+  const timer = setTimeout(() => {
+    if (pyResponse !== undefined || error !== undefined) {
+      if (error) {
+        if (error.status === 500) {
+          setPyRunning(-1);
+          console.log("py not running");
+        } 
+      } else {
+        setPyRunning(1);
+        console.log("py running");
+      }
+      // End the initial loading phase
+      setLoading(false);
     }
-  }, [error]); 
+  }, 1500); // 2 second delay
+
+  return () => clearTimeout(timer); // Cleanup timeout on unmount
+}, [pyResponse, error]);
+
 
   useEffect(() => {
     const names = name1.split(' ');
@@ -97,10 +109,10 @@ useEffect(() => {
                    <HeaderTitle name="Dashboard" /> 
                   </div>
                   }
-                  {pyRunning && 
+                  
                   <div className={styles.searchBarContainer}>
-                    <SearchBar data={filteredData} /> 
-                  </div> }
+                    <SearchBar pyRunning={pyRunning}/> 
+                  </div> 
                   <div className={styles.stocksContainer}>
                     <Stocks pyRunning={pyRunning} />
                   </div>

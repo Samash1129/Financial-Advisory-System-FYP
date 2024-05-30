@@ -40,6 +40,9 @@ const userSchema = new mongoose.Schema({
     ticker: {
       type: String
     },
+    secName: {
+      type: String
+    },
     lastModified:
     {
       type: Date

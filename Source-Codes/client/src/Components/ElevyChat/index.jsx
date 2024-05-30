@@ -20,6 +20,13 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { ArrowForward } from "@mui/icons-material";
 import { styled } from '@mui/system';
 
+const SkeletonLoader = () => (
+  <div className={styles.skeletonContainer}>
+    <div className={styles.skeletonIcon}></div>
+    <div className={styles.skeletonText}></div>
+  </div>
+);
+
 const StyledOutlinedInput = styled(OutlinedInput)(({ theme }) => ({
   backgroundColor: 'rgba(255, 255, 255, 0.1)',
   color: 'rgba(255, 255, 255, 1)',
@@ -110,7 +117,7 @@ const ElevyChat = ({pyRunning}) => {
 
   useEffect(() => {
 
-    if (pyRunning===true && userState.currentTicker!== "")
+    if (pyRunning===1 && userState.currentTicker!= "")
     {
     // existing chat
       if (userState.currentChatHistory.length !== 0) 
@@ -146,28 +153,35 @@ const ElevyChat = ({pyRunning}) => {
 
         
         <div ref={psrSummaryContainerRef} className={styles.psrSummaryContainer}>
-          
-        {pyRunning==true && userState.currentTicker!="" && (<GraphPanel /> )}
 
-        {pyRunning !== true && (
+        {pyRunning===0 && <div>
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                </div>}
+          
+        {pyRunning===1 && userState.currentTicker!="" && (<GraphPanel /> )}
+
+        {pyRunning===-1 && (
         <div className={styles.errorText}><ReportProblemIcon className={styles.warningIcon}/>
         &nbsp;&nbsp;Elevy can't be initialized
         </div>
         )}
 
-        {pyRunning == true && userState.currentTicker == "" && (
+        {pyRunning===1 && userState.currentTicker == "" && (
         <div className={styles.blankText}>
         Select a recommended stock or load a previous chat <br/>to initiate a conversation with Elevy
         </div>
         )}
 
 
-  {pyRunning==true && userState.currentConvoID == "" && userState.currentTicker!="" && (
+  {pyRunning===1 && userState.currentConvoID == "" && userState.currentTicker!="" && (
   <p className={styles.newChat}>New Elevy chat, Welcome!</p> 
   )}
   
   
-  {pyRunning==true && userState.currentTicker!="" && userInputs.map((input, index) => (
+  {pyRunning===1 && userState.currentTicker!="" && userInputs.map((input, index) => (
     <React.Fragment key={index}>
       
        <hr className={styles.psrSummaryDivider} />
@@ -188,7 +202,7 @@ const ElevyChat = ({pyRunning}) => {
       </div>
 
         
-      {pyRunning==true && userState.currentTicker!="" && (
+      {pyRunning===1 && userState.currentTicker!="" && (
       <div className={styles.psrInputContainer}>
         <form onSubmit={handleSubmit}>
         <StyledOutlinedInput
@@ -206,7 +220,7 @@ const ElevyChat = ({pyRunning}) => {
       </div> )}
         
 
-      {pyRunning==true && userState.currentTicker!="" && (
+      {pyRunning===1 && userState.currentTicker!="" && (
       <div className={styles.DisclaimerContainer}>
         <p className={styles.psrDisclaimerParagraph}>
           Elevy can make mistakes. Always verify important information.

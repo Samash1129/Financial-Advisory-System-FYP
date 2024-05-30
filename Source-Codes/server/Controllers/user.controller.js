@@ -357,15 +357,27 @@ module.exports.saveConversation = async (req, res) => {
   }
 
   try {
+    const authHeader = req.headers["authorization"];
     const token = req.cookies.accessToken;
 
-    if (!token) {
+    console.log("authHeader", authHeader);
+    console.log("token", token);
+
+    let decoded;
+    let jwtToken;
+
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      jwtToken = authHeader.split(" ")[1];
+    } else if (token) {
+      jwtToken = token;
+    } else {
       return res.status(401).json({ error: "You must be logged in" });
     }
 
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    decoded = jwt.verify(jwtToken, process.env.ACCESS_TOKEN_SECRET);
+
     const userId = decoded.id;
-    const { conversationID, ticker } = req.body;
+    const { conversationID, ticker, secName } = req.body;
 
     const user = await User.findById(userId);
 
@@ -383,6 +395,7 @@ module.exports.saveConversation = async (req, res) => {
     } else {
       user.conversations.push({
         conversationID,
+        secName,
         ticker,
         lastModified: currentDateTime,
       });
@@ -392,6 +405,7 @@ module.exports.saveConversation = async (req, res) => {
     res.json({
       message: "Conversation saved successfully",
       conversationID,
+      secName,
       ticker,
       lastModified: currentDateTime,
     });
@@ -417,13 +431,25 @@ module.exports.signout = async (req, res) => {
 // Controller for get-profile - Done
 module.exports.getProfile = async (req, res) => {
   try {
-    // Get the token from the header
-    const token = req.header("authorization").split(" ")[1];
-    if (!token) {
+    const authHeader = req.headers["authorization"];
+    const token = req.cookies.accessToken;
+
+    console.log("authHeader", authHeader);
+    console.log("token", token);
+
+    let decoded;
+    let jwtToken;
+
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      jwtToken = authHeader.split(" ")[1];
+    } else if (token) {
+      jwtToken = token;
+    } else {
       return res.status(401).json({ error: "You must be logged in" });
     }
-    // Verify the token
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    decoded = jwt.verify(jwtToken, process.env.ACCESS_TOKEN_SECRET);
+
     console.log("decoded", decoded.id);
     // Get the user from the decoded token
     let user = await User.findById(decoded.id);
@@ -444,23 +470,23 @@ module.exports.getProfile = async (req, res) => {
 };
 
 // Controller for token refresh
-module.exports.refreshToken = async (req, res) => {
-  try {
-    // token in authorization header
-    const token = req.headers["authorization"].split(" ")[1];
-    const user = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
-    const accessToken = jwt.sign(
-      { id: user.id },
-      process.env.ACCESS_TOKEN_SECRET,
-      {
-        expiresIn: "1h",
-      }
-    );
-    res.json({ accessToken });
-  } catch (err) {
-    res.status(500).json({ message: err });
-  }
-};
+// module.exports.refreshToken = async (req, res) => {
+//   try {
+//     // token in authorization header
+//     const token = req.headers["authorization"].split(" ")[1];
+//     const user = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+//     const accessToken = jwt.sign(
+//       { id: user.id },
+//       process.env.ACCESS_TOKEN_SECRET,
+//       {
+//         expiresIn: "1h",
+//       }
+//     );
+//     res.json({ accessToken });
+//   } catch (err) {
+//     res.status(500).json({ message: err });
+//   }
+// };
 
 // Controller for delete-user - May use later
 // module.exports.deleteUser = async (req, res) => {

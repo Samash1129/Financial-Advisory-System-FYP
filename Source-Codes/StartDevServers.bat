@@ -9,6 +9,6 @@ start cmd /k "cd client\src && npm start"
 echo Starting FastAPI...
 cd server\scripts\Helpers
 call .\env\Scripts\activate.bat
-start cmd /k "uvicorn api_server:app --reload"
+start cmd /k "uvicorn api_server:app --host 0.0.0.0 --port 8000"
 
 echo Frontend, Backend and FastAPI, All 3 servers are running

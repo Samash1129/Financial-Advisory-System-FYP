@@ -31,7 +31,7 @@ recordRoutes.route("/signin").post(
 recordRoutes.route("/updateprofile").patch(updateProfile);
 recordRoutes.route("/signout").post(signout);
 recordRoutes.route("/getuser").get(getProfile);
-recordRoutes.route("/refreshToken").post(refreshToken);
+// recordRoutes.route("/refreshToken").post(refreshToken);
 recordRoutes.route("/deleteuser").delete(deleteUser);
 recordRoutes.route("/signup-temp").post(tempSignUp);
 recordRoutes.route("/signup-final").post(finalSignUp);

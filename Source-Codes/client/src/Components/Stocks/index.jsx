@@ -7,25 +7,36 @@ import { updateCurrentChatHistory, updateCurrentTicker, updateCurrentConvoID } f
 import { bankNames } from '../../constants';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 
-
 const SkeletonLoader = () => (
     <div className={styles.skeletonContainer}>
-        <div className={styles.skeletonIcon}></div>
-        <div className={styles.skeletonText}></div>
+      <div className={styles.skeletonIcon}></div>
+      <div className={styles.skeletonText}></div>
     </div>
-);
+  );
 
 const Stocks = ({ pyRunning }) => {
 
     const userState = useSelector(state => state.auth);
     const stockResultState = useSelector(state => state.stockSearch);
     const dispatch = useDispatch();
-    const [searchData, setSearchData] = useState(bankNames);
+    const [searchData, setSearchData] = useState();
+
+    useEffect(() => {
+        if (pyRunning===1) {
+            setSearchData(bankNames);
+            
+        }
+        else
+        {
+            setSearchData();
+        }
+        
+      }, [pyRunning]);
 
 
     const handleItemClick = (tickerSymbol) => {
         dispatch(updateCurrentChatHistory([]));
-        if (pyRunning === true) { dispatch(updateCurrentTicker(tickerSymbol)); }
+        if (pyRunning===1) { dispatch(updateCurrentTicker(tickerSymbol)); }
         dispatch(updateCurrentConvoID(""));
     };
 
@@ -33,26 +44,31 @@ const Stocks = ({ pyRunning }) => {
     return (
         <div className={styles.ssearchContainer}>
             <div className={styles.srecommended}>
-
-                <img src={riseicon} alt="Recommended" className={styles.srecommendedIcon} />
-                <div className={styles.srecommendedTitle}>Recommended Stocks</div>
-
+                <img src={riseicon} alt="Recommended" className={styles.srecommendedIcon} />    
+                <div className={styles.srecommendedTitle}>Recommended Stocks</div> 
+                
             </div>
-
+           
             <ul className={styles.ssearchResults}>
-                {searchData && pyRunning &&
-                    searchData.map((item, index) => (
-                        <li key={item.tickerSymbol}
-                            className={`${styles.ssearchItem} ${item.tickerSymbol === userState.currentTicker &&
-                                    userState.currentConvoID === ""
-                                    ? styles.highlight
-                                    : ""
-                                }`}
+                {pyRunning===0 && <div>
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                </div>}
+            { pyRunning===1 && searchData &&
+          searchData.map((item, index) => (
+                        <li key={item.tickerSymbol} 
+                        className={`${styles.ssearchItem} ${
+                            item.tickerSymbol === userState.currentTicker &&
+                            userState.currentConvoID === ""
+                              ? styles.highlight
+                              : ""
+                          }`}
                         >
-                            {searchData.length > 1 && <span className={styles.listNumber}>{index + 1}</span>}
+                            {searchData.length>1 &&<span className={styles.listNumber}>{index + 1}</span> }
                             <div
-                                className={styles.sitemInfo}
-                                onClick={() => handleItemClick(item.tickerSymbol)}
+                            className = {styles.sitemInfo}
+                            onClick={() => handleItemClick(item.tickerSymbol)}
                             >
                                 <div className={styles.ssymbol}>{item.tickerSymbol}</div>
                                 <div className={styles.sname}>{item.securityName}</div>
@@ -61,21 +77,21 @@ const Stocks = ({ pyRunning }) => {
                         </li>
                     ))
                 }
-
-                {!pyRunning &&
-                    <div className={styles.errorText}>
-                        <ReportProblemIcon className={styles.warningIcon} />
-                        &nbsp;&nbsp;Stocks can't be loaded
-                    </div>
+                
+                {pyRunning===-1 &&
+                <div className={styles.errorText}>
+                    <ReportProblemIcon className={styles.warningIcon}/>
+                    &nbsp;&nbsp;Stocks can't be loaded
+                </div>
                 }
 
-                {pyRunning && !searchData &&
-                    <div className={styles.emptyStocks}>
-                        Search for stocks or generate recommendations
-                    </div>
+                {pyRunning===1 && !searchData &&
+                <div className={styles.emptyStocks}>
+                    Search for stocks or generate recommendations
+                </div>
                 }
-
-
+                
+                
             </ul>
         </div>
     );

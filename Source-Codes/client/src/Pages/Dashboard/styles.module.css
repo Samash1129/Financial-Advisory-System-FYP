@@ -12,6 +12,11 @@
   background: #ffffff;
 }
 
+body
+{
+  z-index: 1;
+}
+
 .container {
   display: flex;
   margin: 0;

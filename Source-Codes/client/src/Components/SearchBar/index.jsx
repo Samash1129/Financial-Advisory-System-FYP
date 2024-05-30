@@ -35,10 +35,11 @@ const useStyles = makeStyles({
       '&:hover .MuiOutlinedInput-notchedOutline': {
         border: 'none', // Example custom border color when focused
       },
+
     },
   });
 
-const SearchBar = () => {
+const SearchBar = ({pyRunning}) => {
     const [inputValue, setInputValue] = useState(''); // State for the input value
     const [filteredData, setFilteredData] = useState(bankNames); // State for the filtered data
     const inputRef = useRef(null); // Ref for the input element
@@ -60,8 +61,11 @@ const SearchBar = () => {
     };
 
     const handleSearchClick = () => {
-        setIsSearchClicked(true);
-        dispatch(setStockSearchData({ searchedStock: "" }));
+      if (pyRunning===1)
+        {
+          setIsSearchClicked(true);
+          dispatch(setStockSearchData({ searchedStock: "" }));
+        }
     };
 
     const searchStock = (stock) => {
@@ -108,6 +112,7 @@ const SearchBar = () => {
         classes={{
             root: classes.root,
           }}
+        disabled={pyRunning !== 1}
       />
             
             {isSearchClicked && (

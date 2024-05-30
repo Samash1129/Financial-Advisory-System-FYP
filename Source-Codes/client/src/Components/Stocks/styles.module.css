@@ -1,21 +1,22 @@
 .ssearchContainer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
   font-family: "Outfit", sans-serif;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  max-height: 42vh;
+ 
 }
 
 .ssearchResults {
+  flex-grow: 1;
   padding: 0;
   margin: 0;
-  height: 36vh;
   overflow-y: auto;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff33;
   border-radius: 0px 0px 8px 8px;
+  height:35vh; /* Set height to auto to allow flex-grow to take effect */
 }
 
 .topIcons
@@ -56,6 +57,7 @@
 .ssearchResults::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.3);
   padding: 4px;
+  padding-right: 10px;
 }
 
 .ssearchResults::-webkit-scrollbar-thumb {
@@ -166,6 +168,10 @@
   display: flex;
   align-items: center;
   height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 7px 7px 0px 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .srecommendedIcon {
