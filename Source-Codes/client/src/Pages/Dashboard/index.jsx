@@ -14,6 +14,7 @@ import { setUserData, removeUserData } from "../../Slices/User/AuthSlice/authSli
 import { useSignoutMutation, useSaveConversationMutation, useCheckPythonQuery } from "../../Slices/User/UserSlice/userApiSlice";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Grid, Box} from '@mui/material';
+import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
 
 
 const Dashboard = ({ filteredData }) => {
@@ -25,6 +26,7 @@ const [pyRunning, setPyRunning] = useState(0);
 const [loading, setLoading] = useState(true)
 const dispatch = useDispatch();
 const [signout] = useSignoutMutation();
+const [getRec] = useGetRecommendedStocksQuery()
 
 const [menuClicked, setMenuClicked] = useState(false);
 const isMobile = useMediaQuery('(max-width:900px)');

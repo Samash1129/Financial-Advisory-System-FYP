@@ -4,7 +4,7 @@ const baseurl = 'http://localhost:4500/api'
 const bankNames = [
     {
       securityName: "Meezan Bank Ltd",
-      tickerSymbol: "MEZN",
+      tickerSymbol: "MEBL",
       stockPrice: "235",
       category: "Banking",
     },
