@@ -29,6 +29,11 @@ class ConversationID(BaseModel):
     conversation_id: str
 
 
+class RecommendationRequest(BaseModel):
+    risk_tolerance: str
+    stock_type: str
+    duration: str
+
 with open("JSONs/queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
     queries = queries_data.get("queries", [])
@@ -168,12 +173,16 @@ async def generate_fundementals():
 
 
 @app.get("/generate-recommendations")
-async def generate_recommendations():
+async def generate_recommendations(data: RecommendationRequest):
     try:
-        result = await genRec()
+        risk_tolerance = data.risk_tolerance
+        stock_type = data.stock_type
+        duration = data.duration
+
+        result = genRec(risk_tolerance, stock_type, duration)
         print(result)
         if result:
-            return JSONResponse(content={"status_code": 200, "content": "Successful"})
+            return JSONResponse(content={"status_code": 200, "content": result})
         else:
             return JSONResponse(content={"status_code": 404, "content": "Invalid Request"}) 
         

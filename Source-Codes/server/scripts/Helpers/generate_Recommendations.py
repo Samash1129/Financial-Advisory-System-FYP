@@ -67,7 +67,7 @@ def calculate_score(stock):
 
 # Example usage:
 # Using each row in the normalized data for demonstration
-async def genRec():
+def genRec(risk_tolerance: str, stock_type: str, duration: str):
     scores = []
     for index, row in normalized_mean_ratios.iterrows():
         stock = {
@@ -79,13 +79,15 @@ async def genRec():
             'return_on_assets': row['Return on Assets'], 
             'return_on_equity': row['Return on Equity'], 
             'cash_per_share': row['Cash per Share'], 
-            'risk_tolerance': 'medium',  # Example value
-            'stock_type': 'growth',  # Example value
-            'duration': 'long_term'  # Example value
+            'risk_tolerance': risk_tolerance,  
+            'stock_type': stock_type,  
+            'duration': duration
         }
         score = calculate_score(stock)
-        scores.append(score)
-        print(f'Score for the stock {row["Ticker Symbol"]}:', score)
+        scores.append({'Ticker': row['Ticker Symbol'], 'Score': score})
+        #print(f'Score for the stock {row["Ticker Symbol"]}:', score)
+
+    scores.sort(key=lambda x: x['Score'], reverse=True)
+    top_5_scores = scores[:5]
     
-    print('Sorted scores (descending):', sorted(scores, reverse=True))
-    return ('Sorted scores (descending):', sorted(scores, reverse=True))
+    return top_5_scores
