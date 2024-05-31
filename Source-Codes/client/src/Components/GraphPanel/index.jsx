@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Graph from "../Graph";
+// import Graph from "../Graph";
 import styles from "./styles.module.css";
 import Statistics from "../Statistics";
 
@@ -21,7 +21,7 @@ function GraphPanel() {
             <Statistics isVisible={isPanelOpen} />
           </div>
           <div className={styles.graphContent}>
-            <Graph labels={labels} data={data} isVisible={isPanelOpen} />
+            {/* <Graph labels={labels} data={data} isVisible={isPanelOpen} /> */}
           </div>
         </div>
       )}

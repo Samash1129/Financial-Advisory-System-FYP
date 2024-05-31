@@ -118,3 +118,8 @@ body {
   margin-top: 10px;
   margin-left: 3px;
 }
+
+.restrictedToggle
+{
+  cursor: not-allowed;
+}

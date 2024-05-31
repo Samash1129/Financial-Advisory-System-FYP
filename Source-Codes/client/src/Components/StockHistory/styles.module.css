@@ -1,25 +1,34 @@
 .shSearchContainer {
-  width: 99.6%;
-  height: 100%;
+  width: 100%;
   margin: 0 auto;
-  overflow-y: auto;
   font-family: "Outfit", sans-serif;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
   z-index: 999;
   position: relative;
+  
 }
+
+
 
 .shSearchResults {
   padding: 0;
   margin: 0;
   overflow-y: auto;
-  height: 182px; /* Fixed height for container */
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0px 0px 8px 8px;
   z-index: 999;
-  position: relative;
+  height: 22vh;
+  top:0;
+  
+}
+
+.listNumber {
+  font-size: 20px; /* Adjust the font size of the numbers */
+  font-weight: 500;
+  color: #ffffff; /* Adjust the color of the numbers */
+  margin-right: 13px;
+  padding-left: 3px; /* Adjust the margin between number and content */
 }
 
 .shSearchResults li {
@@ -31,6 +40,11 @@
   padding-left: 18px;
   z-index: 999;
   position: relative;
+}
+
+.shItemInfo
+{
+  margin-left: 10px;
 }
 
 .shSearchResults li:last-child {
@@ -57,7 +71,7 @@
 
 .shSymbol {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: regular;
   color: #ffffff;
   margin-bottom: -3px;
 }
@@ -102,18 +116,54 @@
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+
+
+.highlight
+{
+  background-color: #52a0ff;
+}
+
+.blankText
+{
+  color: white;
+  font-family: Outfit;
+  padding: 20px 0px 20px 20px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.errorText
+{
+  color:rgb(248, 163, 65);
+  font-family: Outfit;
+  padding: 20px 0px 20px 0px;
+  font-size: 20px;
+ 
+  text-align: center;
+  user-select: none;
+}
+
+.warningIcon {
+  font-size: 30px;
+  padding-top: 0px;
+  vertical-align: bottom;
+}
+
 .sRecent {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 7px 7px 0px 0px;
+  margin: 0;
+  padding: 0; 
 }
 
 .sRecentIcon {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
   margin-left: 10px;
-  margin-top: 8px;
 }
 
 .sRecentTitle {
@@ -123,7 +173,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 5px;
+  user-select: none;
 }
 
 .shSearchResults::-webkit-scrollbar {

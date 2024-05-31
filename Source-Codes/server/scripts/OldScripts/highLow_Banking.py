@@ -7,8 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, Dropout
 from psx import stocks
-import closeVal_Banking
-import openVal_Banking
+from ml_models.BankingIndustry import closeVal_Banking
+from ml_models.BankingIndustry import openVal_Banking
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -147,11 +147,10 @@ def fundamental_values(final_fundamental_values, company, df):
 
     return None
 
-def main():   
+async def main_hl_banking():   
     try:
         
         CompaniesJsonFileLocation = os.getenv("companies_path")
-        # CompaniesJsonFileLocation = 'F:/FYP Deployment/backend/scripts/Helpers/JSONs/companies.json'
 
         # Load companies from the JSON file
         with open(CompaniesJsonFileLocation, 'r') as f:
@@ -242,8 +241,5 @@ def main():
     except Exception as e:
         print(f"Error occurred: {e}")
         return False
-    
-if __name__ == "__main__":
-    main()
 
 

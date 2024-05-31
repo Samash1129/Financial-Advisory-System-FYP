@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# with open("queries.json", "r") as queries_file:
 with open("JSONs/queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
     queries = queries_data.get("queries", [])
@@ -41,7 +40,6 @@ def save_to_db(query, data):
 
 
 def save_to_json(ticker, data):
-    # directory = "query_responses"
     directory = "JSONs/query_responses"
     if not os.path.exists(directory):
         os.makedirs(directory)

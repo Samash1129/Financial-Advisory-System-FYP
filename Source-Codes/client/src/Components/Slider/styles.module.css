@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  
   border-radius: 0px 17px 17px 0px;
   background: #3692ff;
-  padding: 20px;
-  width: fit-content; /* Takes the full width of the parent container */
-  height: 100%; /* Adjusted to take full height of its parent */
+  padding: 0px 20px 0px 20px;
+  height: 100vh;
   font-family: "Outfit";
+  width: 100%;
+  
 }
 
 .welcomeText {
@@ -18,7 +19,7 @@
   line-height: normal;
   margin-right: 10px;
   text-align: left;
-  margin-top: -40px;
+  margin-top: -20px;
   margin-bottom: -5px;
 }
 
@@ -36,7 +37,7 @@
   display: flex; /* Use flexbox to arrange children */
   flex-direction: column; /* Stack children vertically */
   align-items: flex-start; /* Align text to the start (left) */
-  height: 190px;
+  height: 240px;
 }
 
 .upgradeBtn {
@@ -143,11 +144,11 @@
 .imageContainer {
   width: 20vh;
   margin-top: -30px;
-  margin-left: -140px;
+  margin-left: -170px;
 }
 
 .sliderImage {
-  width: 320px;
+  width: 330px;
   height: auto;
 }
 
@@ -166,6 +167,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .userName {
@@ -187,4 +189,23 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+@media (max-width: 900px) {
+  .sliderContainer {
+    height:100vh;
+  }
+
+  .imageContainer {
+    width: 20vh;
+    margin-top: 70px;
+    margin-left: -170px;
+  }
+
+  .sliderButtonContainer
+  {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
 }

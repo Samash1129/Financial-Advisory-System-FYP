@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import Elevy from "../../Assets/SVGs/Elevy.svg";
 import ElevyGPT from "../../Assets/SVGs/ElevyGPT.svg";
@@ -6,122 +6,227 @@ import Send from "../../Assets/SVGs/send.svg";
 import user from "../../Assets/SVGs/User.svg";
 import Disclaimer from "../../Assets/SVGs/Info.svg";
 import GraphPanel from "../GraphPanel";
+import { useElevychatMutation } from "../../Slices/StockSlice/stockApiSlice";
+import { useSaveConversationMutation, useCheckPythonQuery } from "../../Slices/User/UserSlice/userApiSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { updateConversations, updateCurrentChatHistory, updateCurrentTicker, updateCurrentConvoID } from "../../Slices/User/AuthSlice/authSlice";
+import { bankNames } from "../../constants";
+import ErrorIcon from '@mui/icons-material/Error';
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { ArrowForward } from "@mui/icons-material";
+import { styled } from '@mui/system';
 
-const ElevyChat = () => {
-  const [loading, setLoading] = useState(true);
+const SkeletonLoader = () => (
+  <div className={styles.skeletonContainer}>
+    <div className={styles.skeletonIcon}></div>
+    <div className={styles.skeletonText}></div>
+  </div>
+);
+
+const StyledOutlinedInput = styled(OutlinedInput)(({ theme }) => ({
+  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  color: 'rgba(255, 255, 255, 1)',
+  width: '100%',
+  borderRadius: '6px',
+  fontFamily: '"Outfit", sans-serif',
+  fontWeight: 400,
+  lineHeight: 'normal',
+  paddingRight: '0',
+  height: '55px',
+  '& .MuiOutlinedInput-notchedOutline': {
+    border: 'none',
+  },
+}));
+
+const SendMessageButton = styled(ArrowForward)(({ theme }) => ({
+  background: 'rgba(255, 255, 255, 0.1)',
+  padding: '0px 18px',
+  color: 'white',
+  cursor: 'pointer',
+  right: '0',
+  height: '55px',
+  fontSize: '25px',
+  borderTopRightRadius: '6px',
+  borderBottomRightRadius: '6px'
+}));
+
+const ElevyChat = ({pyRunning}) => {
+  const userState = useSelector(state => state.auth);
+  const userChatHistory = useSelector(state => state.auth.currentChatHistory);
+  
+  const [chat] = useElevychatMutation();
+  const [saveConvoID] = useSaveConversationMutation();
+  const [message, setMessage] = useState("");
+  const [userInputs, setUserInputs] = useState([]);
+  const [responses, setResponses] = useState([]);
+  const psrSummaryContainerRef = useRef(null);
+  const dispatch = useDispatch();
+  
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (message.trim() === "") {
+      return;
+    }
+    setUserInputs([...userInputs, message]);
+    setMessage("");
+    try {
+      const response = await chat({ user_input: message, conversation_id: userState.currentConvoID, ticker: userState.currentTicker });
+ 
+      const conversationID = response.data.conversation_id;
+      const ticker = userState.currentTicker;
+      dispatch(updateCurrentConvoID(conversationID));
+      const saveResponse = await saveConvoID({conversationID, ticker}); 
+      
+      const newConversation = {
+        conversationID: saveResponse.data.conversationID,
+        ticker: saveResponse.data.ticker,
+        lastModified: saveResponse.data.lastModified
+      };
+    
+      dispatch(updateConversations(newConversation));
+        
+      console.log(response);
+      setResponses([...responses, response.data.conversation_history[response.data.conversation_history.length - 1].content]);
+      
+    } catch (error) {
+      console.error("Error occurred while fetching chat response:", error);
+    }
+  };
+  
+  const handleMessageChange = (e) => {
+   setMessage(e.target.value);
+  };
+
+  useEffect(() => {
+    dispatch(updateCurrentTicker(""));
+  }, []);
+
+  useEffect(() => {
+    psrSummaryContainerRef.current.scrollTop = psrSummaryContainerRef.current.scrollHeight;
+  }, [responses, userInputs]);
+
+  useEffect(() => {
+    psrSummaryContainerRef.current.scrollTop = 0;
+}, [userState.currentTicker]);
+
+
+  useEffect(() => {
+
+    if (pyRunning===1 && userState.currentTicker!= "")
+    {
+    // existing chat
+      if (userState.currentChatHistory.length !== 0) 
+      {
+      
+        let chatHistory = userChatHistory.data;
+        let userInputsFromHistory = chatHistory.filter(entry => entry.role === 'user').map(entry => entry.content);
+        let responsesFromHistory = chatHistory.filter(entry => entry.role === 'assistant').map(entry => entry.content);
+        setUserInputs(userInputsFromHistory);
+        setResponses(responsesFromHistory);
+      }
+      // new chat
+      else
+      {
+        setUserInputs([]);
+        setResponses([]);
+      }
+    }
+  }, [userState.currentChatHistory]);
 
   return (
-    <div className={styles.overallContainer}>
-      <div className={styles.psrContainer}>
+    <div className={styles.psrOverallContainer}>
+      <div className={`${styles.psrContainer} ${userState.currentTicker === "" ? styles.overlay : ''}`}>
         <div className={styles.psrHeader}>
           <img src={ElevyGPT} alt="Reports" className={styles.psrIcon} />
           <div className={styles.psrTitleContainer}>
             <div className={styles.psrMainTitle}>Elevy -</div>
-            <div className={styles.psrCompanyTitle}>Meezan Bank Ltd.</div>
-          </div>
-          {/* <button
-            className={styles.Disclaimer}
-            data-tooltip="Elevy's insights provide valuable information, but please conduct thorough research before making decisions. "
-          >
-            <img
-              src={Disclaimer}
-              alt="Disclaimer"
-              className={styles.headerIcon}
-              style={{ width: "23px", height: "23px" }} // Adjust the width and height as needed
-            />
-          </button> */}
-        </div>
-        <div className={styles.psrSummaryContainer}>
-          <GraphPanel />
-          <hr className={styles.psrSummaryDivider} />
-          <div className={styles.psrSummaryItem}>
-            <img
-              src={Elevy}
-              alt="Company Icon"
-              className={styles.psrSummaryIcon}
-            />
-            <p className={styles.psrSummaryParagraph}>
-              Based on the provided data, Tesla sold 1,298,434 Model 3 and Model
-              Y vehicles for the fiscal year ending on December 31, 2022. This
-              represents a growth rate of 43.31% compared to the previous year.
-              For the quarter ending on June 30, 2023, Tesla sold 460,211 Model
-              3 and Model Y vehicles, with a growth rate of 90.04% compared to
-              the same quarter in the previous year.Regarding Elon Musk's
-              thoughts on profit margins, he mentioned in a company transcript
-              that every time Tesla sells a car, it has the ability to enable
-              full self-driving through software updates. This presents a
-              significant upside potential because most cars have Hardware 3,
-              allowing for the sale of full.{" "}
-            </p>
-          </div>
-          <hr className={styles.psrSummaryDivider} />
-          <div className={styles.psrSummaryItem}>
-            <img
-              src={user}
-              alt="Company Icon"
-              className={styles.psrSummaryIcon}
-            />
-            <p className={styles.psrSummaryParagraph}>
-              Based on the provided data, Tesla sold 1,298,434 Model 3 and Model
-              Y vehicles for the fiscal year ending on December 31, 2022. This
-              represents a growth rate of 43.31% compared to the previous year.
-              For the quarter ending on June 30, 2023, Tesla sold 460,211 Model has the ability to enable
-              full self-driving through software updates. This presents a
-              significant upside potential because most cars have Hardware 3,
-              allowing for the sale of full.{" "}
-            </p>
-          </div>
-          {/* <div className={styles.psrOptionsContainer}>
-            <img
-              src={user}
-              alt="Company Icon"
-              className={styles.psrOptionsIcon}
-            />
-            <div className={styles.psrActionButtons}>
-              <button className={styles.psrActionButton}>
-                Create a financial plan for me →
-              </button>
-              <button className={styles.psrActionButton}>
-                Rephrase this into something simpler →
-              </button>
-              <button className={styles.psrActionButton}>
-                What will be the potential risks →
-              </button>
-              <button className={styles.psrActionButton2}>
-                Generate Detailed Report
-              </button>
+            <div className={styles.psrCompanyTitle}>
+            {userState.currentTicker && bankNames.find(bank => bank.tickerSymbol === userState.currentTicker)?.securityName}
             </div>
-          </div> */}
-          <hr className={styles.psrSummaryDivider} />
-          <div className={styles.psrSummaryItem}>
-            <img
-              src={Elevy}
-              alt="Company Icon"
-              className={styles.psrSummaryIcon}
-            />
-            <p className={styles.psrSummaryParagraph}>
-              Based on the provided data, Tesla sold 1,298,434 Model 3 and Model
-              Y vehicles for the fiscal year ending on December 31, 2022. This
-              represents a growth rate of 43.31% compared to the previous year.{" "}
-            </p>
           </div>
         </div>
+
+        
+        <div ref={psrSummaryContainerRef} className={styles.psrSummaryContainer}>
+
+        {pyRunning===0 && <div>
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                    <SkeletonLoader />
+                </div>}
+          
+        {pyRunning===1 && userState.currentTicker!="" && (<GraphPanel /> )}
+
+        {pyRunning===-1 && (
+        <div className={styles.errorText}><ReportProblemIcon className={styles.warningIcon}/>
+        &nbsp;&nbsp;Elevy can't be initialized
+        </div>
+        )}
+
+        {pyRunning===1 && userState.currentTicker == "" && (
+        <div className={styles.blankText}>
+        Select a recommended stock or load a previous chat <br/>to initiate a conversation with Elevy
+        </div>
+        )}
+
+
+  {pyRunning===1 && userState.currentConvoID == "" && userState.currentTicker!="" && (
+  <p className={styles.newChat}>New Elevy chat, Welcome!</p> 
+  )}
+  
+  
+  {pyRunning===1 && userState.currentTicker!="" && userInputs.map((input, index) => (
+    <React.Fragment key={index}>
+      
+       <hr className={styles.psrSummaryDivider} />
+      <div className={styles.psrSummaryItem}>
+        <img src={user} alt="User" className={styles.psrSummaryIcon} />
+        <p className={styles.psrSummaryParagraph}>{input}</p>
       </div>
+      {responses[index] && (
+        <div className={styles.psrSummaryItem}>
+          <img src={Elevy} alt="Assistant" className={styles.psrSummaryIcon} />
+          <p className={styles.psrSummaryParagraph}>{responses[index]}</p>
+        </div>
+      )}
+     
+    </React.Fragment>
+  ))}
+</div>
+      </div>
+
+        
+      {pyRunning===1 && userState.currentTicker!="" && (
       <div className={styles.psrInputContainer}>
-        <input
-          type="text"
-          className={styles.psrInputField}
-          placeholder="Message Elevy"
-        />
-        <button className={styles.psrInputButton}>
-          <img src={Send} alt="Reports" className={styles.psrInputIcon} />
-        </button>
-      </div>
+        <form onSubmit={handleSubmit}>
+        <StyledOutlinedInput
+            placeholder="Message Elevy"
+            value={message}
+            onChange={handleMessageChange}
+            endAdornment={
+              <InputAdornment position="end">
+                <SendMessageButton onClick={handleSubmit}/>
+              </InputAdornment>
+            }
+            
+          />
+          </form>
+      </div> )}
+        
+
+      {pyRunning===1 && userState.currentTicker!="" && (
       <div className={styles.DisclaimerContainer}>
-      <p className={styles.psrDisclaimerParagraph}>
-      Elevy can make mistakes. Consider checking important information.{" "}
-            </p>
-      </div>
+        <p className={styles.psrDisclaimerParagraph}>
+          Elevy can make mistakes. Always verify important information.
+        </p>
+      </div> )}
+      
     </div>
   );
 };

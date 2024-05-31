@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "how is the stock market today?"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm happy to help you with your question. However, I must inform you that I'm just an AI and do not have access to real-time stock market data. The stock market is a complex and constantly changing system, and I cannot provide you with accurate and up-to-date information without proper authorization.\n\nIf you're interested in checking the current stock market status, I recommend visiting a reputable financial website or consulting with a financial advisor. They can provide you with the most recent information and help you make informed investment decisions.\n\nAdditionally, it's important to keep in mind that investing in the stock market involves risk, and there are no guarantees of profit. It's essential to do your research, set clear financial goals, and consult with a financial advisor before making any investment decisions.\n\nPlease let me know if you have any other questions or concerns!"
+  }
+]

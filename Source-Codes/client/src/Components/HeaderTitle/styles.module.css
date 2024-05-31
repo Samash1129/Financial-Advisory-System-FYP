@@ -1,0 +1,17 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  /* background-color: lightgreen; */
+  height: 100%;
+}
+
+.headerTitle {
+  font-size: 38px;
+  color: #fff;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

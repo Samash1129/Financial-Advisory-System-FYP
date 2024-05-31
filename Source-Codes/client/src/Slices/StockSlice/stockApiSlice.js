@@ -4,7 +4,7 @@ export const stockApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getRecommendedStocks: builder.query({
             query: () => ({
-                url: '/getrecommendedstocks',
+                url: '/generaterecommendations',
                 method: 'GET'
             })
         }),
@@ -13,11 +13,27 @@ export const stockApiSlice = apiSlice.injectEndpoints({
                 url: '/recentstocks',
                 method: 'GET'
             })
+        }),
+        elevychat: builder.mutation({
+            query: (data) => ({
+                url: '/elevychat',
+                method: 'POST',
+                body: data, 
+            })
+        }),
+        fetchChatHistory: builder.mutation({
+            query: (data) => ({
+              url: '/getChatHistory',
+              method: 'POST',
+              body: data,
+            })
         })
     })
-})
+});
 
 export const { 
     useGetRecommendedStocksQuery,
-    useGetHistoryStockQuery
+    useGetHistoryStockQuery,
+    useElevychatMutation,
+    useFetchChatHistoryMutation,
 } = stockApiSlice;

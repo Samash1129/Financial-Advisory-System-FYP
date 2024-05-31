@@ -13,10 +13,6 @@ load_dotenv()
 with open("JSONs/queries.json", "r") as queries_file:
     queries_data = json.load(queries_file)
     queries = queries_data.get("queries", [])
-    
-# with open("queries.json", "r") as queries_file:
-#     queries_data = json.load(queries_file)
-#     queries = queries_data.get("queries", [])
 
 
 def save2db(sentiment_scores):
@@ -53,7 +49,6 @@ def analyze_sentiment_for_files():
 
     for query in queries.values():
         file_name = f"{query}.json"
-        # file_path = os.path.join("query_responses", file_name)
         file_path = os.path.join("JSONs/query_responses", file_name)
 
         if os.path.exists(file_path):

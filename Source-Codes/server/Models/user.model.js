@@ -1,3 +1,4 @@
+const { toString } = require('express-validator/src/utils');
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -32,6 +33,21 @@ const userSchema = new mongoose.Schema({
       type: String
     }
   },
+  conversations: [{
+    conversationID: {
+      type: String
+    },
+    ticker: {
+      type: String
+    },
+    secName: {
+      type: String
+    },
+    lastModified:
+    {
+      type: Date
+    }
+  }]
 });
 
 const User = mongoose.model('User', userSchema);

@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "Explain stocks very briefly"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\udcca Sure, I'd be happy to explain stocks in a nutshell! \ud83e\udd5c\n\nStocks are essentially shares in a company. When you buy stocks, you are buying a small piece of that company. The value of your stocks goes up or down depending on the company's performance and market conditions. \ud83d\udcc8\n\nThink of it like owning a small part of a business. You can earn money from the company's profits through dividends, and you can also sell your stocks for a profit if the company does well. \ud83d\udcb0\n\nThere are many different types of stocks, including common stocks, preferred stocks, and blue-chip stocks. Each type has its own unique characteristics and potential benefits. \ud83e\udd1d\n\nSo, in summary, stocks are a way for individuals to invest in companies and potentially earn money through their performance. \ud83d\udcca\n\nDo you have any other questions about stocks? \ud83e\udd14"
+  }
+]

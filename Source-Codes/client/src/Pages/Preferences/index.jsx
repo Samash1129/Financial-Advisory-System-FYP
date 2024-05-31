@@ -11,9 +11,11 @@ import LoadingSpinner from '../../Components/LoadingAnimation';
 import { useDispatch, useSelector } from "react-redux";
 import { useSignUpFinalMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
-// import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
+import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { useDeleteUserMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { removeUserData, setUserData } from "../../Slices/User/AuthSlice/authSlice";
+import { Grid, Box} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
@@ -24,6 +26,7 @@ const Preferences = () => {
   const [stockType, setStockType] = useState("");
   const [amountToInvest, setAmountToInvest] = useState("");
   const [error, setError] = useState('');
+  const isMobile = useMediaQuery('(max-width:900px)');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -38,7 +41,7 @@ const Preferences = () => {
       if (preferredIndustries.length > 0) { setPreferredIndustries(preferredIndustries); }
       else { setPreferredIndustries(["Banking"]); }
       setStockType(stockType || "Dividend");
-      if (amountToInvest === 0) { setAmountToInvest("100"); }
+      if (amountToInvest==0) { setAmountToInvest("100"); } 
       else { setAmountToInvest(amountToInvest.toLocaleString()); }
       //setAmountToInvest(amountToInvest.toLocaleString() || "100");
     }
@@ -54,21 +57,21 @@ const Preferences = () => {
     // Format with commas
     return cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
-
+  
   const handleAmountChange = (e) => {
     const value = e.target.value;
     setAmountToInvest(formatCurrency(value));
-
+  
     if (value < 100) {
       setError('Amount must be more than PKR 100');
-    }
+    } 
     else {
       setError('');
     }
   };
 
-  // const previousPage = useSelector((state) => state.previousPage.previousPage);
-  // const userState = useSelector((state) => state.auth);
+  const previousPage = useSelector((state) => state.previousPage.previousPage);
+  const userState = useSelector((state) => state.auth);
 
   const handleToggleInvestmentGoals = (goal) => {
     setInvestmentGoals(goal);
@@ -85,7 +88,7 @@ const Preferences = () => {
       setPreferredIndustries([...preferredIndustries, industry]);
     }
   };
-
+  
 
   const handleDropdownStockType = (selectedOption) => {
     setStockType(selectedOption);
@@ -97,58 +100,62 @@ const Preferences = () => {
       return;
     }
 
-    try {
+    try { 
       const formattedAmountToInvest = parseFloat(amountToInvest.replace(/,/g, ''));
-      const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest: formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
+      const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest:formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
       console.log(response);
 
       let token1 = false;
 
-      if (currentUserData.token === true) { token1 = true; }
+      if (currentUserData.token == true) { token1 = true; }
       else { token1 = false; }
+     
+      dispatch(setUserData({ token: token1, name:response.user.name, email:response.user.email, preferences: response.user.preferences}));
+      
+      { dispatch(setPreviousPage('/signup')); }
 
-      dispatch(setUserData({ token: token1, name: response.user.name, email: response.user.email, preferences: response.user.preferences }));
-
-      dispatch(setPreviousPage(null));
-
-      if (token1 === true) { navigate('/dashboard'); }
-      else {
+      if (token1 == true) { navigate('/dashboard'); }
+      else 
+      { 
         dispatch(removeUserData());
-        navigate('/signin');
+        navigate('/signin'); 
       }
-
+      
     } catch (err) {
       console.error(err);
     }
   };
 
-  // const [signout] = useSignoutMutation();
+  const [signout] = useSignoutMutation();
 
   const handleBackButtonClick = async () => {
 
-    dispatch(setPreviousPage(null));
-    if (currentUserData.token === true) { navigate('/dashboard'); }
-    else {
+    dispatch(setPreviousPage("/preferences"));
+    if (currentUserData.token == true) { navigate('/dashboard'); }
+    else { 
       deleteUser(currentUserData.email).unwrap();
-      navigate('/signup');
+      navigate('/signup'); 
     }
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftContainer}>
-        <div className={styles.logo}>
-          <LogoAnimation />
-        </div>
-        <img
-          src={backgroundImage}
-          alt="Cover"
-          className={styles.coverImage}
-        />
-      </div>
+    <Box sx={{ flexGrow: 1 }}>
+    <Grid container spacing={0} className={styles.container}>
+        {!isMobile &&
+        <Grid item xs={12} md={6} className={styles.leftContainer}>
+          <div className={styles.logo}>
+            <LogoAnimation />
+          </div>
+          <img
+            src={backgroundImage}
+            alt="Cover Image"
+            className={styles.coverImage}
+          />
+        </Grid>
+        }
 
-      <div className={styles.rightContainer}>
-        {isLoading && <LoadingSpinner loadingText="Saving Preferences" />}
+      <Grid item xs={12} md={6} className={styles.rightContainer}>
+      { isLoading && <LoadingSpinner loadingText="Saving Preferences" /> }
         <div className={styles.preferences}>
           <NavBar
             title="Preferences"
@@ -212,16 +219,19 @@ const Preferences = () => {
                 label="Banking"
                 onClick={() => handleTogglePreferredIndustry("Banking")}
                 isSelected={preferredIndustries.includes("Banking")}
+                isRestricted={false}
               />
               <ToggleButton
                 label="Textile"
-                onClick={() => handleTogglePreferredIndustry("Textile")}
-                isSelected={preferredIndustries.includes("Textile")}
+                // onClick={() => handleTogglePreferredIndustry("Automobile")}
+                // isSelected={preferredIndustries.includes("Automobile")}
+                isRestricted={true}
               />
               <ToggleButton
                 label="Automobile"
-                onClick={() => handleTogglePreferredIndustry("Automobile")}
-                isSelected={preferredIndustries.includes("Automobile")}
+                // onClick={() => handleTogglePreferredIndustry("Automobile")}
+                // isSelected={preferredIndustries.includes("Automobile")}
+                isRestricted={true}
               />
             </div>
           </div>
@@ -239,8 +249,9 @@ const Preferences = () => {
             <Button text="Save Preferences" onClick={handleSubmit} />
           </div>
         </div>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
+    </Box>
   );
 };
 

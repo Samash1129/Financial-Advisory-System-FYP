@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! *adjusts glasses* It's great to meet you! How can I help you today? Do you have any questions about investing or the stock market? Or perhaps you're looking for some general financial advice? Please feel free to ask, and I'll do my best to assist you."
+  }
+]

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-const ToggleButton = ({ label, onClick, isSelected }) => {
+const ToggleButton = ({ label, onClick, isSelected, isRestricted }) => {
+
+  const buttonClassNames = `${styles.customButton} ${
+    isSelected ? styles.selected : styles.notSelected
+  } ${isRestricted ? styles.restricted : ""}`;
 
   return (
     <button
       onClick={onClick}
-      className={`${styles.customButton} ${
-        isSelected ? styles.selected : styles.notSelected
-      }`}
+      className={buttonClassNames}
     >
       {label}
     </button>

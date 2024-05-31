@@ -1,0 +1,64 @@
+[
+  {
+    "role": "system",
+    "content": "You are elevy by elev8, a PSX investor help app. "
+  },
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": "\ud83d\ude0a Hello there! What's up? \ud83d\udc4b Do you have any questions about investing in the stock market or want some financial advise? I'm here to help! \ud83d\udcc8\ud83d\udca1"
+  },
+  {
+    "role": "user",
+    "content": "explain stocks briefly"
+  },
+  {
+    "role": "assistant",
+    "content": {
+      "message": "Error occurred"
+    }
+  },
+  {
+    "role": "user",
+    "content": "explain stocks briefly"
+  },
+  {
+    "role": "assistant",
+    "content": {
+      "message": "Error occurred"
+    }
+  },
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": {
+      "message": "Error occurred"
+    }
+  },
+  {
+    "role": "user",
+    "content": "dfs"
+  },
+  {
+    "role": "assistant",
+    "content": {
+      "message": "Error occurred"
+    }
+  },
+  {
+    "role": "user",
+    "content": "dfsfsdfsdfdf"
+  },
+  {
+    "role": "assistant",
+    "content": {
+      "message": "Error occurred"
+    }
+  }
+]

@@ -10,6 +10,8 @@ import { setPreviousPage } from '../../Slices/PageSlice/pageSlice';
 import { useUpdateUserMutation } from '../../Slices/User/UserSlice/userApiSlice';
 import { setUserData } from '../../Slices/User/AuthSlice/authSlice';
 import LoadingSpinner from '../../Components/LoadingAnimation';
+import { Grid, Box} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ProfileSettings = () => {
   const [name, setName] = useState('');
@@ -21,6 +23,7 @@ const ProfileSettings = () => {
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [topError, setTopError] = useState('');
+  const isMobile = useMediaQuery('(max-width:900px)');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -98,15 +101,22 @@ const ProfileSettings = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftContainer}>
-        <div className={styles.logo}>
-          <LogoAnimation />
-        </div>
-        <img src={backgroundImage} alt="Cover Image" className={styles.coverImage} />
-      </div>
+    <Box sx={{ flexGrow: 1 }}>
+    <Grid container spacing={0} className={styles.container}>
+        {!isMobile &&
+        <Grid item xs={12} md={6} className={styles.leftContainer}>
+          <div className={styles.logo}>
+            <LogoAnimation />
+          </div>
+          <img
+            src={backgroundImage}
+            alt="Cover Image"
+            className={styles.coverImage}
+          />
+        </Grid>
+        }
 
-      <div className={styles.rightContainer}>
+      <Grid item xs={12} md={6} className={styles.rightContainer}>
         {isLoading && <LoadingSpinner loadingText="Updating Profile" />}
         <div className={styles.profileSettingsContainer}>
           <NavBar title="Profile Settings" handleBackButtonClick={handleBackButtonClick} />
@@ -145,8 +155,9 @@ const ProfileSettings = () => {
             <Button text="Save"/>
           </form>
         </div>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
+    </Box>
   );
 };
 

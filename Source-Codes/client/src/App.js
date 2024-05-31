@@ -1,12 +1,7 @@
-import {
-  Route,
-  Routes,
-  Navigate,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
+import Services from "./Pages/Services/Services";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
@@ -18,71 +13,11 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from './store/store';
+import { bankNames } from './constants';
 
 
 function App() {
-  const filteredData = [
-    {
-      securityName: "Meezan Bank Ltd",
-      tickerSymbol: "MEZN",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Silk Bank Ltd",
-      tickerSymbol: "SILK",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Askari Bank Ltd",
-      tickerSymbol: "AKBL",
-      stockPrice: "48,354",
-      category: "Banking",
-    },
-    {
-      securityName: "Habib Bank Limited",
-      tickerSymbol: "HBL",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Dubai Islamic Bank",
-      tickerSymbol: "DIB",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Meezan Bank Ltd",
-      tickerSymbol: "MEZN",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Silk Bank Ltd",
-      tickerSymbol: "SILK",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-    {
-      securityName: "Askari Bank Ltd",
-      tickerSymbol: "AKBL",
-      stockPrice: "48,354",
-      category: "Banking",
-    },
-    {
-      securityName: "Habib Bank Limited",
-      tickerSymbol: "HBL",
-      stockPrice: "797,022",
-      category: "Banking",
-    },
-    {
-      securityName: "Dubai Islamic Bank",
-      tickerSymbol: "DIB",
-      stockPrice: "37,020",
-      category: "Banking",
-    },
-  ];
+  const filteredData = bankNames;
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -90,6 +25,8 @@ function App() {
         <Route path="/" index={true} element={<LandingPage />} />
         <Route path="/getstarted" element={<GetStarted />} />
         <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="" element={<PrivateRoute />}>

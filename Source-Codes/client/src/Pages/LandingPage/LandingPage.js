@@ -8,7 +8,8 @@ import PlaceholderImage from "../../Assets/Images/placeholder.jpg";
 import Initializer from "../../Components/InitializingAnimation";
 import { useSignoutMutation } from "../../Slices/User/UserSlice/userApiSlice";
 import { removeUserData } from "../../Slices/User/AuthSlice/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import {
   removeHistoryStock,
   removeRecommendedStocks,
@@ -20,13 +21,21 @@ const LandingPage = () => {
   const [signout] = useSignoutMutation();
 
   const handleSignUp = () => {
-    navigate("/getstarted"); // Navigate to the GetStarted page when Sign Up button is clicked
+    navigate("/getstarted"); 
   };
 
-  // const handleSignIn = () => {
-  //   navigate("/signin"); // Navigate to the SignIn page when Sign In button is clicked
-  // };
-  
+  const handleSignIn = () => {
+    navigate("/signin");
+  };
+
+  const handleServices = () => {
+    navigate('/services');
+  };
+
+  const handleAboutUs = () => {
+    navigate('/about-us');
+  };
+
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showInitializer, setShowInitializer] = useState(true);
 
@@ -44,7 +53,7 @@ const LandingPage = () => {
     }, 3000);
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
-  }, [dispatch, signout]);
+  }, []);
 
   return (
     <div className="landing-page">
@@ -55,14 +64,14 @@ const LandingPage = () => {
             <img src={Logo} alt="Logo" className="Logo" />
             <nav className="navbar">
               <a href="#home">HOME</a>
-              <a href="#services">SERVICES</a>
-              <a href="#pricing">PRICING</a>
-              <a href="#about-us">ABOUT US</a>
+              <a onClick={handleServices}>SERVICES</a>
+              {/* <a href="#pricing">PRICING</a> */}
+              <a onClick={handleAboutUs}>ABOUT US</a>
             </nav>
             <div className="auth-buttons">
-              {/* <button className="sign-in-btn" onClick={handleSignIn}>
+              <button className="sign-in-btn" onClick={handleSignIn}>
                 Sign In
-              </button> */}
+              </button>
               <button className="sign-up-btn" onClick={handleSignUp}>
                 Get Started
               </button>
