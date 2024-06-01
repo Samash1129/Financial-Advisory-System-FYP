@@ -1,0 +1,312 @@
+.servicesPage {
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.logo {
+  width: 4%;
+  height: auto;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+  display: inline-block;
+  border-bottom: 2.5px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.4s;
+}
+
+.authButtons {
+  display: flex;
+}
+
+.signInBtn,
+.signUpBtn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.signInBtn {
+  background-color: #efefef;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  font-size: 18px;
+}
+
+.signUpBtn {
+  background-color: #3692ff;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  border-bottom: 2.5px solid #3692ff;
+  padding-bottom: 4px;
+}
+
+.signInBtn:hover {
+  background-color: #d8d8d8;
+}
+
+.signUpBtn:hover {
+  background-color: #0073ff;
+}
+
+.navbar a {
+  position: relative;
+  margin-right: 20px;
+  font-size: 17px;
+}
+
+.navbar a:not(:last-child)::after {
+  content: "•";
+  color: #2d2d2d;
+  position: absolute;
+  right: -20px;
+  bottom: -7px;
+  font-size: 2em;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+.header,
+.mainContent {
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  background-color: #3692ff;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+}
+
+.footerText {
+  font-size: 18px;
+}
+
+.navbar a {
+  position: relative;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.navbar a:not(:last-child)::after {
+  content: "•";
+  color: #2d2d2d;
+  position: absolute;
+  right: -20px;
+  bottom: -7px;
+  font-size: 2em;
+}
+
+.bigImage .Boomer {
+  height: auto;
+  display: block;
+  margin-bottom: 5%;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContent {
+  margin: 20px;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Textt {
+  max-width: 45%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .landingPage {
+    font-family: "Outfit", sans-serif;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  .logo {
+    width: 6%;
+    height: auto;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  .authButtons {
+    display: flex;
+  }
+
+  .sign-in-btn,
+  .signupButtons {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .sign-in-btn {
+    background-color: #efefef;
+    font-family: "Outfit", sans-serif;
+    color: #333;
+    font-size: 18px;
+  }
+  .signupButtons {
+    background-color: #3692ff;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    font-size: 16px;
+  }
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Textt {
+    max-width: 70%;
+    height: auto;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    margin-left: 95px;
+  }
+
+  .heroContent {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 34px;
+    justify-content: center;
+  }
+  .readmoreButton {
+    color: #000000;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2.5px solid transparent;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: border-color 0.4s;
+  }
+
+  .bigImage .Boomer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4%;
+  }
+
+  .navbar a:hover {
+    border-bottom: 2.5px solid #3692ff;
+    padding-bottom: 4px;
+  }
+  .sign-in-btn:hover {
+    background-color: #d8d8d8;
+  }
+  .signupButtons:hover {
+    background-color: #0073ff;
+  }
+  .readmoreButton:hover {
+    border-bottom: 2.5px solid #3692ff;
+    padding-bottom: 4px;
+  }
+  .navbar a {
+    position: relative;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+
+  .navbar a:not(:last-child)::after {
+    content: "•";
+    color: #2d2d2d;
+    position: absolute;
+    right: -20px;
+    bottom: -7px;
+    font-size: 2em;
+  }
+
+  .navbar a:last-child {
+    margin-right: 0;
+  }
+
+  .mainContent {
+    position: relative;
+    z-index: 1;
+  }
+
+  .headerarea {
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  .footer {
+    background-color: #3692ff;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+  }
+
+  .footerText {
+    font-size: 16px;
+  }
+
+  .Boomer {
+    display: none;
+  }
+}

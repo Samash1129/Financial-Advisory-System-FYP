@@ -1,7 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
-import LandingPage from "./Pages/LandingPage/LandingPage";
-import Services from "./Pages/Services/Services";
-import AboutUs from "./Pages/AboutUs/AboutUs";
+import LandingPage from "./Pages/LandingPage";
+import Services from "./Pages/Services";
+import AboutUs from "./Pages/AboutUs";
 import GetStarted from "./Pages/GetStarted";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
