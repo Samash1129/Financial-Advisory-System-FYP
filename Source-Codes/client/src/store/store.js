@@ -24,7 +24,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root', // Key for the persistor to use in storage
   storage, // Specify the storage engine to use, defaults to localStorage
-  whitelist: ['auth'], // Array of reducers to persist, in this case, only 'auth'
+  whitelist: ['auth', 'stockSlice'], // Array of reducers to persist, in this case, only 'auth'
   // You can also blacklist certain reducers if needed: blacklist: ['someReducer']
 };
 

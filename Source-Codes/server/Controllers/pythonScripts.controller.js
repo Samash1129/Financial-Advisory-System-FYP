@@ -12,6 +12,16 @@ exports.checkPython = async (req, res) => {
   }
 };
 
+exports.getStocksWithPrices = async (req, res) => {
+  try {
+    const response = await axios.get(`http://${ip}/generate-prices`);
+    res.json(response.data);
+  } catch (error) {
+    //console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
 exports.fetchNewsController= async(req, res) => {
   try {
       const response = await axios.get(`http://${ip}/fetch-news`);
@@ -119,7 +129,12 @@ exports.generateFundamentals = async(req, res) => {
 
 exports.generateRecommendations = async(req, res) => {
   try {
-    const response = await axios.get(`http://${ip}/generate-recommendations`)
+    const { risk_tolerance, stock_type, duration } = req.body;
+    const response = await axios.post(`http://${ip}/generate-recommendations`, {
+      risk_tolerance: risk_tolerance,
+      stock_type: stock_type,
+      duration: duration
+    });
 
     console.log(response.status)
     return res.status(response.status).json(response.data)
@@ -127,3 +142,35 @@ exports.generateRecommendations = async(req, res) => {
     console.error(err)
   }
 }
+
+exports.getCloseVals = async (req, res) => {
+  const { companyTicker } = req.body;
+
+  try {
+    const response = await axios.post(`http://${ip}/getCloseVals`, {
+      company: companyTicker,
+    });
+
+    console.log(response.status);
+    return res.status(response.status).json(response.data);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Internal Server Error"});
+ }
+}
+
+exports.getFundVals = async (req, res) => {
+  const { companyTicker } = req.body;
+
+  try {
+    const response = await axios.post(`http://${ip}/getFundVals`, {
+      company: companyTicker,
+    });
+
+    console.log(response.status);
+    return res.status(response.status).json(response.data);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};

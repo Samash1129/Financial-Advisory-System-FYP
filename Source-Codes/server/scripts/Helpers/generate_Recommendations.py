@@ -18,6 +18,9 @@ for column in columns_to_mean:
 # Group by 'Ticker Symbol' and calculate the mean for each group
 mean_ratios = df.groupby('Ticker Symbol')[columns_to_mean].mean().reset_index()
 
+# Assuming 'Security Name' is in the original dataframe, we need to bring it back in the grouped dataframe
+mean_ratios = pd.merge(mean_ratios, df[['Ticker Symbol', 'Security Name']].drop_duplicates(), on='Ticker Symbol', how='left')
+
 # Min-Max Normalization
 normalized_mean_ratios = mean_ratios.copy()
 
@@ -33,25 +36,25 @@ duration_weight = 0.5
 
 # Define the rules for each parameter
 def risk_tolerance_score(stock):
-    if stock['risk_tolerance'] == 'low':
+    if stock['risk_tolerance'] == 'Low':
         return 0.8 * (stock['eps'] + stock['equity_to_asset_ratio'])
-    elif stock['risk_tolerance'] == 'medium':
+    elif stock['risk_tolerance'] == 'Medium':
         return 0.5 * (stock['eps'] + stock['equity_to_asset_ratio'])
     else:
         return 0.2 * (stock['eps'] + stock['equity_to_asset_ratio'])
 
 def stock_type_score(stock):
-    if stock['stock_type'] == 'dividend':
+    if stock['stock_type'] == 'Dividend':
         return 0.8 * (stock['dividend_yield'] - stock['payout_ratio'])
-    elif stock['stock_type'] == 'non-dividend':
+    elif stock['stock_type'] == 'Non-Dividend':
         return 0.5 * (stock['eps'] - stock['pe_ratio'])
-    elif stock['stock_type'] == 'growth':
+    elif stock['stock_type'] == 'Growth':
         return 0.8 * (stock['eps'] + stock['return_on_assets'])
     else:
         return 0.5 * (stock['pe_ratio'] + stock['equity_to_asset_ratio'])
 
 def duration_score(stock):
-    if stock['duration'] == 'short_term':
+    if stock['duration'] == 'Short Term':
         return 0.8 * (stock['eps'] - stock['pe_ratio'])
     else:
         return 0.5 * (stock['return_on_equity'] + stock['cash_per_share'])
@@ -67,7 +70,7 @@ def calculate_score(stock):
 
 # Example usage:
 # Using each row in the normalized data for demonstration
-async def genRec():
+def genRec(risk_tolerance: str, stock_type: str, duration: str):
     scores = []
     for index, row in normalized_mean_ratios.iterrows():
         stock = {
@@ -79,13 +82,15 @@ async def genRec():
             'return_on_assets': row['Return on Assets'], 
             'return_on_equity': row['Return on Equity'], 
             'cash_per_share': row['Cash per Share'], 
-            'risk_tolerance': 'medium',  # Example value
-            'stock_type': 'growth',  # Example value
-            'duration': 'long_term'  # Example value
+            'risk_tolerance': risk_tolerance,  
+            'stock_type': stock_type,  
+            'duration': duration
         }
         score = calculate_score(stock)
-        scores.append(score)
-        print(f'Score for the stock {row["Ticker Symbol"]}:', score)
+        scores.append({'Ticker': row['Ticker Symbol'], 'Name':row['Security Name'],'Score': score})
+        #print(f'Score for the stock {row["Ticker Symbol"]}:', score)
+
+    scores.sort(key=lambda x: x['Score'], reverse=True)
+    top_5_scores = scores[:5]
     
-    print('Sorted scores (descending):', sorted(scores, reverse=True))
-    return ('Sorted scores (descending):', sorted(scores, reverse=True))
+    return top_5_scores

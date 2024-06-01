@@ -41,21 +41,28 @@ const useStyles = makeStyles({
 
 const SearchBar = ({pyRunning}) => {
     const [inputValue, setInputValue] = useState(''); // State for the input value
-    const [filteredData, setFilteredData] = useState(bankNames); // State for the filtered data
+    const [filteredData, setFilteredData] = useState([]); // State for the filtered data
     const inputRef = useRef(null); // Ref for the input element
     const [isSearchClicked, setIsSearchClicked] = useState(false);
     const dispatch = useDispatch();
     const classes = useStyles();
     const stock = useSelector((state) => state.stockSearch.searchedStock);
+    const allStocks = useSelector((state) => state.stockSlice.allStocks);
+
+    useEffect(() => {
+      setFilteredData(allStocks);
+      // console.log("State var: ", allStocks);
+      // console.log("Current stocks rec: ", filteredData);
+    }, [allStocks]);
     
     const handleInputChange = (e) => {
         const value = e.target.value;
         setInputValue(value);
 
         const filtered = value === ''
-            ? bankNames
-            : bankNames.filter(item =>
-                item.securityName.toLowerCase().includes(value.toLowerCase())
+            ? allStocks
+            : allStocks.filter(item =>
+                item.Name.toLowerCase().includes(value.toLowerCase())
             );
         setFilteredData(filtered);
     };
@@ -72,7 +79,7 @@ const SearchBar = ({pyRunning}) => {
         dispatch(setStockSearchData({ searchedStock: stock }));
         setIsSearchClicked(false);
         dispatch(updateCurrentChatHistory([]));
-        dispatch(updateCurrentTicker(stock.tickerSymbol));
+        dispatch(updateCurrentTicker(stock.Ticker));
         dispatch(updateCurrentConvoID(""));
     };
 
@@ -120,10 +127,10 @@ const SearchBar = ({pyRunning}) => {
                     {filteredData.map(item => (
                         <li key={item.tickerSymbol} className={styles.searchItem} onClick={() => searchStock(item)}>
                             <div className={styles.itemInfo}>
-                                <div className={styles.symbol}>{item.tickerSymbol}</div>
-                                <div className={styles.name}>{item.securityName}</div>
+                                <div className={styles.symbol}>{item.Ticker}</div>
+                                <div className={styles.name}>{item.Name}</div>
                             </div>
-                            <div className={styles.searchPrice}>Rs. {item.stockPrice}</div>
+                            <div className={styles.searchPrice}>Rs. {item.Price}</div>
                             
                         </li>
                     ))}

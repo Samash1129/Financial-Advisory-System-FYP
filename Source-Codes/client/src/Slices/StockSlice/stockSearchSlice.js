@@ -13,9 +13,6 @@ const stockSearchSlice = createSlice({
            
             state.searchedStock = searchedStock || initialState.searchedStock;
             
-            console.log("*** Redux Store ***")
-            
-            console.log("Searched Stock:", state.searchedStock);
         },
         // updateCurrentTicker: (state, action) => {
         //     const currentTicker = action.payload;

@@ -65,6 +65,7 @@ const ElevyChat = ({pyRunning}) => {
   const [responses, setResponses] = useState([]);
   const psrSummaryContainerRef = useRef(null);
   const dispatch = useDispatch();
+  const allStocks = useSelector((state) => state.stockSlice.allStocks);
   
 
   const handleSubmit = async (e) => {
@@ -146,7 +147,7 @@ const ElevyChat = ({pyRunning}) => {
           <div className={styles.psrTitleContainer}>
             <div className={styles.psrMainTitle}>Elevy -</div>
             <div className={styles.psrCompanyTitle}>
-            {userState.currentTicker && bankNames.find(bank => bank.tickerSymbol === userState.currentTicker)?.securityName}
+            {userState.currentTicker && allStocks.find(bank => bank.Ticker === userState.currentTicker)?.Name}
             </div>
           </div>
         </div>
@@ -161,7 +162,7 @@ const ElevyChat = ({pyRunning}) => {
                     <SkeletonLoader />
                 </div>}
           
-        {pyRunning===1 && userState.currentTicker!="" && (<GraphPanel /> )}
+        {pyRunning===1 && userState.currentTicker!="" && (<GraphPanel currentTicker={userState.currentTicker}/> )}
 
         {pyRunning===-1 && (
         <div className={styles.errorText}><ReportProblemIcon className={styles.warningIcon}/>

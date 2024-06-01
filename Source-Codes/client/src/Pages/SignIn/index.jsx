@@ -13,7 +13,8 @@ import { setUserData, removeUserData } from "../../Slices/User/AuthSlice/authSli
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import { Grid, Box} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import { useGetRecommendedStocksMutation, useGetAllStocksMutation } from "../../Slices/StockSlice/stockApiSlice";
+import { setRecommendedStocks, setAllStocks } from "../../Slices/StockSlice/stockSlice";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -26,6 +27,8 @@ const SignIn = () => {
 
   const dispatch = useDispatch();
   const [signout] = useSignoutMutation();
+  const [sendPreferences] = useGetRecommendedStocksMutation();
+  
   const navigate = useNavigate();
 
   // Calling the API
@@ -66,12 +69,27 @@ const SignIn = () => {
     try {
       const response = await signin({ email, password }).unwrap();
       
-      dispatch(setUserData({ token:true, name:response.name, email:response.email, preferences:response.preferences, conversations: response.conversations}));
+      dispatch(setUserData({ 
+        token: true, 
+        name: response.name, 
+        email: response.email, 
+        preferences: response.preferences, 
+        conversations: response.conversations 
+      }));
+
+    
+      const sendPref = await sendPreferences({ 
+        risk_tolerance: response.preferences.riskTolerance, 
+        stock_type: response.preferences.stockType, 
+        duration: response.preferences.investmentGoals 
+      }).unwrap(); 
+    
+      dispatch(setRecommendedStocks({ recommendedStocks: sendPref.content }));
       
       dispatch(setPreviousPage("/signin"));
       navigate("/dashboard");
-    } catch (response) {
-      setTopError(response.data.error);
+    } catch (error) {
+      setTopError(error.data.error);
     }
   };
 

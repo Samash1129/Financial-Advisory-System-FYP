@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    recommendedStocks: null,
-    historyStock: null
+    recommendedStocks: [],
+    allStocks: []
 }
 
 const stockSlice = createSlice({
@@ -10,24 +10,26 @@ const stockSlice = createSlice({
     initialState,
     reducers: {
         setRecommendedStocks: (state, action) => {
-            state.recommendedStocks = action.payload
+            state.recommendedStocks = action.payload;
+            console.log("Recommended Stocks: ", state.recommendedStocks);
+        },
+        setAllStocks: (state, action) => {
+            state.allStocks = action.payload;
+            console.log("All Stocks: ", state.allStocks);
         },
         removeRecommendedStocks: (state) => {
-            state.recommendedStocks = null
+            state.recommendedStocks = [];
         },
-        setHistoryStock: (state, action) => {
-            state.historyStock = action.payload
-        },
-        removeHistoryStock: (state) => {
-            state.historyStock = null
+        removeAllStocks: (state) => {
+            state.allStocks = [];
         }
     }
 })
 
 export const { 
     setRecommendedStocks, 
-    setHistoryStock,
-    removeRecommendedStocks,
-    removeHistoryStock
+    setAllStocks, 
+    removeRecommendedStocks, 
+    removeAllStocks
  } = stockSlice.actions
 export default stockSlice.reducer

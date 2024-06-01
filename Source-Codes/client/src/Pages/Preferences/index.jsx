@@ -16,6 +16,8 @@ import { useDeleteUserMutation } from "../../Slices/User/UserSlice/userApiSlice"
 import { removeUserData, setUserData } from "../../Slices/User/AuthSlice/authSlice";
 import { Grid, Box} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useGetRecommendedStocksMutation } from "../../Slices/StockSlice/stockApiSlice";
+import { setRecommendedStocks } from "../../Slices/StockSlice/stockSlice";
 
 const stockTypeOptions = ["Dividend", "Non-Dividend", "Growth", "Value"];
 
@@ -50,6 +52,7 @@ const Preferences = () => {
 
   const [signUpFinal, { isLoading }] = useSignUpFinalMutation();
   const [deleteUser] = useDeleteUserMutation();
+  const [sendPreferences] = useGetRecommendedStocksMutation();
 
   const formatCurrency = (value) => {
     // Remove non-digit characters
@@ -101,6 +104,7 @@ const Preferences = () => {
     }
 
     try { 
+      //console.log("CONVOS: ", currentUserData.conversations);
       const formattedAmountToInvest = parseFloat(amountToInvest.replace(/,/g, ''));
       const response = await signUpFinal({ email: currentUserData.email, investmentGoals, riskTolerance, amountToInvest:formattedAmountToInvest, preferredIndustries, stockType }).unwrap();
       console.log(response);
@@ -111,6 +115,11 @@ const Preferences = () => {
       else { token1 = false; }
      
       dispatch(setUserData({ token: token1, name:response.user.name, email:response.user.email, preferences: response.user.preferences}));
+
+      const sendPref = await sendPreferences({ risk_tolerance: response.user.preferences.riskTolerance, stock_type: response.user.preferences.stockType, duration: response.user.preferences.investmentGoals }).unwrap(); 
+
+      //console.log("Recommendations: ", sendPref.content);
+      dispatch(setRecommendedStocks({ recommendedStocks:sendPref.content }));
       
       { dispatch(setPreviousPage('/signup')); }
 
@@ -124,6 +133,7 @@ const Preferences = () => {
     } catch (err) {
       console.error(err);
     }
+    //console.log("CONVOS: ", currentUserData.conversations);
   };
 
   const [signout] = useSignoutMutation();

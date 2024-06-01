@@ -23,14 +23,14 @@ const authSlice = createSlice({
     reducers: {
         setUserData: (state, action) => {
             const { token, name, email, preferences, conversations, currentChatHistory, currentTicker, currentConvoID } = action.payload
-            state.token = token;
-            state.name = name;
-            state.email = email;
-            state.preferences = preferences || initialState.preferences;
-            state.conversations = conversations || initialState.conversations;
-            state.currentChatHistory = currentChatHistory || initialState.currentChatHistory;
-            state.currentTicker = currentTicker || initialState.currentTicker;
-            state.currentConvoID = currentConvoID || initialState.currentConvoID;
+            if (token !== undefined) state.token = token;
+    if (name !== undefined) state.name = name;
+    if (email !== undefined) state.email = email;
+    if (preferences !== undefined) state.preferences = preferences;
+    if (conversations !== undefined) state.conversations = conversations;
+    if (currentChatHistory !== undefined) state.currentChatHistory = currentChatHistory;
+    if (currentTicker !== undefined) state.currentTicker = currentTicker;
+    if (currentConvoID !== undefined) state.currentConvoID = currentConvoID;
             
             console.log("*** Redux Store ***")
             console.log("Token:", state.token);

@@ -7,8 +7,11 @@ import History from '../../Assets/SVGs/History.svg';
 import { useSelector, useDispatch } from "react-redux";
 import { updateCurrentChatHistory, updateCurrentTicker, updateCurrentConvoID } from "../../Slices/User/AuthSlice/authSlice";
 import { useFetchChatHistoryMutation } from "../../Slices/StockSlice/stockApiSlice";
-import { bankNames } from "../../constants";
+
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import { useGetRecommendedStocksMutation, useGetAllStocksMutation } from "../../Slices/StockSlice/stockApiSlice";
+import { setRecommendedStocks, setAllStocks } from "../../Slices/StockSlice/stockSlice";
+
 
 const SkeletonLoader = () => (
     <div className={styles.skeletonContainer}>
@@ -22,8 +25,16 @@ const StockHistory = ({pyRunning}) => {
 
     const userState = useSelector((state) => state.auth);
     const [sortedChats, setSortedChats] = useState([]);
+    const [bankNames, setBankNames] = useState([]);
     const dispatch = useDispatch();
     const [chatHistory] = useFetchChatHistoryMutation();
+    const allStocks = useSelector((state) => state.stockSlice.allStocks);
+
+    useEffect(() => {
+        setBankNames(allStocks);
+        // console.log("State var: ", allStocks);
+        // console.log("Current stocks rec: ", filteredData);
+      }, [allStocks]);
 
     useEffect(() => {
         if(pyRunning===1)
@@ -60,7 +71,7 @@ const StockHistory = ({pyRunning}) => {
                         <span className={styles.listNumber}>{index + 1}</span>
                         <div className={styles.shItemInfo}>             
                         <div className={styles.shSymbol}>
-                        {bankNames.find(bank => bank.tickerSymbol === conversation.ticker)?.securityName} &nbsp;({conversation.ticker})
+                        {bankNames.find(bank => bank.Ticker === conversation.ticker)?.Name} &nbsp;({conversation.ticker})
                         </div>
                         </div>
                     </li>

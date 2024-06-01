@@ -82,7 +82,7 @@ const Graph = ({ labels, data, isVisible }) => {
 
   const canvasStyle = {
     width: "40%",
-    height: "70%",
+    height: "85%",
   };
 
   return <canvas ref={chartRef} style={canvasStyle}></canvas>;

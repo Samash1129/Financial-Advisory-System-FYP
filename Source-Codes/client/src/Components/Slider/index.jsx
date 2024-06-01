@@ -10,7 +10,6 @@ import { removeUserData } from "../../Slices/User/AuthSlice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import {
-  removeHistoryStock,
   removeRecommendedStocks,
 } from "../../Slices/StockSlice/stockSlice";
 import FeedbackPopup from "../Feedback";
@@ -81,7 +80,7 @@ const Slider = ({ pageType, name }) => {
       await signout().unwrap();
       dispatch(removeUserData());
       dispatch(removeRecommendedStocks());
-      dispatch(removeHistoryStock());
+      
       navigate("/signin");
     } catch (error) {
       console.error(error);

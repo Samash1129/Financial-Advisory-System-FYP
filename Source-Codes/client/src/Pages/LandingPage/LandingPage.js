@@ -11,7 +11,6 @@ import { removeUserData } from "../../Slices/User/AuthSlice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPreviousPage } from "../../Slices/PageSlice/pageSlice";
 import {
-  removeHistoryStock,
   removeRecommendedStocks,
 } from "../../Slices/StockSlice/stockSlice";
 
@@ -47,7 +46,6 @@ const LandingPage = () => {
     signout().unwrap();
     dispatch(removeUserData());
     dispatch(removeRecommendedStocks());
-    dispatch(removeHistoryStock());
     const timer = setTimeout(() => {
       setShowInitializer(false); // Hide the Initializer component after 3 seconds
     }, 3000);

@@ -15,7 +15,8 @@ import { useSignoutMutation, useSaveConversationMutation, useCheckPythonQuery } 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Grid, Box} from '@mui/material';
 import { useGetRecommendedStocksQuery } from '../../Slices/StockSlice/stockApiSlice';
-
+import { useGetRecommendedStocksMutation, useGetAllStocksMutation } from "../../Slices/StockSlice/stockApiSlice";
+import { setRecommendedStocks, setAllStocks } from "../../Slices/StockSlice/stockSlice";
 
 const Dashboard = ({ filteredData }) => {
 
@@ -26,7 +27,8 @@ const [pyRunning, setPyRunning] = useState(0);
 const [loading, setLoading] = useState(true)
 const dispatch = useDispatch();
 const [signout] = useSignoutMutation();
-const [getRec] = useGetRecommendedStocksQuery()
+const [getAllStocks] = useGetAllStocksMutation();
+//const [getRec] = useGetRecommendedStocksQuery()
 
 const [menuClicked, setMenuClicked] = useState(false);
 const isMobile = useMediaQuery('(max-width:900px)');
@@ -41,6 +43,19 @@ useEffect(() => {
       setMenuClicked(false);
   }
 }, [isMobile]);
+
+useEffect(() => {
+  const fetchAllStocks = async () => {
+    try {
+      const { data } = await getAllStocks();
+      dispatch(setAllStocks(data));
+    } catch (error) {
+      console.error("Error fetching all stocks:", error);
+    }
+  };
+
+  fetchAllStocks();
+}, [dispatch, getAllStocks]);
 
 
 useEffect(() => {
